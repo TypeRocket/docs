@@ -140,7 +140,7 @@ To install TypeRocket within an existing WordPress theme follow these instructio
 Go to your custom theme folder, not the WordPress themes folder. Then in the command line and run the [composer](https://getcomposer.org/) command:
 
 ```bash
-composer create-project --prefer-dist typerocket/typerocket
+composer create-project --prefer-dist typerocket/typerocket:v4
 ```
 
 *Note: The composer command will create a `typerocket` folder for you. You do not need to make a folder yourself.*
@@ -180,7 +180,7 @@ To install TypeRocket as your main application create the TypeRocket project bef
 In a fresh location run:
 
 ```bash
-composer create-project --prefer-dist typerocket/typerocket
+composer create-project --prefer-dist typerocket/typerocket:v4
 ```
 
 ### 2. Root Typerocket
@@ -237,7 +237,7 @@ You can install TypeRocket into an MU plugin in the same way you install it into
 Download TypeRocket into your `mu-plugins` folder; if you do not have the folder create it.
 
 ```php
-composer create-project --prefer-dist typerocket/typerocket
+composer create-project --prefer-dist typerocket/typerocket:v4
 ```
 
 ### 2. Configure
