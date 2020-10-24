@@ -73,4 +73,4 @@ The TypeRocket REST API automatically detects middleware groups based on the res
 
 For example, post types look for a middleware group in the kernel that matches their registered ID. That group is not found the middleware group defaults to the `post` group. Taxonomies work in the same way but default to the `term` group.
 
-It is **IMPORTANT** to note, [custom resources](/docs/v1/custom-resources/) will look for their group by resource ID; but, custom resources have the fallback group `rest`. Be sure you create a middleware group for any custom resources unless you want them to be use the `rest` middleware fallback group.
+It is **IMPORTANT** to note, [custom resources](/docs/v5/custom-resources/) will look for their group by resource ID; but, custom resources have the fallback group `rest`. Be sure you create a middleware group for any custom resources unless you want them to be use the `rest` middleware fallback group.

@@ -5,7 +5,7 @@ Description: Creating and running migrations.
 
 ## Setting Up Migrations
 
-The TypeRocket migration system requires [having WordPress command support to TypeRocket Galaxy](/docs/v1/galaxy-cli/#section-wp-commands). Once you ensure WordPress commands are available you will see the make migration command `make:migration`.
+The TypeRocket migration system requires [having WordPress command support to TypeRocket Galaxy](/docs/v5/galaxy-cli/#section-wp-commands). Once you ensure WordPress commands are available you will see the make migration command `make:migration`.
 
 *Note: Local VM machines will need to make sure the CLI has access to the guest and host machines.*
 

@@ -19,7 +19,7 @@ Now, in your main business logic add the following code:
 $parent_page = tr_resource_pages('Test')->setIcon('line-chart');
 ```
 
-If you like, you can use [TypeRocket migrations](/docs/v1/migrations) to manage your custom tables.
+If you like, you can use [TypeRocket migrations](/docs/v5/migrations) to manage your custom tables.
 
 ```
 php galaxy make:migration add_tests_table
@@ -73,7 +73,7 @@ public function index() {
 
 #### View
 
-For the index page you might want to use a [table](/docs/v1/tables/). In the index.php view add the following code:
+For the index page you might want to use a [table](/docs/v5/tables/). In the index.php view add the following code:
 
 ```php
 <?php
@@ -274,7 +274,7 @@ public function edit(Test $test)
 }
 ```
 
-For security, custom resources using the REST API are only accessible to admin users. If you wish to change the security settings for custom resources using the REST API [register a custom middleware group](/docs/v1/middleware/#section-register-middleware) using the same name as your custom resource. In the example we have been using, `test` would be the name of the group.
+For security, custom resources using the REST API are only accessible to admin users. If you wish to change the security settings for custom resources using the REST API [register a custom middleware group](/docs/v5/middleware/#section-register-middleware) using the same name as your custom resource. In the example we have been using, `test` would be the name of the group.
 
 If you encounter issues, the TypeRocket REST API requires strict adherence to the controller action naming scheme: `showRest`, `create`, `update`, and `destroy`. 
 

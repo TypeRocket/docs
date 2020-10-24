@@ -20,7 +20,7 @@ In this TypeRocket Pro tutorial, you will learn how to make an advanced WordPres
 
 ![Stacked pro post type](https://l.rb.typerocket.test/wp-content/uploads/2020/01/docs-v1-post-type-example.png)
 
-Before starting [install TypeRocket Pro](https://l.rb.typerocket.test/docs/v1/plugin-install/).
+Before starting [install TypeRocket Pro](https://l.rb.typerocket.test/docs/v5/plugin-install/).
 
 Here is all the code it takes to create the listed features. We will break the code down into its parts and explain how each part works next.
 
@@ -153,7 +153,7 @@ When a field has the name of a column in its model's database table, that field'
 
 ## Custom Fields: In a Meta Box
 
-First, create a [meta box](https://l.rb.typerocket.test/docs/v1/meta-boxes/) and apply the post type to that meta box.
+First, create a [meta box](https://l.rb.typerocket.test/docs/v5/meta-boxes/) and apply the post type to that meta box.
 
 ```php
 $meta = tr_meta_box('Team Details')->apply($team);
@@ -190,8 +190,8 @@ And, there you have it, a supercharged post type with no more than 17 lines of c
 
 ## Templating
 
-Now that you have a custom post type with some custom fields, you are ready to start templating. Learn about templating with custom fields in the [Post Types: Theming Custom Fields Tutorial](/docs/v1/post-types-theming/).
+Now that you have a custom post type with some custom fields, you are ready to start templating. Learn about templating with custom fields in the [Post Types: Theming Custom Fields Tutorial](/docs/v5/post-types-theming/).
 
 ## Security
 
-Finally, you will want to enhance the security of the forms you have created for the post type. You can read more about this is the [Post Types: Fully Secured Tutorial](/docs/v1/post-types-securing/) 
+Finally, you will want to enhance the security of the forms you have created for the post type. You can read more about this is the [Post Types: Fully Secured Tutorial](/docs/v5/post-types-securing/) 

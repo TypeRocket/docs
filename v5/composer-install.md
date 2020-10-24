@@ -6,7 +6,7 @@ Description: Installing TypeRocket Pro with Composer
 
 ## Requirements
 
-Before getting started, be sure your setup supports [the TypeRocket Pro system and browser requirements](/docs/v1/requirements).
+Before getting started, be sure your setup supports [the TypeRocket Pro system and browser requirements](/docs/v5/requirements).
 
 **Important**: Pro users with a Plus or Max license will have access to composer. Single site licenses do not have composer access.
 

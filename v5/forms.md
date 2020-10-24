@@ -406,7 +406,7 @@ $form->toPage($resource, $action, $item_id);
 
 ## Fields
 
-A form's most powerful feature is the fields it can bind model properties too. There are a number of [built-in field types](/docs/v1/field-types/) that come out of the box and you can [create your own](/docs/v1/custom-fields/) if you like.
+A form's most powerful feature is the fields it can bind model properties too. There are a number of [built-in field types](/docs/v5/field-types/) that come out of the box and you can [create your own](/docs/v5/custom-fields/) if you like.
 
 ### Built-In
 
@@ -448,7 +448,7 @@ Each field takes 4 arguments:
 3. **Settings** - `array` -Custom settings that can vary between fields.
 4. **Label** - `boolean` - This is not for the label text. Set `false` to remove the displaying of the label for the field entirely.
 
-You can read more about each field under [field types](/docs/v1/field-types/).
+You can read more about each field under [field types](/docs/v5/field-types/).
 
 *When you call any of the field methods from a `From` object the corresponding `Field` object is returned (not the `Form` object).*
 
@@ -740,7 +740,7 @@ tr_form()->useOld()->useErrors();
 
 `useErrors()` looks for the cookie `tr_redirect_errors` and the `tr_redirect_errors` WordPress transient. The `tr_redirect_errors` cookie and transient can only be accessed once (after this is will be deleted).
 
-If the `tr_redirect_errors` cookie is found the form will use the field errors within that cookie to display inline field errors. The best way to set the `tr_redirect_errors` cookie and apply fields to that cookie is to use [HTTP fields](docs/v1/http-fields) or a [validator](/docs/vs/validator) [redirect errors](/docs/v1/validator/#section-get-errors-redirect-on-error).
+If the `tr_redirect_errors` cookie is found the form will use the field errors within that cookie to display inline field errors. The best way to set the `tr_redirect_errors` cookie and apply fields to that cookie is to use [HTTP fields](docs/v1/http-fields) or a [validator](/docs/vs/validator) [redirect errors](/docs/v5/validator/#section-get-errors-redirect-on-error).
 
 If you do not want to use cookies for the validation, you can provide an override array.
 
@@ -773,7 +773,7 @@ $form->disableAjax();
 
 ## Use TypeRocket REST API
 
-You can tell forms to use the [TypeRocket REST API](https://l.rb.typerocket.test/docs/v1/json-api/) using the `useRest()` method. This method enables AJAX mode for the form as well.
+You can tell forms to use the [TypeRocket REST API](https://l.rb.typerocket.test/docs/v5/json-api/) using the `useRest()` method. This method enables AJAX mode for the form as well.
 
 ```php
 $form->useRest();

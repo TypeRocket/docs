@@ -162,7 +162,7 @@ define('TR_APP_ROOT_PATH', __DIR__ . '/wp-content/themes/my-theme');
 
 ### Trouble Shooting
 
-If you have trouble connecting to MySQL from the Galaxy CLI, you may need to change your `wp-config.php` file. You can [learn more about VM CLI access above](https://l.rb.typerocket.test/docs/v1/galaxy-cli/#section-accessing-db-from-galaxy-cli-on-host-machine).
+If you have trouble connecting to MySQL from the Galaxy CLI, you may need to change your `wp-config.php` file. You can [learn more about VM CLI access above](https://l.rb.typerocket.test/docs/v5/galaxy-cli/#section-accessing-db-from-galaxy-cli-on-host-machine).
 
 ## Making a Command
 

@@ -5,7 +5,7 @@ Description: Customize the global elements of your design with theme options.
 
 ## Enabling Theme Options
 
-TypeRocket works as a theme options framework for WordPress by providing the custom fields you need to customize your themes. To get started all you need to do is ensure the `ThemeOptions` extension is in the [TypeRocket configuration](/docs/v1/configuration/) in the file `config/app.php`. 
+TypeRocket works as a theme options framework for WordPress by providing the custom fields you need to customize your themes. To get started all you need to do is ensure the `ThemeOptions` extension is in the [TypeRocket configuration](/docs/v5/configuration/) in the file `config/app.php`. 
 
 *Important note, `null` does not mean the extension is not activated. The values of the extensions array are the constructor params passed to the named class. So, `null` means `ThemeOptions` does not require any arguments for its class constructor.*
 
@@ -33,7 +33,7 @@ TypeRocket works as a theme options framework for WordPress by providing the cus
 
 Theme options are commonly used to manage the global elements of a WordPress theme's design. These elements could be as simple as the copyright information at the bottom of every page to API keys for Google Maps.
 
-You can use any of the fields that come with the [forms api](/docs/v1/forms/).
+You can use any of the fields that come with the [forms api](/docs/v5/forms/).
 
 ## Going custom
 
@@ -144,6 +144,6 @@ If you decide to use advanced fields like repeaters and galleries, you can use `
 
 Now that you have the most basic setup, you can start adding more tabs and fields.
 
-- [Tabs API](/docs/v1/layout-tabs/)
-- [Forms API](/docs/v1/forms/) (fields are near the bottom)
-- [Fields API](/docs/v1/fields/)
+- [Tabs API](/docs/v5/layout-tabs/)
+- [Forms API](/docs/v5/forms/) (fields are near the bottom)
+- [Fields API](/docs/v5/fields/)

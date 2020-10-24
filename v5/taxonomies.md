@@ -176,7 +176,7 @@ There is a single place to add custom content within the `<form>` element for ea
 
 Take a look at opening up a content section and adding a custom field. Note, when you make a custom field for taxonomy terms, you must create a model and controller for TypeRocket to save the data as expected. 
 
-You can make a controller and model quickly with the [Galaxy CLI](/docs/v1/galaxy-cli).
+You can make a controller and model quickly with the [Galaxy CLI](/docs/v5/galaxy-cli).
 
 ```shell
 php galaxy make:model -c term Publisher

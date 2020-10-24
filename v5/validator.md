@@ -39,7 +39,7 @@ $errors = $validator->getErrorFields();
 
 ### Redirect On Error
 
-You can [redirect](/docs/v1/redirects) **back** right away, within a controller, when validation fails. When redirecting on error the old fields and error fields needed for inline field errors will get set and sent as well.
+You can [redirect](/docs/v5/redirects) **back** right away, within a controller, when validation fails. When redirecting on error the old fields and error fields needed for inline field errors will get set and sent as well.
 
 ```php
 // throws a RedirectError

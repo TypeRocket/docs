@@ -7,7 +7,7 @@ TypeRocket comes with two callbacks to help you extend the core JavaScript funct
 
 ## HTTP
 
-The HTTP callback lets you modify and respond to the [REST API's](https://l.rb.typerocket.test/docs/v1/rest-api/) JSON response.
+The HTTP callback lets you modify and respond to the [REST API's](https://l.rb.typerocket.test/docs/v5/rest-api/) JSON response.
 
 ```javascript
 TypeRocket.httpCallbacks.push(function(response) {
@@ -52,7 +52,7 @@ TypeRocket.repeaterCallbacks.push(function($template) {
 
 ## JavaScript Helpers
 
-TypeRocket provides a helper object located at `window.trHelpers`. If you need to access these helpers from the front-end be sure you [have front-end mode enabled](/docs/v1/front-end-mode/).
+TypeRocket provides a helper object located at `window.trHelpers`. If you need to access these helpers from the front-end be sure you [have front-end mode enabled](/docs/v5/front-end-mode/).
 
 ### Site URL
 

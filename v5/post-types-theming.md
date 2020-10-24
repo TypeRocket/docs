@@ -5,7 +5,7 @@ Description: Learn how to take custom fields and apply them to theme templates.
 
 ## Getting Setup
 
-Adding custom fields to a post type is easy with TypeRocket Pro, and theming with them is too. In our [example of a team post type](/docs/v1/post-types-making/) we walked through a basic setup. Now, you need to add that data to the theme.
+Adding custom fields to a post type is easy with TypeRocket Pro, and theming with them is too. In our [example of a team post type](/docs/v5/post-types-making/) we walked through a basic setup. Now, you need to add that data to the theme.
 
 Before getting started with templating, make sure the previous example's post type `person` is in your theme's `functions.php` file:
 

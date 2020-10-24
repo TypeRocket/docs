@@ -34,7 +34,7 @@ $form->input('Number')->setType('number');
 $form->input('Number')->setTypeNumber();
 ```
 
-Keep in mind that you can also [set attributes on an input field](https://l.rb.typerocket.test/docs/v1/fields/#section-instancing-a-field-parameters) by passing an array as the attributes parameter. 
+Keep in mind that you can also [set attributes on an input field](https://l.rb.typerocket.test/docs/v5/fields/#section-instancing-a-field-parameters) by passing an array as the attributes parameter. 
 
 ## Password
 
@@ -556,7 +556,7 @@ $form->matrix('Matrix List');
 $form->builder('Page Builder');
 ```
 
-As an example, the [Page Builder Plugin](/docs/v1/builder/) uses the builder field.
+As an example, the [Page Builder Plugin](/docs/v5/builder/) uses the builder field.
 
 ### Components
 
@@ -619,4 +619,4 @@ For the front-end file, `resources/visuals/page_builder/banner.php`. The `$data`
 
 ## Repater, Builder, Matrix JavaScript Hook
 
-You can also use the [javascript hooks](/docs/v1/javascript-hooks/) to do something when a repeater, matrix, or builder field group is added.
+You can also use the [javascript hooks](/docs/v5/javascript-hooks/) to do something when a repeater, matrix, or builder field group is added.

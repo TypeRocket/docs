@@ -296,7 +296,7 @@ $doc->findFirstWhereOrNew('version', 'v1');
 
 ## Get
 
-The `get()` method queries the database. If more than one result is queried a [results collection](/docs/v1/results-collection/) is returned.
+The `get()` method queries the database. If more than one result is queried a [results collection](/docs/v5/results-collection/) is returned.
 
 ```php
 $result = $doc->select('id')->take(10)->get();
@@ -546,7 +546,7 @@ class DocController extends Controller
 
 ## Relationships
 
-If you want to assign relationships to models [view the relationships documentation](/docs/v1/relationships/).
+If you want to assign relationships to models [view the relationships documentation](/docs/v5/relationships/).
 
 ## Accessors
 

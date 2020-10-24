@@ -103,7 +103,7 @@ Because WordPress does not use an MVC architecture TypeRocket spoofs this design
 
 ## Dynamically Set Middleware
 
-There are times when you do not want the global resource [middleware](/docs/v1/middleware/) stack to be called for specific methods of a controller by the [kernel](/docs/v1/kernel/). To dynamically set the middleware stack use the `__construct()` method on a controller and the `addMiddleware()` method.
+There are times when you do not want the global resource [middleware](/docs/v5/middleware/) stack to be called for specific methods of a controller by the [kernel](/docs/v5/kernel/). To dynamically set the middleware stack use the `__construct()` method on a controller and the `addMiddleware()` method.
 
 For example, take a member controller where you want to have different middleware for the login methods.
 
@@ -190,7 +190,7 @@ To start working with controllers. You need to understand the [MVC design patter
 
 ### Controller JSON API Example
 
-For this example, we will create an endpoint that lists the latest published posts in WordPress. In the TypeRocket `routes/public.php` file [add a route](https://l.rb.typerocket.test/docs/v1/routes/#section-route-types) to the URL `/posts/published/latest/` for any GET requests. Then, point that route to a method on the `ApiController`.
+For this example, we will create an endpoint that lists the latest published posts in WordPress. In the TypeRocket `routes/public.php` file [add a route](https://l.rb.typerocket.test/docs/v5/routes/#section-route-types) to the URL `/posts/published/latest/` for any GET requests. Then, point that route to a method on the `ApiController`.
 
 ```php
 tr_route()->get()->match('/posts/latest/')->do('latest@Api');

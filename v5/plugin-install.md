@@ -5,7 +5,7 @@ Description: How to install TypeRocket Pro.
 
 ## Requirements
 
-Before getting started, be sure your setup supports [the TypeRocket Pro system and browser requirements](/docs/v1/requirements).
+Before getting started, be sure your setup supports [the TypeRocket Pro system and browser requirements](/docs/v5/requirements).
 
 ## Plugin Installation
 

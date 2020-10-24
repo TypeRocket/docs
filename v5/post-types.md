@@ -15,9 +15,9 @@ Each type of content, or “post type”, should have a single responsibility. F
 
 To get started with post types using TypeRocket, read these docs.
 
-1. [Post Types: Making](/docs/v1/post-types-making/)
-2. [Post Types: Theming](/docs/v1/post-types-theming/)
-3. [Post Types: Secured](/docs/v1/post-types-secured/)
+1. [Post Types: Making](/docs/v5/post-types-making/)
+2. [Post Types: Theming](/docs/v5/post-types-theming/)
+3. [Post Types: Secured](/docs/v5/post-types-secured/)
 
 ## Adding a Post Type
 
@@ -77,7 +77,7 @@ add_action('init', function() {
 
 ### Adding custom fields to posts
 
-With just a few lines of code, you can add the banner and subheading fields to the WordPress `post` post type using TypeRocket. All you need to do is create a [meta box](https://l.rb.typerocket.test/docs/v1/meta-boxes/) and add it to the `post` screen. Then you can define a content callback and create the fields you need using the [forms API](https://l.rb.typerocket.test/docs/v1/forms/).
+With just a few lines of code, you can add the banner and subheading fields to the WordPress `post` post type using TypeRocket. All you need to do is create a [meta box](https://l.rb.typerocket.test/docs/v5/meta-boxes/) and add it to the `post` screen. Then you can define a content callback and create the fields you need using the [forms API](https://l.rb.typerocket.test/docs/v5/forms/).
 
 Here you can add everything you need in your theme's `functions.php` file.
 

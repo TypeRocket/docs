@@ -66,8 +66,8 @@ php galaxy make:controller -m thin Member
 
 Or, create the files manually in your `app/Controllers` and `app/Models` folders.
 
-- [Controllers](https://l.rb.typerocket.test/docs/v1/controllers/)
-- [Models](https://l.rb.typerocket.test/docs/v1/models/)
+- [Controllers](https://l.rb.typerocket.test/docs/v5/controllers/)
+- [Models](https://l.rb.typerocket.test/docs/v5/models/)
 
 ## Registering a Route
 

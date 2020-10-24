@@ -26,7 +26,7 @@ You can now use TypeRocket on the front-end of your site.
 If you do not want TypeRocket enabled on every page of your site, use the `tr_frontend_enable()` function. Calling `tr_frontend_enable()` within a controller method or at the top of your template file will enable front-end more for that single page.
 ## Front-end Forms
 
-You can use a [form](/docs/v1/forms/) on the front-end of your site and have it submit to a [custom route](/docs/v1/routes/). To do this you need to create a `Form` and assign it to a URL.
+You can use a [form](/docs/v5/forms/) on the front-end of your site and have it submit to a [custom route](/docs/v5/routes/). To do this you need to create a `Form` and assign it to a URL.
 
 For example, if you have the following route in your `routes/public.php` file.
 

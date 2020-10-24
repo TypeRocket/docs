@@ -35,7 +35,7 @@ tr_template_router(function() {
 });
 ```
 
-In this example we use `tr_template_router()` to further route the request through the [TypeRocket HTTP middleware](/docs/v1/middleware/) and then to our anonymous function controller. For simplicity, we are using an anonymous function as the controller. However, using an anonymous function as the controller can be limiting.
+In this example we use `tr_template_router()` to further route the request through the [TypeRocket HTTP middleware](/docs/v5/middleware/) and then to our anonymous function controller. For simplicity, we are using an anonymous function as the controller. However, using an anonymous function as the controller can be limiting.
 
 ### Making The Controller
 
