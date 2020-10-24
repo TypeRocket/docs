@@ -7,7 +7,7 @@ Expanding user profiles is easy with TypeRocket 3.0. To add custom fields to a u
 
 Add a "Job Title" and "Photo Gallery" so users can add more information about themselves.
 
-![Custom User Profile Fields](https://l.rb.typerocket.test/wp-content/uploads/2014/06/Screen-Shot-2014-06-21-at-4.39.15-PM.png)
+![Custom User Profile Fields](https://typerocket.com/wp-content/uploads/2014/06/Screen-Shot-2014-06-21-at-4.39.15-PM.png)
 
 Take a look at the code.
 

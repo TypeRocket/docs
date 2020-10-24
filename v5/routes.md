@@ -66,8 +66,8 @@ php galaxy make:controller -m thin Member
 
 Or, create the files manually in your `app/Controllers` and `app/Models` folders.
 
-- [Controllers](https://l.rb.typerocket.test/docs/v5/controllers/)
-- [Models](https://l.rb.typerocket.test/docs/v5/models/)
+- [Controllers](https://typerocket.com/docs/v5/controllers/)
+- [Models](https://typerocket.com/docs/v5/models/)
 
 ## Registering a Route
 
@@ -406,7 +406,7 @@ tr_form('\App\Models\UserJob', 1)
 If you need to set routes from within a TypeRocket plugin dynamically, you can use the `tr_routes` action hook. For example, if you wanted to have a custom plugin create a sitemap for your site.
 
 ```php
-add_action('tr_routes', function() {
+add_action('typerocket_routes', function() {
     tr_route()
         ->get()
         ->noTrailingSlash()

@@ -5,6 +5,8 @@ Description: Add SEO to your post types or custom resources.
 
 ## Add Theme Support
 
+*Pro Only: This is a Pro only extension feature.*
+
 To begin, be sure your theme has title tag support enabled.
 
 ```php
@@ -45,7 +47,7 @@ class NodeController extends Controller
 {  
     public function add() {
 		$form = tr_from(Node::class);
-		return tr_view('nodes.show', campact('form'))
+		return tr_view('nodes.show', campact('form'));
 	}
 	
     public function create() {
@@ -74,38 +76,38 @@ class NodeController extends Controller
 
 The SEO extension comes with several hooks.
 
-1. Action - `tr_seo_meta` - Used to output custom HTML meta tags.
-2. Filter - `tr_seo_meta` - Used to filter the meta data used for meta tags.
-3. Action - `tr_seo_fields` - Used to add custom fields to the general tab of the SEO meta box.
-4. Filter - `tr_seo_post_types` - Used to control which post types have the SEO meta box.
-6. Filter - `tr_seo_url` - Used to control the URL used for OG. 
+1. Action - `typerocket_seo_meta` - Used to output custom HTML meta tags.
+2. Filter - `typerocket_seo_meta` - Used to filter the meta data used for meta tags.
+3. Action - `typerocket_seo_fields` - Used to add custom fields to the general tab of the SEO meta box.
+4. Filter - `typerocket_seo_post_types` - Used to control which post types have the SEO meta box.
+6. Filter - `typerocket_seo_url` - Used to control the URL used for OG. 
  
 ### tr_seo_post_types
 
-If you want to control what post types the meta box is added too, you can use the `tr_seo_post_types` filter hook. Only post types added will have the meta box added.
+If you want to control what post types the meta box is added too, you can use the `typerocket_seo_post_types` filter hook. Only post types added will have the meta box added.
 
 ```php
-add_filter('tr_seo_post_types', function($types) {
+add_filter('typerocket_seo_post_types', function($types) {
 	return ['page', 'post'];
 });
 ```
 
 ### tr_seo_fields
 
-If you want to add fields to the SEO metabox, use the `tr_seo_fields` action hook.
+If you want to add fields to the SEO metabox, use the `typerocket_seo_fields` action hook.
 
 ```php
-add_action('tr_seo_fields', function($form) {
+add_action('typerocket_seo_fields', function($form) {
     echo $form->text('basic.Keywords');
 });
 ```
 
 ### tr_seo_meta
 
-If you want to add fields to the SEO metabox, you will also want to display them on each page. You can use the `tr_seo_meta` action hook to output new meta.
+If you want to add fields to the SEO metabox, you will also want to display them on each page. You can use the `typerocket_seo_meta` action hook to output new meta.
 
 ```php
-add_action('tr_seo_meta', function($seo) {
+add_action('typerocket_seo_meta', function($seo) {
     $keywords = esc_attr($seo->meta['basic']['keywords'] ?? '')
     echo "<meta name=\"keywords\" content"{$keywords}">";
 });

@@ -342,7 +342,7 @@ $form->items('List Movies');
 
 ### Matrix
 
-The [Matrix field](https://l.rb.typerocket.test/docs/matrix-field/) lets you create modular designs.
+The [Matrix field](https://typerocket.com/docs/matrix-field/) lets you create modular designs.
 
 ```php
 $form->matrix('Page Builder');
@@ -350,7 +350,7 @@ $form->matrix('Page Builder');
 
 ### Repeater
 
-You can create repeatable groups of fields with [repeaters](https://l.rb.typerocket.test/docs/repeater-field/).
+You can create repeatable groups of fields with [repeaters](https://typerocket.com/docs/repeater-field/).
 
 ```php
 $fields = array(

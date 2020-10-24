@@ -22,7 +22,7 @@ The TypeRocket framework has a few system requirements.
 
 ## Using TypeRocket
 
-Before installing TypeRocket using composer [be aware of the possible conflicts and issues you may encounter if you plan to mass distribute your plugin or theme](https://l.rb.typerocket.test/how-to-use-and-install-typerocket/).
+Before installing TypeRocket using composer [be aware of the possible conflicts and issues you may encounter if you plan to mass distribute your plugin or theme](https://typerocket.com/how-to-use-and-install-typerocket/).
 
 ## WP Plugin
 
@@ -36,7 +36,7 @@ This is the install guide for our official TypeRocket Framework 4 WordPress plug
 
 Composer is not required to use the official TypeRocket Framework 4 WordPress plugin.
 
-1. [Download the latest version of TypeRocket here](https://l.rb.typerocket.test/downloads/latest.zip)
+1. [Download the latest version of TypeRocket here](https://typerocket.com/downloads/latest.zip)
 2. Unzip the files into your WordPress sites `plugins` directory.
 3. Active the TypeRocket Framework Plugin.
 
@@ -120,7 +120,7 @@ add_action('plugins_loaded', function() {
 
 The official **TypeRocket Framework 4** plugin does not have the following features:
 
-- The `galaxy` CLI tool but you can [install it separately](https://l.rb.typerocket.test/docs/v4/galaxy-cli/#section-typerocket-wordpress-plugin).
+- The `galaxy` CLI tool but you can [install it separately](https://typerocket.com/docs/v4/galaxy-cli/#section-typerocket-wordpress-plugin).
 - Migrations (You will need to use the official WordPress method for migrations)
 
 Not all of the normal default TypeRocket plugins are enabled by default. You will need to enable those plugins manually using a custom config as outlined below. These plugins are:
@@ -191,7 +191,7 @@ composer create-project --prefer-dist typerocket/typerocket:v4
 php galaxy use:root {database} {username} {password}
 ```
 
-![tr-root](https://l.rb.typerocket.test/wp-content/uploads/2016/09/tr-root.gif)
+![tr-root](https://typerocket.com/wp-content/uploads/2016/09/tr-root.gif)
 
 Running `use:root` will do all the legwork for you.
 

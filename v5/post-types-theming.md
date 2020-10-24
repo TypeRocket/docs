@@ -53,7 +53,7 @@ Publish some content in the `person` post type. Notice, when you publish content
 
 Copy the dev mode code hint from the post type edit page for "Job Title" into a loop in the `archive-person.php` file.
 
-![docs-v1-post-type-templating-code-hint](https://l.rb.typerocket.test/wp-content/uploads/2020/01/docs-v1-post-type-templating-code-hint.png)
+![docs-v1-post-type-templating-code-hint](https://typerocket.com/wp-content/uploads/2020/01/docs-v1-post-type-templating-code-hint.png)
 
 *Note: In the config.php file set `TR_DEBUG` to `true` to see the code hints.*
 

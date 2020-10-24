@@ -13,11 +13,11 @@ TypeRocket 3.0 is a great at building custom data structures like post types and
 - Add a custom taxonomy
 - Add a meta box with custom text field
 
-![Stacked post type](https://l.rb.typerocket.test/wp-content/uploads/2015/07/typerocket-post-type-person.png)
+![Stacked post type](https://typerocket.com/wp-content/uploads/2015/07/typerocket-post-type-person.png)
 
 ## Adding a Post Type
 
-First, [install TypeRocket](https://l.rb.typerocket.test/docs/v3/installation/). Then you can get started building out an advanced "team" [post type](https://l.rb.typerocket.test/docs/v3/post-types/) right in the `functions.php` of our theme.
+First, [install TypeRocket](https://typerocket.com/docs/v3/installation/). Then you can get started building out an advanced "team" [post type](https://typerocket.com/docs/v3/post-types/) right in the `functions.php` of our theme.
 
 ```php
 <?php // functions.php
@@ -38,7 +38,7 @@ $team = tr_post_type('Person', 'Team');
 $team->setId('tr_team');
 ```
 
-Finally, be sure you [flush the WordPress permalinks](https://l.rb.typerocket.test/flushing-permalinks-in-wordpress/).
+Finally, be sure you [flush the WordPress permalinks](https://typerocket.com/flushing-permalinks-in-wordpress/).
 
 ## Adding an Icon
 
@@ -60,7 +60,7 @@ The settings you picked for the post type gives support for just the title field
 
 ## Custom MetaBox
 
-Add some custom fields to `tr_team`. You want them in a [meta box](https://l.rb.typerocket.test/docs/meta-boxes/). Add a meta box to the post type first.
+Add some custom fields to `tr_team`. You want them in a [meta box](https://typerocket.com/docs/meta-boxes/). Add a meta box to the post type first.
 
 ```php
 tr_meta_box('Team Details')->apply($team);
@@ -68,7 +68,7 @@ tr_meta_box('Team Details')->apply($team);
 
 ## Custom Taxonomy
 
-Do the same with a [taxonomy](https://l.rb.typerocket.test/docs/taxonomies/).
+Do the same with a [taxonomy](https://typerocket.com/docs/taxonomies/).
 
 ```php
 tr_taxonomy('Department')->apply($team);
@@ -76,9 +76,9 @@ tr_taxonomy('Department')->apply($team);
 
 ## Custom Fields
 
-In the meta box, with dev mode on, TypeRocket gives supplies the callback you need to echo out [form](https://l.rb.typerocket.test/docs/v3/forms/) fields.
+In the meta box, with dev mode on, TypeRocket gives supplies the callback you need to echo out [form](https://typerocket.com/docs/v3/forms/) fields.
 
-![Typerocket meta box debug helper ](https://l.rb.typerocket.test/wp-content/uploads/2015/07/typerocket-helper-metabox.png)
+![Typerocket meta box debug helper ](https://typerocket.com/wp-content/uploads/2015/07/typerocket-helper-metabox.png)
 
 Add a custom field for "Job Title".
 

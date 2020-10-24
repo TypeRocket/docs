@@ -716,7 +716,7 @@ echo $form->fieldset('Title', 'A desription.', [
 
 ## Use Old
 
-When using a custom resource, you can load the old data submitted if the user with [redirected with fields](https://l.rb.typerocket.test/docs/v4/redirects/#section-with-fields) included.
+When using a custom resource, you can load the old data submitted if the user with [redirected with fields](https://typerocket.com/docs/v4/redirects/#section-with-fields) included.
 
 ```php
 $form->useOld();
@@ -773,7 +773,7 @@ $form->disableAjax();
 
 ## Use TypeRocket REST API
 
-You can tell forms to use the [TypeRocket REST API](https://l.rb.typerocket.test/docs/v1/json-api/) using the `useRest()` method. This method enables AJAX mode for the form as well.
+You can tell forms to use the [TypeRocket REST API](https://typerocket.com/docs/v1/json-api/) using the `useRest()` method. This method enables AJAX mode for the form as well.
 
 ```php
 $form->useRest();

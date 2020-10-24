@@ -15,7 +15,7 @@ define('TR_PAGE_BUILDER', false);
 
 The page builder plugin helps developers and designers work together with clients to deliver the best experience when building [modular/component-based designs](http://alistapart.com/article/language-of-modular-design).
 
-![typerocket-builder-plugin](https://l.rb.typerocket.test/wp-content/uploads/2020/02/page-builder-pro.gif)
+![typerocket-builder-plugin](https://typerocket.com/wp-content/uploads/2020/02/page-builder-pro.gif)
 
 ## Basic Usage
 

@@ -25,8 +25,8 @@ php galaxy make:controller -m thin Member
 
 Or, create the files manually in your `app/Controllers` and `app/Models` folders.
 
-- [Controllers](https://l.rb.typerocket.test/docs/v4/controllers/)
-- [Models](https://l.rb.typerocket.test/docs/v4/models/)
+- [Controllers](https://typerocket.com/docs/v4/controllers/)
+- [Models](https://typerocket.com/docs/v4/models/)
 
 *Note: The Galaxy command-line tool is not available if you are using the official TypeRocket Framework 4 WordPRess plugin.*
 

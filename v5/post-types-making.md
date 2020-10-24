@@ -18,9 +18,9 @@ In this TypeRocket Pro tutorial, you will learn how to make an advanced WordPres
 - Remove the default editor and replace it with [Redactor 3](https://imperavi.com/redactor/).
 - Add a custom taxonomy
 
-![Stacked pro post type](https://l.rb.typerocket.test/wp-content/uploads/2020/01/docs-v1-post-type-example.png)
+![Stacked pro post type](https://typerocket.com/wp-content/uploads/2020/01/docs-v1-post-type-example.png)
 
-Before starting [install TypeRocket Pro](https://l.rb.typerocket.test/docs/v5/plugin-install/).
+Before starting [install TypeRocket Pro](https://typerocket.com/docs/v5/plugin-install/).
 
 Here is all the code it takes to create the listed features. We will break the code down into its parts and explain how each part works next.
 
@@ -65,7 +65,7 @@ That is it! The `tr_post_type()` function adds the post type. No WordPress `add_
 1. The first parameter of `tr_post_type()` is the singular name of our post type.  It will be the post types name/id and labeling.
 2. The second parameter is the plural name and will be used for the base slug and labeling.
 
-[Flush the WordPress permalinks](https://l.rb.typerocket.test/flushing-permalinks-in-wordpress/) each time you change the ID and slug of your post types. Flush them now.
+[Flush the WordPress permalinks](https://typerocket.com/flushing-permalinks-in-wordpress/) each time you change the ID and slug of your post types. Flush them now.
 
 ### Adding an Icon
 
@@ -153,7 +153,7 @@ When a field has the name of a column in its model's database table, that field'
 
 ## Custom Fields: In a Meta Box
 
-First, create a [meta box](https://l.rb.typerocket.test/docs/v5/meta-boxes/) and apply the post type to that meta box.
+First, create a [meta box](https://typerocket.com/docs/v5/meta-boxes/) and apply the post type to that meta box.
 
 ```php
 $meta = tr_meta_box('Team Details')->apply($team);
@@ -176,7 +176,7 @@ Now that you have the "Job Title" field, you can add it to the post type's admin
 $team->addColumn('Job Title');
 ```
 
-![docs-v1-post-type-table-example](https://l.rb.typerocket.test/wp-content/uploads/2020/01/docs-v1-post-type-table-example.png)
+![docs-v1-post-type-table-example](https://typerocket.com/wp-content/uploads/2020/01/docs-v1-post-type-table-example.png)
 
 ## Custom Taxonomy
 

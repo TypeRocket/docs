@@ -24,7 +24,7 @@ To install TypeRocket Pro Plugin for WordPress [go to your account](/account/) a
 
 From the TypeRocket settings page located under "Settings > TypeRocket" add your site license. Activating your license gives you access to automatic updates.
 
-Your license restricts you to a specific number of activations. You can remove old or current sites form your license in your [l.rb.typerocket.test account](https://l.rb.typerocket.test/account/).
+Your license restricts you to a specific number of activations. You can remove old or current sites form your license in your [typerocket.com account](https://typerocket.com/account/).
 
 ### 2. Create Override Folders
 

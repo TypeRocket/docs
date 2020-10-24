@@ -8,12 +8,12 @@ Description: Add fields to user profiles with the action hook tr_user_profile.
 To add custom fields to a user profile in WordPress, all you need to use is the TypeRocket [action hook](http://codex.wordpress.org/Function_Reference/add_action) `tr_user_fields` and set a callback.
 Add a "Job Title" and "Photo Gallery" so users can add more information about themselves.
 
-![Custom User Profile Fields](https://l.rb.typerocket.test/wp-content/uploads/2014/06/Screen-Shot-2014-06-21-at-4.39.15-PM.png)
+![Custom User Profile Fields](https://typerocket.com/wp-content/uploads/2014/06/Screen-Shot-2014-06-21-at-4.39.15-PM.png)
 
 Take a look at the code.
 
 ```php
-add_action('tr_user_fields', function($form) {
+add_action('typerocket_user_fields', function($form) {
     echo $form->text('Job Title');
     echo $form->gallery('Photo Gallery');
 });

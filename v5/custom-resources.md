@@ -9,7 +9,7 @@ Description: Add your own custom resources and database tables to build advanced
 
 Custom resources are the way you access and manage custom database tables.
 
-![typerocket-resource-finished](https://l.rb.typerocket.test/wp-content/uploads/2020/02/custom-resources-loop.gif)
+![typerocket-resource-finished](https://typerocket.com/wp-content/uploads/2020/02/custom-resources-loop.gif)
 
 To get started, you will be creating a custom resource named "Test". **When making your custom resource, it is crucial it does not share the same name as a post type or taxonomy**.
 

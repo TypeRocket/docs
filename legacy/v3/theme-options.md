@@ -5,7 +5,7 @@ Description: Customize the global elements of your design with theme options.
 
 TypeRocket 3.0 makes adding theme options for WordPress simple. Add any number of custom fields you want.
 
-![typerocket-theme-options](https://l.rb.typerocket.test/wp-content/uploads/2015/08/typerocket-theme-options.png)
+![typerocket-theme-options](https://typerocket.com/wp-content/uploads/2015/08/typerocket-theme-options.png)
 
 ## Enabling Theme Options
 

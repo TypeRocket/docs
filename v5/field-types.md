@@ -34,7 +34,7 @@ $form->input('Number')->setType('number');
 $form->input('Number')->setTypeNumber();
 ```
 
-Keep in mind that you can also [set attributes on an input field](https://l.rb.typerocket.test/docs/v5/fields/#section-instancing-a-field-parameters) by passing an array as the attributes parameter. 
+Keep in mind that you can also [set attributes on an input field](https://typerocket.com/docs/v5/fields/#section-instancing-a-field-parameters) by passing an array as the attributes parameter. 
 
 ## Password
 
@@ -64,7 +64,7 @@ $form->submit('Submit');
 $form->textarea('About Me');
 ```
 
-## Text Expand
+## Text Expand - Pro Only
 
 This field is like the Text field but it will expand it fit the content contained within it.
 
@@ -72,7 +72,7 @@ This field is like the Text field but it will expand it fit the content containe
 $form->textexpand('Expand');
 ```
 
-## Editor - Redactor 3
+## Editor - Pro Only
 
 The editor field uses Redactor 3.
 
@@ -136,7 +136,7 @@ $form->radio('Photo')->setOptions([
 $form->checkbox('Email Me')->setText('Yes');
 ```
 
-## Checkboxes
+## Checkboxes - Pro Only
 
 Add multiple checkboxes.
 
@@ -256,7 +256,7 @@ Color fields can have a palette defined for the color picker. Five or six is bes
 $form->color('Color')->setPalette(['#FFFFFF', '#000000']);
 ```
 
-## Swatches
+## Swatches - Pro Only
 
 ```php
 $form->swatches('Site Color')->setOptions([  
@@ -301,7 +301,7 @@ Set the image background to dark instead of white. This applies to the `gallery(
 $image->setBackgroundDark();
 ```
 
-## Background
+## Background - Pro Only
 
 This field is like the image field but also includes X and Y coordinates.
 
@@ -340,7 +340,7 @@ echo $form->file('File')->setSetting('type', 'pdf');
 $file->setSetting('button', 'Insert File')
 ```
 
-## Gallery
+## Gallery - Pro Only
 
 Galleries are groups of images saved by their attachment IDs.
 
@@ -419,7 +419,7 @@ You can set a custom URL endpoint for your search too.
 
 ```php
 $example_url = site_url('my-api/fonts');
-$form->search('Font')->setUrlOptions( $example_url )
+$form->search('Font')->setUrlOptions( $example_url );
 ```
 
 Your custom endpoint should have the following return JSON in format simular to the following:
@@ -432,17 +432,17 @@ Your custom endpoint should have the following return JSON in format simular to 
 }
 ```
 
-## URL
+## URL - Pro Only
 
 Like the search field the URL field can be used to look up the URL of a post or term record. The URL field supports the same features as the search field.
 
 ```php
-$form->url('URL')
+$form->url('URL');
 ```
 
 *Note: When using the URL field it will only search for a record if the input does not start with `/` or `#`.*
 
-## Location
+## Location - Pro Only
 
 Full address field.
 
@@ -453,7 +453,7 @@ $form->location('Location');
 To enable google maps add your Google Maps API key to your `wp-config.php` file:
 
 ```php
-define('TR_GOOGLE_MAPS_API_KEY', 'yourapikeyhere')
+define('TR_GOOGLE_MAPS_API_KEY', 'yourapikeyhere');
 ```
 
 You can also add your API key in the TypeRocket default theme options or under `config/external.php`.
@@ -466,7 +466,7 @@ For example, what if you're building an event listing site and need to list spea
 
 The repeater could be a group of fields for a conference speaker's name, photo, and a link to their slides. Take a look at adding a meta box with the repeater.
 
-```php 
+```php
 $box = tr_meta_box('Speakers');
 $box->addScreen( 'event' );
 $box->setCallback(function() {
@@ -481,7 +481,7 @@ $box->setCallback(function() {
 });
 ```
 
-![Repeater field](https://l.rb.typerocket.test/wp-content/uploads/2015/07/docs-repeater-field-typerocket.png)
+![Repeater field](https://typerocket.com/wp-content/uploads/2015/07/docs-repeater-field-typerocket.png)
 
 ### Fields
 
@@ -564,9 +564,9 @@ These fields use what are called "Components". Components are the field groups d
 
 ### Component Folders
 
-To start added components, there are three directories you need to work with. The directories are: `resources/visuals`, `resources/components`, and `wordpress/assets/components`.
-
-The `resources/visuals` directory is for adding the HTML for each component's front-end design. The `resources/components` directory is for adding the backend fields for each component. Finally, the `wordpress/assets/components` directory is for the thumbnails of the components.
+```
+php galaxy make:component {name}
+```
 
 *Note: Matrix fields do not require thumbnails.*
 
@@ -578,43 +578,73 @@ To make components create a folder in each of the folder locations with the name
 $form->builder('Page Builder');
 ```
 
-- `resources/visuals/page_builder/`
-- `resources/components/page_builder/`
-- `wordpress/assets/components/page_builder/`
+- `app/Components/YourComponent.php` - Backend fields.
+- `wordpress/assets/components/your-component.png` - Thumbnail.
 
-To create a component under this field, add files with matching names. For example, a component named "Content" has the files:
+Next, register your component to the group you want it used with in the `config/components.php` file.
 
-- `resources/visuals/page_builder/content.php` - Front-end.
-- `resources/components/page_builder/content.php` - Backend fields.
-- `wordpress/assets/components/page_builder/content.png` - Thumbnail.
-
-Here is an example of a component named "Banner":
-
-- `resources/visuals/page_builder/banner.php` - Front-end.
-- `resources/components/page_builder/banner.php` - Backend fields.
-- `wordpress/assets/components/page_builder/banner.png` - Thumbnail.
-
-### Using a compnent
+### Using a Component
 
 Once the files are created, you can begin adding code to the front end and backend files. For example, the "Content" component.
 
 For the backend file, `resources/components/page_builder/content.php`. The `$form` variable will be created for you, and the `<h1>` tag will be the component's label on the backend.
 
 ```php
-<h1>Content Component</h1>
 <?php
-echo $form->text('Headline');
-echo $form->editor('Content');
+namespace App\Components;
+
+use TypeRocket\Template\Component;
+
+class ContentComponent extends Component
+{
+    protected $title = 'Content Component';
+
+    /**
+     * Admin Fields
+     */
+    public function fields()
+    {
+        $form = $this->form();
+
+        echo $form->text('Headline');
+        echo $form->image('Featured Image');
+        echo $form->textarea('Content');
+    }
+
+    /**
+     * Render
+     *
+     * @var array $data component fields
+     * @var array $info name, item_id, model, first_item, last_item, component_id, hash
+     */
+    public function render(array $data, array $info)
+    {
+        ?>
+        <div class="builder-content">
+            <h2><?php echo esc_html($data['headline']); ?></h2>
+            <?php echo wp_get_attachment_image($data['featured_image']); ?>
+            <?php echo wpautop( $data['content'] ); ?>
+        </div>
+        <?php
+    }
+}
 ```
 
-For the front-end file, `resources/visuals/page_builder/banner.php`. The `$data` variable will be created for you can contain all the fields information for you.
+### Advanced Components - Pro Only
 
-```html
-<div class="builder-content">
-    <h2><?php echo esc_html($data['headline']); ?></h2>
-    <hr />
-    <?php echo wpautop( $data['content'] ); ?>
-</div>
+Advanced components can be cloned and named.
+
+```php
+<?php
+namespace App\Components;
+
+use TypeRocket\Template\Component;
+use TypeRocketPro\Template\AdvancedComponent;
+
+class ContentComponent extends AdvancedComponent
+{
+   // ...
+}
 ```
 
 ## Repater, Builder, Matrix JavaScript Hook

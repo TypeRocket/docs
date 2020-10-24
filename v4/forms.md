@@ -467,7 +467,7 @@ $form = tr_form();
 
 ## Use Old
 
-When using a custom resource you can load the old data submitted if the user with [redirected with fields](https://l.rb.typerocket.test/docs/v4/redirects/#section-with-fields) included.
+When using a custom resource you can load the old data submitted if the user with [redirected with fields](https://typerocket.com/docs/v4/redirects/#section-with-fields) included.
 
 ```php
 $form->useOld();
@@ -489,7 +489,7 @@ $form->useUrl('put', '/posts/1/edit/'); // override
 
 ## Use JSON API
 
-You can tell forms to use the [TypeRocket JSON API](https://l.rb.typerocket.test/docs/v4/json-api/) as well with the `useJson()` method. This method will also enable AJAX mode for the form.
+You can tell forms to use the [TypeRocket JSON API](https://typerocket.com/docs/v4/json-api/) as well with the `useJson()` method. This method will also enable AJAX mode for the form.
 
 ```php
 $form->useJson();

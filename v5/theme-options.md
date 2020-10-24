@@ -5,6 +5,8 @@ Description: Customize the global elements of your design with theme options.
 
 ## Enabling Theme Options
 
+*Pro Only: This is a Pro only extension feature.*
+
 TypeRocket works as a theme options framework for WordPress by providing the custom fields you need to customize your themes. To get started all you need to do is ensure the `ThemeOptions` extension is in the [TypeRocket configuration](/docs/v5/configuration/) in the file `config/app.php`. 
 
 *Important note, `null` does not mean the extension is not activated. The values of the extensions array are the constructor params passed to the named class. So, `null` means `ThemeOptions` does not require any arguments for its class constructor.*
@@ -52,7 +54,7 @@ In your theme's `functions.php` file add a filter for `tr_theme_options_controll
 
 ```php
 // functions.php
-add_filter('tr_theme_options_controller', function() {
+add_filter('typerocket_theme_options_controller', function() {
     $form = tr_form()->useRest()->setGroup( $this->getName() );
     return tr_view( __DIR__ . '/theme-options.php', ['form' => $form]);
 });
@@ -64,7 +66,7 @@ To wrap up configuration, change the theme options name with the filter `tr_them
 
 ```php
 // functions.php
-add_filter('tr_theme_options_name', function() {
+add_filter('typerocket_theme_options_name', function() {
     return 'my_theme_options';
 });
 ```

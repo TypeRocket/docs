@@ -35,7 +35,7 @@ add_action( 'init', function() {
 
 ### Support Title Only
 
-If you are [registering a post type with TypeRocket](https://l.rb.typerocket.test/post-types-stacked/) and only want the main title field you can use the `setArgument()` method instead.
+If you are [registering a post type with TypeRocket](https://typerocket.com/post-types-stacked/) and only want the main title field you can use the `setArgument()` method instead.
 
 ```php
 $gallery = tr_post_type('Gallery');

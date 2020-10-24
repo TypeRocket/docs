@@ -39,7 +39,7 @@ $redirect->onHome( '/blog' );
 
 ## With Fields
 
-To redirect with fields use the `withFields()` method. This is great for when [validation](https://l.rb.typerocket.test/docs/v4/validator/) fails and you need to [send the field data back to a form](https://l.rb.typerocket.test/docs/v4/forms/#section-use-old).  
+To redirect with fields use the `withFields()` method. This is great for when [validation](https://typerocket.com/docs/v4/validator/) fails and you need to [send the field data back to a form](https://typerocket.com/docs/v4/forms/#section-use-old).  
 
 ```php
 $redirect->withFields( ['field_name' => 'The field value'] );

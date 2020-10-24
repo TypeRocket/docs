@@ -5,6 +5,8 @@ Description: A simple cURL client.
 
 ## Getting Started
 
+*Pro Only: This is a Pro only extension feature.*
+
 **IMPORTANT**: You must have the PHP cURL extension installed to use this class.
 
 TypeRocket provides a simple [cURL]([https://www.php.net/manual/en/book.curl.php](https://www.php.net/manual/en/book.curl.php)) Http client. Take a look at sending a POST request.
@@ -105,14 +107,5 @@ $json = true; // Make request as JSON
 $returned = $http->exec()
 ```
 
-The returned values contains the following array of data:
-
-```php
-$return =  [  
-  'body' => $response,  
-  'code' => curl_getinfo($this->curl, CURLINFO_HTTP_CODE),  
-  'meta' => curl_getinfo($this->curl),  
-  'error' => curl_errno($this->curl),  
-];
-```
+The returned value is a `CurlResponse` object;
 

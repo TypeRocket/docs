@@ -15,7 +15,7 @@ Also, the `Form` object has quick access to the JSON API via the `useRest()` met
 tr_form('book', 'create')->useRest();
 ```
 
-The JSON API passes through the kernel [middleware](https://l.rb.typerocket.test/docs/v1/middleware/) for enhanced security. Modifications made to the Kernel will impact the REST API.
+The JSON API passes through the kernel [middleware](https://typerocket.com/docs/v1/middleware/) for enhanced security. Modifications made to the Kernel will impact the REST API.
 
 If you encounter issues, the REST API requires strict adherence to the controller action naming scheme: `showRest`,  `indexRest`, `create`, `update`, and `destroy`.
 

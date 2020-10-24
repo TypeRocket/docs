@@ -50,7 +50,7 @@ class Person extends WPPost
 
 Once the fillable fields are set, in the WrdPress backend if debug mode is enabled, you will see a pencil icon next to the field label of each fillable field.
 
-![typerocket fillable icons](https://l.rb.typerocket.test/wp-content/uploads/2015/07/typerocket-fillable.png)
+![typerocket fillable icons](https://typerocket.com/wp-content/uploads/2015/07/typerocket-fillable.png)
 
 Now, only `photo`, `job_title` and `post_content` will be saved. However, because the resource controller and model has been specified only an administrator can manage the new fields. If you need to customize who can update the fields configure your HTTP Kernel and Middleware.
 

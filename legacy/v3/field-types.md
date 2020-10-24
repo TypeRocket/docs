@@ -293,7 +293,7 @@ $box->setCallback(function() {
 });
 ```
 
-![Repeater field](https://l.rb.typerocket.test/wp-content/uploads/2015/07/docs-repeater-field-typerocket.png)
+![Repeater field](https://typerocket.com/wp-content/uploads/2015/07/docs-repeater-field-typerocket.png)
 
 ### Fields
 

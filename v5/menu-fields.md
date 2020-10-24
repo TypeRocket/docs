@@ -5,6 +5,8 @@ Description: Add custom fields to menu items in WordPress 5.4+.
 
 ## Requirments
 
+*Pro Only: This is a Pro only extension feature.*
+
 Adding menu item fields is possible in **WordPress 5.4+** with the addition of the `wp_nav_menu_item_custom_fields` action hook. Prior to WordPress 5.4, adding custom fields to menu items was not possible without creating major conflicts between plugins.
 
 ## Getting Started
@@ -24,7 +26,7 @@ Take a look at this example, where we will add a text field named `sub_label`.
  
 ```php
 // functions.php
-add_action('tr_menu_fields', function($form) {  
+add_action('typerocket_menu_fields', function($form) {  
     /** @var \TypeRocket\Elements\Form $form */  
   echo $form->text('Sub Label');  
 });

@@ -7,7 +7,7 @@ Description: Making and adding meta boxes to post types,  the dashboard or comme
 
 Meta boxes are the movable boxes you see on the dashboard or when editing a post. If you have the TypeRocket SEO plugin enabled you will see that it creates a meta box for you to add extra information about your content.
 
-![Meta box](https://l.rb.typerocket.test/wp-content/uploads/2015/07/docs-metabox.png)
+![Meta box](https://typerocket.com/wp-content/uploads/2015/07/docs-metabox.png)
 
 ## Adding a Meta Box
 
@@ -78,7 +78,7 @@ tr_meta_box('Box')->addScreen('page-example.php');
 
 Once you have added a meta box to a screen or post type you can start adding content to it. If you have debug mode turned on, TypeRocket will tell what function needs to be created for the meta box content.
 
-![meta box debug](https://l.rb.typerocket.test/wp-content/uploads/2015/07/docs-meta-box-debug-typerocket.png)
+![meta box debug](https://typerocket.com/wp-content/uploads/2015/07/docs-meta-box-debug-typerocket.png)
 
 ## Adding content
 

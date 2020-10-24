@@ -7,7 +7,7 @@ TypeRocket comes with two callbacks to help you extend the core JavaScript funct
 
 ## HTTP
 
-The HTTP callback lets you modify and respond to the [REST API's](https://l.rb.typerocket.test/docs/v5/rest-api/) JSON response.
+The HTTP callback lets you modify and respond to the [REST API's](https://typerocket.com/docs/v5/rest-api/) JSON response.
 
 ```javascript
 TypeRocket.httpCallbacks.push(function(response) {

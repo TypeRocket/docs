@@ -5,7 +5,7 @@ Description: Customize the global elements of your design with theme options.
 
 The next time you design a WordPress theme think about using TypeRocket for your theme options.
 
-TypeRocket works as a theme options framework for WordPress by providing the custom fields you need to customize your themes completely. To get started all you need to do is enable the `theme-options` plugin in the [TypeRocket configuration](https://l.rb.typerocket.test/docs/configuration/).
+TypeRocket works as a theme options framework for WordPress by providing the custom fields you need to customize your themes completely. To get started all you need to do is enable the `theme-options` plugin in the [TypeRocket configuration](https://typerocket.com/docs/configuration/).
 
 ```php
 <?php // config.php
@@ -16,7 +16,7 @@ define('TR_PLUGINS', 'seo|dev|theme-options');
 
 Theme options are commonly used to manage the global elements of a WordPress theme's design. These elements could be as simple as the copy right information at the bottom of every page; to API keys for Google Maps or Facebook Sharing.
 
-You can use any of the fields that come with the [forms api](https://l.rb.typerocket.test/docs/forms/). This means you can have 18+ types of fields.
+You can use any of the fields that come with the [forms api](https://typerocket.com/docs/forms/). This means you can have 18+ types of fields.
 
 1. Text inputs
 2. Passwords
@@ -34,8 +34,8 @@ You can use any of the fields that come with the [forms api](https://l.rb.typero
 14. Files
 15. Galleries
 16. Items lists
-17. [Matrix Fields](https://l.rb.typerocket.test/docs/matrix-field/)
-18. [Repeaters](https://l.rb.typerocket.test/docs/repeater-field/)
+17. [Matrix Fields](https://typerocket.com/docs/matrix-field/)
+18. [Repeaters](https://typerocket.com/docs/repeater-field/)
 19. Totally custom fields
 
 ## Going custom
@@ -109,13 +109,13 @@ $form->setGroup( $this->getName() );
 
 If you have debug mode enabled you will see the export/import feature at the bottom of the page. When debug mode is turned off the code hints and export/import will be removed.
 
-![TypeRocket theme options plugin and framework](https://l.rb.typerocket.test/wp-content/uploads/2015/08/tuts-theme-options.png)
+![TypeRocket theme options plugin and framework](https://typerocket.com/wp-content/uploads/2015/08/tuts-theme-options.png)
 
 ## Fields into your templates
 
 With debug mode enabled you can simply copy the code hints into any theme template file.
 
-![Theme options debug mode field hint](https://l.rb.typerocket.test/wp-content/uploads/2015/08/tuts-theme-options-field-hints.png)
+![Theme options debug mode field hint](https://typerocket.com/wp-content/uploads/2015/08/tuts-theme-options-field-hints.png)
 
 Finally, you can get the basic field types into the templates: Text, Image and Textarea.
 
@@ -156,6 +156,6 @@ If you decide to use advanced fields like repeaters and galleries you can use `v
 
 Now that you have the most basic setup you can start adding more tabs and fields.
 
-- [Tabs API](https://l.rb.typerocket.test/docs/v2/layout-tabs/)
-- [Forms API](https://l.rb.typerocket.test/docs/v2/forms/) (fields are near the bottom)
-- [Fields API](https://l.rb.typerocket.test/docs/v2/fields/)
+- [Tabs API](https://typerocket.com/docs/v2/layout-tabs/)
+- [Forms API](https://typerocket.com/docs/v2/forms/) (fields are near the bottom)
+- [Fields API](https://typerocket.com/docs/v2/fields/)

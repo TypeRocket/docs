@@ -202,7 +202,7 @@ To start working with controllers. You need to understand the [MVC design patter
 
 ### Controller JSON API Example
 
-For this example, we will create an endpoint that lists the latest published posts in WordPress. In the TypeRocket `routes.php` file [add a route](https://l.rb.typerocket.test/docs/v3/routes/#section-route-types) to the URL `/posts/published/latest/` for any GET requests. Then, point that route to a method on the `ApiController`.
+For this example, we will create an endpoint that lists the latest published posts in WordPress. In the TypeRocket `routes.php` file [add a route](https://typerocket.com/docs/v3/routes/#section-route-types) to the URL `/posts/published/latest/` for any GET requests. Then, point that route to a method on the `ApiController`.
 
 ```php
 tr_route()->get('/posts/latest/', 'latest@Api');

@@ -67,8 +67,8 @@ Method updates:
 
 Form rows and columns now have a new syntax. You can compare the versions using these links:
 
-- Pro [https://l.rb.typerocket.test/docs/v1/forms/#section-rows-columns](https://l.rb.typerocket.test/docs/v1/forms/#section-rows-columns)
-- v4 [https://l.rb.typerocket.test/docs/v4/forms/#section-field-rows](https://l.rb.typerocket.test/docs/v4/forms/#section-field-rows)
+- Pro [https://typerocket.com/docs/v1/forms/#section-rows-columns](https://typerocket.com/docs/v1/forms/#section-rows-columns)
+- v4 [https://typerocket.com/docs/v4/forms/#section-field-rows](https://typerocket.com/docs/v4/forms/#section-field-rows)
 
 ## New Routing
 
@@ -112,8 +112,8 @@ tr_config('app.seed');
 
 Custom resources are also vastly different.
 
-- Pro [https://l.rb.typerocket.test/docs/v1/custom-resources/](https://l.rb.typerocket.test/docs/v1/custom-resources/)
-- v4 [https://l.rb.typerocket.test/docs/v4/custom-resources/](https://l.rb.typerocket.test/docs/v4/custom-resources/)
+- Pro [https://typerocket.com/docs/v1/custom-resources/](https://typerocket.com/docs/v1/custom-resources/)
+- v4 [https://typerocket.com/docs/v4/custom-resources/](https://typerocket.com/docs/v4/custom-resources/)
 
 ## CSS
 

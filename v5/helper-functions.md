@@ -8,7 +8,7 @@ Description: All of the TypeRocket Helper functions
 Check if debug mode is enabled.
 
 ```php
-$bool = tr_debug()
+$bool = tr_debug();
 ```
 
 ## App Classes
@@ -27,7 +27,7 @@ and de-registration of post types and taxonomies.
 
 ```php
 $arg = 'flush_rewrite_rules';
-tr_update_site_state($arg)
+tr_update_site_state($arg);
 ```
 
 ## Container

@@ -7,7 +7,7 @@ Description: Creating and running migrations.
 
 The TypeRocket migration system requires [enabling WordPress command support to TypeRocket Galaxy](/docs/v4/galaxy-cli/#section-wp-commands). Once you enable WordPress commands you will see a new make command `make:migration`
 
-![typerocket-migration](https://l.rb.typerocket.test/wp-content/uploads/2019/04/typerocket-migration.png)
+![typerocket-migration](https://typerocket.com/wp-content/uploads/2019/04/typerocket-migration.png)
 
 ### Logging and Storing Migrations
 

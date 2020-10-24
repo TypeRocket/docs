@@ -28,7 +28,6 @@
 # UI
 - tabs: Tabs
 - tables: Tables
-- icons: Icons
 - theme-templating: Theme Templates
 - front-end-mode: Front-end Mode
 - webpack: Webpack
@@ -69,7 +68,7 @@
 - builder: Page Builder
 - theme-options: Theme Options
 - seo-extension: SEO
-- post-types-ui: Post Types UI
+- typerocket-ui: TypeRocket UI
 - extension-dev-tools: Dev Tools
 # Servers
 - nginx: Nginx

@@ -7,7 +7,7 @@ Description: Add your own custom resources and database tables to build advanced
 
 Simply put, resources are the way you access and manage custom database tables.
 
-![typerocket-resource-finished](https://l.rb.typerocket.test/wp-content/uploads/2016/09/typerocket-resource-finished.gif)
+![typerocket-resource-finished](https://typerocket.com/wp-content/uploads/2016/09/typerocket-resource-finished.gif)
 
 ## Register a Resource
 

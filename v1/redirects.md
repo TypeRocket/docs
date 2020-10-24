@@ -89,7 +89,7 @@ $redirect->back();
 
 ## With Fields
 
-To redirect with fields, use the `withOldFields()` method. This is great for when [validation](https://l.rb.typerocket.test/docs/v1/validator/) fails, and you need to [send the field data back to a form](https://l.rb.typerocket.test/docs/v1/forms/#section-use-old).  
+To redirect with fields, use the `withOldFields()` method. This is great for when [validation](https://typerocket.com/docs/v1/validator/) fails, and you need to [send the field data back to a form](https://typerocket.com/docs/v1/forms/#section-use-old).  
 
 ```php
 $redirect->withOldFields( ['field_name' => 'The field value'] );

@@ -74,7 +74,7 @@ composer create-project --prefer-dist typerocket/typerocket typerocket v3.0.9
 php galaxy use:root {database} {username} {password}
 ```
 
-![tr-root](https://l.rb.typerocket.test/wp-content/uploads/2016/09/tr-root.gif)
+![tr-root](https://typerocket.com/wp-content/uploads/2016/09/tr-root.gif)
 
 Running `use:root` will do all the legwork for you.
 

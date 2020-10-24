@@ -52,7 +52,7 @@ When you go to add or edit a page TypeRocket debug will tell you that you need t
 
 *Note: The group name will always be the name of the matrix field.*
 
-![Matrix debug](https://l.rb.typerocket.test/wp-content/uploads/2015/08/docs-matrix-example-debug.png)
+![Matrix debug](https://typerocket.com/wp-content/uploads/2015/08/docs-matrix-example-debug.png)
 
 Here TypeRocket is telling you that you need to create a folder named `page_builder` in the matrix folder you have specified in the `config.php` file.
 
@@ -62,7 +62,7 @@ By default, there is no `matrix` folder so you will need to create it as well.
 
 In the `typerocket` folder where the `config.php` file is located create a folder named `matrix`; then create a folder with the matrix folder named `page_builder`.
 
-![Matrix folder](https://l.rb.typerocket.test/wp-content/uploads/2015/08/docs-matrix-folder.png)
+![Matrix folder](https://typerocket.com/wp-content/uploads/2015/08/docs-matrix-folder.png)
 
 Now that you have created a matrix group folder you can start adding files to it. These files will be the options used by the matrix field.
 
@@ -70,11 +70,11 @@ Now that you have created a matrix group folder you can start adding files to it
 
 To build the sections for the single page design you should create three files: `banner.php`, `contact.php` and `testimonials.php`.
 
-![Matrix options](https://l.rb.typerocket.test/wp-content/uploads/2015/08/docs-matrix-options.png)
+![Matrix options](https://typerocket.com/wp-content/uploads/2015/08/docs-matrix-options.png)
 
 The Matrix field will pick up on these files and populate the options for you. This is what the front-end will look like.
 
-![Matrix front-end options](https://l.rb.typerocket.test/wp-content/uploads/2015/08/docs-matrix-options-front-end.png)
+![Matrix front-end options](https://typerocket.com/wp-content/uploads/2015/08/docs-matrix-options-front-end.png)
 
 ### Setting up each matrix option
 
@@ -109,8 +109,8 @@ echo $form->repeater('Testimonials')->setFields(array(
 
 ### Options added
 
-After you have configured the option files when an option is selected and you click "Add New" the matrix option field group will be created. You can also use the [javascript hooks](https://l.rb.typerocket.test/docs/javascript-hooks/) to do something when a group is added.
+After you have configured the option files when an option is selected and you click "Add New" the matrix option field group will be created. You can also use the [javascript hooks](https://typerocket.com/docs/javascript-hooks/) to do something when a group is added.
 
 Take a look at what you get if you add all three options. Now you can add custom content to each section and update your design as you like.
 
-![Matrix add option](https://l.rb.typerocket.test/wp-content/uploads/2015/08/docs-matrix-options-added.png)
+![Matrix add option](https://typerocket.com/wp-content/uploads/2015/08/docs-matrix-options-added.png)

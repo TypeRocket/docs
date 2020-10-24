@@ -112,7 +112,7 @@ When `TR_DEBUG` is set to `true`, as it is by default, TypeRocket shows you wher
 
 *Note: this applies to all 4 methods.*
 
-![setTitleForm Debug](https://l.rb.typerocket.test/wp-content/uploads/2015/07/docs-post-type-settitleform-debug-mode.png)
+![setTitleForm Debug](https://typerocket.com/wp-content/uploads/2015/07/docs-post-type-settitleform-debug-mode.png)
 
 ### Suggested function
 

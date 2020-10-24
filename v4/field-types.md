@@ -30,7 +30,7 @@ You can also set the text field to any HTML5 input type. For example `number`, `
 $form->text('Number')->setType('number');
 ```
 
-Keep in mind that you can also [set attributes on an input field](https://l.rb.typerocket.test/docs/v4/fields/#section-instancing-a-field-parameters) by passing an array as the attributes parameter. 
+Keep in mind that you can also [set attributes on an input field](https://typerocket.com/docs/v4/fields/#section-instancing-a-field-parameters) by passing an array as the attributes parameter. 
 
 ## Password
 
@@ -360,7 +360,7 @@ $box->setCallback(function() {
 });
 ```
 
-![Repeater field](https://l.rb.typerocket.test/wp-content/uploads/2015/07/docs-repeater-field-typerocket.png)
+![Repeater field](https://typerocket.com/wp-content/uploads/2015/07/docs-repeater-field-typerocket.png)
 
 ### Fields
 

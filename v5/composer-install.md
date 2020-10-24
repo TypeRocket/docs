@@ -12,7 +12,7 @@ Before getting started, be sure your setup supports [the TypeRocket Pro system a
 
 ## Licensing & Use
 
-Before installing TypeRocket using composer, [be aware of the licensing restrictions and our advice on how TypeRocket should be used](https://l.rb.typerocket.test/how-to-use-and-install-typerocket/).
+Before installing TypeRocket using composer, [be aware of the licensing restrictions and our advice on how TypeRocket should be used](https://typerocket.com/how-to-use-and-install-typerocket/).
 
 ## Install TypeRocket Pro with Composer
 
@@ -22,7 +22,7 @@ To install TypeRocket Pro using composer, first [download composer](https://getc
 
 ### 1. Authenticate
 
-Enable access to the TypeRocket composer repository by authenticating your server or development computer with `typerocket.repo.packagist.com` using your "Composer Token". You can access your token from [your TypeRocket account](https://l.rb.typerocket.test/account/).
+Enable access to the TypeRocket composer repository by authenticating your server or development computer with `typerocket.repo.packagist.com` using your "Composer Token". You can access your token from [your TypeRocket account](https://typerocket.com/account/).
 
 Authenticate composer by replacing the text `YOUR_TOKEN_GOES_HERE` from the following command with your token. From the command line run:
 
@@ -60,7 +60,7 @@ Plugin Name: TypeRocket Pro MU
 Description: MU plugin installation.  
 Author: TypeRocket  
 Version: 1  
-Author URI: http://l.rb.typerocket.test  
+Author URI: http://typerocket.com  
 */
 define('TR_MU_INSTALL', '/typerocket/wordpress/');  
 require ('typerocket/init.php');

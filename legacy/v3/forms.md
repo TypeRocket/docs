@@ -448,7 +448,7 @@ $form->row( $form->text('First Name'), $form->text('Last Name') );
 
 ## Use Old
 
-When using a custom resource you can load the old data submitted if the user with [redirected with fields](https://v3.l.rb.typerocket.test/docs/v3/redirects/#section-with-fields) included.
+When using a custom resource you can load the old data submitted if the user with [redirected with fields](https://v3.typerocket.com/docs/v3/redirects/#section-with-fields) included.
 
 ```php
 $form->useOld();

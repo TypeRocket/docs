@@ -5,11 +5,11 @@ Description: Adding custom fields within a meta box to WordPress posts and pages
 
 Custom fields are a necessity when your client needs to edit their own content. Maybe your client wants to have a unique banner image for their blog posts and a subheading under the title. Fields are exactly what they need to edit this custom content.
 
-![Screenshot, custom WordPress post fields](https://l.rb.typerocket.test/wp-content/uploads/2015/08/typerocket-post-custom-fields.png)
+![Screenshot, custom WordPress post fields](https://typerocket.com/wp-content/uploads/2015/08/typerocket-post-custom-fields.png)
 
 ## Adding custom fields to posts
 
-With just a few lines of code, you can add the banner and subheading fields to the WordPress `post` post type using TypeRocket. All you need to do is create a [meta box](https://l.rb.typerocket.test/docs/meta-boxes/) and add it to the `post` screen. Then you can define a content callback and create the fields you need using the [forms API](https://l.rb.typerocket.test/docs/forms/).
+With just a few lines of code, you can add the banner and subheading fields to the WordPress `post` post type using TypeRocket. All you need to do is create a [meta box](https://typerocket.com/docs/meta-boxes/) and add it to the `post` screen. Then you can define a content callback and create the fields you need using the [forms API](https://typerocket.com/docs/forms/).
 
 Here you can add everything you need in your theme's `functions.php` file.
 

@@ -39,5 +39,5 @@ In some cases, there may be updates to the TypeRocket assets. Assets include Jav
  */
 
 var typerocket = require('typerocket-assets');
-l.rb.typerocket.testpileTypeRocketAssets( './wordpress/assets' );
+typerocket.compileTypeRocketAssets( './wordpress/assets' );
 ```

@@ -36,13 +36,13 @@ The configuration file needs to be created within the `typerocket` folder. To he
 
 ## Enable API: Flushing Rewrite Rules
 
-To enable the REST API needed for TypeRocket to function properly you need to [flush the WordPress permalinks](https://l.rb.typerocket.test/flushing-permalinks-in-wordpress/). This is because the REST API registers rewrite rules. You can flush the permalinks by going to in the admin:
+To enable the REST API needed for TypeRocket to function properly you need to [flush the WordPress permalinks](https://typerocket.com/flushing-permalinks-in-wordpress/). This is because the REST API registers rewrite rules. You can flush the permalinks by going to in the admin:
 
 1. Settings
 2. Permalinks
 3. Scroll to the bottom of the permalinks page
 4. Click "Save Changes"
 
-![Flush permalinks](https://l.rb.typerocket.test/wp-content/uploads/2015/08/save-permalinks.png)
+![Flush permalinks](https://typerocket.com/wp-content/uploads/2015/08/save-permalinks.png)
 
 *Note: Any time you register a post type or change a post type ID you need to do the same.*

@@ -46,4 +46,4 @@ The TypeRocket REST API is designed to work specifically with TypeRocket forms. 
 
 The `Kernel` sends the `Request` and `Response` through appropriate middleware. At the center of the middleware if the controller for the resource. For the options resource the controller is `OptionsController`.
 
-![REST API](https://l.rb.typerocket.test/wp-content/uploads/2015/08/docs-rest-api.png)
+![REST API](https://typerocket.com/wp-content/uploads/2015/08/docs-rest-api.png)

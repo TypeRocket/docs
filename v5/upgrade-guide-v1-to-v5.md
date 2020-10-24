@@ -34,6 +34,7 @@ There several critical updates that you need to be aware of when making the upda
 All non-prefixed helper functions have been removed like `dd`, `dots_walk`, `class_names`, and `str_contains`. Also, number of helper functions have been removed:
 
 ```php
+tr_table(); // This is now Pro version only
 ```
 
 ### tr_form()
@@ -51,3 +52,19 @@ composer config repositories.pro vcs git@github.com:typerocket/professional.git
 composer require typerocket/professional
 php galaxy extension:publish typerocket/professional
 ```
+
+## Builder & Matrix Component
+
+The three directories pattern has been removed in favor of using classes and views. The directories were: `resources/visuals`, `resources/components`, and `wordpress/assets/components`. All of these have changed.
+
+We removed: `resources/visuals` and `resources/components`. Also, all thumbnails should now live under `wordpress/assets/components`.
+
+Components now live under the `app/Components` folder and are registered to the `config/components.php` file. To migrate your components use the galaxy command to create your new component classes and register them.
+
+```
+php galaxy make:component
+``` 
+
+## Icons Removed
+
+The TypeRocket icons `\TypeRocket\Elements\Icons` have been removed in favor of [the WordPress built-in options](https://developer.wordpress.org/resource/dashicons/). To upgrade your icons replace your icon names with the WordPress Dashicons.

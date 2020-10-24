@@ -24,13 +24,13 @@ $tabs->render();
 
 When tabs are added to a meta box they will have this style.
 
-![Tabs meta box](https://l.rb.typerocket.test/wp-content/uploads/2015/08/docs-tabs-meta-box.png)
+![Tabs meta box](https://typerocket.com/wp-content/uploads/2015/08/docs-tabs-meta-box.png)
 
 ## Main content tabs
 
 When tabs are added in the main content area of the admin they will have this style.
 
-![Tabs main content](https://l.rb.typerocket.test/wp-content/uploads/2015/08/docs-tabs-main-content.png)
+![Tabs main content](https://typerocket.com/wp-content/uploads/2015/08/docs-tabs-main-content.png)
 
 ## Main content box tabs
 
@@ -41,7 +41,7 @@ $tabs->render( 'box' );
 
 ```
 
-![Tabs main content box](https://l.rb.typerocket.test/wp-content/uploads/2015/08/docs-tabs-main-content-box.png)
+![Tabs main content box](https://typerocket.com/wp-content/uploads/2015/08/docs-tabs-main-content-box.png)
 
 ## Sidebars
 

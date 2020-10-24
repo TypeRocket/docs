@@ -15,7 +15,7 @@ Also, the `Form` object has quick access to the JSON API via the `useJson()` met
 tr_form('book', 'create')->useJson();
 ```
 
-The JSON API passes through the [Kernel](https://l.rb.typerocket.test/docs/v4/kernel/) [middleware](https://l.rb.typerocket.test/docs/v4/middleware/) for enhanced security. Modifications made to the Kernel will impact the JSON API.
+The JSON API passes through the [Kernel](https://typerocket.com/docs/v4/kernel/) [middleware](https://typerocket.com/docs/v4/middleware/) for enhanced security. Modifications made to the Kernel will impact the JSON API.
 
 If you encouter issues keep in mind the TypeRocket JSON API requires strict adherence to the controller action naming scheme: `showRest`, `create`, `update`, and `destroy`.
 
@@ -53,7 +53,7 @@ Registry::addTaxonomyResource('publisher', [
 
 ### Custom Resources
 
-If you want to access your [custom resource](https://l.rb.typerocket.test/docs/v4/custom-resources/) using the TypeRocket JSON API register is using the `Registry::addCustomResource()` method.
+If you want to access your [custom resource](https://typerocket.com/docs/v4/custom-resources/) using the TypeRocket JSON API register is using the `Registry::addCustomResource()` method.
 
 ```php
 Registry::addCustomResource('test', [

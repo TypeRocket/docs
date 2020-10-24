@@ -123,6 +123,6 @@ new \TypeRocket\Console\Launcher();
 
 ### Trouble Shooting
 
-If you have trouble connecting to MySQL from the Galaxy CLI you may need to change your `wp-config.php` file. You can [learn more about VM CLI access above](https://l.rb.typerocket.test/docs/v4/galaxy-cli/#section-accessing-db-from-galaxy-cli-on-host-machine).
+If you have trouble connecting to MySQL from the Galaxy CLI you may need to change your `wp-config.php` file. You can [learn more about VM CLI access above](https://typerocket.com/docs/v4/galaxy-cli/#section-accessing-db-from-galaxy-cli-on-host-machine).
 
 Also, you may need to modify this copy of the `galaxy` file to fit your installation if you have TypeRocket installed in a location other than `wp-content/plugins/typerocket-framework`.

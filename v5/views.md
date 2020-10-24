@@ -47,6 +47,8 @@ tr_view('books.add')->setTitle('Add Book');
 
 ### SEO Meta
 
+*Pro Only: This is a Pro only extension feature.*
+
 If you are using views within a post type's template file, you do not need to set SEO meta of the view. However, if you view is for anything that is not a post type you will need to set the SEO meta using the `setSeoMeta()` view method.
 
 If the view has access to the TypeRocket SEO meta from the `\TypeRocket\Extensions\SEO` extension, you can set the SEO for the page.
@@ -79,6 +81,8 @@ Will output,
 ```
 
 ## Twig Engine
+
+*Pro Only: This is a Pro only extension feature.*
 
 If you want to use [Twig](https://twig.symfony.com/) for your views, require Twig as apart of your project using `composer`.
 

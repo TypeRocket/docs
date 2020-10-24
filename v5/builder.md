@@ -15,7 +15,7 @@ define('TR_PAGE_BUILDER', false);
 
 The page builder plugin helps developers and designers work together with clients to deliver the best experience when building [modular/component-based designs](http://alistapart.com/article/language-of-modular-design).
 
-![typerocket-builder-plugin](https://l.rb.typerocket.test/wp-content/uploads/2020/02/page-builder-pro.gif)
+![typerocket-builder-plugin](https://typerocket.com/wp-content/uploads/2020/02/page-builder-pro.gif)
 
 ## Basic Usage
 
@@ -98,7 +98,7 @@ You can dynamically set thumbnails using the `tr_builder_component_thumbnails` h
 
 ```php
 $path = tr_cinfig('urls.components');
-add_filter('tr_builder_component_thumbnails', function($thumbnail, $v, $type, $name) use($path) {
+add_filter('typerocket_builder_component_thumbnails', function($thumbnail, $v, $type, $name) use($path) {
 
     if($v && $type == 'grid') {
         $cells = $v['cells_per_row'] ?: 4;

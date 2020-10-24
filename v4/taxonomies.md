@@ -147,7 +147,7 @@ $pub->setMainForm(function() {
 });
 ```
 
-![Taxonomy Custom Fields](https://l.rb.typerocket.test/wp-content/uploads/2016/09/typerocket-taxonomy-fields.png)
+![Taxonomy Custom Fields](https://typerocket.com/wp-content/uploads/2016/09/typerocket-taxonomy-fields.png)
 
 ## Arguments
 

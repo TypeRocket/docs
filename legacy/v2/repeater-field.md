@@ -26,7 +26,7 @@ $box->setCallback(function() {
 });
 ```
 
-![Repeater field](https://l.rb.typerocket.test/wp-content/uploads/2015/07/docs-repeater-field-typerocket.png)
+![Repeater field](https://typerocket.com/wp-content/uploads/2015/07/docs-repeater-field-typerocket.png)
 
 ## Fields
 
@@ -65,4 +65,4 @@ $form->repeater('Speakers')->appendField($nameField);
 
 ## JavaScript Hook
 
-You can also use the [javascript hooks](https://l.rb.typerocket.test/docs/javascript-hooks/) to do something when a repeater field group is added.
+You can also use the [javascript hooks](https://typerocket.com/docs/javascript-hooks/) to do something when a repeater field group is added.
