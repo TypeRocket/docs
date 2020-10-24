@@ -27,7 +27,7 @@ There are two recommended ways to download and install TypeRocket Pro using comp
 
 For beginners, the MU install is the fittest place to start.
 
-*Note: Only one installation type is required for TypeRocket to work. Either the theme install or the root install. Also, you should not install TypeRocket into an existing plugin or theme.*
+*Note: Only one installation type is required for TypeRocket to work. Either the MU plugin install or the root install. Also, you should not install TypeRocket into an existing plugin or theme.*
 
 ### 2.1 MU Install
 
