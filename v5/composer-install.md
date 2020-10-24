@@ -6,9 +6,9 @@ Description: Installing TypeRocket Pro with Composer
 
 ## Requirements
 
-Before getting started, be sure your setup supports [the TypeRocket Pro system and browser requirements](/docs/v5/requirements).
+Before getting started, be sure your setup supports [the TypeRocket system and browser requirements](/docs/v5/requirements).
 
-**Important**: Pro users with a Plus or Max license will have access to composer. Single site licenses do not have composer access.
+**Important**: Pro users with a Plus or Max license will have access to composer via github for the pro extension. Single site licenses do not have composer access for the pro extension.
 
 ## Licensing & Use
 
@@ -16,21 +16,7 @@ Before installing TypeRocket using composer, [be aware of the licensing restrict
 
 ## Install TypeRocket Pro with Composer
 
-To install TypeRocket Pro using composer, first [download composer](https://getcomposer.org/download/) and install it globally. You can [read the full instructions on the composer.org website](https://getcomposer.org/doc/00-intro.md).
-
-**Important**: Composer `1.10.0+` is required. If you do not have the latest version of Composer you can update using the command `composer selfupdate --stable`.
-
-### 1. Authenticate
-
-Enable access to the TypeRocket composer repository by authenticating your server or development computer with `typerocket.repo.packagist.com` using your "Composer Token". You can access your token from [your TypeRocket account](https://typerocket.com/account/).
-
-Authenticate composer by replacing the text `YOUR_TOKEN_GOES_HERE` from the following command with your token. From the command line run:
-
-```
-composer config --global --auth http-basic.typerocket.repo.packagist.com token YOUR_TOKEN_GOES_HERE
-```
-
-*Note: Token authentication is required only once per machine or server.*
+To install TypeRocket using composer, first [download composer](https://getcomposer.org/download/) and install it globally. You can [read the full instructions on the composer.org website](https://getcomposer.org/doc/00-intro.md).
 
 ### 2. Installation Types
 
@@ -45,10 +31,10 @@ For beginners, the MU install is the fittest place to start.
 
 ### 2.1 MU Install
 
-From the command line, go to your `wordpress/wp-content/mu-plugins` folder. Then, replace `YOUR_URL_HERE` in the following command with the "Composer URL" from your acount page and run it:
+From the command line, go to your `wordpress/wp-content/mu-plugins` folder.
 
 ```
-composer create-project --prefer-dist typerocket/pro typerocket --add-repository --repository=YOUR_URL_HERE
+composer create-project --prefer-dist typerocket/typerocket typerocket
 ```
 
 Finally, in the root of your [WordPress MU plugins folder](https://wordpress.org/support/article/must-use-plugins/) create a PHP file named `typerocket.php` and add the following.
@@ -70,10 +56,10 @@ require ('typerocket/init.php');
 
 *Note: You do not need to install WordPress before doing a root install.*
 
-To install TypeRocket as your root application, create the TypeRocket Pro project in a new location run from the command line. Replace `YOUR_URL_HERE` in the following command with the "Composer URL" from your account page and run it:
+To install TypeRocket as your root application, create the TypeRocket Pro project in a new location run from the command line.
 
 ```
-composer create-project --prefer-dist typerocket/pro typerocket --add-repository --repository=YOUR_URL_HERE
+composer create-project --prefer-dist typerocket/typerocket typerocket
 cd typerocket
 ```
 
@@ -87,10 +73,10 @@ TypeRocket root install is now complete. You can access the WordPress files from
 
 #### PHP Server
 
-Optionally, if you do not have a web server configured, you can use the built-in TypeRocket PHP server on your local machine to view your WordPress site. From the command line, navigate to the `typerocket/wordpress` folder and run the following command:
+Optionally, if you do not have a web server configured, you can use the built-in TypeRocket PHP server on your local machine to view your WordPress site.
 
 ```
-php -S localhost:8888 ../server.php
+php -S localhost:8888 -t wordpress server.php
 ```
 
 In your browser, visit `localhost:8888` to view the WordPress install page.
@@ -125,3 +111,17 @@ require_once(ABSPATH . 'wp-settings.php');
 ## Updating
 
 To update TypeRocket run `composer update`. This will update all the PHP code and JS/CSS assets.
+
+## Pro - Install
+
+*Note: These directions are going to change.*
+
+After creating your composer project run these command (you will need github access). Commands in full are:
+
+```
+composer create-project --prefer-dist typerocket/typerocket
+cd typerocket
+composer config repositories.pro vcs git@github.com:typerocket/professional.git
+composer require typerocket/professional
+php galaxy extension:publish typerocket/professional
+```
