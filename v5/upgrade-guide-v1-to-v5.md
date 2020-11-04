@@ -49,15 +49,7 @@ The `tr_form()` function now load the `App/Elements/Form` class instead of `Type
 
 ## Pro Extension Publishing
 
-Previously in Typerocket Pro v1 all features were included. With TypeRocket v5 you will need to also publish the professional extension after installing it with `composer`.
-
-```bash
-composer create-project --prefer-dist typerocket/typerocket
-cd typerocket
-composer config repositories.pro vcs git@github.com:typerocket/professional.git
-composer require typerocket/professional
-php galaxy extension:publish typerocket/professional
-```
+Previously in Typerocket Pro v1 all features were included. With TypeRocket v5 you will need to also require `typerocket/professional` and then publish the professional package after installing it with `composer`.
 
 ## Builder & Matrix Component
 
