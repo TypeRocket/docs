@@ -27,7 +27,7 @@ Here is all the code it takes to create the listed features. We will break the c
 ```php
 // Setup
 $team = tr_post_type('Person', 'Team');
-$team->setIcon('users');
+$team->setIcon('dashicons-groups');
 $team->setSupports(['title']);
 $team->setTitlePlaceholder( 'Enter full name here' );
 $team->setRest();
@@ -72,8 +72,7 @@ That is it! The `tr_post_type()` function adds the post type. No WordPress `add_
 Set the icon for the post type with one of the 200+ icons from TypeRocket or using one of the 200+ [WordPress dashicons](https://developer.wordpress.org/resource/dashicons/).
 
 ```php
-$team->setIcon('dashicons-groups'); // WordPress dashicon
-$team->setIcon('users'); // Or, TypeRocket icon
+$team->setIcon('dashicons-groups');
 ```
 
 ### Choose Your Supported Features

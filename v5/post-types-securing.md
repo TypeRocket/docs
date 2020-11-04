@@ -38,7 +38,7 @@ use \TypeRocket\Models\WPPost;
 
 class Person extends WPPost
 {
-    protected $postType = 'person';
+    public const POST_TYPE = 'person';
 
     protected $fillable = [
         'photo',
@@ -72,7 +72,7 @@ use \TypeRocket\Models\WPPost;
 
 class Person extends WPPost
 {
-    protected $postType = 'person';
+    public const POST_TYPE = 'person';
 
     protected $fillable = [
         'photo',

@@ -94,10 +94,10 @@ This command will create two files in `builder` folders.
 
 ## Dynamic Thumbnails
 
-You can dynamically set thumbnails using the `tr_builder_component_thumbnails` hook. This is helpful if a field setting within your component changes the visual representation of the component.
+You can dynamically set thumbnails using the `typerocket_builder_component_thumbnails` hook. This is helpful if a field setting within your component changes the visual representation of the component.
 
 ```php
-$path = tr_cinfig('urls.components');
+$path = tr_config('urls.components');
 add_filter('typerocket_builder_component_thumbnails', function($thumbnail, $v, $type, $name) use($path) {
 
     if($v && $type == 'grid') {

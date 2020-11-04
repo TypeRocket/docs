@@ -65,10 +65,11 @@
 - javascript-hooks: JS Hooks
 # Extensions
 - custom-composer-packages: Custom Extensions
-- builder: Page Builder
-- theme-options: Theme Options
-- seo-extension: SEO
-- typerocket-ui: TypeRocket UI
+- extension-page-builder: Page Builder
+- extension-theme-options: Theme Options
+- extension-seo: SEO
+- extension-rapid-pages: SEO
+- extension-typerocket-ui: TypeRocket UI
 - extension-dev-tools: Dev Tools
 # Servers
 - nginx: Nginx

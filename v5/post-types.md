@@ -108,19 +108,11 @@ $boxPages->setCallback(function(){
 
 ## Setting an Icon
 
-To set a custom menu icon use the `setIcon()` method.
-
-```php
-$book->setIcon('book');
-```
-
-If you want to use a [WordPress dashicon](https://developer.wordpress.org/resource/dashicons) you must use the prefixed dashicon name:
+To set a custom menu icon use the `setIcon()` method and a [WordPress dashicon](https://developer.wordpress.org/resource/dashicons).
 
 ```php
 $book->setIcon('dashicons-book');
 ```
-
-*Note: Browse the “dev” TypeRocket page in the WordPress admin under the "Icons" tab to see the list of icons provided by TypeRocket.*
 
 ## Title Placeholder Text
 
@@ -140,7 +132,7 @@ Take a look at opening up a content section after the title area.
 $book->setTitleForm();
 ```
 
-When `TR_DEBUG` is set to `true`, as it is by default, TypeRocket shows you where the section was opened and suggests a function to be used to add content.
+When `WP_DEBUG` is set to `true` TypeRocket shows you where the section was opened and suggests a function to be used to add content.
 
 *Note: this applies to all four methods.*
 
@@ -231,7 +223,7 @@ For more control you can use `setArchiveQueryKey($key, $value)` to control speci
 
 ```php
 // Same as $member->setArchivePostsPerPage(-1)
-$member->setArchiveQueryKey('posts_per_page', -1)
+$member->setArchiveQueryKey('posts_per_page', -1);
 ```
 
 Also, you can remove an archive query key, but this only applies to the specific TypeRocket created post type instance.
@@ -424,13 +416,13 @@ If you have edited your `app.php` config file with your own custom Gutenberg fea
 ### Enable
 
 ```php
-$team->enableGutenberg()
+$team->enableGutenberg();
 ```
 
 ### Disable
 
 ```php
-$team->forceDisableGutenberg()
+$team->forceDisableGutenberg();
 ```
 
 ## Add Support
@@ -450,7 +442,7 @@ Add support for a WordPress feature:
 - `post-formats`: Add post formats.
 
 ```php
-$symbol = tr_post_type('Symbol')
+$symbol = tr_post_type('Symbol');
 $symbol->addSupport('comments');
 ```
 
@@ -473,7 +465,7 @@ $symbol->featureless();
 To make a post type hierarchicle:
 
 ```php
-$species = tr_post_type('Species')
+$species = tr_post_type('Species');
 $species->setHierarchical(true);
 ```
 
@@ -482,7 +474,7 @@ $species->setHierarchical(true);
 To exclude a post type from search:
 
 ```php
-$code = tr_post_type('Code')
+$code = tr_post_type('Code');
 $code->excludeFromSearch(true);
 ```
 
@@ -491,7 +483,7 @@ $code->excludeFromSearch(true);
 To delete a user's posts in a post type when that user is deleted:
 
 ```php
-$code = tr_post_type('Code')
+$code = tr_post_type('Code');
 $code->deleteWithUser(true);
 ```
 
@@ -500,7 +492,7 @@ $code->deleteWithUser(true);
 To set the post type menu position:
 
 ```php
-$code = tr_post_type('Code')
+$code = tr_post_type('Code');
 $code->setPosition(25);
 ```
 
@@ -511,7 +503,7 @@ The number can be from 5 to 100.
 If you would like to set custom capabilities for a post type, use the `customCapabilities()` method. This method will replace the post type's capability settings with the singular and plural post type name.
 
 ```php
-$product = tr_post_type('Product')
+$product = tr_post_type('Product');
 $product->customCapabilities();
 
 // Capabilities will become:

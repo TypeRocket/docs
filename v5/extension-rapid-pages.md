@@ -1,15 +1,15 @@
-Title: Static Page Generator
+Title: Rapid Pages
 Description: Create static page caches to point your web server at for improved performance.
 
 ---
 
 ## Nginx Configuration
 
-Once you have enabled the `TypeRocketPro\Extension\StaticPageGenerator` you will need to configure your web server to the cached files. With Nginx, you can use the `map` directive with custom variables to show the cache with `try_files` to guest users only.   
+Once you have enabled the `TypeRocketPro\Extension\RapidPages` you will need to configure your web server to the cached files. With Nginx, you can use the `map` directive with custom variables to show the cache with `try_files` to guest users only.   
 
 ```
 map $http_cookie $cachefiles {
-    default "/tr_cache/$new_request_uri.html";
+    default "/tr_cache/rapid_cache/$new_request_uri.html";
     "~*wordpress_logged_in" "";
 }
 

@@ -3,7 +3,6 @@ Description: Installing TypeRocket Pro with Composer
 
 ---
 
-
 ## Requirements
 
 Before getting started, be sure your setup supports [the TypeRocket system and browser requirements](/docs/v5/requirements).
@@ -14,13 +13,15 @@ Before getting started, be sure your setup supports [the TypeRocket system and b
 
 Before installing TypeRocket using composer, [be aware of the licensing restrictions and our advice on how TypeRocket should be used](https://typerocket.com/how-to-use-and-install-typerocket/).
 
-## Install TypeRocket Pro with Composer
+## Install TypeRocket with Composer
+
+**Important**: Composer `2.0+` is required.
 
 To install TypeRocket using composer, first [download composer](https://getcomposer.org/download/) and install it globally. You can [read the full instructions on the composer.org website](https://getcomposer.org/doc/00-intro.md).
 
 ### 2. Installation Types
 
-There are two recommended ways to download and install TypeRocket Pro using composer:
+There are two recommended ways to download and install TypeRocket using composer:
 
 1. WordPress MU Plugin install.
 2. Root install.
@@ -42,13 +43,13 @@ Finally, in the root of your [WordPress MU plugins folder](https://wordpress.org
 ```php
 <?php
 /*
-Plugin Name: TypeRocket Pro MU  
+Plugin Name: TypeRocket MU  
 Description: MU plugin installation.  
 Author: TypeRocket  
-Version: 1  
+Version: 5  
 Author URI: http://typerocket.com  
 */
-define('TR_MU_INSTALL', '/typerocket/wordpress/');  
+define('TYPEROCKET_MU_INSTALL', '/typerocket/wordpress/');  
 require ('typerocket/init.php');
 ```
 
@@ -87,15 +88,12 @@ Running `root:install` will:
 
 - Downloads WordPress in the `wordpress` folder where the assets are located.
 - Creates the `wp-config.php` file in the main TypeRocket folder.
-- Enables TypeRocket's root theme and removes all WordPress themes.
-- Installs TypeRocket MU plugin allowing for theme URL overrides.
+- Enables TypeRocket's root theme as the default.
 - Add `require __DIR__ . '/init.php';` to your `wp-config.php`.
 
 #### Deploying A Root Install
 
-When pushing your code to a production server, ensure that you have the correct `wp-config.php` settings, the MU TypeRocket WordPress plugin, and the correct TypeRocket configuration.
-
-Note, when rooting TypeRocket `wp-config.php` is modified and `init.php` is required after the `ABSPATH` is defined. This is important to note because you need to require the `init.php` in `wp-config.php` for production and not just development.
+When pushing your code to a production server, ensure that you have the correct `wp-config.php` settings. Note, when rooting TypeRocket `wp-config.php` is modified and `init.php` is required after the `ABSPATH` is defined. This is important to note because you need to require the `init.php` in `wp-config.php` for production and not just development.
 
 ```php
 /** Absolute path to the WordPress directory. */
@@ -112,16 +110,31 @@ require_once(ABSPATH . 'wp-settings.php');
 
 To update TypeRocket run `composer update`. This will update all the PHP code and JS/CSS assets.
 
-## Pro - Install
+## Pro
 
-*Note: These directions are going to change.*
+If you are using TypeRocket Pro and have composer access with your license you can follow these instructions to get `typerocket/professional` installed.
 
-After creating your composer project run these command (you will need github access). Commands in full are:
+### 1. Authenticate
+
+Enable access to the TypeRocket composer repository by authenticating your server or development computer with `typerocket.repo.packagist.com` using your "Composer Token". You can access your token from [your TypeRocket account](https://typerocket.com/account/).
+
+Authenticate composer by replacing the text `YOUR_TOKEN_GOES_HERE` from the following command with your token. From the command line run:
 
 ```
-composer create-project --prefer-dist typerocket/typerocket
+composer config --global --auth http-basic.typerocket.repo.packagist.com token YOUR_TOKEN_GOES_HERE
+```
+
+*Note: Token authentication is required only once per machine or server.*
+
+### 2. Install
+
+After you have added composer auth access from [your TypeRocket account](https://typerocket.com/account/). 
+Run these commands but replace `YOUR_URL_HERE` with the "Composer URL" from your account page:
+
+```
+composer create-project --prefer-dist typerocket/typerocket typerocket
 cd typerocket
-composer config repositories.pro vcs git@github.com:typerocket/professional.git
+composer config repositories.pro '{"type": "composer","url": "YOUR_URL_HERE","only": ["typerocket/professional"]}'
 composer require typerocket/professional
 php galaxy extension:publish typerocket/professional
 ```

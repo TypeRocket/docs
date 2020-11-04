@@ -25,3 +25,9 @@ Fully supported browsers include:
 - Firefox
 - Chrome
 - Safari
+
+### Composer
+
+If you are using composer:
+
+- Composer `2.0+` is required

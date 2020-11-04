@@ -45,8 +45,8 @@ You can add headers:
 
 ```php
 $http->headers([
-    'Content-Type: application/json',
-	'X-Custom: value'
+    'Content-Type' => 'application/json',
+	'X-Custom' => 'value'
 ]);
 ```
 
@@ -104,8 +104,8 @@ Execute the curl request and get the returned value.
 
 ```php
 $json = true; // Make request as JSON
-$returned = $http->exec()
+$returned = $http->exec();
 ```
 
-The returned value is a `CurlResponse` object;
+The returned value is a `CurlResponse` object.
 
