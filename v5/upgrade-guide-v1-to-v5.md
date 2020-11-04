@@ -71,6 +71,8 @@ Components now live under the `app/Components` folder and are registered to the 
 php galaxy make:component
 ``` 
 
+Dynamic component thumbnails have been updated to no longer required the hook `tr_builder_component_thumbnails`. You can now control the thumbnail through the component class.
+
 ## Icons Removed
 
 The TypeRocket icons `\TypeRocket\Elements\Icons` have been removed in favor of [the WordPress built-in options](https://developer.wordpress.org/resource/dashicons/). To upgrade your icons replace your icon names with the WordPress Dashicons.
