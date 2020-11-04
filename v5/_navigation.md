@@ -2,8 +2,8 @@
 - upgrade-guide-v1-to-v5: Upgrading v1 to v5
 # Installation
 - requirements: Requirements
-- plugin-install: Plugin Install
-- composer-install: Composer Install
+- install-via-plugin: Plugin Install
+- install-via-composer: Composer Install
 - configuration: Configuration
 - updating: Updating
 # Getting Started

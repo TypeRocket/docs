@@ -9,7 +9,7 @@ Before getting started, be sure your setup supports [the TypeRocket system and b
 
 ## Plugin Installation
 
-Anyone can download and enjoy TypeRocket from [here](#link-comming-soon).
+Anyone can download and enjoy TypeRocket from [here](https://typerocket.com/downloads/v5.zip).
 
 If you have the pro version... install TypeRocket plugin for WordPress [go to your account](/account/) and download the plugin zip file. Find the download link at the bottom of your "Purchase Receipt" page.
 

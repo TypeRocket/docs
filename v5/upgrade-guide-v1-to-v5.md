@@ -3,7 +3,13 @@ Description: Upgrading TypeRocket v1 to v5
 
 ---
 
-**TypeRocket Pro v5** is not fully backward compatible with **TypeRocket v4**. You will need to make a number of updates to get TypeRocket v4 to work. Because Typerocket v5 is such a big update, it is best to create a new TypeRocket v5 project and then migrate your existing v4 sites into TypeRocket v5.
+## Start A New Project
+
+New to TypeRocket? Start with the installation guide for the [plugin](/docs/v5/install-via-plugin) or [composer](/docs/v5/install-via-composer).
+
+## Upgrading From v1
+
+**TypeRocket Pro v5** is not fully backward compatible with **TypeRocket v4**. You will need to make a number of updates to get TypeRocket v4 to work. Because Typerocket v5 is such a big update, it is best to create a new TypeRocket v5 project and then migrate your existing v4 sites into TypeRocket v5. If you are coming from TypeRocket Pro v1 upgrading should take no more than an hour depending on your project size. 
 
 **IMPORTANT NOTICE**: This is not a comprehensive upgrade guide and is still being updated as we look to officially release Typerocket v5.
 
