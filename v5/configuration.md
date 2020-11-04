@@ -24,10 +24,10 @@ $value = tr_config('app.debug', false);
 
 ## Defining Configuration Values
 
-Because WordPress uses constants for user-defined variables over env variables, TypeRocket provides the `immutable()` function for accessing a constant but also provides a default value if it is not found.
+Because WordPress uses constants for user-defined variables over env variables, TypeRocket provides the `typerocket_env()` function for accessing a constant but also provides a default value if it is not found.
 
 ```php
-immutable('WP_DEBUG', true);
+typerocket_env('WP_DEBUG', true);
 ```
 
 You can use this function when creating your configuration options.
@@ -39,7 +39,7 @@ In your `config/app.php` file, you can add and remove extensions loaded by TypeR
 The `extensions` settings take a key-value array of with key as the class name and the value as an array of arguments that will be used by the extension class' constructor. 
 
 ```php
-/*  
+/*
 |--------------------------------------------------------------------------  
 | Extensions  
 |--------------------------------------------------------------------------  
@@ -48,12 +48,25 @@ The `extensions` settings take a key-value array of with key as the class name a
 |  
 */  
 'extensions' => [  
-  '\TypeRocket\Extensions\Seo' => [ null ],  
-  '\TypeRocket\Extensions\PageBuilder' => null,  
-  '\TypeRocket\Extensions\PostTypesUI' => null,  
-  '\TypeRocket\Extensions\ThemeOptions' => null,  
-  '\TypeRocket\Extensions\DevTools' => [ true ],  
-  '\TypeRocket\Extensions\PostMessages' => null,  
-  '\TypeRocket\Extensions\Gutenberg' => [ true ],  
+  '\TypeRocket\Extensions\PostMessages',
+  '\TypeRocket\Extensions\PageBuilder',
+  '\TypeRocket\Extensions\TypeRocketUI',
 ],
+```
+
+### Pro
+
+TypeRocket Pro also comes with these additional extensions:
+
+```php
+'extensions' => [
+   // ... 
+  '\TypeRocketPro\Extensions\ThemeOptions',
+  '\TypeRocketPro\Extensions\DevTools',
+  '\TypeRocketPro\Extensions\Seo',
+  '\TypeRocketPro\Extensions\RapidPages',
+  '\TypeRocketPro\Extensions\HidePostMenu',
+  '\TypeRocketPro\Extensions\DisableComments',
+  '\TypeRocketPro\Extensions\GutenbergRemover',
+]
 ```

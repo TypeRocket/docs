@@ -68,7 +68,7 @@
 - extension-page-builder: Page Builder
 - extension-theme-options: Theme Options
 - extension-seo: SEO
-- extension-rapid-pages: SEO
+- extension-rapid-pages: Rapid Pages
 - extension-typerocket-ui: TypeRocket UI
 - extension-dev-tools: Dev Tools
 # Servers

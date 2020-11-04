@@ -126,7 +126,7 @@ To customize the Twig config add a new config file named `config/twig.php` with 
 ```php
 return [
     'env' => [
-         'debug' => immutable('WP_DEBUG', true),
+         'debug' => typerocket_env('WP_DEBUG', true),
          'cache' => tr_config('paths.cache') . '/twig',
     ]
 ];
