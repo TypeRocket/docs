@@ -69,7 +69,7 @@ That is it! The `tr_post_type()` function adds the post type. No WordPress `add_
 
 ### Adding an Icon
 
-Set the icon for the post type with one of the 200+ icons from TypeRocket or using one of the 200+ [WordPress dashicons](https://developer.wordpress.org/resource/dashicons/).
+Set the icon for the post type with one of the 200+ [WordPress Dashicons](https://developer.wordpress.org/resource/dashicons/).
 
 ```php
 $team->setIcon('dashicons-groups');
