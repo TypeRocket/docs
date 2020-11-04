@@ -24,4 +24,4 @@ From the toolbar, you can view all of your database queries is you have `define(
 
 Also, you can quickly flush the WordPress rewrite rules from the toolbar by clicking the "Flush Rules" tab.
 
-You can disable the toolbar by adding `define('TR_DEV_TOOLBAR', false);` to your `wp-config.php`.
+You can disable the toolbar by adding `define('TYPEROCKET_DEV_TOOLBAR', false);` to your `wp-config.php`.

@@ -101,7 +101,7 @@ $pub->setHierarchical();
 Whether to show the taxonomy in the quick/bulk edit panel.
 
 ```php
-$pub->showQuickEdit(true)
+$pub->showQuickEdit(true);
 ```
 
 ## Show Post Type Admin Column
@@ -109,7 +109,7 @@ $pub->showQuickEdit(true)
 Whether to allow automatic creation of taxonomy columns on associated post-types table.
 
 ```php
-$pub->showPostTypeAdminColumn(true)
+$pub->showPostTypeAdminColumn(true);
 ```
 
 ## Set Rest
@@ -117,7 +117,7 @@ $pub->showPostTypeAdminColumn(true)
 Add taxonomy to the REST API and set the base path.
 
 ```php
-$pub->setRest('publishers')
+$pub->setRest('publishers');
 ```
 
 
@@ -225,7 +225,7 @@ $pub->setArgument( 'public', $public );
 If you would like to set custom capabilities for a taxonomy, use the `customCapabilities()` method. This method will replace the taxonomy's capability settings with the singular and plural taxonomy name.
 
 ```php
-$pub = tr_taxonomy('Publisher')
+$pub = tr_taxonomy('Publisher');
 $pub->customCapabilities();
 
 // Capabilities will become:

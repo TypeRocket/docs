@@ -148,8 +148,8 @@ Add the following code to your `galaxy-config.php` and point the `$typerocket` v
 <?php
 // galaxy-config.php
 $typerocket = __DIR__ . '/wp-content/plugins/typerocket-pro-plugin/typerocket';
-define('TR_GALAXY_PATH', $typerocket);
-define('TR_CORE_CONFIG_PATH', $typerocket . '/config' );
+define('TYPEROCKET_GALAXY_PATH', $typerocket);
+define('TYPEROCKET_CORE_CONFIG_PATH', $typerocket . '/config' );
 ```
 
 Also, you might want to update where the galaxy command creates new files like models and controllers.
@@ -157,7 +157,7 @@ Also, you might want to update where the galaxy command creates new files like m
 ```php
 // The folder that contains your app folder
 // not the app folder itself
-define('TR_APP_ROOT_PATH', __DIR__ . '/wp-content/themes/my-theme');
+define('TYPEROCKET_APP_ROOT_PATH', __DIR__ . '/wp-content/themes/my-theme');
 ``` 
 
 ### Trouble Shooting

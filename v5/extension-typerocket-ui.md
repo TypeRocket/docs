@@ -17,8 +17,8 @@ You can also move the menu location of the Post Types UI to another location by 
 
 ```php
 // Add to the tools menu
-define('TR_POST_TYPES_MENU', 'tools');
+define('TYPEROCKET_POST_TYPES_MENU', 'tools');
 
 // Add to the setings menu
-define('TR_POST_TYPES_MENU', 'settings');
+define('TYPEROCKET_POST_TYPES_MENU', 'settings');
 ```

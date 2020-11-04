@@ -453,7 +453,7 @@ $form->location('Location');
 To enable google maps add your Google Maps API key to your `wp-config.php` file:
 
 ```php
-define('TR_GOOGLE_MAPS_API_KEY', 'yourapikeyhere');
+define('TYPEROCKET_GOOGLE_MAPS_API_KEY', 'yourapikeyhere');
 ```
 
 You can also add your API key in the TypeRocket default theme options or under `config/external.php`.

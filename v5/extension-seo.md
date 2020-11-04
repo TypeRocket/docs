@@ -16,7 +16,7 @@ add_theme_support( 'title-tag' );
 If you want to disabled the SEO extension, you can remove it from the extensions list or add the following to your `wp-config.php`.
 
 ```php
-define('TR_SEO', false);
+define('TYPEROCKET_SEO', false);
 ```
 
 If Yoast SEO or All in One SEO Pack are installed the TypeRocket's SEO extension will get disabled automatically.

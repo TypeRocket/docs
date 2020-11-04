@@ -8,7 +8,7 @@ Description: Build modular designs in a slide deck style.
 By default, the Page Builder will be the default editor for WordPress pages. To replace it with Gutenberg, add the following to your `wp-config.php` file.
 
 ```php
-define('TR_PAGE_BUILDER', false);
+define('TYPEROCKET_PAGE_BUILDER', false);
 ```
 
 ## About Page Builder
