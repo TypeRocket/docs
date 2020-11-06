@@ -207,3 +207,19 @@ $rquest->getDataFiles();
 $all = $request->getDataCookies();
 $single = $rquest->getDataCookies('my_cookie');
 ```
+
+## Check Nonce
+
+The `checkNonce()` method is used by the `\App\Http\Middleware\VerifyNonce` middleware used by TypeRocket for all Kernel requests using the middleware class. It returns true if the check passes.
+
+```php
+$request->checkNonce();
+```
+
+### Axios
+
+If you are using [axios](https://github.com/axios/axios) you can set a common header for the WordPress nonce TypeRocket uses.
+
+```javascript
+axios.defaults.headers.common['X-WP-NONCE'] = window.trHelpers.nonce;
+```

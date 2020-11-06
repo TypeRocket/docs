@@ -9,12 +9,12 @@ The `Request` object has several methods for working with the HTTP request.
 
 ## Make Request
 
+You can make a `\TypeRocket\Http\Request` object 3 ways:
+
 ```php
 $request = new \TypeRocket\Http\Request();
-
-// Or...
-
 $request = tr_request();
+$request = \TypeRocket\Http\Request::new();
 ```
 
 ## Get Fields
@@ -40,12 +40,26 @@ $fields =  $request->fields();
 $field = $request->fields('field_name');
 ```
 
+## Get Form Prefix
+
+If you are using `echo $form->open()` you will be able to access the form prefix used by the form from the request.
+
+```php
+$prefix = $request->getFormPrefix();
+```
+
 ## Get Path
 
 Get the request path.
 
 ```php
 $path = $request->getPath();
+```
+
+Or, exploded path.
+
+```php
+$path = $request->getPathExploded();
 ```
 
 ## Get URI
@@ -76,6 +90,14 @@ Get the Host.
 
 ```php
 $host = $request->gethost();
+```
+
+## Get Protocol
+
+Get the protocol.
+
+```php
+$host = $request->getProtocol();
 ```
 
 ## Get Form Method
@@ -207,3 +229,29 @@ $rquest->getDataFiles();
 $all = $request->getDataCookies();
 $single = $rquest->getDataCookies('my_cookie');
 ```
+
+## Check Nonce
+
+The `checkNonce()` method is used by the `\App\Http\Middleware\VerifyNonce` middleware used by TypeRocket for all Kernel requests using the middleware class. It returns true if the check passes.
+
+```php
+$request->checkNonce();
+```
+
+### Axios
+
+If you are using [axios](https://github.com/axios/axios) you can set a common header for the WordPress nonce TypeRocket uses.
+
+```javascript
+axios.defaults.headers.common['X-WP-NONCE'] = window.trHelpers.nonce;
+```
+
+## Check Honeypot
+
+It returns true if the check passes. The check looks for any fields within the request group `$_REQUEST['__hny']`.
+
+```php
+$request->checkHoneypot();
+```
+
+This method is used by the `\TypeRocket\Http\Middleware\CheckSpamHoneypot` middleware class. Also, you can add the honeypot fields to any HTML `<form>` by using the static method `\TypeRocket\Elements\BaseForm::honeypotInputs()`.
