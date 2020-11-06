@@ -1,4 +1,5 @@
 # Prologue
+- get-started: Getting Started
 - upgrade-guide-v1-to-v5: Upgrading v1 to v5
 # Installation
 - requirements: Requirements

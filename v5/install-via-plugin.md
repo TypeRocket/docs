@@ -7,13 +7,15 @@ Description: How to install TypeRocket Pro.
 
 Before getting started, be sure your setup supports [the TypeRocket system and browser requirements](/docs/v5/requirements).
 
+*Note: Do not modify the TypeRocket plugin files. You would only extend TypeRocket using available hooks and `wp-config.php` constants. When the documentation tells you to edit TypeRocket files, those edits should be made to your version of those files.*
+
 ## Plugin Installation
 
-Anyone can download and enjoy TypeRocket from [here](https://typerocket.com/downloads/v5.zip).
+Anyone can download and [enjoy TypeRocket for free here](https://typerocket.com/downloads/v5.zip).
 
-If you have the pro version... install TypeRocket plugin for WordPress [go to your account](/account/) and download the plugin zip file. Find the download link at the bottom of your "Purchase Receipt" page.
+### Pro Plugin Install
 
-*Note: Do not modify the TypeRocket plugin files. You would only extend TypeRocket using available hooks and `wp-config.php` constants. When the documentation tells you to edit TypeRocket files, those edits should be made to your version of those files.*
+To install the TypeRocket Pro plugin [go to your account](/account/) and download the plugin zip file. Find the download link at the bottom of your "Purchase Receipt" page.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-VkAydury5c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
