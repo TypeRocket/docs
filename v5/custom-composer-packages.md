@@ -35,7 +35,7 @@ You can have multiple package publishers if you like. Each publisher should be l
 php galaxy extension:publish my-vendor/my-package feature-2
 ```
 
-### Publish Scripts
+## Publish Scripts
 
 You can anything you want into a publisher script. Here is an example:
 
