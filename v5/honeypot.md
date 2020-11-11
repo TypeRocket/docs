@@ -7,20 +7,20 @@ Description: Form honeypot protection.
 
 A form honeypot can help reduce the amount of spam your receive. You can add a honeypot to your forms by using `tr_honeypot_fields()` function inside your front-end forms.
 
+```html
+<form action="form-endpoint">
+<?php echo tr_honeypot_fields(); ?>
+</form>
+```
+
+Or, in TypeRocket forms.
+
 ```php
 $form = tr_from([])->toRoute('form');
 echo $form->open();
 echo $form->honeypot();
 echo $form->text('Name');
 echo $form->close('Save');
-```
-
-Or, with HTML forms.
-
-```html
-<form action="form-endpoint">
-<?php echo tr_honeypot_fields(); ?>
-</form>
 ```
 
 Next, you need to check the honeypot to see if a bot touched it. Do this by adding the `\TypeRocket\Http\Middleware\CheckSpamHoneypot` [middleware](/docs/v5/middleware/) to the middleware group your form is using.
