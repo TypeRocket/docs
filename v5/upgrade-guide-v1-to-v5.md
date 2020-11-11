@@ -47,6 +47,16 @@ Some functions have been removed while other have been moved.
 - `not_blank_string()` moved to `\TypeRocket\Utility\Str::notBlank()`.
 - `mb_ucwords()` moved to `\TypeRocket\Utility\Str::uppercaseWords()`.
 
+## Die & Dump
+
+If you love the old `dd()` function and want to keep using it you can add the function to your code:
+
+```php
+function dd(...$args) {
+    var_dump(...$args); exit(); 
+}
+```
+
 ### Actions and Filters
 
 All `tr_` hooks are now prefixed with `typerocket_`. This was done to bring TypeRocket into better compliance with the WordPress guidelines. 
