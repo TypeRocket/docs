@@ -2,14 +2,13 @@ Title: Upgrade Guide v1 to v5
 Description: Upgrading TypeRocket v1 to v5
 
 ---
-
-## Upgrading From v4
-
-**TypeRocket Pro v5 Andromeda** is not fully backward compatible with **TypeRocket v4**. You will need to make a number of updates to get TypeRocket v4 to work. Because Typerocket v5 is such a big update, it is best to create a new TypeRocket v5 project and then migrate your existing v4 sites into TypeRocket v5.
-
 ## Upgrading From v1
 
 If you are coming from TypeRocket Pro v1 upgrading should take 1 - 3 hours depending on your project size.
+
+### Upgrading From v4
+
+This guide is not for upgrading from v4 to v5. There is no official guide for that upgrade. The update is just that big. **TypeRocket Pro v5 Andromeda** is not fully backward compatible with **TypeRocket v4**. You will need to make a number of updates to get TypeRocket v4 to work. Because Typerocket v5 is such a big update, it is best to create a new TypeRocket v5 project and then migrate your existing v4 sites into TypeRocket v5.
 
 ## Start
 
