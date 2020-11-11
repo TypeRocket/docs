@@ -9,7 +9,7 @@ You can create your custom composer packages that are compatible with TypeRocket
 
 If you are using the TypeRocket Pro WordPress plugin, you should make your packages WordPress plugins. This feature is designed for composer installations.
 
-To make your package publishable, add a `publish.php` file to the root of your composer package. When you publish your package, the `publish.php` will get executed.
+To make your package publishable, add a `ext/publish.php` file to the root of your composer package. When you publish your package, the `ext/publish.php` will get executed.
 
 ## Publishing
 

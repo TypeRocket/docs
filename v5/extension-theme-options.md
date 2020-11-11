@@ -3,33 +3,11 @@ Description: Customize the global elements of your design with theme options.
 
 ---
 
-## Enabling Theme Options
-
 *Pro Only: This is a Pro only extension feature.*
 
+## Enabling Theme Options
+
 TypeRocket works as a theme options framework for WordPress by providing the custom fields you need to customize your themes. To get started all you need to do is ensure the `ThemeOptions` extension is in the [TypeRocket configuration](/docs/v5/configuration/) in the file `config/app.php`. 
-
-*Important note, `null` does not mean the extension is not activated. The values of the extensions array are the constructor params passed to the named class. So, `null` means `ThemeOptions` does not require any arguments for its class constructor.*
-
-```php
-/*  
-|--------------------------------------------------------------------------  
-| Extensions  
-|--------------------------------------------------------------------------  
-|  
-| The class names of the TypeRocket extensions you wish to enable.  
-|  
-*/  
-'extensions' => [  
-  '\TypeRocket\Extensions\Seo' => [ null ],  
-  '\TypeRocket\Extensions\PageBuilder' => null,  
-  '\TypeRocket\Extensions\PostTypesUI' => null,  
-  '\TypeRocket\Extensions\ThemeOptions' => null, 
-  '\TypeRocket\Extensions\DevTools' => [ true ],  
-  '\TypeRocket\Extensions\PostMessages' => null,  
-  '\TypeRocket\Extensions\Gutenberg' => [ true ],  
-],
-```
 
 ## Your options, your ideas
 

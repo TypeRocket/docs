@@ -8,14 +8,12 @@ Description: The validator class help you validate fields submitted by a form.
 There are many times you need to validate fields submitted by a form. Take a look at an example validation:
 
 ```php
-$request = new \TypeRocket\Http\Request();
-
 $options = [
     'email' => 'required|email',
     'name'  => 'required|min:3'
 ];
 
-$validator = tr_validator($options, $request->getFields());
+$validator = tr_validator($options, tr_request()->getFields())->validate(true);
 
 $errors = $validator->getErrors();
 $passes = $validator->getPasses();
@@ -39,7 +37,7 @@ $errors = $validator->getErrorFields();
 
 ### Redirect On Error
 
-You can [redirect](/docs/v5/redirects) **back** right away, within a controller, when validation fails. When redirecting on error the old fields and error fields needed for inline field errors will get set and sent as well.
+You can [redirect](/docs/v5/redirects/) **back** right away, within a controller, when validation fails. When redirecting on error the old fields and error fields needed for inline field errors will get set and sent as well.
 
 ```php
 // throws a RedirectError
@@ -88,7 +86,7 @@ $options = [
     'name'  => 'min:3'
 ];
 
-$validator = tr_validator($options, $request->getFields());
+$validator = tr_validator($options, tr_request()->getFields())->validate(true);
 ```
 
 ### Min
@@ -100,7 +98,7 @@ $options = [
     'name'  => 'min:3'
 ];
 
-$validator = tr_validator($options, $request->getFields());
+$validator = tr_validator($options, tr_request()->getFields())->validate(true);
 ```
 
 ### Max
@@ -112,7 +110,7 @@ $options = [
     'name'  => 'max:3'
 ];
 
-$validator = tr_validator($options, $request->getFields());
+$validator = tr_validator($options, tr_request()->getFields())->validate(true);
 ```
 
 ### Size
@@ -124,7 +122,7 @@ $options = [
     'state'  => 'size:2'
 ];
 
-$validator = tr_validator($options, $request->getFields());
+$validator = tr_validator($options, tr_request()->getFields())->validate(true);
 ```
 
 ### URL
@@ -136,7 +134,7 @@ $options = [
     'website'  => 'url'
 ];
 
-$validator = tr_validator($options, $request->getFields());
+$validator = tr_validator($options, tr_request()->getFields())->validate(true);
 ```
 
 ### Required
@@ -148,7 +146,7 @@ $options = [
     'email_address'  => 'required'
 ];
 
-$validator = tr_validator($options, $request->getFields());
+$validator = tr_validator($options, tr_request()->getFields())->validate(true);
 ```
 
 ### Email
@@ -160,7 +158,7 @@ $options = [
     'email_address'  => 'email'
 ];
 
-$validator = tr_validator($options, $request->getFields());
+$validator = tr_validator($options, tr_request()->getFields())->validate(true);
 ```
 
 ### Unique
@@ -181,7 +179,7 @@ For example, in a one to one relationship between a `Seat` and `Person` only one
 ```php
 $options['persons_id'] = 'unique:persons_id:3';
 
-$validator = tr_validator($options, $request->getFields(), \App\Models\Seat);
+$validator = tr_validator($options, tr_request()->getFields(), \App\Models\Seat)->validate(true);
 ```
 
 #### With Table
@@ -226,13 +224,27 @@ callback:{callback}:{[option]}
 For example, in a one to one relationship between a `Seat` and `Person` only one person can have a `Seat` so it must be unique.
 
 ```php
-// Callback Function
-function checkCallback($validator, $value, $field, $option2) {
-    if( $value != '' ) {
-        return ['success' => $field . ' is good!'];
-    } else {
-        return ['error' => $field . ' is missing'];
-    }  
+function checkCallback($args) 
+{
+    /**
+     * @var $option3
+     * @var $option
+     * @var $option2
+     * @var $name
+     * @var $field_name
+     * @var $value
+     * @var $type
+     * @var \TypeRocket\Utility\Validator $validator
+     */
+    extract($args);
+
+    $error = null;
+
+    if( empty($value) ) {
+        return $field_name . ' is bad'; // has error
+    }
+
+    return true; // passed
 }
 
 // Validator
@@ -240,8 +252,7 @@ $options = [
     'persons_id'  => 'callback:checkCallback:3'
 ];
 
-$validator = tr_validator($options, $request->getFields(), \App\Models\Seat);
-
+$validator = tr_validator($options, tr_request()->getFields())->validate(true);
 ```
 
 ## Flash Errors
@@ -264,5 +275,68 @@ $fields['person'][2]['email'] = 'example2.1@example.com';
 
 $validator = tr_validator([
    'person.*.email' => 'email'
-], $fields);
+], $fields)->validate(true);
+```
+
+## Custom Validation Rules
+
+You will need to extend the `\TypeRocket\Utility\Validators\ValidatorRule` class to create custom rules. For example, you might make a variation of the email validation rule:
+
+```php
+<?php
+namespace App\Validators;
+
+use TypeRocket\Utility\Str;
+use TypeRocket\Utility\Validator;
+
+class DomainEmailValidator extends ValidatorRule
+{
+    public CONST KEY = 'domain_email';
+
+    public function validate(): bool
+    {
+        /**
+         * @var $option
+         * @var $option2
+         * @var $option3
+         * @var $full_name
+         * @var $field_name
+         * @var $value
+         * @var $type
+         * @var Validator $validator
+         */
+        extract($this->args);
+
+        if( ! filter_var($value, FILTER_VALIDATE_EMAIL) && ! Str::contains('example.com', $value) ) {
+            $this->error = "must be an example.com email address.";
+        }
+
+        return !$this->error;
+    }
+}
+```
+
+Now you can validate using the class and combine it with other rules:
+
+```php
+$validator = tr_validator([
+   'person.*.email' => [\App\Validators\DomainEmailValidator::new(), 'required']
+], $fields)->validate(true);
+```
+
+You can add your own validation rules with the `typerocket_validator_map` filter so you can access them by key. You can also use this feature to replace an existing rule with your own.
+
+```php
+add_filter('typerocket_validator_map', function($map) {
+    $map[\App\Validators\DomainEmailValidator::KEY] = \App\Validators\DomainEmailValidator::class;
+    return $map;
+});
+```
+
+Now you can access it by key:
+
+```php
+$validator = tr_validator([
+   'person.*.email' => 'domain_email|required'
+], $fields)->validate(true);
 ```

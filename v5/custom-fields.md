@@ -16,11 +16,13 @@ use TypeRocket\Html\Html;
 
 class Age extends Field
 {
-    protected function init() {
+    protected function init() 
+{
         $this->setType( 'number' );
     }
 
-    public function getString() {
+    public function getString() 
+    {
         $name = $this->getNameAttributeString();
         $value = (int) $this->getValue();
         $attr = $this->getAttributes();

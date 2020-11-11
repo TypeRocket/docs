@@ -9,6 +9,8 @@ Because of TypeRocket's rewrite cache bypass, you do not need to flush the perma
 
 When a TypeRocket route is matched, TypeRocket dynamically generates a WordPress rewrite rule and adds it to the top of the WordPress rewrite array to ensure it will be the route used. TypeRocket routes will be favored over WordPress routes, to prevent plugins and WordPress content from breaking your custom application code.
 
+**IMPORTANT!** WordPress is super sticky about URLs with trailing slashes `/`. If your URLs have trailing slashes, and you call a route without using a trailing slash WordPress will do a 301 redirect. This can cause all kinds of bugs in your code (this issue is not TypeRocket specific or WordPress specific many systems do this). Be sure when calling a route with AJAX that you have the proper URL structures.
+
 ## Routes File
 
 In the TypeRocket root directory, locate the `routes/public.php` file. This file is where you will add all of your custom routes. Routes are mapped from the root path of your domain and are not used for admin pages.

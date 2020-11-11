@@ -53,7 +53,7 @@ This command will create the following controller for us.
 <?php  
 namespace App\Controllers;  
   
-use \TypeRocket\Controllers\TemplateController;  
+use \TypeRocketPro\Controllers\TemplateController;  
   
 class BlogController extends TemplateController  
 {  

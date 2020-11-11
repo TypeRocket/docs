@@ -89,7 +89,6 @@ If you are using TypeRocket as the root of your project.
 
 ```
 root:install       Install TypeRocket as root
-root:mu            Install root MU plugin
 ```
 
 ### Other
@@ -147,7 +146,8 @@ Add the following code to your `galaxy-config.php` and point the `$typerocket` v
 ```php
 <?php
 // galaxy-config.php
-$typerocket = __DIR__ . '/wp-content/plugins/typerocket-pro-plugin/typerocket';
+
+$typerocket = __DIR__ . '/wp-content/plugins/typerocket-pro-v5/typerocket';
 define('TYPEROCKET_GALAXY_PATH', $typerocket);
 define('TYPEROCKET_CORE_CONFIG_PATH', $typerocket . '/config' );
 ```
@@ -158,7 +158,8 @@ Also, you might want to update where the galaxy command creates new files like m
 // The folder that contains your app folder
 // not the app folder itself
 define('TYPEROCKET_APP_ROOT_PATH', __DIR__ . '/wp-content/themes/my-theme');
-``` 
+define('TYPEROCKET_ALT_PATH', __DIR__ . '/wp-content/themes/my-theme');
+```
 
 ### Trouble Shooting
 

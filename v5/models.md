@@ -746,3 +746,13 @@ $pager->toJson();
 echo $pager;
 // Outputs JSON format
 ```
+
+## When
+
+You can run the `when()` method on a model only do something when the value passed is not empty.
+
+```php
+$post = (new \App\Models\Post)->when(tr_request()->input('title'), function($model, $value) {
+    $model->where('post_title', $value);
+})->get();
+```

@@ -25,7 +25,8 @@ class MyService extends Service
 {  
     protected $singleton = true;
     
-    public function __construct(){
+    public function __construct()
+    {
 		// Runs when service is loaded into the container
 		// this happens on every page load.
 	}
@@ -67,7 +68,7 @@ Register a class to the DI Container.
 $singleton = true;
 $alias = 'my.class';
 
-\TypeRocket\Core\Injector::register(\MyNamespace\MyClass::class, function () {
+\TypeRocket\Core\Container::register(\MyNamespace\MyClass::class, function () {
     $api_key = 'sdfjd83mvbfy92kf';
 
     return new \MyNamespace\MyClass($api_key);
@@ -78,16 +79,16 @@ Get an instance from the DI container.
 
 ```php
 // by class name
-$obj = \TypeRocket\Core\Injector::resolve(\MyNamespace\MyClass::class);
+$obj = \TypeRocket\Core\Container::resolve(\MyNamespace\MyClass::class);
 
 // by alias
-$obj = \TypeRocket\Core\Injector::resolve('my.class');
+$obj = \TypeRocket\Core\Container::resolve('my.class');
 ```
 
 Using helper.
 
 ```php
-$obj = tr_container(\MyNamespace\MyClass::class)
+$obj = tr_container(\MyNamespace\MyClass::class);
 ```
 
 

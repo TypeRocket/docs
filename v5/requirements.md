@@ -13,6 +13,8 @@ TypeRocket has a few requirements.
 - WordPress >= 5.5.0
 - PDO PHP Extension
 - Mbstring PHP Extension
+- Fileinfo PHP Extension
+- JSON PHP Extension
 - Friendly URLs
 
 ### Browsers

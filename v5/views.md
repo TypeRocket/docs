@@ -17,21 +17,11 @@ tr_view('books.index', ['data' => 'my data']);
 
 Because a view uses dot notation, it can return different templates based on context. These contexts are: "Admin" and "Front-end".
 
-## Admin Views
+## Admin Views & Front-end Views
 
-Admin views are located under `resources/pages` by default. When a controller returns a view in the admin context, it will return the view from the specified folder.
+Views are located under `resources/views` by default. When a controller returns a view it will return the view from the specified folder.
 
-Take this example view, in the admin context, it will return the `resources/pages/books/index.php` template file.
-
-```php
-tr_view('books.index', ['data' => 'my data']);
-```
-
-## Front-end Views
-
-Front-end views are located under `resources/views` by default. When a controller returns a view in the front-end context, it will return the view from the specified folder.
-
-Take this example view, in the front-end context, it will return the `resources/views/books/index.php` template file.
+Take this example view, it will return the `resources/views/books/index.php` template file.
 
 ```php
 tr_view('books.index', ['data' => 'my data']);
@@ -103,7 +93,6 @@ Next, update your `template_engine` settings in your `config/app.php` file and s
 */
 'templates' => [
     'views' => '\TypeRocket\Template\TwigTemplateEngine',
-    'pages' => '\TypeRocket\Template\TwigTemplateEngine',
 ],
 ```
 
@@ -143,6 +132,8 @@ tr_view('books.show')->setEngine($engine);
 
 ## Views In Templates
 
+*Pro Only: This is a Pro only extension feature.*
+
 You can also use views within your standard WordPress templates. To use views for your WordPress templates use the `\TypeRocket\Http\Template::respond()` static method.
 
 ```php
@@ -154,11 +145,11 @@ You can also use views within your standard WordPress templates. To use views fo
  * 
  * @var WP_Post[] $posts  
  */  
-\TypeRocket\Http\Template::respond(function() use ($posts) {  
+\TypeRocketPro\Http\Template::respond(function() use ($posts) {  
     $title = 'Pro';  
   
     return tr_view('master', compact('posts', 'title'));  
 });
 ```
 
-When using the `\TypeRocket\Http\Template::respond()` static method, you are able to exit the global scope and avoid conflicting with global variables. To access any global variables, you must pass them using the `use` statement.
+When using the `\TypeRocketPro\Http\Template::respond()` static method, you are able to exit the global scope and avoid conflicting with global variables. To access any global variables, you must pass them using the `use` statement.

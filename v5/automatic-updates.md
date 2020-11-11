@@ -16,7 +16,7 @@ The updaters check for a new version every 12 hours.
 The slug must match the name of your plugin.
 
 ```php
-new \TypeRocket\Updates\PluginUpdater([
+new \TypeRocketPro\Updates\PluginUpdater([
     'slug' => 'my-typerocket-plugin',
     'api_url' => 'https://example.com/plugins/my-typerocket-plugin/'
 ]);
