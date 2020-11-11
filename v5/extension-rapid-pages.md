@@ -12,6 +12,15 @@ TypeRocket's Rapid Pages extension allows you to take advantage of the `advanced
 1. Add the extension `\TypeRocketPro\Extensions\RapidPages` to your `app.extesnions` config setting.
 2. Run the galaxy command `php galaxy extension:publish typerocket/professional rapid-pages`.
 
+
+## Unpublish
+
+To unpublish Rapid Pages use the command:
+
+```
+php galaxy extension:publish typerocket/professional rapid-pages --mode=unpublish
+```
+
 ## Nginx Configuration
 
 Once you have enabled the `TypeRocketPro\Extension\RapidPages` you can also configure your web server to the cached files for even faster performance. With Nginx, you can use the `map` directive with custom variables to show the cache with `try_files` to guest users only.   

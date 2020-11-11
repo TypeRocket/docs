@@ -19,7 +19,36 @@ To publish your composer package, run the following command but replace `my-vend
 php galaxy extension:publish my-vendor/my-package
 ```
 
-### Working with Files
+## Unpublish
 
-When publishing your package, you may want to work with files. You can use the `tr_file()` helper to copy and update files.
+To unpublish a package to use the `--mode=unpublish` option.
+
+```php
+php galaxy extension:publish my-vendor/my-package --mode=unpublish
+```
+
+## Multiple Publishers
+
+You can have multiple package publishers if you like. Each publisher should be located under your packages `ext` folder with the main `ext/publish.php` script. For example, you can have a `ext/feature-2.php` script. To run that script use the command:
+
+```
+php galaxy extension:publish my-vendor/my-package feature-2
+```
+
+### Publish Scripts
+
+You can anything you want into a publisher script. Here is an example:
+
+```php
+<?php
+/** @var $this \TypeRocket\Console\Command */
+$content = WP_CONTENT_DIR;
+
+if($this->getOption('mode', 'publish') == 'publish') {
+    $this->success('Publishing Package');
+    $this->into($content);
+} else {
+    $this->warning('Package Unpublished.');
+}
+```
 
