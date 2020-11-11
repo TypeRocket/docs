@@ -357,6 +357,6 @@ $passes = $validator->getPasses();
 
 Also, the `callback` validation rule has changed, you can [read more here](/docs/v5/validator/).
 
-## Custom Packages
+### Custom Packages
 
 How [custom packages](/docs/v5/custom-composer-packages/) are published has changed. Your `publish.php` file needs to be move to an `ext` folder.
