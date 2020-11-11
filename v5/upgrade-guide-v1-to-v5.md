@@ -2,6 +2,7 @@ Title: Upgrade Guide v1 to v5
 Description: Upgrading TypeRocket v1 to v5
 
 ---
+
 ## Upgrading From v1
 
 If you are coming from TypeRocket Pro v1 upgrading should take 1 - 3 hours depending on your project size.
