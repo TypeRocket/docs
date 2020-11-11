@@ -34,9 +34,7 @@ You can use this function when creating your configuration options.
 
 ## Extensions
 
-In your `config/app.php` file, you can add and remove extensions loaded by TypeRocket.
-
-The `extensions` settings take a key-value array of with key as the class name and the value as an array of arguments that will be used by the extension class' constructor. 
+In your `config/app.php` file, you can add and remove extensions loaded by TypeRocket. The `extensions` settings take an array of extension classes. 
 
 ```php
 /*
