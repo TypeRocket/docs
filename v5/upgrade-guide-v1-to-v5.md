@@ -179,7 +179,7 @@ $form = tr_form();
 echo $form->builder('builder');
 ```
 
-You can have multiple groups. You can scope components to a specific group by registering the component with the name of the group followed by a colon `:`. Scoping is only needed is you are migrating from the folder system to the class system, but you have component naming collisions.
+You can have multiple groups and register the same component to multiple groups. You can scope components to a specific group by registering the component with the name of the group followed by a colon `:`. Scoping is only needed if you are migrating from the folder system to the class system, but you have component naming collisions.
 
 ```php
 <?php
