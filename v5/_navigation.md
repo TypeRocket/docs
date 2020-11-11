@@ -54,6 +54,8 @@
 # Security
 - policies: Policies
 - sanitize-data: Sanitizer
+- csrf: CSRF
+- honeypot: Honeypot
 # Advanced
 - mail: Mail
 - log: Log
