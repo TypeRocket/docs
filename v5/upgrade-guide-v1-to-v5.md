@@ -47,7 +47,7 @@ Some functions have been removed while other have been moved.
 - `not_blank_string()` moved to `\TypeRocket\Utility\Str::notBlank()`.
 - `mb_ucwords()` moved to `\TypeRocket\Utility\Str::uppercaseWords()`.
 
-## Die & Dump
+### Die & Dump
 
 If you love the old `dd()` function and want to keep using it you can add the function to your code:
 
