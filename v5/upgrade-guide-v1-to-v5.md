@@ -80,7 +80,7 @@ Components no longer use the folder system. The new system is PHP class based. T
 2. **Admin Components** under `resources/components`.
 3. **Component Thumbnails** under `wordpress/assets/components`.
 
-The folders `resources/visuals` and `resources/components` have been replace with the new `\TypeRocket\Template\Component` class and `config/components.php` registration system. As for thumbnails, they now live under `wordpress/assets/components` folder and must have a unique names (you no longer need to add thumbnails into *group* folders). You can control the name of the thumbnail files from the `\TypeRocket\Template\Component` class.
+The folders `resources/visuals` and `resources/components` have been replace with the new `\TypeRocket\Template\Component` class and `config/components.php` registration system. As for thumbnails, they now live under `wordpress/assets/components` folder and must have a unique names (you no longer need to add thumbnails into **group** folders). You can control the name of the thumbnail files from the `\TypeRocket\Template\Component` class.
 
 Component classes live under the `app/Components` folder and must be registered to the `config/components.php` file. To migrate your components from the folder system use the galaxy command to create replacement component classes and register them. you can do this with the following command:
 

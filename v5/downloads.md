@@ -29,7 +29,7 @@ tr_route()->get()->on('my-path', function() {
 
 ## From Storage
 
-Send files to a client for storage using a custom route you can sue the `download()` method.
+Send files to a client from [storage](/docs/v5/storage/) using a custom route you can sue the `download()` method.
 
 ```php
 tr_route()->get()->on('my-path', function() {
