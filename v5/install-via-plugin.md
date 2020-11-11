@@ -11,20 +11,22 @@ Before getting started, be sure your setup supports [the TypeRocket system and b
 
 ## Plugin Installation
 
-Anyone can download and [enjoy TypeRocket for free here](https://typerocket.com/downloads/v5.zip).
+TypeRocket v5 Open is free to use forever. To install TypeRocket as a plugin:
 
-## Pro Plugin Install
+1. [Download TypeRocket v5 here](https://typerocket.com/downloads/v5.zip).
+2. Install the plugin into your WordPress site.
+3. Optionally [add override folders to customize your installation](/docs/v5/install-via-plugin/#section-create-override-folders).
+
+## Pro Plugin Installation
 
 To install the TypeRocket Pro plugin [go to your account](/account/) and download the plugin zip file. Find the download link at the bottom of your "Purchase Receipt" page.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-VkAydury5c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Download & Activate 
-
 1. Download the latest version of TypeRocket plugin.
 2. Upload the plugin in the WordPress admin or unzip the files into your WordPress sites `plugins` directory.
 3. Activate the TypeRocket plugin in WordPress.
-4. Activate your TypeRocket site license if you are using Pro.
+4. Activate your TypeRocket site license.
 
 From the TypeRocket settings page located under "Settings > TypeRocket" add your site license. Activating your license gives you access to automatic updates.
 

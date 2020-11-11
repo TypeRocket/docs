@@ -1,16 +1,15 @@
-# Start Here
+# Getting Started
 - get-started: Getting Started
 - upgrade-guide-v1-to-v5: Upgrading v1 to v5
+- post-types-making: Post Type: Making
+- post-types-theming: Post Type: Theming
+- post-types-securing: Post Type: Securing
 # Installation
 - requirements: Requirements
 - install-via-plugin: Plugin Install
 - install-via-composer: Composer Install
 - configuration: Configuration
 - updating: Updating
-# Getting Started
-- post-types-making: Post Type: Making
-- post-types-theming: Post Type: Theming
-- post-types-securing: Post Type: Securing
 # Registrables
 - post-types: Post Types
 - taxonomies: Taxonomies

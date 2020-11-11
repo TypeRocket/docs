@@ -61,6 +61,15 @@ function dd(...$args) {
 
 All `tr_` hooks are now prefixed with `typerocket_`. This was done to bring TypeRocket into better compliance with the WordPress guidelines. 
 
+### Constants
+
+All constants now have the `TYPEROCKET_` prefix instead of `TR_`.
+
+```php
+define('TR_ALT_PATH', __DIR__); // was
+define('TYPEROCKET_ALT_PATH', __DIR__); // is now
+```
+
 ### Helper Functions Moved
 
 The `tr_` helper functions have been moved to the project root. See your `composer.json` file and look for the `helpers.php` file. However, the Pro version helpers are not included in the `helpers.php` file. Pro helpers are loaded from the `typerocket/professional` package.
