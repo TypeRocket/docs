@@ -5,7 +5,7 @@ Description: Specifics for configuring TypeRocket and its features.
 
 ## Configuration
 
-All of the configuration files for the TypeRocket are stored in the `config` directory.
+The configuration files for TypeRocket are stored in the `config` folder.
 
 
 ## Accessing Configuration Values
