@@ -55,6 +55,10 @@
 - policies: Policies
 - sanitize-data: Sanitizer
 # Advanced
+- mail: Mail
+- log: Log
+- storage: Storage
+- downloads: Downloads
 - utilities: Utilities
 - localization: Localization
 - automatic-updates: Automatic Updates

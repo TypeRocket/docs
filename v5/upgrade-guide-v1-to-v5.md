@@ -13,7 +13,7 @@ This guide is not for upgrading from v4 to v5. There is no official guide for th
 
 ## Start
 
-First, you will need to [create a new project](/docs/v5/get-started/) by starting a clean installation. From the new installation you can copy the majority of your `app`, `database`, `storage`, `routes`, and `resources` code into the new project. However, keep in ind the following changes.
+First, you will need to [create a new project](/docs/v5/get-started/) by starting a clean installation. From the new installation you can copy the majority of your `app`, `database`, `storage`, `routes`, and `resources` code into the new project. However, keep in mind the following changes.
 
 ### Pro Extension Publishing: Composer Only
 
