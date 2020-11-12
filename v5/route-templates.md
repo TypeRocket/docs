@@ -28,7 +28,7 @@ To add a route-template go to your routes file located at `routes/public.php` an
 
 To enable route-templates you need to register the `\TypeRocketPro\Services\TemplateRouter` service in your `app.services` configuration file.
 
-```
+```php
 'services' => [
     /*
      * TypeRocket Service Providers...
