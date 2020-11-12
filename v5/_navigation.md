@@ -45,6 +45,7 @@
 - responses: Response
 - validator: Validator
 - routes: Routes
+- route-templates: Route Templates
 - middleware: Middleware
 - redirects: Redirects
 - cookies: Cookies

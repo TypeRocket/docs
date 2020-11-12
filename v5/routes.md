@@ -416,3 +416,9 @@ add_action('typerocket_routes', function() {
         ->do([\MyPlugin\Controllers\SitemapController::class, 'index']);
 });
 ```
+
+## Route Templates
+
+You can also use routes for your theme templates. This means you will no longer need to make WP templates. You can replace them with MVC completely.
+
+Routes for templates are a not the same as standard routes. You can read about [route templates here](/docs/v5/route-templates/).
