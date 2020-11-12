@@ -13,6 +13,23 @@ With route-templates you can completely replace for your theme's templates syste
 
 The secret to this is the `tr_route_template()` function.
 
+## Enabling
+
+To enable route-templates you need to register the `\TypeRocketPro\Services\TemplateRouter` service in your `app.services` configuration file.
+
+```
+'services' => [
+    /*
+     * TypeRocket Service Providers...
+     */
+    '\TypeRocket\Services\ErrorService',
+    '\TypeRocket\Services\MailerService',
+    '\TypeRocketPro\Services\TemplateRouter', // add the template router
+    
+    ...
+],
+```
+
 ## About Route Templates
 
 To add a route-template go to your routes file located at `routes/public.php` and create them there. Route-templates work like normal routes in every way with only a few key differences.
