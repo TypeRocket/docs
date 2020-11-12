@@ -65,7 +65,7 @@ tr_route_template()->on('index', function() {
 
 ## Request Methods
 
-Route-templates require you to use the `on()` method. The `on()` sets your default handler. However, you can also define alternative handlers for other request types.
+Route-templates require you to use the `on()` method. The `on()` sets your default handler. However, you can also define alternative handlers for other request methods.
 
 ```php
 tr_route_template()->on('single', 'post@SiteController')
