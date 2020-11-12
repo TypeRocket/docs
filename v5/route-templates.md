@@ -13,6 +13,17 @@ With route-templates you can completely replace for your theme's templates syste
 
 The secret to this is the `tr_route_template()` function.
 
+## About Route Templates
+
+To add a route-template go to your routes file located at `routes/public.php` and create them there. Route-templates work like normal routes in every way with only a few key differences.
+
+- Route-templates will respond no matter what request method is used with a default handler. Normal routes only respond to their defined request methods.
+- Route-templates have global middleware only. Normal routes only use the middleware of their definition.
+- Route-templates cannot be named.
+- Route-templates do not match a given URL path. They match a [WordPress template name](https://developer.wordpress.org/themes/basics/template-hierarchy/).
+
+*Note: Route-templates do not replace your theme's need for an `index.php` file.*
+
 ## Enabling
 
 To enable route-templates you need to register the `\TypeRocketPro\Services\TemplateRouter` service in your `app.services` configuration file.
@@ -29,17 +40,6 @@ To enable route-templates you need to register the `\TypeRocketPro\Services\Temp
     ...
 ],
 ```
-
-## About Route Templates
-
-To add a route-template go to your routes file located at `routes/public.php` and create them there. Route-templates work like normal routes in every way with only a few key differences.
-
-- Route-templates will respond no matter what request method is used with a default handler. Normal routes only respond to their defined request methods.
-- Route-templates have global middleware only. Normal routes only use the middleware of their definition.
-- Route-templates cannot be named.
-- Route-templates do not match a given URL path. They match a [WordPress template name](https://developer.wordpress.org/themes/basics/template-hierarchy/).
-
-*Note: Route-templates do not replace your theme's need for an `index.php` file.*
 
 ## Basic Example
 
