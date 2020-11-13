@@ -47,6 +47,20 @@ Meet [route-templates](/docs/v5/route-templates/).
 
 Route-templates let you completely replace the WordPress theme templates with Laravel style routes. If you prefer, use the more powerful [route-templates](/docs/v5/route-templates/) instead of WordPress theme templates with `tr_template_router()`.
 
+For example, delete your `single-post.php` template file and register a route-template for it in your `routes/public.php` file instead.
+
+```php
+<?php
+/*
+|--------------------------------------------------------------------------
+| Routes
+|--------------------------------------------------------------------------
+*/
+tr_route_template()->on('single-post', function() {
+    return tr_view('blog.single');
+});
+```
+
 ### Making The Controller
 
 Let's create an actual controller class and use it instead. We can quickly create our template controller using the galaxy command `make:controller`.
