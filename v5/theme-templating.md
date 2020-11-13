@@ -3,9 +3,9 @@ Description: Drop the WordPress loop and start using MVC.
 
 ---
 
-## Getting Started
-
 *Pro Only: This is a Pro only extension feature.*
+
+## Getting Started
 
 To understand the TypeRocket theme templating system lets walk through an example implementation. In this example, we will make a blog using views, template controllers, and models.
 
@@ -21,7 +21,7 @@ In WordPress, the theme templates do three things:
 
 For example, if your theme has a `single-post.php` template file, all requests for a "single blog post" will be routed to that template file. The file will also control the logic flow and display the view for the page. This bundling of responsibilities is not ideal as it can lead to numerous bugs and scalability issues.
 
-On the other hand, TypeRocket's template router seamlessly integrates into the WordPress template hierarchy pattern allowing you to use the MVC pattern while maintaining backward compatibility withing WordPress. Using the TypeRocket template router has several advantages: 
+On the other hand, TypeRocket's template router seamlessly integrates into the WordPress template hierarchy pattern allowing you to use the MVC pattern while maintaining backward compatibility withing WordPress. Using the TypeRocket template router has several advantages:
 
 - WordPress core templates only allow for 400 error handling. The template router allows for 500, 401, 403, or any other error templates to be used.
 - Takes your view out of the global scope, greatly reducing your chances of variable naming collisions, thus reducing the odds for bugs.
@@ -38,6 +38,14 @@ tr_template_router(function() {
 ```
 
 In this example we use `tr_template_router()` to further route the request through the [TypeRocket HTTP middleware](/docs/v5/middleware/) and then to our anonymous function controller. For simplicity, we are using an anonymous function as the controller. However, using an anonymous function as the controller can be limiting.
+
+### Bye-bye Theme Templates
+
+Using WordPress templates as controllers or routers is a little clumsy. While you can use the standard theme templates like `index.php`, `single-post.php`, `archive.php` and others there is a better way.
+
+Meet [route-templates](/docs/v5/route-templates/).
+
+Route-templates let you completely replace the WordPress theme templates with Laravel style routes. If you prefer, use the more powerful [route-templates](/docs/v5/route-templates/) instead of WordPress theme templates with `tr_template_router()`.
 
 ### Making The Controller
 
@@ -82,7 +90,17 @@ Now, let's update the `single-post.php` template. Using the TypeRocket shorthand
 tr_template_router('single@Blog');
 ```
 
-*Note: The `tr_template_router()` function works in the same way you might use `tr_route()->do()` with a few exceptions.*
+Or, instead of using WordPress templates you can do this with a [route-template](/docs/v5/route-templates/) in your `routes/public.php` file (be sure you have the `\TypeRocketPro\Services\TemplateRouter` enabled).
+
+```php
+<?php
+/*
+|--------------------------------------------------------------------------
+| Routes
+|--------------------------------------------------------------------------
+*/
+tr_route_template()->on('single-post', 'single@Blog');
+```
 
 ### Single Post View
 
@@ -193,9 +211,11 @@ get_header();
 get_footer();
 ``` 
 
-Instead, we can use view layouts. Layouts allow our views to be nested inside a parent view. That parent view can be the single location where our header and footer will be located. 
+Instead, we can use view layouts by enabling the `\TypeRocketPro\Template\TachyonTemplateEngine`. Layouts allow our views to be nested inside a parent view. That parent view can be the single location where our header and footer will be located.
 
-Make a layout in your views folder under `layout/blog.php` like so:
+To enable Tachyon templates, and access layouts, update your configuration under `app.templates.views` from `\TypeRocket\Template\TemplateEngine` to `\TypeRocketPro\Template\TachyonTemplateEngine`.
+
+Once Tachyon templates are enabled, make a layout in your views folder under `layout/blog.php` like so:
 
 ```php
 <?php // resources/views/layouts/blog.php
