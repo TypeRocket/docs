@@ -47,7 +47,7 @@ Meet [route-templates](/docs/v5/route-templates/).
 
 Route-templates let you completely replace the WordPress theme templates with Laravel style routes. If you prefer, use the more powerful [route-templates](/docs/v5/route-templates/) instead of WordPress theme templates with `tr_template_router()`.
 
-For example, delete your `single-post.php` template file and register a route-template for it in your `routes/public.php` file instead.
+For example, delete your `single-post.php` template file and register a route-template for it in your `routes/public.php` file instead (be sure you have the `\TypeRocketPro\Services\TemplateRouter` service enabled in your `app.services` config).
 
 ```php
 <?php
