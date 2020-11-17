@@ -27,6 +27,10 @@ You will need to extend the free system with Pro by requiring `typerocket/profes
 
 Take note of [the new config files on the typerocket/typerocket repository](https://github.com/TypeRocket/typerocket/tree/main/config). Merge any changes you have made to work with the new functions and settings. Also, be aware that `immutable()` has been replaced by `typerocket_env()`.
 
+### New App Classes
+
+There are new classes and updates to the `app` folder, you can [see them on the typerocket/typerocket repository](https://github.com/TypeRocket/typerocket/tree/main/app). The main changes are the addition of the `Elements` and `Components` folders. If you are using folder overrides be sure to add these new folders to your application.
+
 ### Removed Non-prefixed Helper Functions
 
 All non-prefixed helper functions have been removed like `dd`, `dots_walk`, `class_names`, and `str_contains`. Also, number of helper functions have been removed. These functions have been removed to bring TypeRocket into better compliance with the WordPress guidelines.
