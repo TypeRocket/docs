@@ -66,5 +66,5 @@ TypeRocket Pro also comes with these additional extensions:
   '\TypeRocketPro\Extensions\HidePostMenu',
   '\TypeRocketPro\Extensions\DisableComments',
   '\TypeRocketPro\Extensions\GutenbergRemover',
-]
+],
 ```

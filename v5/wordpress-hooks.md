@@ -17,6 +17,8 @@ add_action('typerocket_loaded', function() {
 });
 ```
 
+You can also use `typerocket_before_load` if you want to run code before the TypeRocket system is loaded.
+
 *Note: If you are creating plugins that interact with TypeRocket you will want to install TypeRocket as an MU plugin.*
 
 ## Models

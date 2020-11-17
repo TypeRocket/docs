@@ -134,7 +134,7 @@ To manually configure WP commands, locate your `config/galaxy.php` file, and fin
 | Example of root installation: TR_PATH . '/wordpress'
 |
 */
-'wordpress' => TR_PATH . '/wordpress',
+'wordpress' => TYPEROCKET_PATH . '/wordpress',
 ```
 
 ## Galaxy For the TypeRocket WordPress Plugin

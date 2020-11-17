@@ -21,11 +21,10 @@ To configure the storage system to a specific storage driver see the `app/storag
 ## Basic Usage
 
 ```php
-\TypeRocketPro\Utility\Storage::create('file.txt');
-\TypeRocketPro\Utility\Storage::append('file.txt');
-\TypeRocketPro\Utility\Storage::replace('file.txt');
+\TypeRocketPro\Utility\Storage::create('file.txt', 'content');
+\TypeRocketPro\Utility\Storage::append('file.txt', 'content');
+\TypeRocketPro\Utility\Storage::replace('file.txt', 'content');
 \TypeRocketPro\Utility\Storage::get('file.txt');
-\TypeRocketPro\Utility\Storage::create('file.txt');
 \TypeRocketPro\Utility\Storage::delete('file.txt');
 \TypeRocketPro\Utility\Storage::exists('file.txt');
 \TypeRocketPro\Utility\Storage::path('file.txt');
@@ -46,7 +45,7 @@ If you do not want to use the default driver you can specify one.
 You can log to a custom stack as well.
 
 ```php
-\TypeRocketPro\Utility\Storage::stack(['uploads', 'storage'], 'create', 'file.txt');
+\TypeRocketPro\Utility\Storage::stack(['uploads', 'storage'], 'create', 'file.txt', 'content');
 ```
 
 ## Downloads

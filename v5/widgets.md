@@ -7,10 +7,10 @@ Description: Add custom fields to widgets.
 
 ## Getting Started
 
-To create custom widgets with fields, you will need to extend the `\TypeRocket\Register\BaseWidget` class. 
+To create custom widgets with fields, you will need to extend the `\TypeRocketPro\Register\BaseWidget` class. 
 
 ```php
-class TR_Widget extends \TypeRocket\Register\BaseWidget {
+class TR_Widget extends \TypeRocketPro\Register\BaseWidget {
 
     /**
      * Sets up the widgets name etc

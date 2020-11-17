@@ -131,7 +131,7 @@ In the `form.php` view add the following code:
 
 ```php
 <?php
-/** @var \TypeRocket\Elements\Form $form */
+/** @var \App\Elements\Form $form */
 echo $form->save($button)->setFields(
     $form->text('Name')
 );

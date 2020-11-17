@@ -61,7 +61,7 @@ The required endpoint format is JSON.
 The slug must match the name of your theme.
 
 ```php
-new \TypeRocket\Updates\ThemeUpdater([
+new \TypeRocketPro\Updates\ThemeUpdater([
     'slug' => 'my-typerocket-theme',
     'api_url' => 'https://example.com/themes/my-typerocket-theme/'
 ]);

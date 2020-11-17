@@ -7,7 +7,7 @@ Description: Custom icons, fields, taxonomy, meta box – in just 20 lines of co
 
 In this TypeRocket Pro tutorial, you will learn how to make an advanced WordPress post type, with custom fields, in under 17 lines of code. Packed into those few 17 lines, you will create:
 
--  A custom post type 
+- A custom post type 
 - Set a custom menu icon
 - Set custom title placeholder text
 - Enable the REST API

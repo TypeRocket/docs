@@ -1,13 +1,13 @@
-Title: Extension: Post Types UI
+Title: Extension: TypeRocket UI
 Description: Quickly add post types and Taxonomies to your site.
 
 ---
 
 ## Post Types UI
 
-If you need to quickly add a post type or taxonomies to your WordPress site, you can use the Post Types UI extension.
+If you need to quickly add a post type or taxonomies to your WordPress site, you can use the TypeRocket UI extension.
 
-The Post Types UI extension adds an admin menu named "Registrables".
+The TypeRocket UI extension adds an admin menu named "TypeRocket UI".
 
 This extension is designed to make creating post types, taxonomies, and meta boxes fast while providing robust customization tools. 
 

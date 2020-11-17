@@ -476,7 +476,7 @@ $form->setFields([
     $form->editor('Post Content')
 ]);
 
-$form->render()
+$form->render();
 ```
 
 The `render()` method has 4 optional arguments:
@@ -581,7 +581,7 @@ group_name.another.lowercase_underscore_only
 
 ```php
 $form->setGroup('company_info');
-$form->text('Name')
+$form->text('Name');
 ```
 
 The above translates to,
@@ -594,7 +594,7 @@ The above translates to,
 
 ```php
 $form->setGroup('company_info.about');
-$form->text('Name')
+$form->text('Name');
 ```
 
 The above translates to,
@@ -664,8 +664,8 @@ echo $form->row(
 You can also add columns and titles to rows.
 
 ```php
-$row = $form->row()
-$row->setTitle('A Row')
+$row = $form->row();
+$row->setTitle('A Row');
 
 $column1 = $row->column(
     $form->text('First'),
@@ -682,14 +682,13 @@ echo $row;
 You can also add columns fluently using `withColumn()`. The method returns the row object instead of the column object.
 
 ```php
-echo $form
-->row()
-->withColumn(
-    $form->text('First'),
-    $form->text('Last')
-)->withColumn(
-    $form->image('Image')
-);
+echo $form->row()
+    ->withColumn(
+        $form->text('First'),
+        $form->text('Last')
+    )->withColumn(
+        $form->image('Image')
+    );
 ```
 
 ## Sections
@@ -708,7 +707,7 @@ echo $form->section([
 In some cases, you want fields grouped into a `<fieldset>`. This can be for styling with CSS or when you want to toggle a group of fields with conditionals. To make a section use the `fieldset()` method.
 
 ```php
-echo $form->fieldset('Title', 'A desription.', [
+echo $form->fieldset('Title', 'A description.', [
     $form->text('First'),
     $form->text('Last')
 ]);

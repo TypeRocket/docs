@@ -246,6 +246,8 @@ If you are using [axios](https://github.com/axios/axios) you can set a common he
 axios.defaults.headers.common['X-WP-NONCE'] = window.trHelpers.nonce;
 ```
 
+*Note: `window.trHelpers.nonce` is only available when front-end mode is enabled.*
+
 ## Check Honeypot
 
 It returns true if the check passes. The check looks for any fields within the request group `$_REQUEST['__hny']`.

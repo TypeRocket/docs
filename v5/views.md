@@ -41,7 +41,7 @@ tr_view('books.add')->setTitle('Add Book');
 
 If you are using views within a post type's template file, you do not need to set SEO meta of the view. However, if you view is for anything that is not a post type you will need to set the SEO meta using the `setSeoMeta()` view method.
 
-If the view has access to the TypeRocket SEO meta from the `\TypeRocket\Extensions\SEO` extension, you can set the SEO for the page.
+If the view has access to the TypeRocket SEO meta from the `\TypeRocketPro\Extensions\SEO` extension, you can set the SEO for the page.
 
 ```php
 tr_view('books.show')->setSeoMeta($meta, $url);
@@ -92,7 +92,7 @@ Next, update your `template_engine` settings in your `config/app.php` file and s
 |
 */
 'templates' => [
-    'views' => '\TypeRocket\Template\TwigTemplateEngine',
+    'views' => '\TypeRocketPro\Template\TwigTemplateEngine',
 ],
 ```
 
@@ -121,12 +121,18 @@ return [
 ];
 ```
 
+## Tachyon Template Engine
+
+*Pro Only: This is a Pro only extension feature.*
+
+TypeRocket Pro also has a template engine called Tachyon. This template engine is a blazing fast and pure PHP templating engine equipped with layouts and more. You can read more about Tachyon in the [theme templating docs](/docs/v5/theme-templating/#section-advanced-views).
+
 ## Multiple Templating Engines
 
 If you want to use an engine that is not the default, you can use the `setEngine()` method.
 
 ```php
-$engine = '\TypeRocket\Template\TwigTemplateEngine';
+$engine = '\TypeRocketPro\Template\TwigTemplateEngine';
 tr_view('books.show')->setEngine($engine);
 ```
 
@@ -134,7 +140,7 @@ tr_view('books.show')->setEngine($engine);
 
 *Pro Only: This is a Pro only extension feature.*
 
-You can also use views within your standard WordPress templates. To use views for your WordPress templates use the `\TypeRocket\Http\Template::respond()` static method.
+You can also use views within your standard WordPress templates. To use views for your WordPress templates use the `tr_template_router` function.
 
 ```php
 <?php  
@@ -145,11 +151,11 @@ You can also use views within your standard WordPress templates. To use views fo
  * 
  * @var WP_Post[] $posts  
  */  
-\TypeRocketPro\Http\Template::respond(function() use ($posts) {  
+tr_template_router(function() use ($posts) {  
     $title = 'Pro';  
   
     return tr_view('master', compact('posts', 'title'));  
 });
 ```
 
-When using the `\TypeRocketPro\Http\Template::respond()` static method, you are able to exit the global scope and avoid conflicting with global variables. To access any global variables, you must pass them using the `use` statement.
+When using the `tr_template_router` function, you are able to exit the global scope and avoid conflicting with global variables. To access any global variables, you must pass them using the `use` statement.

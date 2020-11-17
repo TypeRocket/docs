@@ -135,7 +135,7 @@ And, where the ID is greater than 10.
 
 ```php
 $doc = new Doc;
-$doc->where('version', '!=' ,'v1')
+$doc->where('version', '!=' ,'v1');
 $doc->where('id', '>' , 10);
 $doc->first();
 ```
@@ -360,7 +360,7 @@ Models that have meta tables (`WPPost`, `WPUser`, `WPComment`, and `WPTerm`) can
 
 ```php
 // short syntax for where feature meta value is not null
-(new Post)->whereMeta('feature')
+(new Post)->whereMeta('feature');
 ```
 
 ```php
@@ -645,7 +645,7 @@ $model->toArray();
 $model->toJson();
 ```
 
-### Importing Relationshsips
+### Importing Relationships
 
 When using eager loading, `toArray()` and `toJson` will also import the loaded relationships as a part of the return value.
 

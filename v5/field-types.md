@@ -544,7 +544,6 @@ echo $form->repeater('Stories')
     ->setTitle('Story');
 ```
 
-
 ## Matrix and Builder
 
 Matrix and builder fields work a lot like repeater fields. However, they are not limited to the same field groups like repeaters are.
