@@ -41,6 +41,9 @@ To enable route-templates you need to register the `\TypeRocketPro\Services\Temp
 ],
 ```
 
+Once you have registered the service, you need to set a static page for your "Homepage" and "Posts page" under "Admin > Settings > Reading Settings > 
+Your homepage displays". If these settings are not used you will be unable to use the `index` slug later.
+
 ## Basic Example
 
 To get started, register your first route-template to replace the default `index.php` template. Note, your theme still needs an `index.php` file to be valid; but it will not get used by WordPress.
@@ -63,6 +66,8 @@ tr_route_template()->on('index', function() {
 
 1. `$slug` - The template name to replace without the `.php` extension.
 2. `$handler` - The controller or callback you want to handle the request.
+
+*Note: The slug `index` only works for a plugin install with one theme.*
 
 ### Variations
 
