@@ -53,7 +53,7 @@ define('TYPEROCKET_CORE_CONFIG_PATH', __DIR__ . '/config');
 define('TYPEROCKET_ALT_PATH', __DIR__);
 define('TYPEROCKET_APP_NAMESPACE', 'App');
 define('TYPEROCKET_AUTOLOAD_APP', [
-    'prefix' => TR_APP_NAMESPACE . '\\',
+    'prefix' => TYPEROCKET_APP_NAMESPACE . '\\',
     'folder' => __DIR__. '/app/',
 ]);
 ```
