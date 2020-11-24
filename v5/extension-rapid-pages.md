@@ -12,6 +12,7 @@ TypeRocket's Rapid Pages extension allows you to take advantage of the `advanced
 1. Add the extension `\TypeRocketPro\Extensions\RapidPages` to your `app.extesnions` config setting.
 2. Run the galaxy command `php galaxy extension:publish typerocket/professional rapid-pages`.
 3. Add `define( 'WP_CACHE', true );` to your `wp-config.php` file.
+4. Add `define('TYPEROCKET_RAPID_PAGES_FOLDER_PATH', ABSPATH . 'tr_cache/rapid_cache');` to your `wp-config.php` file after `ABSPATH` is defined.
 
 ## Unpublish
 
