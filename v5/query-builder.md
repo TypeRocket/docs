@@ -92,7 +92,7 @@ $result = $query->select('post_title', 'ID')->take(10)->get();
 You can use the `select()` method get return specific columns only.
 
 ```php
-$query->select('ID', 'title')>first();
+$query->select('ID', 'title')->first();
 ```
 
 Or, every column.
