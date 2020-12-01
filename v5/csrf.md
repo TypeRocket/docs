@@ -29,7 +29,7 @@ echo $form->text('Name');
 echo $form->close('Save');
 ```
 
-If you have a custom HTML for you can use the `` function to add the CSRF token to your site.
+If you have a custom HTML for you can use the `tr_field_nonce()` function to add the CSRF token to your site.
 
 ```html
 <form>
