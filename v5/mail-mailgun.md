@@ -1,0 +1,65 @@
+Title: Mail - Mailgun
+Description: Custom Mailgun email driver setup.
+
+---
+
+*Pro Only: This is a Pro only extension feature.*
+
+## Getting Started
+
+You can add mailgun to your site by setting the driver in your `config/mail.php` file. Or, you can set the driver using the `typerocket_mailer_service_driver` and `typerocket_mail_driver_mailgun_options` filters.
+
+```php
+add_filter('typerocket_mail_driver_mailgun_options', function($driver) {
+    return [
+        'region' => 'us', // eu is another option
+        'api_key' => '053cf3b2e8asdfasdffasd1e5ddc5b24fa-9525e19d-482c2be7',
+        'domain' => 'mg.example.com',
+        'from_override' => false,
+        'from_address' => 'kevin@example.com',
+        'from_name' => 'Kevin from TypeRocket',
+        'track_clicks' => 'no',
+        'track_opens' => 'no',
+        'tags' => ['WordPress'],
+    ];
+});
+
+add_filter('typerocket_mailer_service_driver', function($driver) {
+    return new \TypeRocketPro\Utility\Mailers\MailgunMailDriver();
+});
+```
+
+### Mailgun UI
+
+As an example, you might want to make a user interface for your Mailgun driver config.
+
+```php
+// MailGun
+$form->group('mailgun')->fieldset('Mailgun', 'Email deliverability', [
+    $form->toggle('Use Mailgun'),
+    $form->section(
+        $form->text('Mailgun API Key')->setName('api_key')->setAttribute('autocomplete', 'new-password')
+            ->setHelp('Your Mailgun API key. Only valid for use with the API.'),
+        $form->select('Mailgun Region')->setName('region')->setOptions(['U.S./North America' => 'us', 'Europe' => 'eu'])
+            ->setHelp('Choose a region - U.S./North America or Europe - from which to send email, and to store your customer data. Please note that your sending domain must be set up in whichever region you choose.'),
+        $form->text('Mailgun Domain')->setName('domain')->setHelp('Your Mailgun Domain Name.'),
+        $form->text('Mailgun From Address')->setName('from_address')->setHelp('It is recommended that the @mydomain portion matches your Mailgun sending domain.'),
+        $form->text('Mailgun From Name')->setName('from_name')->setHelp('The "User Name" part of the sender information ("Excited User <user@samples.mailgun.org>").'),
+        $form->toggle('Override "From" Details')->setName('from_override')->setText('Send all mail from the above address.'),
+        $form->toggle('Mailgun Click Tracking')->setName('track_clicks')->setText('If enabled, Mailgun will track links.'),
+        $form->toggle('Mailgun Open Tracking')->setName('track_opens')->setText('If enabled, HTML messages will include an open tracking beacon.'),
+    )->when('use_mailgun')
+]);
+```
+
+Then, you can save the Mailgun data to your `wp_options` table with the key `mailgun` to automatically set the config for the Mailgun driver.
+
+```php
+add_filter('typerocket_mailer_service_driver', function($driver) {
+    $mg = get_option('mailgun');
+    if(is_array($mg) && !empty($mg['use_mailgun'])) {
+        $driver = new \TypeRocketPro\Utility\Mailers\MailgunMailDriver();
+    }
+    return $driver;
+});
+```

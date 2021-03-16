@@ -1,0 +1,11 @@
+### OS and IDE
+*~
+.idea
+.settings
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+.project
+.build
+.vscode
+

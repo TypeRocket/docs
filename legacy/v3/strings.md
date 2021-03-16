@@ -1,0 +1,38 @@
+Title: Strings
+Description: Access common string utilities without rolling your own.
+
+---
+
+## String
+
+The functions of the `Str` class are all UTF8 enabled and can work with Unicode characters.
+
+## Starts
+
+Use the method `starts()` to test if a string starts with a value.  
+
+```php
+$needle = 'Name';
+$subject = 'Names are cool.';
+$bool = \TypeRocket\Utility\Str::starts( $needle, $subject );
+```
+
+## Ends
+
+Use the method `ends()` to test if a string ends with a value.  
+
+```php
+$needle = 'ol.';
+$subject = 'Names are cool.';
+$bool = \TypeRocket\Utility\Str::ends( $needle, $subject );
+```
+
+## Contains
+
+Use the method `contains()` to test if a string contains a value.  
+
+```php
+$needle = 'are';
+$subject = 'Names are cool.';
+$bool = \TypeRocket\Utility\Str::contains( $needle, $subject );
+```
