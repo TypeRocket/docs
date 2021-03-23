@@ -13,7 +13,7 @@ You can add mailgun to your site by setting the driver in your `config/mail.php`
 add_filter('typerocket_mail_driver_mailgun_options', function($driver) {
     return [
         'region' => 'us', // eu is another option
-        'api_key' => '053cf3b2e8asdfasdffasd1e5ddc5b24fa-9525e19d-482c2be7',
+        'api_key' => 'key-somerandomchars',
         'domain' => 'mg.example.com',
         'from_override' => false,
         'from_address' => 'kevin@example.com',
@@ -28,6 +28,8 @@ add_filter('typerocket_mailer_service_driver', function($driver) {
     return new \TypeRocketPro\Utility\Mailers\MailgunMailDriver();
 });
 ```
+
+*Note: The `api_key` can be either your main API private key or a domain specific API key.*
 
 ### Mailgun UI
 
