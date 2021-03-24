@@ -171,6 +171,69 @@ $book->setEditorForm(function() {
 });
 ```
 
+## Custom Labels
+
+To customize post type labels you can use the shortcut setting `labeled`. This setting makes setting labels for translation easier for plugins to detect and for you to set.
+
+```php
+tr_post_type('Book', 'Books', [
+    'labeled' => [
+        __('Book'),
+        __('Books'),
+        false, // Keep capitalization
+    ]
+]);
+
+tr_post_type('CPT', 'CPTs', [
+    'labeled' => [
+        __('CPT'),
+        __('CPTs'),
+        true, // Keep capitalization
+    ]
+]);
+```
+
+### Complete Override
+
+You can also completely override the labels using the `setLabels()` method:
+
+```php
+$upperPlural = 'Books';
+$upperSingular = 'Book';
+$lowerSingular = 'book';
+$pluralLower = 'books';
+
+tr_post_type('Book', 'Books')->setLabels([
+    'add_new'               => _x('Add New', 'post_type:book', 'typerocket-core'),
+    'all_items'             => sprintf( _x('All %s', 'post_type:book', 'typerocket-core'), $upperPlural),
+    'archives'              => sprintf( _x('%s Archives', 'post_type:book', 'typerocket-core'), $upperSingular),
+    'add_new_item'          => sprintf( _x('Add New %s', 'post_type:book', 'typerocket-core'), $upperSingular),
+    'attributes'            => sprintf( _x('%s Attributes', 'post_type:book', 'typerocket-core'), $upperSingular),
+    'edit_item'             => sprintf( _x('Edit %s', 'post_type:book', 'typerocket-core'), $upperSingular),
+    'filter_items_list'     => sprintf( _x('Filter %s list %s', 'post_type:book', 'typerocket-core'), $pluralLower, $upperSingular),
+    'insert_into_item'      => sprintf( _x('Insert into %s', 'post_type:book', 'typerocket-core'), $lowerSingular),
+    'item_published'        => sprintf( _x('%s published.', 'post_type:book', 'typerocket-core'), $upperSingular),
+    'item_published_privately' => sprintf( _x('%s published privately.', 'typerocket-core'), $upperSingular),
+    'item_updated'          => sprintf( _x('%s updated.', 'post_type:book', 'typerocket-core'), $upperSingular),
+    'item_reverted_to_draft'=> sprintf( _x('%s reverted to draft.', 'post_type:book', 'typerocket-core'), $upperSingular),
+    'item_scheduled'        => sprintf( _x('%s scheduled.', 'post_type:book', 'typerocket-core'), $upperSingular),
+    'items_list'            => sprintf( _x('%s list', 'post_type:book', 'typerocket-core'), $upperPlural),
+    'menu_name'             => sprintf( _x('%s',  'post_type:book:admin menu', 'typerocket-core'), $upperPlural),
+    'name'                  => sprintf( _x('%s', 'post_type:book:post type general name', 'typerocket-core'), $upperPlural),
+    'name_admin_bar'        => sprintf( _x('%s', 'post_type:book:add new from admin bar', 'typerocket-core'), $upperSingular),
+    'items_list_navigation' => sprintf( _x('%s list navigation', 'post_type:book', 'typerocket-core'), $upperPlural),
+    'new_item'              => sprintf( _x('New %s', 'post_type:book', 'typerocket-core'), $upperSingular),
+    'not_found'             => sprintf( _x('No %s found', 'post_type:book', 'typerocket-core'), $pluralLower),
+    'not_found_in_trash'    => sprintf( _x('No %s found in Trash', 'post_type:book', 'typerocket-core'), $pluralLower),
+    'parent_item_colon'     => sprintf( _x("Parent %s:", 'post_type:book', 'typerocket-core'), $upperPlural),
+    'search_items'          => sprintf( _x('Search %s', 'post_type:book', 'typerocket-core'), $upperPlural),
+    'singular_name'         => sprintf( _x('%s',  'post_type:book:post type singular name', 'typerocket-core'), $upperSingular),
+    'uploaded_to_this_item' => sprintf( _x('Uploaded to this %s', 'post_type:book', 'typerocket-core'), $lowerSingular),
+    'view_item'             => sprintf( _x('View %s', 'post_type:book', 'typerocket-core'), $upperSingular),
+    'view_items'            => sprintf( _x('View %s', 'post_type:book', 'typerocket-core'), $upperPlural),
+], 'Book');
+```
+
 ## Set Archive Slug
 
 To set the slug for the custom post type and change the default use the method `setSlug()`.

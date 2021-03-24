@@ -197,6 +197,61 @@ $pub->setMainForm(function() {
 
 ![Taxonomy Custom Fields](https://typerocket.com/wp-content/uploads/2016/09/typerocket-taxonomy-fields.png)
 
+## Custom Labels
+
+To customize taxonomy labels you can use the shortcut setting `labeled`. This setting makes setting labels for translation easier for plugins to detect and for you to set.
+
+```php
+tr_taxonomy('Publisher', 'Publishers', [
+    'labeled' => [
+        __('Publisher'),
+        __('Publishers'),
+        false, // Keep capitalization
+    ]
+]);
+
+tr_taxonomy('CTX', 'CTXs', [
+    'labeled' => [
+        __('CTX'),
+        __('CTXs'),
+        true, // Keep capitalization
+    ]
+]);
+```
+
+### Complete Override
+
+You can also completely override the labels using the `setLabels()` method:
+
+```php
+$upperPlural = 'Publishers';
+$upperSingular = 'Publisher';
+$lowerSingular = 'publisher';
+$lowerPlural = 'publishers';
+
+tr_post_type('Book', 'Books')->setLabels([
+    'add_new_item'               => sprintf( _x( 'Add New %s', 'taxonomy:publisher', 'typerocket-core' ), $upperSingular),
+    'add_or_remove_items'        => sprintf( _x( 'Add or remove %s', 'taxonomy:publisher', 'typerocket-core' ), $lowerPlural),
+    'all_items'                  => sprintf( _x( 'All %s', 'taxonomy:publisher', 'typerocket-core' ), $upperPlural),
+    'back_to_items'              => sprintf( _x( '← Back to %s', 'taxonomy:publisher', 'typerocket-core' ), $lowerPlural),
+    'choose_from_most_used'      => sprintf( _x( 'Choose from the most used %s', 'taxonomy:publisher', 'typerocket-core' ), $lowerPlural),
+    'edit_item'                  => sprintf( _x( 'Edit %s', 'taxonomy:publisher', 'typerocket-core' ), $upperSingular),
+    'name'                       => sprintf( _x( '%s', 'taxonomy:publisher:taxonomy general name', 'typerocket-core' ), $upperPlural),
+    'menu_name'                  => sprintf( _x( '%s', 'taxonomy:publisher:admin menu', 'typerocket-core' ), $upperPlural),
+    'new_item_name'              => sprintf( _x( 'New %s Name', 'taxonomy:publisher', 'typerocket-core' ), $upperSingular),
+    'no_terms'                   => sprintf( _x( 'No %s', 'taxonomy:publisher', 'typerocket-core' ), $lowerPlural),
+    'not_found'                  => sprintf( _x( 'No %s found.', 'taxonomy:publisher', 'typerocket-core' ), $lowerPlural),
+    'parent_item'                => sprintf( _x( 'Parent %s', 'taxonomy:publisher', 'typerocket-core' ), $upperSingular),
+    'parent_item_colon'          => sprintf( _x( 'Parent %s:', 'taxonomy:publisher', 'typerocket-core' ), $upperSingular),
+    'popular_items'              => sprintf( _x( 'Popular %s', 'taxonomy:publisher', 'typerocket-core' ), $upperPlural),
+    'search_items'               => sprintf( _x( 'Search %s', 'taxonomy:publisher', 'typerocket-core' ), $upperPlural),
+    'separate_items_with_commas' => sprintf( _x( 'Separate %s with commas', 'taxonomy:publisher', 'typerocket-core' ), $lowerPlural),
+    'singular_name'              => sprintf( _x( '%s', 'taxonomy:publisher:taxonomy singular name', 'typerocket-core' ), $upperSingular),
+    'update_item'                => sprintf( _x( 'Update %s', 'taxonomy:publisher', 'typerocket-core' ), $upperSingular),
+    'view_item'                  => sprintf( _x( 'View %s', 'taxonomy:publisher', 'typerocket-core' ), $upperSingular),
+], 'Book');
+```
+
 ## Arguments
 
 There are five methods to set and get arguments. Arguments are used when the taxonomy is being registered. All arguments can be [found in the WordPress codex](https://codex.wordpress.org/Function_Reference/register_taxonomy#Arguments).
