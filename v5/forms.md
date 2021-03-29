@@ -435,7 +435,7 @@ There are 27+ different fields that the `Form` object can create using the follo
 21. `gallery()` - Gallery field.
 22. `items()` - Items field.
 23. `matrix()` - Matrix field.
-24. `repeater()` - Respeater field.
+24. `repeater()` - Repeater field.
 25. `builder()` - Builder field.
 26. `search()` - Search field with multi select option.
 27. `toggle()` - Toggle field.
