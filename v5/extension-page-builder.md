@@ -15,6 +15,17 @@ The page builder plugin helps developers and designers work together with client
 
 ![typerocket-builder-plugin](https://typerocket.com/wp-content/uploads/2020/02/page-builder-pro.gif)
 
+## Post Types
+
+By default, the page builder will be applied to the `page` post type only. You can add more post types usinf the following filter:
+
+```php
+add_filter('typerocket_ext_builder_post_types', function($post_types) { 
+    array_push($post_types, 'your_post_type_id'); 
+    return $post_types;} 
+);
+```
+
 ## Basic Usage
 
 For the most basic setup, duplicate your theme's current `page.php` template and rename it to `standard.php`. Now, in the `page.php` template file, use the page builder.
