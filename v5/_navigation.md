@@ -40,6 +40,7 @@
 - migrations: Migrations
 - results-collection: Results Collection
 - query-builder: Query Builder
+- wp-query-caster: WP Query Caster
 # MVC & Http
 - controllers: Controllers
 - views: Views

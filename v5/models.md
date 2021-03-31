@@ -636,6 +636,25 @@ Limiting the number of items eager loaded is not yet possible. If you need this 
 
 *Note: You can not limit the number of items on eager loaded relationships using `take` or another method. MySQL 8 has support for `ROW_NUMBER` which would make this possible, but WordPress does not support MySQL 8.*
 
+### After Initial Query
+
+Sometimes you will have an existing set of results and need to eager load after a query has already run. To eager load a relationship post query use the `load()` method. This method works on single models and results.  
+
+```php
+$pages = (new App\Models\Page)->published()->get();
+$results = $pages->load('meta');
+```
+
+And, with scoping.
+
+```php
+$pages = (new App\Models\Page)->published()->get();
+
+$results = $pages->load(['meta' => function($query) {
+   return $query->where('meta_key', 'feature');
+}]);
+```
+
 ## toArray and toJson
 
 Convert a model to an `array` or `json`.
