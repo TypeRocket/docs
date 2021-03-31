@@ -42,9 +42,10 @@ $results = \TypeRocket\Utility\QueryCaster::terms(
 Cast the results of a [WP_User_Query](https://developer.wordpress.org/reference/classes/wp_user_query/) to any `WPUser` model. For example, the `User` model.
 
 ```php
-$results = \TypeRocket\Utility\QueryCaster::users(\App\Models\User::class, [
-    'role' => 'administrator',
-]);
+$results = \TypeRocket\Utility\QueryCaster::users(
+    \App\Models\User::class, 
+    ['role' => 'administrator']
+);
 ```
 
 ## Comments
@@ -52,7 +53,8 @@ $results = \TypeRocket\Utility\QueryCaster::users(\App\Models\User::class, [
 Cast the results of a [WP_Comment_Query](https://developer.wordpress.org/reference/classes/wp_comment_query/) to any `WPComment` model. For example, the `Comment` model.
 
 ```php
-$results = \TypeRocket\Utility\QueryCaster::comments(\App\Models\Comment::class, [
-    'post_id' => 1,
-]);
+$results = \TypeRocket\Utility\QueryCaster::comments(
+    \App\Models\Comment::class, 
+    ['post_id' => 1]
+);
 ```
