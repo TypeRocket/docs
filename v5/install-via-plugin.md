@@ -100,7 +100,7 @@ $overrides = __DIR__ . '/wp-content/themes/my-theme';
 
 define('TYPEROCKET_GALAXY_PATH', $typerocket);
 define('TYPEROCKET_CORE_CONFIG_PATH', $overrides . '/config' );
-define('TYPEROCKET_ROOT_WP', __DIR__ . '/wordpress/');
+define('TYPEROCKET_ROOT_WP', __DIR__);
 
 define('TYPEROCKET_APP_ROOT_PATH', $overrides);
 define('TYPEROCKET_ALT_PATH', $overrides);
