@@ -23,13 +23,13 @@ Validation is best done for custom resources. Post types fields should not be re
 
 ## Get Errors
 
-To get any validation errors use the `getErrors()` method.
+To get all validation errors use the `getErrors()` method. This will return an array of stings with the error messages.
 
 ```php
 $errors = $validator->getErrors();
 ```
 
-You can also get the errors used for inline fields.
+You can also get the errors used for inline fields. This will return an array of stings with the error messages.
 
 ```php
 $errors = $validator->getErrorFields();
@@ -75,19 +75,7 @@ To use multiple options, use the `|` (pipe) character to separate them.
 
 ## Option Types
 
-There are 9 option types: `required`, `email`, `min:{int}`, `max:{int}`, `size:{int}`, `numeric`, `url`, `callback:{callback}:{[option]}`, and ( `unique:{field}:{[id]}` and `unique:{field}:{table[@column]}{[id]}`).
-
-### Min
-
-To set a character minimum, use the `min` option.
-
-```php
-$options = [
-    'name'  => 'min:3'
-];
-
-$validator = tr_validator($options, tr_request()->getFields())->validate(true);
-```
+There are 9 option types: `required`, `key`, `email`, `min:{int}`, `max:{int}`, `size:{int}`, `numeric`, `url`, `callback:{callback}:{[option]}`, and ( `unique:{field}:{[id]}` and `unique:{field}:{table[@column]}{[id]}`).
 
 ### Min
 
@@ -125,6 +113,18 @@ $options = [
 $validator = tr_validator($options, tr_request()->getFields())->validate(true);
 ```
 
+### Key 
+
+May only contain lowercase alphanumeric characters and underscores.
+
+```php
+$options = [
+    'name'  => 'key'
+];
+
+$validator = tr_validator($options, tr_request()->getFields())->validate(true);
+```
+
 ### URL
 
 To set a URL requirement, use the `url` option.
@@ -144,6 +144,16 @@ To make a field required, use the `required` option.
 ```php
 $options = [
     'email_address'  => 'required'
+];
+
+$validator = tr_validator($options, tr_request()->getFields())->validate(true);
+```
+
+To require a field but allow for `NULL`, use the `weak` option.
+
+```php
+$options = [
+    'email_address'  => 'required:weak'
 ];
 
 $validator = tr_validator($options, tr_request()->getFields())->validate(true);
@@ -267,15 +277,30 @@ if($validator->getErrors() ) {
 
 ## Validate Grouped Fields
 
-You can also validate deeply embedded fields.
+You can also validate deeply embedded fields. This will require the group to be present for the value to validate.
 
 ```php
 $fields['person'][1]['email'] = 'example@example.com';
 $fields['person'][2]['email'] = 'example2.1@example.com';
 
-$validator = tr_validator([
+$options = [
    'person.*.email' => 'email'
-], $fields)->validate(true);
+];
+
+$validator = tr_validator($options, $fields)->validate(true);
+```
+
+By using `?` instead of `*` you can weakly validate a group. The `?` wildcard is helpful if the group is not required but you still want to validate the fields within the group when the group is there.
+
+```php
+// Will still pass validation.
+$fields['person'] = [];
+
+$options = [
+   'person.?.email' => 'required|email'
+];
+
+$validator = tr_validator($options, $fields)->validate(true);
 ```
 
 ## Custom Validation Rules
@@ -339,4 +364,37 @@ Now you can access it by key:
 $validator = tr_validator([
    'person.*.email' => 'domain_email|required'
 ], $fields)->validate(true);
+```
+
+## Custom Error Messages
+
+You can set custom error messages with `setErrorMessages()`. When using this method `{error}` will be replaced by the validation rules error message. `{error}` is not required.  When setting error messages the key will be a regular expression matched to the field name passed with a `:` and the rule key as a suffix.
+
+```php
+$fields['name'] = 'kevin@example.com';
+$fields['repeater'][2849573629]['name'] = 'TypeRocket';
+
+$options = [
+    'name' => 'required|email',
+    'repeater.?.name' => 'required',
+];
+
+$messages = [
+    'name:required' => 'Name is a must have!',
+    'name:email' => 'Email {error}',
+    'repeater.\d+.name:required' => 'Repeater name {error}',
+];
+
+$validator = tr_validator($options, $fields)->setErrorMessages($messages, true)->validate(true);
+```
+
+## Add Static Error Message
+
+You can manually apply an error message to the errors list with `appendToFlashErrorMessage()` and `prependToFlashErrorMessage()`.
+
+```php
+$validator = tr_validator($options, $fields)->validate(true);
+
+$validator->appendToFlashErrorMessage('An error message appended.');
+$validator->prependToFlashErrorMessage('An error message prepended.');
 ```
