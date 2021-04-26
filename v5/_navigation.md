@@ -72,6 +72,7 @@
 - ioc-resolver: DI Container
 - galaxy-cli: Galaxy CLI
 - strings: Strings
+- errors: Errors
 - html-generator: HTML Generator
 - wordpress-hooks: WP Hooks
 - javascript-hooks: JS Hooks
