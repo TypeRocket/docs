@@ -3,6 +3,14 @@ Description: Manage your database tables and models easily.
 
 ---
 
+## Before Starting
+
+In most cases, your models will work as you intend. However, it is important to note the ORM is designed to work with WordPress as best it can while at the same time feeling like a true ORM.
+
+Models that extend `WPPost`, `WPTerm`, `WPUser`, and `WPComment` are different from the base model class. These models use the core WordPress functions to `create`, `update`, and `delete`. This is by design to make the ORM more compatible with WordPress itself. So, when taking any of these actions, keep in mind your results may not be what you expect. When running queries on these models everything should work as expected.
+
+Also, `WPOption` is not designed to work like a true model. It is designed to act as a key value store model. It does not pull records like you may expect. When running queries on this model you may get odd results.
+
 ## About Models
 
 Models are object representations of database tables and how you want them to behave. For example, if you have a table called `wp_docs` with the columns `id` (primary), `version`, `title`, `json`, `created_at`, `modified_at`, and `slug` you can create a model to access and manipulate it.
@@ -461,7 +469,7 @@ $doc = (new Doc)->findById(1);
 $doc->delete();
 ```
 
-You can also bulk delete items.
+You can also bulk delete items via models you create that extend the base `Model` class. Models that extend `WPPost`, `WPTerm`, `WPUser`, `WPComment`, `WPOption` do not have the ability to bulk delete.
 
 ```php
 (new Doc)->delete([1,2,3]);
