@@ -298,3 +298,21 @@ Once a taxonomy has custom capabilities, you will need to apply those capabiliti
 $caps = tr_roles()->getTaxonomyCapabilities('publisher', 'publishers');
 tr_roles()->updateRolesCapabilities('administrator', $caps);
 ```
+
+## Set Handler & Controller
+
+By default, the controller for a taxonomy is automatically set to one using its shared name in the `App` namespace. To set a custom controller for a taxonomy use `setHandler()`.
+
+```php
+$prodType = tr_taxonomy('Product Type');
+$prodType->setHandler(\MyCustomNamspace\Controllers\ProductTypeController::class);
+```
+
+## Set Model Class
+
+By default, the model class for a taxonomy is automatically set to one using its shared name in the `App` namespace. To set a custom model class for a taxonomy use `setModelClass()`. When setting the model a `tr_form()` will locate that model for the taxonomies custom fields.
+
+```php
+$prodType = tr_taxonomy('Product Type');
+$prodType->setModelClass(\MyCustomNamspace\Models\ProductType::class);
+```
