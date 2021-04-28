@@ -275,3 +275,53 @@ class Post extends WPPost
 
 }
 ```
+
+## Scoping Relationships
+
+You can scope any inner relationship as well by passing a callback.
+
+```php
+<?php
+class ExampleModel extends Model
+{
+    public function publishedBlog()
+    {
+        $model = '\App\Models\Blog';
+    
+        return $this->hasOne($model, 'blog_id', function($rel) {
+            // only blogs that are published
+            $rel->where('status', 'publish');
+        });
+    }
+    
+    public function takenSeat()
+    {
+        $model = '\App\Models\Seat';
+    
+        return $this->belongsTo($model, 'seat_id', function($rel) {
+            // only a seat that is taken
+            $rel->where('status', 'taken');
+        });
+    }
+    
+    public function fromFirstThousandBooks()
+    {
+      $model = '\App\Models\Book';
+      $table = 'wp_authors_books';
+      return $this->belongsToMany($model, $table, 'books_id', 'authors_id', function($rel) {
+            // Scopes wp_authors_books model/query
+            $rel->where('books_id', '<', 1000);
+        });
+    }
+    
+    public function tags()
+    {
+        $model = '\App\Models\Tag';
+    
+        return $this->belongsToTaxonomy($model, 'post_tag', function($rel) {
+            // Scopes term_relationships model/query
+            $rel->where('books_id', '<', 1000);
+        });
+    }
+}
+```
