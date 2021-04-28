@@ -594,3 +594,21 @@ You can modify the registration if you need to from here.
 ```php
 add_action('registered_post_type', function($postType, $args) {}, 10, 2);
 ```
+
+## Set Handler & Controller
+
+By default, the controller for a post type is automatically set to one using its shared name in the `App` namespace. To set a custom controller for a post type use `setHandler()`.
+
+```php
+$product = tr_post_type('Product');
+$product->setHandler(\MyCustomNamspace\Controllers\ProductController::class);
+```
+
+## Set Model Class
+
+By default, the model class for a post type is automatically set to one using its shared name in the `App` namespace. To set a custom model class for a post type use `setModelClass()`. When setting the model a `tr_form()` will locate that model for the post types custom fields.
+
+```php
+$product = tr_post_type('Product');
+$product->setModelClass(\MyCustomNamspace\Models\Product::class);
+```
