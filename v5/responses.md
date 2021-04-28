@@ -123,6 +123,28 @@ Set if the flash message should be shown on the front end.
 $response->setFlash(true);
 ```
 
+## Lock Flash
+
+Stop flash from being overridden by future sets.
+
+```php
+$response->lockFlash();
+```
+
+You can also unlock the flash if it is locked.
+
+```php
+$response->unlockFlash();
+```
+
+## Block Flash
+
+Force the flash to not be shown.
+
+```php
+$response->blockFlash();
+```
+
 ## Exit Any
 
 To exit right away on any request, REST API or normal request, use the `exitAny()` method.
@@ -331,4 +353,18 @@ You can then access the data using `tr_redirect_data()`.
 
 ```php
 $response->disablePageCache();
+```
+
+## Cancel Response
+
+When the response would be used, cancel the response when it finishes.
+
+```php
+$response->setCancel(true);
+```
+
+Or, undo the cancel.
+
+```php
+$response->setCancel(false);
 ```
