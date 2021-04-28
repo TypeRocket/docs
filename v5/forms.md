@@ -440,6 +440,7 @@ There are 27+ different fields that the `Form` object can create using the follo
 26. `search()` - Search field with multi select option.
 27. `toggle()` - Toggle field.
 28. `locaton()` - Location field with Google Maps API integration.
+28. `textexpand()` - Text field that expands as you type.
 
 Each field takes 4 arguments:
 
@@ -493,6 +494,21 @@ $form->render(
     'PATCH',
     'Submit Changes'
 );
+```
+
+## Field Wrapper UI Only
+
+Sometimes you might want to exclude the opening and closing `<form>` tag when echoing fields. For example, when adding a form to a post type page. In those cases, use the `fieldsWrapperString()` form method.
+
+```php
+$form = tr_form('post', 1);
+
+$form->setFields([
+    $form->text('Post Title'),
+    $form->editor('Post Content')
+]);
+
+echo $form->fieldsWrapperString();
 ```
 
 ## Debug Status
