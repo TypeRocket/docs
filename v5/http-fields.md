@@ -24,7 +24,7 @@ use TypeRocket\Http\Fields;
 class MyFields extends Fields  
 {  
     /** @var bool Validate & redirect on errors immediately */  
-    protected $run = false;  
+    protected $run = null;  
   
     /**  
      * Extend the fillable fields of a model
@@ -57,4 +57,31 @@ tr_route()->post()->on('submit', function(\App\Http\Fields\MyFields $fields) {
     (new \App\Models\Post)->save($fields);  
     return tr_redirect()->back();  
 });
+```
+
+## Execute Validation and Redirect
+
+To run field validation and redirect with errors use the fields class method`validate()` and the validator classes `redirectWithErrorsIfFailed()`. Running validation and redirecting before saving data will allow the validation to exit before saving if there are validation errors.
+
+```php
+tr_route()->post()->on('submit', function(\App\Http\Fields\MyFields $fields) {
+    $fields->validate()->redirectWithErrorsIfFailed()
+    (new \App\Models\Post)->save($fields);  
+    return tr_redirect()->back();
+});
+```
+
+### Auto Execute And Redirect
+
+When a fields class, like `MyFields`, is imported into a controller you can force the field class to automatically validate based on its rules. To auto execute and redirect set the fields class' `$run` property to `true`.
+
+If you want to modify the redirect add a `redirect()` method to the field class.
+
+```php
+public function redirect(\TypeRocket\Http\Redirect $redirect)
+{
+    $redirect->toHome();
+
+    return $redirect;
+}
 ```
