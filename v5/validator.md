@@ -31,13 +31,13 @@ $errors = $validator->getErrors();
 
 ### Inline Form Field Errors
 
-You can also get the errors used for inline form fields. This will return an array of stings with the error messages.
+You can also get the errors used for inline form fields. This will return an array of stings with the error messages. These errors are shortened and do not include the field name.
 
 ```php
 $errorsForFields = $validator->getErrorFields();
 ```
 
-Once getting the inline field errors, to display them, send them back to the form by redirecting the response.
+Once getting the inline field errors, to display them, send them back to the form by redirecting the response. If you want the errors to include the field labels use `$validator->getErrors()` instead of `$validator->getErrorFields()`.
 
 ```php
 tr_redirect()->withErrors( ['fields' => $errorsForFields] )->back()->now();
