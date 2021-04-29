@@ -183,3 +183,16 @@ $table->setBulkActions($form, [
 	'Delete' => 'delete'
 ]);
 ```
+
+When the form is submitted you will have access to the request POST data `bulk` and `tr[]`. You can use that data to implement your bulk actions. For example, the delete example:
+
+```php
+$action = tr_request()->fields('tr_bulk_action');
+$ids = tr_request()->getDataPost('bulk');
+
+if(!empty($ids) && $action === 'delete') {
+    // Your delete code here
+    
+    echo 'Records deleted: ' . implode(', ', $ids);
+}
+```
