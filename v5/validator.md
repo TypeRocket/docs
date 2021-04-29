@@ -21,7 +21,7 @@ $passes = $validator->getPasses();
 
 Validation is best done for custom resources. Post types fields should not be required but should be expected to be empty just as all other post type fields are in WordPress.
 
-## Get Errors
+## Using Errors
 
 To get all validation errors use the `getErrors()` method. This will return an array of stings with the error messages.
 
@@ -29,16 +29,24 @@ To get all validation errors use the `getErrors()` method. This will return an a
 $errors = $validator->getErrors();
 ```
 
-You can also get the errors used for inline fields. This will return an array of stings with the error messages.
+### Inline Form Field Errors
+
+You can also get the errors used for inline form fields. This will return an array of stings with the error messages.
 
 ```php
 $errorsForFields = $validator->getErrorFields();
 ```
 
-Once getting the inline field errors, send them back to the form by redirecting the response.
+Once getting the inline field errors, to display them, send them back to the form by redirecting the response.
 
 ```php
 tr_redirect()->withErrors( ['fields' => $errorsForFields] )->back()->now();
+```
+
+Then in your form use `useErrors()`.
+
+```php
+tr_form()->useErrors();
 ```
 
 ### Redirect On Error
@@ -56,6 +64,24 @@ You can modify the redirect used by passing a callback to the method.
 $validator->redirectOnError(function($redirect) {
 	return $redirect->toHome();
 });
+```
+
+### Flash Errors
+
+To flash errors to the admin on the next request use the `flashErrors()` method. This will flash the errors on the next request. So, you will need to redirect if validation has errors.
+
+```php
+if($validator->failed() ) {
+     $validator->flashErrors();
+     
+     tr_redirect()->back()->now();
+}
+```
+
+If you need the errors to flash on the front-end use the `\TypeRocket\Elements\Notice` class.
+
+```php
+echo \TypeRocket\Elements\Notice::flash();
 ```
 
 ## Get Passing
@@ -79,20 +105,20 @@ $validator->failed();
 
 To use multiple options, use the `|` (pipe) character to separate them.
 
-## Option Types
+## Validation Rules
 
-There are 9 option types: `required`, `key`, `email`, `min:{int}`, `max:{int}`, `size:{int}`, `numeric`, `url`, `callback:{callback}:{[option]}`, and ( `unique:{field}:{[id]}` and `unique:{field}:{table[@column]}{[id]}`).
+There are 10 validation Rules: `required`, `key`, `email`, `min:{int}`, `max:{int}`, `size:{int}`, `numeric`, `url`, `callback:{callback}:{[option]}`, and ( `unique:{field}:{[id]}` and `unique:{field}:{table[@column]}{[id]}`). You can make custom validation rules if you need more.
 
 ### Min
 
 To set a character minimum, use the `min` option.
 
 ```php
-$options = [
+$rules = [
     'name'  => 'min:3'
 ];
 
-$validator = tr_validator($options, tr_request()->getFields())->validate(true);
+$validator = tr_validator($rules, tr_request()->getFields())->validate(true);
 ```
 
 ### Max
@@ -100,11 +126,11 @@ $validator = tr_validator($options, tr_request()->getFields())->validate(true);
 To set a character maximum, use the `max` option.
 
 ```php
-$options = [
+$rules = [
     'name'  => 'max:3'
 ];
 
-$validator = tr_validator($options, tr_request()->getFields())->validate(true);
+$validator = tr_validator($rules, tr_request()->getFields())->validate(true);
 ```
 
 ### Size
@@ -112,11 +138,11 @@ $validator = tr_validator($options, tr_request()->getFields())->validate(true);
 To set a character size requirement, use the `size` option.
 
 ```php
-$options = [
+$rules = [
     'state'  => 'size:2'
 ];
 
-$validator = tr_validator($options, tr_request()->getFields())->validate(true);
+$validator = tr_validator($rules, tr_request()->getFields())->validate(true);
 ```
 
 ### Key 
@@ -124,11 +150,11 @@ $validator = tr_validator($options, tr_request()->getFields())->validate(true);
 May only contain lowercase alphanumeric characters and underscores.
 
 ```php
-$options = [
+$rules = [
     'name'  => 'key'
 ];
 
-$validator = tr_validator($options, tr_request()->getFields())->validate(true);
+$validator = tr_validator($rules, tr_request()->getFields())->validate(true);
 ```
 
 ### URL
@@ -136,11 +162,11 @@ $validator = tr_validator($options, tr_request()->getFields())->validate(true);
 To set a URL requirement, use the `url` option.
 
 ```php
-$options = [
+$rules = [
     'website'  => 'url'
 ];
 
-$validator = tr_validator($options, tr_request()->getFields())->validate(true);
+$validator = tr_validator($rules, tr_request()->getFields())->validate(true);
 ```
 
 ### Required
@@ -148,21 +174,21 @@ $validator = tr_validator($options, tr_request()->getFields())->validate(true);
 To make a field required, use the `required` option.
 
 ```php
-$options = [
+$rules = [
     'email_address'  => 'required'
 ];
 
-$validator = tr_validator($options, tr_request()->getFields())->validate(true);
+$validator = tr_validator($rules, tr_request()->getFields())->validate(true);
 ```
 
 To require a field but allow for `NULL`, use the `weak` option.
 
 ```php
-$options = [
+$rules = [
     'email_address'  => 'required:weak'
 ];
 
-$validator = tr_validator($options, tr_request()->getFields())->validate(true);
+$validator = tr_validator($rules, tr_request()->getFields())->validate(true);
 ```
 
 ### Email
@@ -170,11 +196,11 @@ $validator = tr_validator($options, tr_request()->getFields())->validate(true);
 To make a field required to be an email, use the `email` option.
 
 ```php
-$options = [
+$rules = [
     'email_address'  => 'email'
 ];
 
-$validator = tr_validator($options, tr_request()->getFields())->validate(true);
+$validator = tr_validator($rules, tr_request()->getFields())->validate(true);
 ```
 
 ### Unique
@@ -193,9 +219,9 @@ unique:{field}:{[id]}
 For example, in a one to one relationship between a `Seat` and `Person` only one person can have a `Seat` so it must be unique.
 
 ```php
-$options['persons_id'] = 'unique:persons_id:3';
+$rules['persons_id'] = 'unique:persons_id:3';
 
-$validator = tr_validator($options, tr_request()->getFields(), \App\Models\Seat)->validate(true);
+$validator = tr_validator($rules, tr_request()->getFields(), \App\Models\Seat)->validate(true);
 ```
 
 #### With Table
@@ -264,29 +290,11 @@ function checkCallback($args)
 }
 
 // Validator
-$options = [
+$rules = [
     'persons_id'  => 'callback:checkCallback:3'
 ];
 
-$validator = tr_validator($options, tr_request()->getFields())->validate(true);
-```
-
-## Flash Errors
-
-To flash errors to the admin on the next request use the `flashErrors()` method. This will flash the errors on the next request. So, you will need to redirect if validation has errors. 
-
-```php
-if($validator->failed() ) {
-     $validator->flashErrors();
-     
-     tr_redirect()->back()->now();
-}
-```
-
-If you need the errors to flash on the front-end use the `\TypeRocket\Elements\Notice` class.
-
-```php
-echo \TypeRocket\Elements\Notice::flash();
+$validator = tr_validator($rules, tr_request()->getFields())->validate(true);
 ```
 
 ## Validate Grouped Fields
@@ -297,11 +305,11 @@ You can also validate deeply embedded fields. This will require the group to be 
 $fields['person'][1]['email'] = 'example@example.com';
 $fields['person'][2]['email'] = 'example2.1@example.com';
 
-$options = [
+$rules = [
    'person.*.email' => 'email'
 ];
 
-$validator = tr_validator($options, $fields)->validate(true);
+$validator = tr_validator($rules, $fields)->validate(true);
 ```
 
 By using `?` instead of `*` you can weakly validate a group. The `?` wildcard is helpful if the group is not required but you still want to validate the fields within the group when the group is there.
@@ -310,11 +318,11 @@ By using `?` instead of `*` you can weakly validate a group. The `?` wildcard is
 // Will still pass validation.
 $fields['person'] = [];
 
-$options = [
+$rules = [
    'person.?.email' => 'required|email'
 ];
 
-$validator = tr_validator($options, $fields)->validate(true);
+$validator = tr_validator($rules, $fields)->validate(true);
 ```
 
 ## Custom Validation Rules
@@ -388,7 +396,7 @@ You can set custom error messages with `setErrorMessages()`. When using this met
 $fields['name'] = 'kevin@example.com';
 $fields['repeater'][2849573629]['name'] = 'TypeRocket';
 
-$options = [
+$rules = [
     'name' => 'required|email',
     'repeater.?.name' => 'required',
 ];
@@ -399,7 +407,7 @@ $messages = [
     'repeater.\d+.name:required' => 'Repeater name {error}',
 ];
 
-$validator = tr_validator($options, $fields)->setErrorMessages($messages, true)->validate(true);
+$validator = tr_validator($rules, $fields)->setErrorMessages($messages, true)->validate(true);
 ```
 
 ## Add Static Error Message
@@ -407,7 +415,7 @@ $validator = tr_validator($options, $fields)->setErrorMessages($messages, true)-
 You can manually apply an error message to the errors list with `appendToFlashErrorMessage()` and `prependToFlashErrorMessage()`.
 
 ```php
-$validator = tr_validator($options, $fields)->validate(true);
+$validator = tr_validator($rules, $fields)->validate(true);
 
 $validator->appendToFlashErrorMessage('An error message appended.');
 $validator->prependToFlashErrorMessage('An error message prepended.');
