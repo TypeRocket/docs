@@ -47,12 +47,10 @@ If you have additional questions about installing and setting up TypeRocket chec
 
 ## Beginner Coding Tutorial
 
-With TypeRocket installed, and your override folders in place, you are ready to start coding. The best place to start is through creating a simple post type.
-
-[Getting Started with TypeRocket Post Types](/docs/v5/post-types-making/).
+With TypeRocket installed, and your override folders in place, you are ready to start coding. The best place to start is  [following our creating a post type documentation](/docs/v5/post-types-making/) and the [MVC for WordPress video series](https://www.youtube.com/playlist?list=PLh6jokL0yBPT6uJPnMFcZJJ1PzNs8XaK8).
 
 ## What Next?
 
-We are in the process of making many more video tutorials including an entire MVC series. Stay up to date with our free videos, [subscribe to our channel on YouTube](https://www.youtube.com/typerocket).
+Stay up to date with our free videos, [subscribe to our channel on YouTube](https://www.youtube.com/typerocket).
 
 Additionally, [subscribe to our mailing list](https://us8.list-manage.com/subscribe?u=7bbb7409e86c85970f6150c5e&id=1d45a226d0) to get TypeRocket announcements and be notified when a new tutorial series is available.
