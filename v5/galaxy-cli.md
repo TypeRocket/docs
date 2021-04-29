@@ -44,6 +44,8 @@ Commands to interface with the TypeRocket cache.
 cache:clear        Clear Cache
 ```
 
+This command removes all files from a specified cache folder located under the configured path for storage `paths.storage`. The main cache folder is located under `storage/cache`. So, the command `php galaxy cache:clear app` will remove all files from `storage/cache/app`, `php galaxy cache:clear twig` will remove all files from `storage/cache/twig`, and so forth.
+
 ### Config
 
 Commands to interface with the TypeRocket config.
@@ -51,6 +53,8 @@ Commands to interface with the TypeRocket config.
 ```
 config:seed        Generate seed for app.php
 ``` 
+
+In the `config/app.php` file of a fresh project you will see the `'seed' => 'PUT_TYPEROCKET_SEED_HERE'`. Running `php galaxy config:seed` will replace the seed with a random string.
 
 ### Core
 
@@ -60,6 +64,8 @@ Commands used to interface with TypeRocket core.
 core:update        Update Core
 ```
 
+When running `composer update` on your project this command will run. It downloads all the latest js, css, and other assets into the public directory for your project. To manually download the assets for TypeRocket run `php galaxy core:update`.
+
 ### Extension
 
 To publish custom TypeRocket enabled extensions.
@@ -68,6 +74,8 @@ To publish custom TypeRocket enabled extensions.
 extension:publish  Publish extension package
 ```
 
+Extensions, differ from WordPress plugins in that they are installed via composer only and do not have an interface on the plugins admin page in WordPress. You can [read more about extensions here](/docs/v5/custom-composer-packages).
+
 ### Make
 
 The make commands generate template code for you. These commands do not change configuration information or modify files. They create new files so you do not need to manually.
@@ -75,11 +83,15 @@ The make commands generate template code for you. These commands do not change c
 ```
 make:command       Make new command
 make:component     Make new component
+make:composer      Make new view composer
 make:controller    Make new controller
+make:fields        Make new HTTP fields container
 make:middleware    Make new middleware
 make:migration     Make new migration
 make:model         Make new model
+make:plugin        Make new WP plugin (pro only)
 make:policy        Make new auth policy
+make:rule          Make new validation rule
 make:service       Make new service
 ```
 

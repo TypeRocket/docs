@@ -71,6 +71,7 @@
 - automatic-updates: Automatic Updates
 - ioc-resolver: DI Container
 - galaxy-cli: Galaxy CLI
+- plugins-making: Make WordPress Plugin
 - strings: Strings
 - errors: Errors
 - html-generator: HTML Generator
