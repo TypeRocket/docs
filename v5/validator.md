@@ -32,7 +32,13 @@ $errors = $validator->getErrors();
 You can also get the errors used for inline fields. This will return an array of stings with the error messages.
 
 ```php
-$errors = $validator->getErrorFields();
+$errorsForFields = $validator->getErrorFields();
+```
+
+Once getting the inline field errors, send them back to the form by redirecting the response.
+
+```php
+tr_redirect()->withErrors( ['fields' => $errorsForFields] )->back()->now();
 ```
 
 ### Redirect On Error
@@ -267,12 +273,20 @@ $validator = tr_validator($options, tr_request()->getFields())->validate(true);
 
 ## Flash Errors
 
-To flash errors to the admin on the next request use the `flashErrors()` method;
+To flash errors to the admin on the next request use the `flashErrors()` method. This will flash the errors on the next request. So, you will need to redirect if validation has errors. 
 
 ```php
-if($validator->getErrors() ) {
+if($validator->failed() ) {
      $validator->flashErrors();
+     
+     tr_redirect()->back()->now();
 }
+```
+
+If you need the errors to flash on the front-end use the `\TypeRocket\Elements\Notice` class.
+
+```php
+echo \TypeRocket\Elements\Notice::flash();
 ```
 
 ## Validate Grouped Fields
