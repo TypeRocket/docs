@@ -87,6 +87,14 @@ $redirect->toPage($resource, $action, $item_id);
 $redirect->back();
 ```
 
+## Maybe Back
+
+Redirect back if URL is not already set.
+
+```php
+$redirect->maybeBack();
+```
+
 ## With Fields
 
 To redirect with fields, use the `withOldFields()` method. This is great for when [validation](https://typerocket.com/docs/v5/validator/) fails, and you need to [send the field data back to a form](https://typerocket.com/docs/v5/forms/#section-use-old).  
