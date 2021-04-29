@@ -51,19 +51,27 @@ tr_form()->useErrors();
 
 ### Redirect On Error
 
-You can [redirect](/docs/v5/redirects/) **back** right away, within a controller, when validation fails. When redirecting on error the old fields and error fields needed for inline field errors will get set and sent as well.
+You can [redirect](/docs/v5/redirects/) **back** right away, within a controller, when validation fails. When redirecting and validations fails a flash message, the old fields, and inline field errors will get set and sent as well.
 
 ```php
 // throws a RedirectError
-$validator->redirectOnError();
+$validator->redirectWithErrorsIfFailed();
 ```
 
 You can modify the redirect used by passing a callback to the method.
 
 ```php
-$validator->redirectOnError(function($redirect) {
+$cb = function($redirect) {
 	return $redirect->toHome();
-});
+};
+
+$validator->redirectWithErrorsIfFailed($cb);
+```
+
+Also, you can disable the error flash messages by passing `false` as the second argument.
+
+```php
+$validator->redirectWithErrorsIfFailed($cb, false);
 ```
 
 ### Flash Errors
