@@ -15,11 +15,11 @@ $options = [
 
 $validator = tr_validator($options, tr_request()->getFields())->validate(true);
 
-$errors = $validator->getErrors();
-$passes = $validator->getPasses();
+$failed = $validator->failed();
+$passed = $validator->passed();
 ```
 
-Validation is best done for custom resources. Post types fields should not be required but should be expected to be empty just as all other post type fields are in WordPress.
+Validation is best done for custom resources. Post types fields should not be required but should be expected to be empty just as all other post type fields are in WordPress. However, you can [implement field validation for post types](/add-custom-field-validation-to-wordpress-post-types/).
 
 ## Using Errors
 
