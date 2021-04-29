@@ -15,7 +15,13 @@ To register an "Admin Page" in WordPress, you only need one line of code.
 tr_page('Api', 'view', 'APIs Page');
 ```
 
-This one line of code adds the "Admin Page" to the WordPress admin, sets all the correct labels in the navigation and applicable places, and implements the required WordPress hooks. This would typically take many many lines of code.
+Or, the same using OOP.
+
+```php
+\TypeRocket\Register\Page::add('Api', 'view', 'APIs Page');
+```
+
+This one line of code adds the "Admin Page" to the WordPress admin, sets all the correct labels in the navigation and applicable places, and implements the required WordPress hooks. This would typically take many lines of code.
 
 *Note: By default, anyone who is logged-in with the capability `administrator` can view a page. You can change this later.* 
 
@@ -26,8 +32,8 @@ The `tr_page()` function takes 4 arguments:
 1. `$resource` - A string set to the resource or section the page belongs to.
 2. `$action` - A string set to the action the page is responsible for.
 3. `$title` - A string set to the title of the page and menu.
-4. `$settings` - Array menu, capability, position, view, slug.
-5. `$handler` - A controller or callable to handle the request.
+4. `$settings` - (optional) Array with keys `menu`, `capability`, `position`, `view`, `slug`.
+5. `$handler` - (optional) A controller class name as a string or callable to handle the request.
 
 Take a look at creating an admin page.
 
@@ -45,7 +51,6 @@ $fn = function() {
 };
 
 tr_page('Api', 'view', 'APIs Page', $settings, $fn);
-// Calls the function and `view` action is ignored
 ```
 
 Or, with a controller.
