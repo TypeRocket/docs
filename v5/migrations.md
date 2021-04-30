@@ -19,19 +19,17 @@ When a migration is run it creates a database entry in the `wp_options` table wi
 
 ## Admin UI
 
-You can view the status of your migrations using the DevTools extension in your WordPress admin on the Dev page under the migrations tab.
+You can view the status of your migrations using the `DevTools` extension in your WordPress admin on the Dev page under the migrations tab. If you have [TypeRocket plugins](/docs/v5/plugins-making) their migrations will appear on this page as well.
 
 ## Make Migration
 
-To make a migration run, the `make:migration` Galaxy command with a "name" for that migration.  
+To make a migration run, the `make:migration` Galaxy command with a "name" for that migration. There are two types of migrations you can create: SQL and PHP. The default migration type is SQL.
 
-```
+```bash
 php galaxy make:migration add_blocks_table
 ```
 
-Then, in the migration file, add the SQL for your migration. Under the `>>> Up >>>` section add the SQL for migrating up or forward. Under the `>>> Down >>>` section add the SQL for migrating down or backward.
-
-Anywhere you add `{!!prefix!!}` the migration system will replace `{!!prefix!!}` with your WordPress table prefix (the default is `wp_`).
+Then, in the migration file, add the SQL for your migration. Under the `>>> Up >>>` section add the SQL for migrating up or forward. Under the `>>> Down >>>` section add the SQL for migrating down or backward. Anywhere you add `{!!prefix!!}` the migration system will replace `{!!prefix!!}` with your WordPress table prefix (the default is `wp_`).
 
 ```sql
 -- Description: For reusable page builder components
@@ -43,7 +41,33 @@ CREATE TABLE IF NOT EXISTS `{!!prefix!!}blocks` (
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 -- >>> Down >>>
-DROP TABLE `{!!prefix!!}blocks`;
+DROP TABLE IF EXISTS `{!!prefix!!}blocks`;
+```
+
+To create a PHP class based migration add `php` after the migration name when using the `make:migration` command.
+
+```bash
+php galaxy make:migration add_blocks_table php
+```
+
+Will create a PHP migration with this template:
+
+```php
+<?php
+use TypeRocket\Database\Migration;
+
+return new class($wpdb) extends Migration
+{
+    public function up()
+    {
+
+    }
+
+    public function down()
+    {
+
+    }
+};
 ```
 
 ## Migrate Up
