@@ -26,6 +26,15 @@ Model created: Person as Post
 Controller created: PersonController as Post
 ```
 
+## Apply Model & Controller
+
+Next, apply the model and controller to the team post type. This step is not required but makes life easier later.
+
+```php
+$team->setHandler(\App\Controllers\PersonController::class);
+$team->setModelClass(\App\Models\Person::class);
+```
+
 ## Set Fillable Fields
 
 By setting the fillable property of the `Person` model, we will tell WordPress only to save the specified fields.
