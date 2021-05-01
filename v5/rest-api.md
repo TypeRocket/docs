@@ -3,6 +3,8 @@ Description: The TypeRocket REST API
 
 ---
 
+## TypeRocket REST API
+
 TypeRocket comes with a REST API that can be used to `create`, `update`, and `destroy` resources. You can access this API using the following URI scheme:
 
 ```

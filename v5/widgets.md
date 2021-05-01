@@ -3,9 +3,9 @@ Description: Add custom fields to widgets.
 
 ---
 
-*Pro Only: This is a Pro only extension feature.*
-
 ## Getting Started
+
+*Pro Only: This is a Pro only extension feature.*
 
 To create custom widgets with fields, you will need to extend the `\TypeRocketPro\Register\BaseWidget` class. 
 

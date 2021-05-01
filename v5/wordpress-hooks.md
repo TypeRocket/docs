@@ -3,6 +3,8 @@ Description: Extend and hook into TypeRocket with actions and filters.
 
 ---
 
+## About Hooks
+
 TypeRocket comes with several hooks to help you extend its core functionality. Not all the hooks are listed here.
 
 ## Core Loaded

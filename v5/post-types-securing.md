@@ -3,6 +3,8 @@ Description: Secure custom fields using models, controllers, middleware and the 
 
 ---
 
+## Securing Post Type Models
+
 In a previous tutorial, we created a [stacked "team" post type](/docs/v5/post-types-making/) with custom fields. As you experienced, TypeRocket saves any and all fields. However, this level of flexibility is not always appropriate for security reasons.
 
 ## Security

@@ -3,7 +3,7 @@ Description: Requirements to install TypeRocket Pro
 
 ---
 
-## Requirements
+## TypeRocket Requirements
 
 TypeRocket has a few requirements.
 

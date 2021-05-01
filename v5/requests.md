@@ -3,6 +3,8 @@ Description: Requests are objects that represent the HTTP requests.
 
 ---
 
+## What Is A Request?
+
 The `Request` object has several methods for working with the HTTP request.
 
 *Note: WordPress automatically adds slashes to $_POST, $_GET, and other super globals. A Request object reflects unmodified super globals.*

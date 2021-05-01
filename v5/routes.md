@@ -3,6 +3,8 @@ Description: Bypass the WordPress rewrite rules and use routes.
 
 ---
 
+## Getting Started
+
 The WordPress rewrite rules are mighty. You can use them to create custom endpoints and paths. TypeRocket routes do not explicitly register WordPress rewrite rules. Instead, TypeRocket routes bypass the rewrite `wp_options` cache. However, TypeRocket routes do pass through the rewrite engine. This allows you to quickly route requests to TypeRocket controllers where you can manage the business logic of your application.
 
 Because of TypeRocket's rewrite cache bypass, you do not need to flush the permalinks when you add a new route. However, TypeRocket routes do pass through the WordPress rewrite engine when a match is found.

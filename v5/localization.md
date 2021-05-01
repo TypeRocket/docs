@@ -3,6 +3,8 @@ Description: Localization of TypeRocket
 
 ---
 
+## TypeRocket Translation Support
+
 Localization in TypeRocket is a mixture of generating a POT file and then manually updating that file. If you have manually updated the POT file, keep in mind regenerating the file will remove your edits.
 
 If you are using WPML or another plugin, you will need to manually edit POT files for your fields, custom post types, and other places.

@@ -3,9 +3,9 @@ Description: The Galaxy CLI helps developers build custom TypeRocket powered Wor
 
 ---
 
-*Pro Only: This is a Pro only extension feature.*
-
 ## Make A TypeRocket Powered WordPress Plugin
+
+*Pro Only: This is a Pro only extension feature.*
 
 To create a standard WordPress plugin that is powered by TypeRocket use the galaxy CLI command.
 

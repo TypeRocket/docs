@@ -3,9 +3,9 @@ Description: A simple cURL client.
 
 ---
 
-*Pro Only: This is a Pro only extension feature.*
-
 ## Getting Started
+
+*Pro Only: This is a Pro only extension feature.*
 
 **IMPORTANT**: You must have the PHP cURL extension installed to use this class.
 

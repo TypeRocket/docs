@@ -4,6 +4,7 @@ Description: Controllers define how a resource is created, updated, read, delete
 ---
 
 ## Make Controller
+
 There are four Galaxy CLI commands "directives" for making a controller: `base`, `thin`, `post`, and `term`. You can also create a controller manually using the example code to follow.
 
 1. `base` - Make a base controller with the methods `index`, `add`, `create`, `edit`, `update`, `show`, `delete`, and `destroy`.

@@ -3,9 +3,9 @@ Description: Create static page caches to point your web server at for improved 
 
 ---
 
-*Pro Only: This is a Pro only extension feature.*
+## Rapid Pages Extension
 
-## Rapid Pages
+*Pro Only: This is a Pro only extension feature.*
 
 TypeRocket's Rapid Pages extension allows you to take advantage of the `advanced-cache.php` WordPress drop-in. To enable Rapid Pages:
  

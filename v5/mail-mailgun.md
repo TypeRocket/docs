@@ -3,9 +3,9 @@ Description: Custom Mailgun email driver setup.
 
 ---
 
-*Pro Only: This is a Pro only extension feature.*
-
 ## Getting Started
+
+*Pro Only: This is a Pro only extension feature.*
 
 You can add mailgun to your site by setting the driver in your `config/mail.php` file. Or, you can set the driver using the `typerocket_mailer_service_driver` and `typerocket_mail_driver_mailgun_options` filters.
 

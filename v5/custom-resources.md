@@ -3,10 +3,9 @@ Description: Add your own custom resources and database tables to build advanced
 
 ---
 
-*Pro Only: This is a Pro only extension feature.*
-
 ## Getting Started
 
+*Pro Only: This is a Pro only extension feature.*
 *Note: All your custom resources need to have unique names and cannot share a name with a post type or taxonomy. If you break this rule, you might encounter issues.*
 
 Custom resources are the way you access and manage custom database tables.

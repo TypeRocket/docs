@@ -3,6 +3,8 @@ Description: Redirect
 
 ---
 
+## What Are Redirects
+
 The `Redirect` object has several methods for making a redirect. For example, you can redirect to a URL on the home page right away using the following code.
 
 ```php

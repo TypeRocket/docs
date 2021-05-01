@@ -3,8 +3,6 @@ Description: Build SQL queries with JOIN, SELECT, INSERT, WHERE and others state
 
 ---
 
-*Note: for the sake of brevity, any time you see `$query` without a definition it equals `tr_query()->table('wp_posts')->setIdColumn('ID')`*
-
 ## Query Builder
 
 To create an SQL statements create a new instance of the `Query` class. To make a custom query object instance the `\Typerocket\Database\Query` class.
@@ -42,6 +40,8 @@ ID
 ```
 
 ## Finding
+
+*Note: for the sake of brevity, any time you see `$query` without a definition it equals `tr_query()->table('wp_posts')->setIdColumn('ID')`*
 
 There are four find methods models can use: `findById`, `findAll`, `findOrDie`, and `findFirstWhereOrDie`. For the majority of the following section we will use the `wp_posts` table as the example and work with the following `$query` object:
 

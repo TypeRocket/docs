@@ -3,6 +3,8 @@ Description: Define the relationships of models.
 
 ---
 
+## ORM Model Relationships
+
 Model relationships define how records are related in the database. The main relationship types include: "one to one", "one to many", and "many to many".
 
 ## One to One

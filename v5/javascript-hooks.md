@@ -3,6 +3,8 @@ Description: Extend repeaters and matrix fields; or, the REST HTTP response.
 
 ---
 
+## Getting Started
+
 TypeRocket comes with two callbacks to help you extend the core JavaScript functionality: `TypeRocket.httpCallbacks` and `TypeRocket.repeaterCallbacks`.
 
 ## HTTP

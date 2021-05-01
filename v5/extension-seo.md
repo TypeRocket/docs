@@ -3,9 +3,9 @@ Description: Add SEO to your post types or custom resources.
 
 ---
 
-*Pro Only: This is a Pro only extension feature.*
+## SEO Extension
 
-## Add Theme Support
+*Pro Only: This is a Pro only extension feature.*
 
 To begin, be sure your theme has title tag support enabled.
 

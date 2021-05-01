@@ -3,6 +3,8 @@ Description: Access role and capability features of WordPress through and elegan
 
 ---
 
+## What Are Roles?
+
 The `Roles` object has several methods for making working with roles and capabilities. The object gives you enhanced APIs for working with [WordPress roles and capabilities](https://wordpress.org/support/article/roles-and-capabilities/).
 
 ## List All

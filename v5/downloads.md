@@ -3,9 +3,9 @@ Description: Send downloads from a controller.
 
 ---
 
-*Pro Only: This is a Pro only extension feature.*
-
 ## Getting Started
+
+*Pro Only: This is a Pro only extension feature.*
 
 The `TypeRocketPro\Http\Download` class lets you send a downloadable file as the response to a request.
 

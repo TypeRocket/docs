@@ -3,9 +3,9 @@ Description: Middleware components allow  you to filter HTTP requests.
 
 ---
 
-Middleware allows you to take action before or after the `Response` is sent.
+## Http Middleware
 
-TypeRocket middleware works in a similar way to [Laravel middleware](http://laravel.com/docs/master/middleware).
+Middleware allows you to take action before or after the `Response` is sent. TypeRocket middleware works like [Laravel middleware](http://laravel.com/docs/master/middleware).
 
 ## Locating middleware
 
