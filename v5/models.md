@@ -156,7 +156,7 @@ $doc = (new Doc())->find(1);
 
 ## Fillable
 
-To make limit what fields can be saved without be explicitly set use the `$fillable` property.
+To limit the fields tht can be saved without being explicitly set, use the `$fillable` property.
 
 ```php
 class Doc extends Model
@@ -172,9 +172,28 @@ class Doc extends Model
 }
 ```
 
+Now, when a `Doc` is saved using `save()` only the fillable fields will be saved.
+
+```php
+$fields = [
+    'title' => 'Setting Fillable Model Fields',
+    'id' => 1,
+    'content' => 'When saving fields to a model use fillable to restrict mass/bulk saving.',
+];
+
+// Only `title` from fields is saved
+$doc->save($fields);
+
+// Only `title` from fields is saved, and the
+// explicitly set `content` is saved.  
+$doc->content = $fields['content'];
+$doc->save($fields);
+```
+
 ## Guard
 
-To restrict a set of fields that can not be saved without be explicitly set use the `$guard` property.
+To restrict a set of fields that can not be saved without be explicitly set use the `$guard` property. In this example, `is`, `created_at`, and `modified_at` can not be saved using
+the mass `save()` method.
 
 ```php
 class Doc extends Model
@@ -187,6 +206,24 @@ class Doc extends Model
         'modified_at'
     ];
 }
+```
+
+Now,
+
+```php
+$fields = [
+    'title' => 'Setting Guard Model Fields',
+    'created_at' => 2021,
+    'modified_at' => 2021,
+];
+
+// Only `title` from fields is saved
+$doc->save($fields);
+
+// Only `title` from fields is saved, and the
+// explicitly set `modified_at` is saved.
+$doc->modified_at = $doc->getDateTime();
+$doc->save($fields);
 ```
 
 ## Cast
