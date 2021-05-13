@@ -118,24 +118,24 @@ You can cache the rendered view by using the `cache()` method. This will cache t
 
 1. A unique name for the cache.
 2. (optional A cache time in seconds, `9999999999` is the default.
-3. (optional) A folder for the cache, `app` is the default.
+3. (optional) A folder for the cache, `views` is the default (was `app` in the past).
 
-In this example, we cache the page for 2 minutes and cache the result to `storage/cache/view`
+In this example, we cache the page for 2 minutes and cache the result to `storage/cache/my-views`
 
 ```php
-echo tr_view('books.index')->cache('my-namespace.books.index', MINUTE_IN_SECONDS * 2, 'view');
+echo tr_view('books.index')->cache('my-namespace.books.index', MINUTE_IN_SECONDS * 2, 'my-views');
 ```
 
-To clear the cache use the Galaxy CLI and pass the cache folder name `view` as the argument.
+To clear the cache use the Galaxy CLI and pass the cache folder name `my-views` as the argument.
 
 ```bash
-php galaxy cache:clear view
+php galaxy cache:clear my-views
 ```
 
-If the folder was `app` then run.
+If the folder was the default of `views` then run.
 
 ```bash
-php galaxy cache:clear app
+php galaxy cache:clear views
 ```
 
 ## Twig Engine
