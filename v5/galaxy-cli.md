@@ -261,7 +261,7 @@ class Test extends Command
 
 When adding console commands, you will want to get input from the user through arguments or options. You can define the user input you want in two ways:
 
-1. Using the (Symfony Command methods)[https://symfony.com/doc/current/console/input.html]. For example, using `$this->addArgument('arg', self::REQUIRED, 'Description')`.
+1. Using the [Symfony Command methods](https://symfony.com/doc/current/console/input.html). For example, using `$this->addArgument('arg', self::REQUIRED, 'Description')`.
 2. Using a shorthand command signature. The first index of the `$command` property is the command signature.
 
 ## Shorthand Command Signature
@@ -408,7 +408,7 @@ name:command {email} {?user=kevin} {--o|option=dees}
 
 ## Take an Array of Values
 
-You can also accept an array of values with `*`. When setting an argument or option an array of input values no default value can be set. However, this can be done with the (Symfony Command methods)[https://symfony.com/doc/current/console/input.html].
+You can also accept an array of values with `*`. When setting an argument or option an array of input values no default value can be set. However, this can be done with the [Symfony Command methods](https://symfony.com/doc/current/console/input.html).
 
 ```
 name:command {user*} 
