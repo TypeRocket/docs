@@ -206,14 +206,13 @@ You can now find your new command at `app/Commands/Test.php`. We will take a loo
 Now run `php galaxy list` and check for:
 
 ```shell
-app
-  app:test         Short description here
+app:test         Short description here
 ```
 
 Now run the command:
 
 ```shell
- php galaxy app:test
+php galaxy app:test
 ```
 
 This will output,
@@ -224,7 +223,7 @@ Executed!
 
 You are now ready to start building your command.
 
-### Coding Commands
+## Coding Commands
 
 Here is the `Test` command class we just created. If you want to make your commands without the galaxy CLI, this can serve as a working template.
 
@@ -238,7 +237,7 @@ class Test extends Command
 {
 
     protected $command = [
-        'app:test',
+        'app:test', // Command signature
         'Short description here',
         'Longer help text goes here.',
     ];
@@ -246,6 +245,7 @@ class Test extends Command
     protected function config()
     {
         // If you want to accept arguments
+        // Not required when using 
         // $this->addArgument('arg', self::REQUIRED, 'Description');
     }
 
@@ -255,4 +255,181 @@ class Test extends Command
         $this->success('Execute!');
     }
 }
+```
+
+## Command User Input
+
+When adding console commands, you will want to get input from the user through arguments or options. You can define the user input you want in two ways:
+
+1. Using the (Symfony Command methods)[https://symfony.com/doc/current/console/input.html]. For example, using `$this->addArgument('arg', self::REQUIRED, 'Description')`.
+2. Using a shorthand command signature. The first index of the `$command` property is the command signature.
+
+## Shorthand Command Signature
+
+When using a shorthand command signature you will not need to use the Symfony Command methods like `addArgument()`. So, you can remove the `config()` method from your commands if you use shorthand.
+
+```php
+<?php
+namespace App\Commands;
+
+use \TypeRocket\Console\Command;
+
+class Test extends Command
+{
+
+    protected $command = [
+        'app:test', // Command signature
+        'Short description here',
+        'Longer help text goes here.',
+    ];
+    
+    // Removed config()
+
+    public function exec()
+    {
+        // When command executes
+        $this->success('Execute!');
+    }
+}
+```
+
+## Command Arguments
+
+To collection user input in shorthand use curly braces `{}` and place the desired input name inside. These arguments are required. For example, an input named `user` would be `{user}`. This is the same as using `$this->addArgument('user', self::REQUIRED)` via Symfony.
+
+```
+name:command {user}
+```
+
+Now, you can run the command:
+
+```
+php galaxy name:command kevin
+```
+
+You can take as many arguments as you like.
+
+```
+name:command {user} {email} 
+```
+
+Then run the command:
+
+```
+php galaxy name:command kevin kevin@example.com
+```
+
+You can access the arguments from within the `exec()` method of the command class using `$this->getArgument()`.
+
+```php
+// When command executes
+var_dump(
+    $this->getArgument('user'),
+    $this->getArgument('email')
+);
+$this->success('Execute!');
+```
+
+## Command Options
+
+Commands can also take options. Options are like arguments but instead act as named arguments. Options can always be excluded by the end-user, but when provided an end-user value is required.
+
+```
+name:command {user} {?--option}
+```
+
+Now, you can pass an option with `--option`.
+
+```
+php galaxy name:command kevin --option="my option"
+```
+
+But, error will occur when running,
+
+```
+php galaxy name:command kevin --option
+```
+
+Outputs:
+
+```
+The "--option" option requires a value.
+```
+
+### Shorthand Options
+
+You can also define a shorthand option in the command signature. For example, an option of `mode` with a shorthand of `m`:
+
+```
+name:command {user} {--m|mode}
+```
+
+Now, you can pass an option with `-m` (only one dash is used and no `=` sign).
+
+```
+name:command kevin -mfirst
+```
+
+To access an option from within the `exec()` method of the command class using `$this->getOption()`.
+
+```php
+// When command executes
+var_dump($this->getOption('mode'));
+$this->success('Execute!');
+```
+
+### Optional Input
+
+You can also mark an input argument as optional with the `?` prefix.
+
+```
+name:command {?user}
+```
+
+Optional user input should be defined last when other input is required:
+
+```
+name:command {email} {?user}
+```
+
+Or, for options.
+
+```
+name:command {?--user}
+```
+
+## Default Values
+
+To set a default value use `=`.
+
+```
+name:command {email} {?user=kevin} {--o|option=dees}
+```
+
+## Take an Array of Values
+
+You can also accept an array of values with `*`. When setting an argument or option an array of input values no default value can be set. However, this can be done with the (Symfony Command methods)[https://symfony.com/doc/current/console/input.html].
+
+```
+name:command {user*} 
+```
+
+Then from the console.
+
+```bash
+php galaxy name:command kevin jeff jena 
+```
+
+You can combine array input with the optional to collect zero or more values.
+
+```
+name:command {?user*}
+```
+
+When using array input it must be the last argument accepted so `name:command {?user*} {email}` should instead be `name:command {email} {?user*}`.
+
+If using an option:
+
+```
+name:command {?user*} {--o|option*}
 ```
