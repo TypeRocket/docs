@@ -245,7 +245,6 @@ class Test extends Command
     protected function config()
     {
         // If you want to accept arguments
-        // Not required when using 
         // $this->addArgument('arg', self::REQUIRED, 'Description');
     }
 
