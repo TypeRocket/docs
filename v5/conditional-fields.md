@@ -127,7 +127,7 @@ echo $form->text('my_group.another_group.Hours')
     ->when('<<company_open');
 ```
 
-You can use subfield selector `<` to access main level fields from within repeater, matrix, and builder fields. For example, when using a repeater you must go back two levels by prefixing with `<<` (go back two subfields). the first level is the element index `1738502764832` so dive one level with the first `<` and the next is the field name `advantages` so dive one more level with `<`. Finally, access the field with `use_descriptions`. So, the "when" lookup target is `<<use_descriptions`.
+You can use subfield selector `<` to access main level fields from within repeater, matrix, and builder fields. For example:
 
 ```php
 echo $form->toggle('Use Descriptions'); 
@@ -137,6 +137,8 @@ echo $form->repeater('Advantages')->setFields([
     $form->text('Description')->when('<<use_descriptions'),
 ])->setLimit(4);
 ```
+
+When using a repeater you must go back two levels by prefixing with `<<` (go back two subfields). The first level is the element index `1738502764832` so dive one level with the first `<` and the next is the field name `advantages` so dive one more level with `<`. Finally, access the field with `use_descriptions`. So, the "when" lookup target is `<<use_descriptions`.
 
 ## Select From Root
 
