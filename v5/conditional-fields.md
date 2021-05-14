@@ -119,12 +119,23 @@ echo $form->text('Hours')
 
 ## Select Child Fields
 
-If you are using groups, you can select multiple groups down using the `<` selector. For each `<` the conditional will look one field group down.
+If you are using groups, you can select multiple groups down using the `<` subfield selector. For each `<` the conditional will look one field group down.
 
 ```php
 echo $form->toggle('Company Open'); 
 echo $form->text('my_group.another_group.Hours')
     ->when('<<company_open');
+```
+
+You can use subfield selector `<` to access main level fields from within repeater, matrix, and builder fields. For example, when using a repeater you must go back two levels by prefixing with `<<` (go back two subfields). the first level is the element index `1738502764832` so dive one level with the first `<` and the next is the field name `advantages` so dive one more level with `<`. Finally, access the field with `use_descriptions`. So, the "when" lookup target is `<<use_descriptions`.
+
+```php
+echo $form->toggle('Use Descriptions'); 
+
+echo $form->repeater('Advantages')->setFields([
+    $form->text('Title'),
+    $form->text('Description')->when('<<use_descriptions'),
+])->setLimit(4);
 ```
 
 ## Select From Root
