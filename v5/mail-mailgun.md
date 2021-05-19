@@ -9,6 +9,18 @@ Description: Custom Mailgun email driver setup.
 
 You can add mailgun to your site by setting the driver in your `config/mail.php` file. Or, you can set the driver using the `typerocket_mailer_service_driver` and `typerocket_mail_driver_mailgun_options` filters.
 
+Options include:
+
+- `region` - Two options `us` or `eu`.
+- `api_key` - You can use the API key from the Mailgun "Settings" > "API Keys" section, or a domain specific API key under "Sending" > (select your domain) > "Domain Settings" > "Sending API keys".
+- `domain` - Your custom sending domain, eg. mg.example.com, not the Mailgun API domain.
+- `from_override` - A `bool` value. When set it will use the config's address information as the "From:" information used instead of the code level "From:" information. Setting this value to `true` will send all emails from the same address.
+- `from_address` - The email address used by the `from_override` and as the default "From:" email address.
+- `from_name` - The name used by the `from_override` and as the default "From:" name for the email address.
+- `track_clicks` - Two options `yes` and `no`.
+- `track_opens` - Two options `yes` and `no`.
+- `tags` - A list of tags to mark email sends with in the Mailgun dashboard.
+
 ```php
 add_filter('typerocket_mail_driver_mailgun_options', function($driver) {
     return [
