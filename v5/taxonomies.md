@@ -129,6 +129,21 @@ By default, TypeRocket will use the taxonomy ID as the slug for the URL rewrite 
 $pub->setSlug('publishers');
 ```
 
+### Slug With Front
+
+Sometimes you will not want your taxonomy slug structure be prepended to the front base. For example, if your main permalink structure is `/blog/%postname%/` then your links will be `/blog/publishers/%postname%/` by default because `with_font` is `true` by default. To make taxonomy slug stop prepending to the front base URL set the `with_front` setting to `false`; the result will be `/publishers/%postname%/` instead of `/blog/publishers/%postname%/`.
+
+```php
+$withFront = false;
+$pub->setSlug('publishers', $withFront);
+```
+
+Or, you can simply disable `with_front`.
+
+```php
+$pub->disableSlugWithFront();
+```
+
 ## Show Or Hide Admin & Frontend
 
 Sometimes you don't want a taxonomy to have an archives page. You can use the `setAdminOnly()` method to keep a taxonomy out of the front-end.

@@ -246,6 +246,21 @@ Any time you add a new post type or change the slug, you need to flush the WordP
 
 *Note: Flush rewrites by clicking "Settings > Permalinks > Save Changes".*
 
+### Slug With Front
+
+Sometimes you will not want your post type slug structure be prepended to the front base. For example, if your main permalink structure is `/blog/%postname%/` then your links will be `/blog/library/%postname%/` by default because `with_font` is `true` by default. To make your post type slug stop prepending to the front base URL set the `with_front` setting to `false`; the result will be `/library/%postname%/` instead of `/blog/library/%postname%/`.
+
+```php
+$withFront = false;
+$book->setSlug('library', $withFront);
+```
+
+Or, you can simply disable `with_front`.
+
+```php
+$book->disableSlugWithFront();
+```
+
 ## Show Or Hide Admin & Frontend
 
 Sometimes you don't want post types to have an archive or single pages. You can use the `setAdminOnly()` method to keep a post type out of the front-end.
