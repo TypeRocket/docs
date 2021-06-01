@@ -17,7 +17,7 @@ The page builder plugin helps developers and designers work together with client
 
 ## Post Types
 
-By default, the page builder will be applied to the `page` post type only. You can add more post types usinf the following filter:
+By default, the page builder will be applied to the `page` post type only. You can add more post types using the following filter:
 
 ```php
 add_filter('typerocket_ext_builder_post_types', function($post_types) { 
