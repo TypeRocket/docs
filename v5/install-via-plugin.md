@@ -93,8 +93,8 @@ Add the following code to your `galaxy-config.php` and point the `$typerocket` v
 You can also [watch the tutorial on YouTube](https://youtu.be/tXPn7wUfBdo?t=165).
 
 ```php
-# Your paths might be different.
-# This example works with the Pro plugin.
+// Your paths might be different.
+// This example works with the Pro plugin.
 $typerocket = __DIR__ . '/wp-content/plugins/typerocket-pro-v5/typerocket';
 $overrides = __DIR__ . '/wp-content/themes/my-theme';
 
@@ -104,4 +104,10 @@ define('TYPEROCKET_ROOT_WP', __DIR__);
 
 define('TYPEROCKET_APP_ROOT_PATH', $overrides);
 define('TYPEROCKET_ALT_PATH', $overrides);
+
+// Here we include the app folder
+define('TYPEROCKET_AUTOLOAD_APP', [
+    'prefix' => 'App',
+    'folder' => $overrides . '/app',
+]);
 ```

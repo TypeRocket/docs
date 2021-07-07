@@ -167,13 +167,19 @@ define('TYPEROCKET_CORE_CONFIG_PATH', $typerocket . '/config' );
 define('TYPEROCKET_ROOT_WP', __DIR__);
 ```
 
-Also, you might want to update where the galaxy command creates new files like models and controllers.
+Also, you might want to update where the galaxy command creates and load new files like models and controllers.
 
 ```php
 // The folder that contains your app folder
 // not the app folder itself
 define('TYPEROCKET_APP_ROOT_PATH', __DIR__ . '/wp-content/themes/my-theme');
 define('TYPEROCKET_ALT_PATH', __DIR__ . '/wp-content/themes/my-theme');
+
+// Here we include the app folder
+define('TYPEROCKET_AUTOLOAD_APP', [
+    'prefix' => 'App',
+    'folder' => __DIR__ . '/wp-content/themes/my-theme/app',
+]);
 ```
 
 ### Trouble Shooting
