@@ -31,7 +31,7 @@ tr_meta_box('Team Details')->apply($team)->setCallback(function() {
 tr_taxonomy('Department')->apply($team);
 ```
 
-Next, flush the rewrite rules in WordPress. This **VERY IMPORTANT**. Without flushing, rewrite rules, WordPress will not have a URL for the `person` post type.
+Next, flush the rewrite rules in WordPress. This is **VERY IMPORTANT**! Without flushing, rewrite rules, WordPress will not have a URL for the `person` post type.
 
 *Note: Flush rewrites by clicking Settings > Permalinks > Save Changes*
 

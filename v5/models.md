@@ -27,7 +27,7 @@ Both `post` and `term` are unique and should be used with care. In many cases, i
 
 The `base` directive is the most useful and is for making a model that is connected to custom tables.
 
-*Note: The Galaxy command-line tool is not available if you are using the official TypeRocket Framework 4 WordPRess plugin.*
+*Note: The Galaxy command-line tool is not available if you are using the official TypeRocket Framework 4 WordPress plugin.*
 
 ### Command
 
@@ -156,7 +156,7 @@ $doc = (new Doc())->find(1);
 
 ## Fillable
 
-To limit the fields tht can be saved without being explicitly set, use the `$fillable` property.
+To limit the fields that can be saved without being explicitly set, use the `$fillable` property.
 
 ```php
 class Doc extends Model
@@ -728,7 +728,7 @@ $machines->toJson();
 
 ## Post Type Models
 
-At times will want to access the `WP_Post` object using a `WPPost` model without making an extra query to the database. You can now do this using the `WP_Post()` method on any post type model.
+At times you will want to access the `WP_Post` object using a `WPPost` model without making an extra query to the database. You can now do this using the `wpPost()` method on any post type model.
 
 Here is an advanced usage example on how this can be used to optimize your database performance.
 
@@ -744,7 +744,7 @@ class Symbol extends WPPost
 
     public function getLinkProperty()
     {
-        return get_the_permalink($this->WP_Post());
+        return get_the_permalink($this->wpPost());
     }
 
     public function getFeaturedImageProperty()

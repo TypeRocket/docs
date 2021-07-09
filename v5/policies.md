@@ -7,7 +7,7 @@ Description: Policies give you expressive control over user action authorization
 
 Policies give you expressive control over user action authorization. For this reason, policies go hand-in-hand with WordPress roles and capabilities.
 
-For example, locate your `app/Auth/PostPilicy`.  
+For example, locate your `app/Auth/PostPolicy`.  
 
 ```php
 class PostPolicy extends Policy  

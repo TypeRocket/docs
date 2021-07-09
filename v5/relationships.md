@@ -13,7 +13,7 @@ In a [one to one](https://en.wikipedia.org/wiki/One-to-many_(data_model)) relati
 
 ### Implementation
 
-Take the plane flight example where one `Person` and have one `Seat`. For the `Person` model, let's assume there is a table named `wp_people` with the columns `id`, `name`, and `email`. For the `Seat` model lets assume there is a table named `wp_seats` with the columns `id`, `person_id`, `seat_number`, and `price`. How would you represent the database relationship in your TypeRocket models?
+Take the plane flight example where one `Person` has one `Seat`. For the `Person` model, let's assume there is a table named `wp_people` with the columns `id`, `name`, and `email`. For the `Seat` model lets assume there is a table named `wp_seats` with the columns `id`, `person_id`, `seat_number`, and `price`. How would you represent the database relationship in your TypeRocket models?
 
 Take a look at the `Person` model.
 

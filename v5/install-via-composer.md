@@ -86,9 +86,9 @@ In your browser, visit `localhost:8888` to view the WordPress install page.
 
 Running `root:install` will:
 
-- Downloads WordPress in the `wordpress` folder where the assets are located.
-- Creates the `wp-config.php` file in the main TypeRocket folder.
-- Enables TypeRocket's root theme as the default.
+- Download WordPress in the `wordpress` folder where the assets are located.
+- Create the `wp-config.php` file in the main TypeRocket folder.
+- Enable TypeRocket's root theme as the default.
 - Add `require __DIR__ . '/init.php';` to your `wp-config.php`.
 
 #### Deploying A Root Install
