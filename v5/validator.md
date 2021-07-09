@@ -335,7 +335,7 @@ $validator = tr_validator($rules, $fields)->validate(true);
 
 ## Custom Validation Rules
 
-You will need to extend the `\TypeRocket\Utility\Validators\ValidatorRule` class to create custom rules. For example, you might make a variation of the email validation rule:
+You will need to extend the `\TypeRocket\Utility\Validators\ValidatorRule` class to create custom rules. You can make a custom validation rule using the Galaxy CLI using the command `php galaxy make:rule <key> <class>`. For example, you might make a variation of the email validation rule with `php galaxy make:rule domain_email DomainEmailValidator`:
 
 ```php
 <?php
