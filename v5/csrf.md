@@ -5,7 +5,7 @@ Description: CSRF protection.
 
 ## Getting Started
 
-You can add CSRF protection to your site's forms by using the middleware `\App\Http\Middleware\VerifyNonce`. You will need to register the middleware to your `\App\Http\Kernel`. By default, it is apply to any request using the `http` group (controllers called by internal WordPress hooks have their own CSRF protections).
+You can add CSRF protection to your site's forms by using the middleware `\App\Http\Middleware\VerifyNonce`. You will need to register the middleware to your `\App\Http\Kernel`. By default, it is applied to any request using the `http` group (controllers called by internal WordPress hooks have their own CSRF protections).
 
 ```php
 class Kernel extends HttpKernel
