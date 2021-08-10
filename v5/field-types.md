@@ -340,13 +340,7 @@ echo $form->file('File')->setSetting('type', 'text/csv');
 echo $form->file('File')->setSetting('type', 'image/svg+xml');
 ```
 
-Any of [these mime types](https://codex.wordpress.org/Function_Reference/get_allowed_mime_types) will work, and the following common use cases will also work:
-
-```php
-echo $form->file('File')->setSetting('type', 'audio');
-echo $form->file('File')->setSetting('type', 'video');
-echo $form->file('File')->setSetting('type', 'pdf');
-```
+Any of [these mime types](https://codex.wordpress.org/Function_Reference/get_allowed_mime_types) will work.
 
 ### Button Text
 
