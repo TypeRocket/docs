@@ -126,6 +126,6 @@ If you decide to use advanced fields like repeaters and galleries, you can use `
 
 Now that you have the most basic setup, you can start adding more tabs and fields.
 
-- [Tabs API](/docs/v5/layout-tabs/)
+- [Tabs API](/docs/v5/tabs/)
 - [Forms API](/docs/v5/forms/) (fields are near the bottom)
 - [Fields API](/docs/v5/fields/)
