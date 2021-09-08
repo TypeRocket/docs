@@ -113,3 +113,14 @@ Migrate "down" all migrations that have been run and then migrate "up".
 ```
 php galaxy migrate reload
 ```
+
+## Migrate Options
+
+The migrate command has two additional options:
+
+- `--path`: An absolute path to a specific migrations folder.
+- `--wp_option`: The `{{prefix}}_options` option name to track the migration's of the defined folder.
+
+```bash
+php galaxy migrate up --path=/my/path/migrations --wp_option=my_migrations_option
+```

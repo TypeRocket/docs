@@ -109,10 +109,6 @@ $validator->passed();
 $validator->failed();
 ```
 
-## Multiple Options
-
-To use multiple options, use the `|` (pipe) character to separate them.
-
 ## Validation Rules
 
 There are 10 validation Rules: `required`, `key`, `email`, `min:{int}`, `max:{int}`, `size:{int}`, `numeric`, `url`, `callback:{callback}:{[option]}`, and ( `unique:{field}:{[id]}` and `unique:{field}:{table[@column]}{[id]}`). You can make custom validation rules if you need more.
@@ -195,8 +191,30 @@ To require a field but allow for `NULL`, use the `weak` option.
 $rules = [
     'email_address'  => 'required:weak'
 ];
+```
 
-$validator = tr_validator($rules, tr_request()->getFields())->validate(true);
+To require a field but first `trim()` the value(s), use the `strong` option.
+
+```php
+$rules = [
+    'email_address'  => 'required:strong'
+];
+```
+
+To require a field and allow the value of `0`, use the `allow_zero` option.
+
+```php
+$rules = [
+    'email_address'  => 'required:allow_zero'
+];
+```
+
+To combine options separate them with a `/`.
+
+```php
+$rules = [
+    'email_address'  => 'required:strong/allow_zero'
+];
 ```
 
 ### Email
@@ -427,4 +445,24 @@ $validator = tr_validator($rules, $fields)->validate(true);
 
 $validator->appendToFlashErrorMessage('An error message appended.');
 $validator->prependToFlashErrorMessage('An error message prepended.');
+```
+
+## Multiple Options
+
+To use multiple options, use the `|` (pipe) character to separate them.
+
+```php
+$rules = [
+    'email' => 'required|email',
+];
+```
+
+## Weak Validation
+
+To skip validation when a field is not probided or is blank prepend `?` to the validation rule set.
+
+```php
+$rules = [
+    'email' => '?required|email',
+];
 ```
