@@ -331,6 +331,23 @@ Files are saved by their attachment ID.
 $file = $form->file('PDF');
 ```
 
+### Restricted Mime Types
+
+When adding a file field, you can set the allowed mime types to be uploaded:
+
+```php
+echo $form->file('File')->setSetting('type', 'text/csv');
+echo $form->file('File')->setSetting('type', 'image/svg+xml');
+```
+
+Any of [these mime types](https://codex.wordpress.org/Function_Reference/get_allowed_mime_types) will work.
+
+### Button Text
+
+```php
+$file->setSetting('button', 'Insert File')
+```
+
 ## File Upload
 
 Upload files using the `<input type="file">` field. Unlike other fields this one does not save data to the database nor does it save any field value. You will need to implement your own file upload system.
@@ -392,23 +409,6 @@ To echo information before the input field provide a callback that returns a str
 $form->fileUpload('PDF')->doBefore(function($field, $value) {
     return esc_html($value);
 });
-```
-
-### Restricted Mime Types
-
-When adding a file field, you can set the allowed mime types to be uploaded:
-
-```php
-echo $form->file('File')->setSetting('type', 'text/csv');
-echo $form->file('File')->setSetting('type', 'image/svg+xml');
-```
-
-Any of [these mime types](https://codex.wordpress.org/Function_Reference/get_allowed_mime_types) will work.
-
-### Button Text
-
-```php
-$file->setSetting('button', 'Insert File')
 ```
 
 ## Gallery - Pro Only
