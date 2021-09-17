@@ -331,6 +331,69 @@ Files are saved by their attachment ID.
 $file = $form->file('PDF');
 ```
 
+## File Upload
+
+Upload files using the `<input type="file">` field. Unlike other fields this one does not save data to the database nor does it save any field value. You will need to implement your own file upload system.
+
+```php
+$file = $form->fileUpload('PDF');
+```
+
+When the field is attached to a form it will make that form `multipart/form-data` if you create your own form element using `$form->open()` or the like. Otherwise, you will need to allow file uploads on your form manually.
+
+You can add `multipart/form-data` support to your form directly using:
+
+```php
+$form->allowFileUploads()
+echo $form->open();
+echo $form->close();
+```
+
+In the case of the post edit screen you will be using the WordPress provided form element. The same is true in many other places with the WordPress admin. Each form will require `enctype="multipart/form-data"` to be added using hooks.
+
+```php
+function add_form_multipart() {
+ echo ' enctype="multipart/form-data"';
+}
+
+add_action('post_edit_form_tag', 'add_form_multipart');
+add_action( "{$taxonomy}_term_edit_form_tag", 'add_form_multipart');
+add_action( "{$taxonomy}_term_new_form_tag", 'add_form_multipart');
+add_action( "user_edit_form_tag", 'add_form_multipart');
+add_action( "user_new_form_tag", 'add_form_multipart');
+```
+
+*Note: Some places in WordPress do not allow for file uploads. Comments for example.*
+
+### Multiple
+
+Allow multiple files for uploading.
+
+```php
+$form->fileUpload('Image')->multiple();
+```
+
+### Accept
+
+You can define what types of files are accepted by the input field.
+
+```php
+$form->fileUpload('Image')->accepts(['.png','.jpg','.jpeg','.gif']);
+```
+
+### Do Before
+
+To echo information before the input field provide a callback that returns a string. The callback has two parameters:
+
+1. `$field` - An instance of the `FileUpload` field.
+2. `$value` - A field value that shares the fields name. **Note**: No value is saved by default, you will need to implement your own value saving system. `$value` is provided for easy value access, provided you save your own data following the TypeRocket model system conventions.
+
+```php
+$form->fileUpload('PDF')->doBefore(function($field, $value) {
+    return esc_html($value);
+});
+```
+
 ### Restricted Mime Types
 
 When adding a file field, you can set the allowed mime types to be uploaded:

@@ -217,6 +217,18 @@ $rules = [
 ];
 ```
 
+### Datetime Local
+
+To make a field required to be an in the [HTML5 input datetime-local field](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local) format `<input type="datetime-local">`, use the `datetime-local` option.
+
+```php
+$rules = [
+    'datetime'  => 'datetime-local'
+];
+
+$validator = tr_validator($rules, tr_request()->getFields())->validate(true);
+```
+
 ### Email
 
 To make a field required to be an email, use the `email` option.
@@ -459,7 +471,7 @@ $rules = [
 
 ## Weak Validation
 
-To skip validation when a field is not probided or is blank prepend `?` to the validation rule set.
+To skip validation when a field is not provided or is blank prepend `?` to the validation rule set.
 
 ```php
 $rules = [

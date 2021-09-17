@@ -843,6 +843,32 @@ $form->myFunction('your', 'arg');
 
 Macros do not override existing methods.
 
+## Allow File Uploads
+
+Allow files uploads from the form. This will apply `multipart/form-data` to the form element.
+
+```php
+$form->allowFileUploads();
+echo $form->open();
+echo $form->close();
+```
+
+In the many cases WordPress provides its own form elements. The `allowFileUploads()` does not apply to built-in WordPress form elements. You will need to use hooks to add the needed form attributes.
+
+```php
+function add_form_multipart() {
+ echo ' enctype="multipart/form-data"';
+}
+
+add_action('post_edit_form_tag', 'add_form_multipart');
+add_action( "{$taxonomy}_term_edit_form_tag", 'add_form_multipart');
+add_action( "{$taxonomy}_term_new_form_tag", 'add_form_multipart');
+add_action( "user_edit_form_tag", 'add_form_multipart');
+add_action( "user_new_form_tag", 'add_form_multipart');
+```
+
+*Note: Some places in WordPress do not allow for file uploads. Comments for example.*
+
 ## Attributes
 
 Attributes are the HTML attributes set to the form's open tag.
