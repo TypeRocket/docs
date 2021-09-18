@@ -820,3 +820,89 @@ $post = (new \App\Models\Post)->when(tr_request()->input('title'), function($mod
     $model->where('post_title', $value);
 })->get();
 ```
+
+## Advanced Recursive Replace
+
+You can recursively replace current array data with new array data within a specific model column using the `Model::setArrayReplaceRecursiveKey()`. Using this method will not allow the current data to be deleted because it is a deep array replace function.
+
+1. `$key`: `string` - The name of the column to recursively replace.
+2. `$callback`: `callable` - A callback returning the new value just before the recursive replacement. The callback requires three arguments `$new`, `$current`, and `$key`.
+
+```php
+$model = new class extends Model 
+{
+    protected $properties = [
+        'column' => [
+            'first_name' => 'Kevin',
+            'last_name' => 'Dees',
+        ]
+    ];
+};
+
+$new = [
+    'column' => [
+        'last_name' => 'Smith',
+    ]
+];
+
+$model->setArrayReplaceRecursiveKey('column', function($new, $current, $key) {
+    $name['last_name'] = 'Doe';
+    return $new;
+});
+$model->save($new);
+```
+
+Result will be:
+
+```php
+[
+    'column' => [
+        'first_name' => 'Kevin',
+        'last_name' => 'Doe',
+    ]
+]
+```
+
+Also, you can use `Model::setArrayReplaceRecursiveStops()` to mark stop points for the recursive replacements. This allows for the removal or total replacement of data after the stop point. `Model::setArrayReplaceRecursiveStops()` takes two arguments.
+
+1. `$key`: `string` - The name of the column.
+2. `$stops`: `array` - List of dot notation stop point against the current data.
+
+```php
+$model = new class extends Model 
+{
+    protected $properties = [
+        'column' => [
+            'first_name' => 'Kevin',
+            'last_name' => 'Dees',
+            'list' => [1,2,3],
+            'group' => ['name' => ['a' => 'item'], 'age' => 12]
+        ]
+    ];
+};
+
+$new = [
+    'column' => [
+        'last_name' => 'Smith',
+        'list' => [],
+        'group' => ['name' => ['b' => 'item']]
+    ]
+];
+
+$model->setArrayReplaceRecursiveKey('column');
+$model->setArrayReplaceRecursiveStops('column', ['list', 'group.name']);
+$model->save($new);
+```
+
+Result will be:
+
+```php
+[
+    'column' => [
+        'first_name' => 'Kevin',
+        'last_name' => 'Smith',
+        'list' => [],
+        'group' => ['name' => ['b' => 'item'], 'age' => 12]
+    ]
+]
+```

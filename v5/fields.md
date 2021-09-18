@@ -346,3 +346,11 @@ To visually mark fields as required, TypeRocket provides a `markLabelRequired()`
 ```
 
 To make a field required with HTML5 use the `setAttribute()` method.
+
+## Set Display Capability
+
+Using the `setDisplayCapability()` method you can disable the output of a field based on the current user's [WordPress capabilities](https://wordpress.org/support/article/roles-and-capabilities/). When disabling the output of a field ensure the model saving using the submitted field accounts for instances when that field is missing.
+
+```php
+echo $form->text("Editor's Field")->setDisplayCapability("editor");
+```
