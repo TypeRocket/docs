@@ -368,7 +368,7 @@ $book->apply( [$bookDetails, $publisher] );
 To apply a taxonomy that already exists use the `addTaxonomy()` method and pass the taxonomies ID as a parameter.
 
 ```php
-$book->addTaxonomy('categoy');
+$book->addTaxonomy('category');
 $book->addTaxonomy('post_tag');
 ```
 
