@@ -166,7 +166,7 @@ To set the meta box priority use the `setPriority()` method. You can also get th
 There are four options for priority `high`, `core`, `default` or `low`.
 
 ```php
-$box->setContext('high');
+$box->setPriority('high');
 ```
 
 *Priority only applies if the user has not moved the metabox.*
