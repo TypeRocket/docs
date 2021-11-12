@@ -236,10 +236,16 @@ $wpEditor = $form->wpEditor('Page Content');
 
 ### Options
 
-You can also set the [WordPress editor internal settings](https://codex.wordpress.org/Function_Reference/wp_editor#Arguments). For example, turning off the media buttons.
+You can also set the [WordPress editor internal settings](https://codex.wordpress.org/Function_Reference/wp_editor#Arguments). 
+For example, turning off the media buttons.
 
 ```php
 $wpEditor->setSetting('options', ['media_buttons' => false])
+```
+Example of editor with all buttons like in post edit form
+
+```php
+$wpEditor = $form->wpEditor('Page Content')->setSetting('options', ['teeny' => false]);
 ```
 
 ## Color
