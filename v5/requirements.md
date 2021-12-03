@@ -9,7 +9,7 @@ TypeRocket has a few requirements.
 
 ### System
 
-- PHP >= 7.2.5
+- PHP >= 7.2.35
 - WordPress >= 5.5.0
 - PDO PHP Extension
 - Mbstring PHP Extension
