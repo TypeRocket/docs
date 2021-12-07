@@ -152,6 +152,23 @@ echo $form->text('my_group.another_group.Hours')
     ->when('/company_open');
 ```
 
+## Modes
+
+To set the conditional field mode use the method `conditionMode`. Conditional fields have two modes: "display" and "include".
+
+1. `display` - This is the default mode. When using display mode, the field will be hidden from view using CSS. This mode does not stop the field's value from being sent when the form is submitted.
+2. `include` - When using include mode, the field's name attribute will be disabled, and the display is also hidden using CSS. In addition, this mode stops the field's value from being sent when the form is submitted.
+
+For example, you can use the `conditionMode('include')` to have a user toggle between two field types that share the same name depending on context.
+
+```php
+echo $form->toggle('Background');
+echo $form->image('Image')->when('background', false)->conditionMode('include');
+echo $form->background('Image')->when('background')->conditionMode('include');
+```
+
+*Note: Using the `include` mode can result in data loss because this mode is designed to exclude data when the condition is not met. Use the `display` mode to retain all data.*
+
 ## Valid Fields
 
 Conditional elements can target not all fields. Fields like gallery, items, matrix, builder, and others. These fields are typically fields that do not return a single value.
