@@ -242,6 +242,14 @@ class Doc extends Model
 }
 ```
 
+* if you uising repeter with custom table you need to define cast for your repeater data which will convert serialized string into array. Put this in your Model corresponding for storing data:
+```
+    protected $cast = [
+        'faq_content'  => 'maybe_unserialize'
+    ];
+```
+After this your repeater should have all values.
+
 ## Format
 
 To format a model's values before it is saved, use the `$format` property. Formating can be used to sanitize data being saved to the database.
