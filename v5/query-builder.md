@@ -177,10 +177,16 @@ $result = $query->findAll()->orderBy('post_title', 'DESC')->get();
 
 You can set the grouping of results with `groupBy()`. this method takes one argument:
 
-1. `$column` - The column to group by.
+1. `$column` - The column or columns to group by.
 
 ```php
 $result = $query->findAll()->groupBy('ID')->get();
+```
+
+Or, multiple columns.
+
+```php
+$result = $query->findAll()->groupBy(['ID','name','email'])->get();
 ```
 
 ## Date Time
