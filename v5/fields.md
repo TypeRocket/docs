@@ -79,6 +79,8 @@ To get the name use `getName()`.
 $name = $field->getName();
 ```
 
+When setting a field's name, the label will be set to the exact text provided. However, the HTML name attribute will be converted to lowercase and all sequences of none-alphanumeric values converted to `_`. For example, `'Last Name'` becomes the HTML name attribute of `tr[last_name]`. This is also true when using field and form groups.
+
 ## Groups
 
 *Note: Field and From groups are independant.*
