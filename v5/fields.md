@@ -83,7 +83,7 @@ When setting a field's name, the label will be set to the exact text provided. H
 
 ## Groups
 
-*Note: Field and From groups are independant.*
+*Note: Field and From groups are independent.*
 
 There are times when you want to have fields grouped together when being saved. A great case for this is when you are saving data to `wp_options` using the `OptionController`.
 
