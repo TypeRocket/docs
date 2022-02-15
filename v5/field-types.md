@@ -481,14 +481,18 @@ You can search a taxonomy's terms.
 $form->search('Search')->setTaxonomyOptions('post_tag');
 ```
 
+Note, post types and taxonomies can not be searched together. However, you can [create a custom search endpoint](/docs/v5/field-types/#section-search-relationship-field-search-url-endpoint) if you have advanced requirements.
+
 ### Search Model
 
-You can search a taxonomy's terms.
+You can search by Model class.
 
 ```php
 $model_class = '\TypeRocket\Models\WPPost';
 $form->search('Search')->setModelOptions($model_class);
 ```
+
+Model search functionality comes from the `TypeRocket\Models\Traits\Searchable` trait – this trait is applied to all models by default.
 
 ### Search URL Endpoint
 
