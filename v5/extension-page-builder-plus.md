@@ -34,6 +34,4 @@ The Page Builder Plus package comes with an additional builder Block component. 
 
 The Page Builder Plus package comes with builder revisions. With it, you can see the history of your component changes. There is additional steps involved to get the revisions included.
 
-1. You need to include the BuilderRevisions trait in your applicable model classes (users, pages). `use TypeRocketPro\Extensions\PageBuilderPlus\Traits\BuilderRevisions;`
-
-### 
+1. You need to include the BuilderRevisions trait in your applicable `Page` model class. `use TypeRocketPro\Extensions\PageBuilderPlus\Traits\BuilderRevisions;`
