@@ -80,7 +80,7 @@
 # Extensions
 - custom-composer-packages: Custom Extensions
 - extension-page-builder: Page Builder
-- - extension-page-builder-plus: Page Builder Plus
+- extension-page-builder-plus: Page Builder Plus
 - extension-theme-options: Theme Options
 - extension-seo: SEO
 - extension-rapid-pages: Rapid Pages
