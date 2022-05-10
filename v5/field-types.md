@@ -234,6 +234,8 @@ Use the `wpEditor()` at your own risk. This editor was never designed to work in
 $wpEditor = $form->wpEditor('Page Content');
 ```
 
+*Note: The `wpEditor()` field does not include support for shortcodes by default nor does TypeRocket include functionality to enable support.*
+
 ### Options
 
 You can also set the [WordPress editor internal settings](https://codex.wordpress.org/Function_Reference/wp_editor#Arguments). 
@@ -578,6 +580,8 @@ $box->setCallback(function() {
 });
 ```
 
+*Note: Your usage of the repeater field may require you to increase PHP's `max_input_vars`.*
+
 ![Repeater field](https://typerocket.com/wp-content/uploads/2015/07/docs-repeater-field-typerocket.png)
 
 ### Fields
@@ -653,6 +657,8 @@ $form->builder('Page Builder');
 ```
 
 To add components to these fields see the [Page Builder plugin documentation](/docs/v5/extension-page-builder/#section-components).
+
+*Note: Your usage of the matrix and builder fields may require you to increase PHP's `max_input_vars`.*
 
 ## Repater, Builder, Matrix JavaScript Hook
 
