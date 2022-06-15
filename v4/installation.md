@@ -36,7 +36,7 @@ This is the install guide for our official TypeRocket Framework 4 WordPress plug
 
 Composer is not required to use the official TypeRocket Framework 4 WordPress plugin.
 
-1. [Download the latest version of TypeRocket here](https://typerocket.com/downloads/latest.zip)
+1. [Download the latest version of TypeRocket here](https://typerocket.com/downloads/v4.zip)
 2. Unzip the files into your WordPress sites `plugins` directory.
 3. Active the TypeRocket Framework Plugin.
 
