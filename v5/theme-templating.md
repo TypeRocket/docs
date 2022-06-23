@@ -229,7 +229,7 @@ Instead, we can use view layouts by enabling the `\TypeRocketPro\Template\Tachyo
 
 To enable Tachyon templates, and access layouts, update your configuration under `app.templates.views` from `\TypeRocket\Template\TemplateEngine` to `\TypeRocketPro\Template\TachyonTemplateEngine`.
 
-Once Tachyon templates are enabled, make a layout in your views folder under `layout/blog.php` like so:
+Once Tachyon templates are enabled, make a layout in your `views` folder under `layout/blog.php` like so:
 
 ```php
 <?php // resources/views/layouts/blog.php
@@ -298,6 +298,65 @@ $this->yield('main');
 $this->yield('scripts');
 
 $this->footer('parts.footer');
+```
+
+### View Includes
+
+The Tachyon template system also provides an includes system for partial template imports. To include a view use dot syntax within the template engine `include()` method.
+
+The `include()` method takes up to 3 arguments:
+
+1. **View** - View's dot syntax path or a full file path wth file extension.
+2. **Data** (optional) - An associative array with the data to pass into the included view.
+3. **Extension** (optional) - A replacement file extension for the dot syntax path. This is only useful in very custom situations.
+
+Further, the view include will have access to the `main`, the initial, view's data. However, it will not have access to the parents view's data when includes are nested.
+
+```php
+<?php // resources/views/blog/single.php
+$this->layout('layouts.blog');
+
+if($posts) : 
+foreach($posts as $post) :
+    // resources/views/blog/post-content.php
+    $this->include('blog.post-content', ['post' => $post]);
+endwhile;
+endif;
+
+$this->section('scripts');
+echo '<script>alert('hi')</script>';
+$this->end();
+```
+
+Then, inside the included file.
+
+```php
+<?php // resources/views/blog/post-content.php
+echo '<h1>' . $post->title() . '</h1>';
+echo $post->content();
+```
+
+## Multiple View Folder Locations
+
+Sometimes you will want multiple view folders within your site to isolate some views from your main views. To configure views within a folder that is not the default you will need to make your own `View` class. Then within the new class define the folder location within the `init()` method.
+
+```php
+<?php
+namespace App;
+
+class ViewEmail extends \TypeRocket\Template\View
+{
+    public function init()
+    {
+        $this->setFolder('/your/root/path/to/views_folder');
+    }
+}
+```
+
+Now you can use the view.
+
+```php
+\App\ViewEmail::new('dot.location');
 ```
 
 
