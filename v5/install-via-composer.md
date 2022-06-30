@@ -72,6 +72,10 @@ php galaxy root:install {database} {db_username} {db_password}
 
 TypeRocket root install is now complete. You can access the WordPress files from the `typerocket/wordpress` folder. Finally, Complete the WordPress installation by pointing your servers root web folder to the `typerocket/wordpress` and then visit your site's web address.
 
+#### Root Child Themes
+
+A root install's `templates` theme can not have child themes; this is a limitation of WordPress, and TypeRocket does not yet provide a solution. However, themes and child themes within the standard WordPress themes setup will work.
+
 #### PHP Server
 
 Optionally, if you do not have a web server configured, you can use the built-in TypeRocket PHP server on your local machine to view your WordPress site.
