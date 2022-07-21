@@ -46,6 +46,9 @@ The required endpoint format is JSON.
     "high": "https://example.com/banner.png",
     "low": null
   },
+  "icons": {
+    "default": "https://example.com/updates-page-tile-icon.png"
+  },
   "sections": {
     "description": "<p>My plugin</p>",
     "installation": "<p>Install things this way...</p>",
