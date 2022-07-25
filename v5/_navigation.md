@@ -71,7 +71,7 @@
 - localization: Localization
 - log: Log
 - mail: Mail
-- queue: Queues & Jobs
+- queues: Queues & Jobs
 - storage: Storage
 - strings: Strings
 - utilities: Utilities
