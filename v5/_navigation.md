@@ -62,19 +62,21 @@
 - honeypot: Honeypot
 - roles-capabilities: Roles & Cap.
 # Advanced
-- mail: Mail
-- log: Log
-- storage: Storage
-- downloads: Downloads
-- utilities: Utilities
-- localization: Localization
 - automatic-updates: Automatic Updates
+- errors: Errors
 - ioc-resolver: DI Container
 - galaxy-cli: Galaxy CLI
-- plugins-making: Make WordPress Plugin
-- strings: Strings
-- errors: Errors
+- downloads: Downloads
 - html-generator: HTML Generator
+- localization: Localization
+- log: Log
+- mail: Mail
+- queue: Queues & Jobs
+- storage: Storage
+- strings: Strings
+- utilities: Utilities
+- plugins-making: WordPress Plugins
+# Hooks
 - wordpress-hooks: WP Hooks
 - javascript-hooks: JS Hooks
 # Extensions
