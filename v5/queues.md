@@ -80,7 +80,7 @@ To pass information along to your job you can send an array of data. The data wi
 
 ```php
 App\Jobs\MyFirstJob::dispatch([
-    'email' => 'kevin@exampl.com',
+    'email' => 'kevin@example.com',
     'name' => 'Kevin'
 ]);
 ```
