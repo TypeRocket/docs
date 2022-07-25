@@ -25,7 +25,7 @@ To start using the queues and jobs system, you first need to add the `TypeRocket
      * Application Service Providers...
      */
     '\App\Services\AuthService',
-    'TypeRocket\Services\JobQueueRunner', // <- Added here
+    '\TypeRocket\Services\JobQueueRunner', // <- Added here
 ],
 ```
 
