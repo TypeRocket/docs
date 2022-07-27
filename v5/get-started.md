@@ -21,7 +21,7 @@ In the spirit of WordPress, TypeRocket is extremely flexible. To give you the gr
 - Composer
 - And more...
 
-The installation freedom you have means you can get TypeRocket working on virtually any PHP 7.2+ server or WordPress setup.
+The installation freedom you have means you can get TypeRocket working on virtually any **PHP 7.4+** server or **WordPress 6.0** setup.
 
 ## How Should You Install TypeRocket?
 
