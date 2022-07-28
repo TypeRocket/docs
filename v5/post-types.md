@@ -17,7 +17,7 @@ To get started with post types using TypeRocket, read these docs.
 
 1. [Post Types: Making](/docs/v5/post-types-making/)
 2. [Post Types: Theming](/docs/v5/post-types-theming/)
-3. [Post Types: Secured](/docs/v5/post-types-secured/)
+3. [Post Types: Secured](/docs/v5/post-types-securing/)
 
 ## Adding a Post Type
 

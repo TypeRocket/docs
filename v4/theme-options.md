@@ -43,8 +43,8 @@ You can use any of the fields that come with the [forms api](/docs/v4/forms/). T
 14. Files
 15. Galleries
 16. Items lists
-17. [Matrix Fields](/docs/v4/matrix-field/)
-18. [Builder Fields](/docs/v4/builder-field/)
+17. Matrix Fields
+18. [Builder Fields](/docs/v4/builder/)
 19. [Repeaters](/docs/v4/repeater-field/)
 20. Search fields
 
