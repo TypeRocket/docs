@@ -20,7 +20,7 @@ In this TypeRocket Pro tutorial, you will learn how to make an advanced WordPres
 
 ![Stacked pro post type](https://typerocket.com/wp-content/uploads/2020/01/docs-v1-post-type-example.png)
 
-Before starting [install TypeRocket Pro](https://typerocket.com/docs/v5/plugin-install/).
+Before starting [install TypeRocket Pro](https://typerocket.com/docs/v5/install-via-plugin/).
 
 Here is all the code it takes to create the listed features. We will break the code down into its parts and explain how each part works next.
 

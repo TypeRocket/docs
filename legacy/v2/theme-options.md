@@ -16,7 +16,7 @@ define('TR_PLUGINS', 'seo|dev|theme-options');
 
 Theme options are commonly used to manage the global elements of a WordPress theme's design. These elements could be as simple as the copy right information at the bottom of every page; to API keys for Google Maps or Facebook Sharing.
 
-You can use any of the fields that come with the [forms api](https://typerocket.com/docs/forms/). This means you can have 18+ types of fields.
+You can use any of the fields that come with the [forms api](/docs/v2/forms/). This means you can have 18+ types of fields.
 
 1. Text inputs
 2. Passwords

@@ -65,7 +65,7 @@ To set an icon for the admin page use the `setIcon()` method.
 $seat_index->setIcon('plane');
 ```
 
-Or, a [WordPress dashicon]([https://developer.wordpress.org/resource/dashicons/#heart](https://developer.wordpress.org/resource/dashicons/#heart)).
+Or, a [WordPress dashicon](https://developer.wordpress.org/resource/dashicons/#heart).
 
 ```php
 $seat_index->setIcon('dashicons-heart');

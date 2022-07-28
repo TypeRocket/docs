@@ -104,7 +104,7 @@ Because WordPress does not use an MVC architecture TypeRocket spoofs this design
 
 ## Dynamically Set Middleware
 
-There are times when you do not want the global resource [middleware](/docs/v5/middleware/) stack to be called for specific methods of a controller by the [kernel](/docs/v5/kernel/). To dynamically set the middleware stack use the `__construct()` method on a controller and the `addMiddleware()` method.
+There are times when you do not want the global resource [middleware](/docs/v5/middleware/) stack to be called for specific methods of a controller by the [kernel](/docs/v5/middleware/#section-register-middleware). To dynamically set the middleware stack use the `__construct()` method on a controller and the `addMiddleware()` method.
 
 For example, take a member controller where you want to have different middleware for the login methods.
 

@@ -3,7 +3,7 @@ Description: Manage the HTTP JSON response for the REST API.
 
 ---
 
-The TypeRocket `Response` class is used to manage the HTTP JSON response for the [REST API](/docs/rest-api/). The `Response` is also used to declare the validity of the HTTP request with the method `setInvalid()`.
+The TypeRocket `Response` class is used to manage the HTTP JSON response for the [REST API](/docs/v2/rest-api/). The `Response` is also used to declare the validity of the HTTP request with the method `setInvalid()`.
 
 When a `Response` is defined as "invalid" by the middleware, before the controller is called, the controller will be skipped.
 

@@ -755,7 +755,7 @@ tr_form()->useOld()->useErrors();
 
 `useErrors()` looks for the cookie `tr_redirect_errors` and the `tr_redirect_errors` WordPress transient. The `tr_redirect_errors` cookie and transient can only be accessed once (after this is will be deleted).
 
-If the `tr_redirect_errors` cookie is found the form will use the field errors within that cookie to display inline field errors. The best way to set the `tr_redirect_errors` cookie and apply fields to that cookie is to use [HTTP fields](docs/v1/http-fields) or a [validator](/docs/vs/validator) [redirect errors](/docs/v5/validator/#section-get-errors-redirect-on-error).
+If the `tr_redirect_errors` cookie is found the form will use the field errors within that cookie to display inline field errors. The best way to set the `tr_redirect_errors` cookie and apply fields to that cookie is to use [HTTP fields](/docs/v1/http-fields) or a [validator](/docs/v5/validator) [redirect errors](/docs/v5/validator/#section-get-errors-redirect-on-error).
 
 If you do not want to use cookies for the validation, you can provide an override array.
 
@@ -788,7 +788,7 @@ $form->disableAjax();
 
 ## Use TypeRocket REST API
 
-You can tell forms to use the [TypeRocket REST API](https://typerocket.com/docs/v5/json-api/) using the `useRest()` method. This method enables AJAX mode for the form as well.
+You can tell forms to use the [TypeRocket REST API](https://typerocket.com/docs/v5/rest-api/) using the `useRest()` method. This method enables AJAX mode for the form as well.
 
 ```php
 $form->useRest();

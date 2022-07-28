@@ -11,7 +11,7 @@ To understand the TypeRocket theme templating system lets walk through an exampl
 
 ## Template Routing & Controllers
 
-WordPress uses what is called the [template hierarchy]([https://developer.wordpress.org/themes/basics/template-hierarchy/](https://developer.wordpress.org/themes/basics/template-hierarchy/)) to route user http requests.
+WordPress uses what is called the [template hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/) to route user http requests.
 
 In WordPress, the theme templates do three things:
 
@@ -26,7 +26,7 @@ On the other hand, TypeRocket's template router seamlessly integrates into the W
 - WordPress core templates only allow for 400 error handling. The template router allows for 500, 401, 403, or any other error templates to be used.
 - Takes your view out of the global scope, greatly reducing your chances of variable naming collisions, thus reducing the odds for bugs.
 - Affords you the opportunity to routes requests based on the HTTP methods of `POST`, `PUT`, `GET`, or `DELETE` in an eloquent way.
-- Empowers the practice of [the SOLID design principle]([https://en.wikipedia.org/wiki/SOLID](https://en.wikipedia.org/wiki/SOLID)).
+- Empowers the practice of [the SOLID design principle](https://en.wikipedia.org/wiki/SOLID).
 
 Take a look at an example `single-post.php` file.
 
@@ -162,7 +162,7 @@ class Post extends WPPost
 }
 ```
 
-These methods allow us to access [the WordPress template tags for the post]([https://developer.wordpress.org/themes/references/list-of-template-tags/#post-tags](https://developer.wordpress.org/themes/references/list-of-template-tags/#post-tags)). You can add as many of these as your site needs.
+These methods allow us to access [the WordPress template tags for the post](https://developer.wordpress.org/themes/references/list-of-template-tags/#post-tags). You can add as many of these as your site needs.
 
 The main benefit of using models over the WordPress loops, in our view, will be the ability to encapsulate the logic of our views into the model. 
 

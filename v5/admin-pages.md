@@ -64,7 +64,7 @@ tr_page('Api', 'view', 'APIs Page', $settings, $controller);
 
 ## Set Icon
 
-To set an icon for the admin page use the `setIcon()` method. Use a [WordPress dashicon]([https://developer.wordpress.org/resource/dashicons/#heart](https://developer.wordpress.org/resource/dashicons/#heart)).
+To set an icon for the admin page use the `setIcon()` method. Use a [WordPress dashicon](https://developer.wordpress.org/resource/dashicons/#heart).
 
 ```php
 $seat_index->setIcon('dashicons-heart');

@@ -7,7 +7,7 @@ Description: A simple cURL client.
 
 **IMPORTANT**: You must have the PHP cURL extension installed to use this class.
 
-TypeRocket provides a simple [cURL]([https://www.php.net/manual/en/book.curl.php](https://www.php.net/manual/en/book.curl.php)) Http client. Take a look at sending a POST request.
+TypeRocket provides a simple [cURL](https://www.php.net/manual/en/book.curl.php) Http client. Take a look at sending a POST request.
 
 ```php
 $url = 'https://exmaple.com';  

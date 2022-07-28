@@ -60,7 +60,7 @@ The settings you picked for the post type gives support for just the title field
 
 ## Custom MetaBox
 
-Add some custom fields to `tr_team`. You want them in a [meta box](https://typerocket.com/docs/meta-boxes/). Add a meta box to the post type first.
+Add some custom fields to `tr_team`. You want them in a [meta box](https://typerocket.com/docs/v3/meta-boxes/). Add a meta box to the post type first.
 
 ```php
 tr_meta_box('Team Details')->apply($team);
@@ -68,7 +68,7 @@ tr_meta_box('Team Details')->apply($team);
 
 ## Custom Taxonomy
 
-Do the same with a [taxonomy](https://typerocket.com/docs/taxonomies/).
+Do the same with a [taxonomy](https://typerocket.com/docs/v3/taxonomies/).
 
 ```php
 tr_taxonomy('Department')->apply($team);

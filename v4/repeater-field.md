@@ -42,4 +42,4 @@ These methods are: `getFields()`, `setFields()` and `appendField()`.
 
 ## JavaScript Hook
 
-You can also use the [javascript hooks](/docs/v3/javascript-hooks/) to do something when a repeater field group is added.
+You can also use the [javascript hooks](/docs/v4/javascript-hooks/) to do something when a repeater field group is added.
