@@ -163,6 +163,6 @@ If you decide to use advanced fields like repeaters and galleries you can use `v
 
 Now that you have the most basic setup you can start adding more tabs and fields.
 
-- [Tabs API](/docs/v4/layout-tabs/)
+- [Tabs API](/docs/v4/tabs/)
 - [Forms API](/docs/v4/forms/) (fields are near the bottom)
 - [Fields API](/docs/v4/fields/)

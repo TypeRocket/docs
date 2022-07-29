@@ -23,7 +23,7 @@ The `Field` class is used to create custom fields. A `Field` can be anything you
 14. File - for a file field.
 15. Gallery - for a gallery field.
 16. Items - for a list of items.
-17. [Matrix](/docs/v4/matrix-field/) - for a matrix field.
+17. Matrix - for a matrix field.
 18. [Repeater](/docs/v4/repeater-field/) - for a repeater field
 20. Builder - for a builder field.
 21. Search - for a search field.
