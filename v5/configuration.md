@@ -24,7 +24,7 @@ $value = tr_config('app.debug', false);
 
 ## Defining Configuration Values
 
-Because WordPress uses constants for user-defined variables over env variables, TypeRocket provides the `typerocket_env()` function for accessing a constant but also provides a default value if it is not found.
+Because WordPress uses constants for user-defined variables over env variables, TypeRocket provides the `typerocket_env()` function for accessing a constant but also provides a default value if it is not found. The constants are normally defined in the `wp-config.php` file.
 
 ```php
 typerocket_env('WP_DEBUG', true);
