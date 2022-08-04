@@ -906,3 +906,32 @@ Result will be:
     ]
 ]
 ```
+
+## Connections
+
+You can set up secondary `\wpdb` connections by adding a new driver to the `database.drivers` config. For example, in your `config/database.php` file you could update the `alt` driver to the following:
+
+```php
+'alt' => [
+    'driver' => '\TypeRocket\Database\Connectors\CoreDatabaseConnector',
+    'username' => typerocket_env('TYPEROCKET_ALT_DB_USER'),
+    'password' => typerocket_env('TYPEROCKET_ALT_DB_PASSWORD'),
+    'database' => typerocket_env('TYPEROCKET_ALT_DB_NAME'),
+    'host' => typerocket_env('TYPEROCKET_ALT_DB_HOST'),
+],
+```
+
+Finally, in your model class, set the `connection` property to the database drivers config name of `alt`.
+
+```php
+use \TypeRocket\Utility\Sanitize;
+
+class Doc extends Model
+{
+    protected string $connection = 'alt';
+    
+    ...
+}
+```
+
+The default model connection is always `wp`, even if the default in the config is changed. The default driver in the config is for setting up the initial connection in the `ApplicationKernel`. It is not for setting the default connection on all models.
