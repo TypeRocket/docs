@@ -909,7 +909,7 @@ Result will be:
 
 ## Connections
 
-If you need **multiple database connections** in wordPress you can set up secondary `\wpdb` connections in TypeRocket by adding new drivers to the `database.drivers` config. For example, in your `config/database.php` file you will find the `alt` driver example with the following:
+If you need **multiple database connections** in WordPress, you can set up secondary `\wpdb` connections in TypeRocket by adding new drivers to the `database.drivers` config. For example, in your `config/database.php` file you will find the `alt` driver example with the following:
 
 ```php
 'alt' => [
