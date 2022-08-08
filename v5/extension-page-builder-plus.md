@@ -15,7 +15,7 @@ The Pro package includes a Page Builder Plus extension that adds additional capa
 - Page builder revisions.
 - Clone component to block.
 
-You can [download the list of official component thumbnails icons](https://typerocket.com/Page-Builder-Component-Thumbnails.zip).
+You can [download the list of official page builder component thumbnail icons](https://typerocket.com/Page-Builder-Component-Thumbnails.zip).
 
 ### Installation
 
