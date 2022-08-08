@@ -11,11 +11,11 @@ Description: Additional feature for the TypeRocket page builder.
 
 The Pro package includes a Page Builder Plus extension that adds additional capabilities to the basic Page Builder. You must have the Page Builder extension turned on to use this extension. The new features include:
 
-- Blocks system and component.
+- Blocks system and block component.
 - Page builder revisions.
 - Clone component to block.
 
-There is also a list of official component thumbnails coming soon.
+You can [download the list of official component thumbnails icons](https://typerocket.com/Page-Builder-Component-Thumbnails.zip).
 
 ### Installation
 
