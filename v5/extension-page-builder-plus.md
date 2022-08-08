@@ -7,7 +7,7 @@ Description: Additional feature for the TypeRocket page builder.
 
 *Pro Only: This is a Pro only extension feature.*
 
-**IMPORTANT**: In beta phase, only works with the `App\Modles\Page` model.
+**IMPORTANT**: In beta phase, only works with the `App\Models\Page` model.
 
 The Pro package includes a Page Builder Plus extension that adds additional capabilities to the basic Page Builder. You must have the Page Builder extension turned on to use this extension. The new features include:
 
