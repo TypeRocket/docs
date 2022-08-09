@@ -29,17 +29,17 @@ To make a migration run, the `make:migration` Galaxy command with a "name" for t
 php galaxy make:migration add_blocks_table
 ```
 
-Then, in the migration file, add the SQL for your migration. Under the `>>> Up >>>` section add the SQL for migrating up or forward. Under the `>>> Down >>>` section add the SQL for migrating down or backward. Anywhere you add `{!!prefix!!}` the migration system will replace `{!!prefix!!}` with your WordPress table prefix (the default is `wp_`).
+Then, in the migration file, add the SQL for your migration. Under the `>>> Up >>>` section add the SQL for migrating up or forward. Under the `>>> Down >>>` section add the SQL for migrating down or backward. Anywhere you add `{!!prefix!!}` the migration system will replace `{!!prefix!!}` with your WordPress table prefix (the default is `wp_`). Likewise, you can use `{!!charset!!}` for charset and `{!!collate!!}` for collate.
 
 ```sql
 -- Description: For reusable page builder components
 -- >>> Up >>>
 CREATE TABLE IF NOT EXISTS `{!!prefix!!}blocks` (
 `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-`title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-`blocks` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+`title` varchar(255) COLLATE {!!collate!!} NOT NULL,
+`blocks` longtext COLLATE {!!collate!!} DEFAULT NULL,
 PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET={!!charset!!};
 -- >>> Down >>>
 DROP TABLE IF EXISTS `{!!prefix!!}blocks`;
 ```
