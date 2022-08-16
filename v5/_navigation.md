@@ -63,6 +63,7 @@
 - roles-capabilities: Roles & Cap.
 # Advanced
 - automatic-updates: Automatic Updates
+- cache: Cache
 - errors: Errors
 - ioc-resolver: DI Container
 - galaxy-cli: Galaxy CLI
