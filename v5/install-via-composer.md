@@ -132,13 +132,18 @@ composer config --global --auth http-basic.typerocket.repo.packagist.com token Y
 
 ### 2. Install
 
-After you have added composer auth access from [your TypeRocket account](https://typerocket.com/account/). 
-Run these commands but replace `YOUR_URL_HERE` with the "Composer URL" from your account page:
+After you a [TypeRocket Pro account](https://typerocket.com/account/) run these commands to enable TypeRocket Pro from composer:
 
 ```
 composer create-project --prefer-dist typerocket/typerocket typerocket
 cd typerocket
-composer config repositories.pro '{"type": "composer","url": "YOUR_URL_HERE","only": ["typerocket/professional"]}'
+composer config repositories.professional '{"type": "composer","url": "https://satis.typerocket.com","only": ["typerocket/professional"]}'
 composer require typerocket/professional
 php galaxy extension:publish typerocket/professional
 ```
+
+### Authorize
+When asked for your `Username` and `Password` during the composer install process provide the following:
+
+- **Username**: Your website host name. Examples: `www.example.com`, `example.local`
+- **Password**: Your TypeRocket Pro license key.
