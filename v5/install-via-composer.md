@@ -118,19 +118,7 @@ To update TypeRocket run `composer update`. This will update all the PHP code an
 
 If you are using TypeRocket Pro and have composer access with your license you can follow these instructions to get `typerocket/professional` installed.
 
-### 1. Authenticate
-
-Enable access to the TypeRocket composer repository by authenticating your server or development computer with `typerocket.repo.packagist.com` using your "Composer Token". You can access your token from [your TypeRocket account](https://typerocket.com/account/).
-
-Authenticate composer by replacing the text `YOUR_TOKEN_GOES_HERE` from the following command with your token. From the command line run:
-
-```
-composer config --global --auth http-basic.typerocket.repo.packagist.com token YOUR_TOKEN_GOES_HERE
-```
-
-*Note: Token authentication is required only once per machine or server.*
-
-### 2. Install
+### 1. Install
 
 After you a [TypeRocket Pro account](https://typerocket.com/account/) run these commands to enable TypeRocket Pro from composer:
 
@@ -142,8 +130,11 @@ composer require typerocket/professional
 php galaxy extension:publish typerocket/professional
 ```
 
-### Authorize
+### 1.1 Authorize
+
 When asked for your `Username` and `Password` during the composer install process provide the following:
 
 - **Username**: Your website host name. Examples: `www.example.com`, `example.local`
 - **Password**: Your TypeRocket Pro license key.
+
+*Note: You may need to have authentication on your server.*
