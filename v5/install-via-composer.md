@@ -137,4 +137,10 @@ When asked for your `Username` and `Password` during the composer install proces
 - **Username**: Your website host name. Examples: `www.example.com`, `example.local`
 - **Password**: Your TypeRocket Pro license key.
 
+If your authentication is not working:
+
+1. You may need to log in to your account and free a site from licenses under "Account > View Licenses > Manage Sites".
+2. Your license might be expired.
+3. You may need to log in to your account and free a site from licenses.
+
 *Note: You may need to have authentication on your server.*

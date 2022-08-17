@@ -32,7 +32,11 @@ To install the TypeRocket Pro plugin [go to your account](/account/) and downloa
 
 From the TypeRocket settings page located under "Settings > TypeRocket" add your site license. Activating your license gives you access to automatic updates.
 
-Your license restricts you to a specific number of activations. You can remove old or current sites form your license in your [typerocket.com account](https://typerocket.com/account/).
+Your license restricts you to a specific number of activations. You can remove old or current sites form your license in your [typerocket.com account](https://typerocket.com/account/). If your authentication is not working:
+
+1. You may need to log in to your account and free a site from licenses under "Account > View Licenses > Manage Sites".
+2. Your license might be expired.
+3. You may need to log in to your account and free a site from licenses.
 
 ## Create Override Folders
 
