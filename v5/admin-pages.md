@@ -23,7 +23,7 @@ Or, the same using OOP.
 
 This one line of code adds the "Admin Page" to the WordPress admin, sets all the correct labels in the navigation and applicable places, and implements the required WordPress hooks. This would typically take many lines of code.
 
-*Note: By default, anyone who is logged-in with the capability `administrator` can view a page. You can change this later.* 
+! **Note**: By default, anyone who is logged-in with the capability `administrator` can view a page. You can change this later.
 
 ### Function Arguments
 
@@ -80,7 +80,7 @@ $add_seat = tr_page('Seat', 'add', 'Add Seat', $settings);
 $add_seat->setParent($seat_index);
 ```
 
-*Note: By default, child pages will inherit the parent pages permission or capability settings unless the child has a capability set.*
+! **Note**: By default, child pages will inherit the parent pages permission or capability settings unless the child has a capability set.
 
 ## Add Child Page
 
@@ -144,7 +144,7 @@ If you're are using a controller for your pages you need to create a controller.
 php galaxy make:model -c base Seat
 ```
 
-*Note: Pages work best with controllers so reach for them.*
+! **Note**: Pages work best with controllers so reach for them.
 
 ### Map Actions
 

@@ -143,4 +143,4 @@ If your authentication is not working:
 2. Your license might be expired.
 3. You may need to log in to your account and free a site from licenses.
 
-*Note: You may need to have authentication on your server.*
+! **Note**: You may need to have authentication on your server.
