@@ -5,7 +5,7 @@ Description: Tables a used for displaying data from models.
 
 ## Tables
 
-*Pro Only: This is a Pro only extension feature.*
+! **Pro Only**: This is a Pro only extension feature.
 
 UI tables are used to list the records of a Model. Tables can be added to admin pages or anywhere else. When a table is created within the context of a resource admin view all the required settings are detected and injected for you. The only thing you need to do is specify what fields you want the table to list.
 

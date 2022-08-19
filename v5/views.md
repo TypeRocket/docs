@@ -96,7 +96,7 @@ tr_view('books.add')->setTitle('Add Book');
 
 ## SEO Meta
 
-*Pro Only: This is a Pro only extension feature.*
+! **Pro Only**: This is a Pro only extension feature.
 
 If you are using views within a post type's template file, you do not need to set SEO meta of the view. However, if you view is for anything that is not a post type you will need to set the SEO meta using the `setSeoMeta()` view method.
 
@@ -140,7 +140,7 @@ php galaxy cache:clear views
 
 ## Twig Engine
 
-*Pro Only: This is a Pro only extension feature.*
+! **Pro Only**: This is a Pro only extension feature.
 
 If you want to use [Twig](https://twig.symfony.com/) for your views, require Twig as apart of your project using `composer`.
 
@@ -191,7 +191,7 @@ return [
 
 ## Tachyon Template Engine
 
-*Pro Only: This is a Pro only extension feature.*
+! **Pro Only**: This is a Pro only extension feature.
 
 TypeRocket Pro also has a template engine called Tachyon. This template engine is a blazing fast and pure PHP templating engine equipped with layouts and more. You can read more about Tachyon in the [theme templating docs](/docs/v5/theme-templating/#section-advanced-views).
 
@@ -206,7 +206,7 @@ tr_view('books.show')->setEngine($engine);
 
 ## Views In Templates
 
-*Pro Only: This is a Pro only extension feature.*
+! **Pro Only**: This is a Pro only extension feature.
 
 You can also use views within your standard WordPress theme's templates. To use views for your WordPress templates use the `tr_template_router` function.
 
