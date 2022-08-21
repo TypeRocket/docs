@@ -5,7 +5,7 @@ Description: Add automatic updates to your plugin or theme.
 
 ## Getting Started
 
-! **Pro Only**: This is a Pro only extension feature.
+!!
 
 TypeRocket provides an API for adding your own automatic updates system. This API can be used if TypeRocket is installed as an MU plugin or if TypeRocket is installed as root.
 

@@ -5,7 +5,7 @@ Description: Add custom fields to menu items in WordPress 5.4+.
 
 ## Getting Started
 
-! **Pro Only**: This is a Pro only extension feature.
+!!
 
 First things first, to enabled WordPress menus for your theme, you need to register them. If you already have menus enabled for your theme you can skip the registration process.
 

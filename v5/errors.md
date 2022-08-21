@@ -5,7 +5,7 @@ Description: Whoops for WordPress in TypeRocket.
 
 ## Whoops
 
-! **Pro Only**: This is a Pro only extension feature.
+!!
 
 For more expressive error handling in WordPress development TypeRocket uses [Whoops](https://github.com/filp/whoops). Whoops is enabled when your `app.debug` is set to `true` - by default `WP_DEBUG` is connected to this config setting.
 

@@ -5,7 +5,7 @@ Description: Access powerful dev tools for WordPress.
 
 ## Getting Started
 
-! **Pro Only**: This is a Pro only extension feature.
+!!
 
 The `TypeRocketPro\Extensions\DevTools` extension adds an admin page to WordPress named "Dev". From the "Dev" page you can:
 

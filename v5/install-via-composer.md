@@ -15,7 +15,7 @@ Before installing TypeRocket using composer, [be aware of the licensing restrict
 
 ## Install TypeRocket with Composer
 
-**Important**: Composer `2.0+` is required.
+**Important**: Composer `2.4+` is required.
 
 To install TypeRocket using composer, first [download composer](https://getcomposer.org/download/) and install it globally. You can [read the full instructions on the composer.org website](https://getcomposer.org/doc/00-intro.md).
 
@@ -114,7 +114,7 @@ require_once(ABSPATH . 'wp-settings.php');
 
 To update TypeRocket run `composer update`. This will update all the PHP code and JS/CSS assets.
 
-## Pro
+## Pro Repository !!
 
 If you are using TypeRocket Pro and have composer access with your license you can follow these instructions to get `typerocket/professional` installed.
 
