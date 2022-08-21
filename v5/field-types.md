@@ -64,7 +64,7 @@ $form->submit('Submit');
 $form->textarea('About Me');
 ```
 
-## Text Expand - Pro Only
+## Text Expand - !!
 
 This field is like the Text field but it will expand it fit the content contained within it.
 
@@ -72,7 +72,7 @@ This field is like the Text field but it will expand it fit the content containe
 $form->textexpand('Expand');
 ```
 
-## Editor - Pro Only
+## Editor - !!
 
 The editor field uses Redactor 3.
 
@@ -136,7 +136,7 @@ $form->radio('Photo')->setOptions([
 $form->checkbox('Email Me')->setText('Yes');
 ```
 
-## Checkboxes - Pro Only
+## Checkboxes - !!
 
 Add multiple checkboxes.
 
@@ -264,7 +264,7 @@ Color fields can have a palette defined for the color picker. Five or six is bes
 $form->color('Color')->setPalette(['#FFFFFF', '#000000']);
 ```
 
-## Swatches - Pro Only
+## Swatches - !!
 
 ```php
 $form->swatches('Site Color')->setOptions([  
@@ -273,7 +273,7 @@ $form->swatches('Site Color')->setOptions([
 ]);
 ```
 
-## Range - Pro Only
+## Range - !!
 
 ```php
 $form->range('Years')->setMax(100)->setMin(0)->setStep(1);
@@ -323,7 +323,7 @@ Set the image background to dark instead of white. This applies to the `gallery(
 $image->setBackgroundDark();
 ```
 
-## Background - Pro Only
+## Background - !!
 
 This field is like the image field but also includes X and Y coordinates.
 
@@ -419,7 +419,7 @@ $form->fileUpload('PDF')->doBefore(function($field, $value) {
 });
 ```
 
-## Gallery - Pro Only
+## Gallery - !!
 
 Galleries are groups of images saved by their attachment IDs.
 
@@ -515,7 +515,7 @@ Your custom endpoint should have the following return JSON in format simular to 
 }
 ```
 
-## URL - Pro Only
+## URL - !!
 
 Like the search field the URL field can be used to look up the URL of a post or term record. The URL field supports the same features as the search field.
 
@@ -541,7 +541,7 @@ add_filter('typerocket_search_field_result_url', function($url, $value, $options
 }, 10, 4);
 ```
 
-## Location - Pro Only
+## Location - !!
 
 Full address field.
 

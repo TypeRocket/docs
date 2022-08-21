@@ -189,7 +189,7 @@ public function thumbnail($url = null)
 }
 ```
 
-### Advanced Components - Pro Only
+### Advanced Components - !!
 
 Advanced components can be cloned and named.
 
