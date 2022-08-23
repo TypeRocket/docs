@@ -7,7 +7,7 @@ Description: Requests are objects that represent the HTTP requests.
 
 The `Request` object has several methods for working with the HTTP request.
 
-*Note: WordPress automatically adds slashes to $_POST, $_GET, and other super globals. A Request object reflects unmodified super globals.*
+! **Note**: WordPress automatically adds slashes to $_POST, $_GET, and other super globals. A Request object reflects unmodified super globals.
 
 ## Make Request
 
@@ -248,7 +248,7 @@ If you are using [axios](https://github.com/axios/axios) you can set a common he
 axios.defaults.headers.common['X-WP-NONCE'] = window.trHelpers.nonce;
 ```
 
-*Note: `window.trHelpers.nonce` is only available when front-end mode is enabled.*
+! **Note**: `window.trHelpers.nonce` is only available when front-end mode is enabled.
 
 ## Check Honeypot
 

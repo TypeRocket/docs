@@ -41,7 +41,7 @@ add_filter('typerocket_mailer_service_driver', function($driver) {
 });
 ```
 
-*Note: The `api_key` can be either your main API private key or a domain specific API key.*
+! **Note**: The `api_key` can be either your main API private key or a domain specific API key.
 
 ### Mailgun UI
 

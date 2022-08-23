@@ -22,7 +22,7 @@ To add a route-template go to your routes file located at `routes/public.php` an
 - Route-templates cannot be named.
 - Route-templates do not match a given URL path. They match a [WordPress template name](https://developer.wordpress.org/themes/basics/template-hierarchy/).
 
-*Note: Route-templates do not replace your theme's need for an `index.php` file.*
+! **Note**: Route-templates do not replace your theme's need for an `index.php` file.
 
 ## Enabling
 
@@ -67,7 +67,7 @@ tr_route_template()->on('index', function() {
 1. `$slug` - The template name to replace without the `.php` extension.
 2. `$handler` - The controller or callback you want to handle the request.
 
-*Note: The slug `index` only works for a plugin install with one theme.*
+! **Note**: The slug `index` only works for a plugin install with one theme.
 
 ### Variations
 
@@ -96,7 +96,7 @@ tr_route_template()->on('single', 'post@SiteController')
   ->delete('postDelete@SiteController');
 ```
 
-*Note: Many nginx servers do but support `PUT` and `DELETE` requests for the `/` path. So, you may not be able to use `put` and `delete` on the `index` template route-template.*
+! **Note**: Many nginx servers do but support `PUT` and `DELETE` requests for the `/` path. So, you may not be able to use `put` and `delete` on the `index` template route-template.
 
 ## Middleware
 

@@ -27,7 +27,7 @@ Both `post` and `term` are unique and should be used with care. In many cases, i
 
 The `base` directive is the most useful and is for making a model that is connected to custom tables.
 
-*Note: The Galaxy command-line tool is not available if you are using the official TypeRocket Framework 4 WordPress plugin.*
+! **Note**: The Galaxy command-line tool is not available if you are using the official TypeRocket Framework 4 WordPress plugin.
 
 ### Command
 

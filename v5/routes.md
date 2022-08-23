@@ -90,7 +90,7 @@ The `post` route will map to the `MemberController` and call the public `auth` m
 
 All that is left is to create the defined methods in the `MemberController` to handle the request.
 
-*Note: "Controller" is omitted at the end of the string "Member". You should not append "Controller". TypeRocket handles adding it for you.*
+! **Note**: "Controller" is omitted at the end of the string "Member". You should not append "Controller". TypeRocket handles adding it for you.
 
 ## Route Types
 

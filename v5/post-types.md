@@ -29,9 +29,9 @@ To register a “Book” post type in WordPress, you only need one line of code.
 tr_post_type('Book');
 ```
 
-This one line of code adds the post type to the admin, sets all the correct labels in the navigation and applicable places, and implements the required WordPress hooks. This would typically take many many lines of code.
+This one line of code adds the post type to the admin, sets all the correct labels in the navigation and applicable places, and implements the required WordPress hooks. This would typically take many lines of code.
 
-*Note: you do not need to use any WordPress hook with TypeRocket here.*
+! **Note**: you do not need to use any WordPress hook with TypeRocket here.
 
 TypeRocket takes Post Types to the next level. Let us assign the “Book” post type to a variable to see these features.
 ```php
@@ -73,7 +73,7 @@ add_action('init', function() {
 }, $priority);
 ```
 
-*Note: When overriding a post type created by a plugin, that plugin may have its code that TypeRocket can not override due to how that plugin works. For example, in WooCommerce you can not override the post type icon because WooCommerce implements its own CSS code and the TypeRocket CSS does not have more specificity than WooCommerce for the icon design.*
+! **Note**: When overriding a post type created by a plugin, that plugin may have its code that TypeRocket can not override due to how that plugin works. For example, in WooCommerce you can not override the post type icon because WooCommerce implements its own CSS code and the TypeRocket CSS does not have more specificity than WooCommerce for the icon design.
 
 ### Adding custom fields to posts
 

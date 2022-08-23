@@ -30,7 +30,7 @@ add_action('typerocket_menu_fields', function($form) {
 
 That's it! You now have a menu item field.
 
-*Note: Only simple fields work in menu items right now. Also, conditional fields are not supported for menu items at the moment but they will be added in a coming version.*
+! **Note**: Only simple fields work in menu items right now. Also, conditional fields are not supported for menu items at the moment but they will be added in a coming version.
 
 ### Displaying the menu item field
 

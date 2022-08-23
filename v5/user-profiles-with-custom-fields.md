@@ -106,4 +106,4 @@ What if you need that data for a different user? Just set the user's ID as the s
 
 By adding the ID, you override the automated ID detection, and you get the user data you want. This works even if you call it in "The Loop" or any other context.
 
-*Note: TypeRocket has three automations for user fields. First, it looks for the global $user_id. If that is not present, it looks for the post authors ID. If that is not present it looks for the currently logged in users ID.*
+! **Note**: TypeRocket has three automations for user fields. First, it looks for the global $user_id. If that is not present, it looks for the post authors ID. If that is not present it looks for the currently logged-in users ID.

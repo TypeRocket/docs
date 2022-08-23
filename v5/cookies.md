@@ -27,7 +27,7 @@ WordPress comes with these options:
 - `MONTH_IN_SECONDS`
 - `YEAR_IN_SECONDS`
 
-*Note: Cookies must be set before any headers are sent. This is before anything is printed to the screen.*
+! **Note**: Cookies must be set before any headers are sent. This is before anything is printed to the screen.
 
 ## Get a Cookie
 
@@ -49,7 +49,7 @@ my cookie data
 tr_cookie()->delete('cookie_name');
 ```
 
-*Note: Cookies must be deleted before any headers are sent. This is before anything is printed to the screen.*
+! **Note**: Cookies must be deleted before any headers are sent. This is before anything is printed to the screen.
 
 ## Transient Cookies
 
@@ -71,7 +71,7 @@ $hour = HOUR_IN_SECONDS;
 tr_cookie()->set('cookie_name', 'my cookie data', $hour);
 ```
 
-*Note: Transient cookies must be set before any headers are sent. This is before anything is printed to the screen.*
+! **Note**: Transient cookies must be set before any headers are sent. This is before anything is printed to the screen.
 
 ### Get and Delete a Transient Cookie
 
@@ -82,4 +82,4 @@ $delete = true;
 tr_cookie()->setTransient('redirect_data', $delete);
 ```
 
-*Note: Transient cookies must be deleted before any headers are sent. This is before anything is printed to the screen.*
+! **Note**: Transient cookies must be deleted before any headers are sent. This is before anything is printed to the screen.

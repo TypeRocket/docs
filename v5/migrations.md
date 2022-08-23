@@ -7,7 +7,7 @@ Description: Creating and running migrations.
 
 The TypeRocket migration system requires [having WordPress command support to TypeRocket Galaxy](/docs/v5/galaxy-cli/#section-wp-commands). Once you ensure WordPress commands are available you will see the make migration command `make:migration`.
 
-*Note: Local VM machines will need to make sure the CLI has access to the guest and host machines.*
+! **Note**: Local VM machines will need to make sure the CLI has access to the guest and host machines.
 
 ### Logging and Storing Migrations
 
@@ -15,7 +15,7 @@ TypeRocket migrations are stored in the file system under the `database/migratio
 
 When a migration is run it creates a database entry in the `wp_options` table with the key `tr_migrations`.
 
-*Note: PRO migrations are stored in the database. This allows for multi-server configurations.*
+! **Note**: PRO migrations are stored in the database. This allows for multi-server configurations.
 
 ## Admin UI
 

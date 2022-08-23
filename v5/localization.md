@@ -11,7 +11,7 @@ If you are using WPML or another plugin, you will need to manually edit POT file
 
 TypeRocket provides limited static strings for translation because of its dynamic nature.
 
-*Note: Localization is being enhanced in the future v1.1 release, and manual POT file editing will still be required. However, there will be much better targeting in the new version.*
+! **Note**: Localization is being enhanced in the future v1.1 release, and manual POT file editing will still be required. However, there will be much better targeting in the new version.
 
 1. [Implications of Manually Editing PO Files](https://wordpress.stackexchange.com/a/327809/197)
 2. [WordPress Internationalization Docs](https://developer.wordpress.org/themes/functionality/internationalization/)

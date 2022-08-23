@@ -20,7 +20,7 @@ $results = \TypeRocket\Utility\QueryCaster::posts(
 );
 ```
 
-*Note: When a model is used the `post_type` of that model is applied to the WP_Query.*
+! **Note**: When a model is used the `post_type` of that model is applied to the WP_Query.
 
 ## Terms
 
@@ -35,7 +35,7 @@ $results = \TypeRocket\Utility\QueryCaster::terms(
 );
 ```
 
-*Note: When a model is used the `taxonomy` of that model is applied to the WP_Term_Query.*
+! **Note**: When a model is used the `taxonomy` of that model is applied to the WP_Term_Query.
 
 ## Users
 

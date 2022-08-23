@@ -167,7 +167,7 @@ echo $form->image('Image')->when('background', false)->conditionMode('include');
 echo $form->background('Image')->when('background')->conditionMode('include');
 ```
 
-*Note: Using the `include` mode can result in data loss because this mode is designed to exclude data when the condition is not met. Use the `display` mode to retain all data.*
+! **Note**: Using the `include` mode can result in data loss because this mode is designed to exclude data when the condition is not met. Use the `display` mode to retain all data.
 
 ## Valid Fields
 

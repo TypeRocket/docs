@@ -41,7 +41,7 @@ ID
 
 ## Finding
 
-*Note: for the sake of brevity, any time you see `$query` without a definition it equals `tr_query()->table('wp_posts')->setIdColumn('ID')`*
+! **Note**: For the sake of brevity, any time you see `$query` without a definition it equals `tr_query()->table('wp_posts')->setIdColumn('ID')`
 
 There are four find methods models can use: `findById`, `findAll`, `findOrDie`, and `findFirstWhereOrDie`. For the majority of the following section we will use the `wp_posts` table as the example and work with the following `$query` object:
 

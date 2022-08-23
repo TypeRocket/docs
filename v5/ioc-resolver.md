@@ -134,4 +134,4 @@ Will output,
 cheddar
 ```
 
-*Note: If one of the classes is located in the DI Container then the DI Container will be used for resolution of that class.*
+! **Note**: If one of the classes is located in the DI Container then the DI Container will be used for resolution of that class.

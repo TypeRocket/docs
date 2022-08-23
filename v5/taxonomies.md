@@ -11,7 +11,7 @@ Don't let the complexities of taxonomies scare you.
 
 ## Adding a Taxonomy
 
-*Note: When adding custom fields to custom taxonomies, you need to have a controller and model in place for that taxonomy. See the "Forms and Fields" section for more details.*
+! **Note**: When adding custom fields to custom taxonomies, you need to have a controller and model in place for that taxonomy. See the "Forms and Fields" section for more details.
 
 You can create a custom taxonomy with the `tr_taxonomy()` function. Using the `tr_taxonomy()` function will take care of the basic settings for you, including pluralizing labels.
 
@@ -63,7 +63,7 @@ add_action('init', function() {
 }, $priority);
 ```
 
-*Note: When overriding a taxonomy created by a plugin that plugin may have its own code that TypeRocket can not override due to how that plugin works.*
+! **Note**: When overriding a taxonomy created by a plugin that plugin may have its own code that TypeRocket can not override due to how that plugin works.
 
 ## Apply: Post Types
 

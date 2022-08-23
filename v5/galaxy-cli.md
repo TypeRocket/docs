@@ -30,7 +30,7 @@ if( php_sapi_name() !== 'cli' || gethostname() == 'homestead' ) {
 }
 ```
 
-*Note: You can always run your commands from the guest machine without extra configuration.*
+! **Note**: You can always run your commands from the guest machine without extra configuration.
 
 ## TypeRocket Commands
 
@@ -126,13 +126,13 @@ wp:sql             WordPress database SQL script
 
 To access WordPress command, you might need to configure the Galaxy CLI. In most cases, the `tr_wp_root()` function will do the work for you automatically.
 
-*Note: Be sure your CLI can access the database from its current host. For example, if you are using a VM, you might not be able to access the database of the guest machine.*
+! **Note**:Be sure your CLI can access the database from its current host. For example, if you are using a VM, you might not be able to access the database of the guest machine.
 
 ### Manullay Configuring WP 
 
 To manually configure WP commands, locate your `config/galaxy.php` file, and find the `wordpress` setting. Change the `wordpress` setting to the directory that your `wp-load.php` file is located in. The `wp-load.php` file should be located at the root of your WordPress installation, where the `wp-config-sample.php` is located as well.
 
-*Note: The path that you choose might be different than what is located below.*
+! **Note**: The path that you choose might be different from what is located below.
 
 ```php
 /*

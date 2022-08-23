@@ -170,7 +170,7 @@ To clear the twig cache using `galaxy`.
 php galaxy cache:clear twig
 ```
 
-*Note: If `WP_DEBUG` is enabled caching will be disabled, but the cache still needs to be cleared.*
+! **Note**: If `WP_DEBUG` is enabled caching will be disabled, but the cache still needs to be cleared.
 
 ### Customizing Twig Env
 
@@ -273,4 +273,4 @@ The above will load its settings from the config, but they must be added by you 
 1. Template engine under `app.templates.admin`.
 2. Views folder under `paths.admin`.
 
-*Note, if you set the folder or engine for the view on the fly it will override the context settings.*
+! **Note**: If you set the folder or engine for the view on the fly it will override the context settings.

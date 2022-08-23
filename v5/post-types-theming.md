@@ -33,7 +33,7 @@ tr_taxonomy('Department')->apply($team);
 
 Next, flush the rewrite rules in WordPress. This is **VERY IMPORTANT**! Without flushing, rewrite rules, WordPress will not have a URL for the `person` post type.
 
-*Note: Flush rewrites by clicking Settings > Permalinks > Save Changes*
+! **Note**: Flush rewrites by clicking "Settings > Permalinks > Save Changes"
 
 ## The Files
 
@@ -47,7 +47,7 @@ You will need three template files when theming in our example.
 
 Publish some content in the `person` post type. Notice, when you publish content to a post type with TypeRocket, the "flash message" corresponds to the post type's singular label. This helps make the management experience feel very refined.
 
-*Note: If the post type is not public or "Admin Only" the view link is removed from the "flash message".*
+! **Note**: If the post type is not public or "Admin Only" the view link is removed from the "flash message".
 
 ## Archive Template 
 
@@ -55,7 +55,7 @@ Copy the dev mode code hint from the post type edit page for "Job Title" into a 
 
 ![docs-v1-post-type-templating-code-hint](https://typerocket.com/wp-content/uploads/2020/01/docs-v1-post-type-templating-code-hint.png)
 
-*Note: In the config.php file set `TR_DEBUG` to `true` to see the code hints.*
+! **Note**: In the config.php file set `TR_DEBUG` to `true` to see the code hints.
 
 The code hint in this case is:
 

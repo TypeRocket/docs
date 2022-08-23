@@ -27,7 +27,7 @@ Previously in Typerocket Pro v1 all features were included in the base [composer
 
 You will need to extend the free system with Pro by requiring `typerocket/professional` with composer. Then you will need to publish the professional package after installing it with `composer`. The details on this process can be found in [the composer installation guide for v5](/docs/v5/install-via-composer/).
 
-*Note: For root installations the `typerocket.php` MU plugin is no longer needed and has been removed.*
+! **Note**: For root installations the `typerocket.php` MU plugin is no longer needed and has been removed.
 
 ### New Config Files
 
@@ -117,7 +117,7 @@ Component classes live under the `app/Components` folder and must be registered 
 php galaxy make:component <key> [<class> [<title>]]
 ```
 
-*Note: If you are migrating from v1 you will want your key to match the name of your old component file name.*
+! **Note**: If you are migrating from v1 you will want your key to match the name of your old component file name.
 
 For example, lets say you are migrating an existing "Image" folder system component. First, make a new "Image" component with the command:
 
@@ -278,7 +278,7 @@ echo $form->matrix('footer');
 echo $form->builder('builder');
 ```
 
-*Note: Dynamic component thumbnails have been updated to no longer required the hook `tr_builder_component_thumbnails`. You can now control the thumbnail through the component class.*
+! **Note**: Dynamic component thumbnails have been updated to no longer required the hook `tr_builder_component_thumbnails`. You can now control the thumbnail through the component class.
 
 ### Icons Removed
 

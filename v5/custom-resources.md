@@ -95,7 +95,7 @@ $table->setColumns([
 $table->render();
 ```
 
-*Note: The delete action will use an ajax call to the controller destroy method by default.*
+! **Note**: The delete action will use an ajax call to the controller destroy method by default.
 
 ## Add
 

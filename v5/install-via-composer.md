@@ -28,7 +28,7 @@ There are two recommended ways to download and install TypeRocket using composer
 
 For beginners, the MU install is the fittest place to start.
 
-*Note: Only one installation type is required for TypeRocket to work. Either the MU plugin install or the root install. Also, you should not install TypeRocket into an existing plugin or theme.*
+! **Note**: Only one installation type is required for TypeRocket to work. Either the MU plugin install or the root install. Also, you should not install TypeRocket into an existing plugin or theme.
 
 ### 2.1 MU Install
 
@@ -55,7 +55,7 @@ require ('typerocket/init.php');
 
 ### 2.2 Root Install
 
-*Note: You do not need to install WordPress before doing a root install.*
+! **Note**: You do not need to install WordPress before doing a root install.
 
 To install TypeRocket as your root application, create the TypeRocket Pro project in a new location run from the command line.
 
