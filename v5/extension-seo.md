@@ -44,21 +44,21 @@ For example, your controller and views:
 use \App\Models\Node;
 
 class NodeController extends Controller  
-{  
+{
     public function add() {
-		$form = tr_form(Node::class);
-		return tr_view('nodes.show', campact('form'));
-	}
-	
+        $form = tr_form(Node::class);
+        return tr_view('nodes.show', campact('form'));
+    }
+
     public function create() {
-		// Do some node creation
-	}
-	
+        // Do some node creation
+    }
+
 	public function show($id) {
-		$node = (new Node)->find($id);
-		$url = site_url('/nodes/' . $id);
-		return tr_view('nodes.show', campact('node'))->setSeoMeta($node->seo, $url);
-	}   
+        $node = (new Node)->find($id);
+        $url = site_url('/nodes/' . $id);
+        return tr_view('nodes.show', campact('node'))->setSeoMeta($node->seo, $url);
+    }
 }
 ```
 
@@ -88,7 +88,7 @@ If you want to control what post types the meta box is added too, you can use th
 
 ```php
 add_filter('typerocket_seo_post_types', function($types) {
-	return ['page', 'post'];
+    return ['page', 'post'];
 });
 ```
 
