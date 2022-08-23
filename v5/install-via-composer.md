@@ -114,7 +114,7 @@ require_once(ABSPATH . 'wp-settings.php');
 
 To update TypeRocket run `composer update`. This will update all the PHP code and JS/CSS assets.
 
-## Pro Repository !!
+## Pro Repository - !!
 
 If you are using TypeRocket Pro and have composer access with your license you can follow these instructions to get `typerocket/professional` installed.
 
