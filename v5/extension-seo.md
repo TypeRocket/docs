@@ -54,7 +54,7 @@ class NodeController extends Controller
         // Do some node creation
     }
 
-	public function show($id) {
+    public function show($id) {
         $node = (new Node)->find($id);
         $url = site_url('/nodes/' . $id);
         return tr_view('nodes.show', campact('node'))->setSeoMeta($node->seo, $url);
