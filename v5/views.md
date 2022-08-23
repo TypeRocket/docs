@@ -94,9 +94,7 @@ To set a views page `<head>` `<title>` tag use the `setTitle()` method. This wor
 tr_view('books.add')->setTitle('Add Book');
 ```
 
-## SEO Meta
-
-!!
+## SEO Meta - !!
 
 If you are using views within a post type's template file, you do not need to set SEO meta of the view. However, if you view is for anything that is not a post type you will need to set the SEO meta using the `setSeoMeta()` view method.
 
@@ -138,9 +136,7 @@ If the folder was the default of `views` then run.
 php galaxy cache:clear views
 ```
 
-## Twig Engine
-
-!!
+## Twig Engine - !!
 
 If you want to use [Twig](https://twig.symfony.com/) for your views, require Twig as apart of your project using `composer`.
 
@@ -189,9 +185,7 @@ return [
 ];
 ```
 
-## Tachyon Template Engine
-
-!!
+## Tachyon Template Engine - !!
 
 TypeRocket Pro also has a template engine called Tachyon. This template engine is a blazing fast and pure PHP templating engine equipped with layouts and more. You can read more about Tachyon in the [theme templating docs](/docs/v5/theme-templating/#section-advanced-views).
 
@@ -204,9 +198,7 @@ $engine = '\TypeRocketPro\Template\TwigTemplateEngine';
 tr_view('books.show')->setEngine($engine);
 ```
 
-## Views In Templates
-
-!!
+## Views In Templates - !!
 
 You can also use views within your standard WordPress theme's templates. To use views for your WordPress templates use the `tr_template_router` function.
 

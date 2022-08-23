@@ -3,9 +3,9 @@ Description: Add SEO to your post types or custom resources.
 
 ---
 
-## SEO Extension
-
 !!
+
+## SEO Extension
 
 To begin, be sure your theme has title tag support enabled.
 

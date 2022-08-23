@@ -3,9 +3,9 @@ Description: Send downloads from a controller.
 
 ---
 
-## Getting Started
-
 !!
+
+## Getting Started
 
 The `TypeRocketPro\Http\Download` class lets you send a downloadable file as the response to a request.
 

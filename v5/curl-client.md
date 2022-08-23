@@ -3,9 +3,9 @@ Description: A simple cURL client.
 
 ---
 
-## Getting Started
-
 !!
+
+## Getting Started
 
 **IMPORTANT**: You must have the PHP cURL extension installed to use this class.
 

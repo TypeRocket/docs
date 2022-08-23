@@ -3,9 +3,9 @@ Description: Drop the WordPress loop and start using MVC.
 
 ---
 
-## Getting Started
-
 !!
+
+## Getting Started
 
 To understand the TypeRocket theme templating system lets walk through an example implementation. In this example, we will make a blog using views, template controllers, and models.
 

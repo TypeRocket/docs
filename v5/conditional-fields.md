@@ -3,9 +3,9 @@ Description: Conditional elements can hide and show their content from view when
 
 ---
 
-## Getting Started
-
 !!
+
+## Getting Started
 
 If you are coming from another custom field plugin, you probably use conditional fields. TypeRocket Pro has conditional fields and many other conditional elements:
 

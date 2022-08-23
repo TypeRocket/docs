@@ -3,9 +3,9 @@ Description: Add custom fields to widgets.
 
 ---
 
-## Getting Started
-
 !!
+
+## Getting Started
 
 To create custom widgets with fields, you will need to extend the `\TypeRocketPro\Register\BaseWidget` class. 
 

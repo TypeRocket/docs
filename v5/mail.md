@@ -3,9 +3,9 @@ Description: Custom email system.
 
 ---
 
-## Getting Started
-
 !!
+
+## Getting Started
 
 To WordPress send email WordPress provides the `wp_mail()` function. With new service `\TypeRocket\Services\MailerService` loaded in your `app.servies` config file you can extend the WordPress email system with additional mail drivers.
 

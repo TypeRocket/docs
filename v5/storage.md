@@ -3,9 +3,9 @@ Description: Custom storage system.
 
 ---
 
-## Getting Started
-
 !!
+
+## Getting Started
 
 You can use the `\TypeRocketPro\Utility\Storage` class to work with files from specific locations. The class makes it easy to work with files, like the `TypeRocket\Utility\File` class, with the benefit of working with files in external and internal locations.
 

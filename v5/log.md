@@ -3,9 +3,9 @@ Description: Custom log system.
 
 ---
 
-## Getting Started
-
 !!
+
+## Getting Started
 
 To configure the log system to a specific log driver see the `app/logging.php` config file. By default, TypeRocket uses its `stack` log driver. There are five log drivers included with TypeRocket:
 

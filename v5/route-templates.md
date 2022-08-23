@@ -1,11 +1,11 @@
 Title: Route Templates
-Description: Use the WordPress rewrite rules with MVS and bypass a theme's templates.
+Description: Use the WordPress rewrite rules with MVC and bypass a theme's templates.
 
 ---
 
-## Getting Started
+!! 
 
-!!
+## Getting Started
 
 Typerocket [routes are powerful](/docs/v5/routes/). Also, you might want to use MVC with the built-in WordPress rewrite rules too. But, maybe you don't want to use the WordPress file based templating system. 
 

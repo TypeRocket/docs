@@ -3,11 +3,11 @@ Description: Additional feature for the TypeRocket page builder.
 
 ---
 
-## Page Builder Plus
-
 !!
 
-**IMPORTANT**: In beta phase, only works with the `App\Models\Page` model.
+## Page Builder Plus
+
+! **IMPORTANT**: In beta phase, only works with the `App\Models\Page` model.
 
 The Pro package includes a Page Builder Plus extension that adds additional capabilities to the basic Page Builder. You must have the Page Builder extension turned on to use this extension. The new features include:
 
