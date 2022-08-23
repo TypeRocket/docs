@@ -9,8 +9,6 @@ TypeRocket has a few requirements.
 
 ### System
 
-### TypeRocket v5.1+
-
 - PHP >= 7.4
 - WordPress >= 6.0
 - PDO PHP Extension
@@ -34,4 +32,4 @@ Fully supported browsers include:
 
 If you are using composer:
 
-- Composer `2.0+` is required
+- Composer `2.4+` is required
