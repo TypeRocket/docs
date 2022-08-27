@@ -5,7 +5,17 @@ Description: Access common string utilities without rolling your own.
 
 ## String
 
-The functions of the `Str` class are all UTF8 enabled and can work with Unicode characters.
+The functions of the `\TypeRocket\Utility\Str` class are all UTF8 enabled and can work with Unicode characters.
+
+<div class="content-columns">
+
+[Str::starts](#section-starts)
+[Str::ends](#section-ends)
+[Str::contains](#section-contains)
+[Str::camelize](#section-camelize)
+[Str::trimStart](#section-trim-start)
+
+</div>
 
 ## Starts
 
@@ -55,15 +65,4 @@ Use the method `trimStart()` to trim the start of a string.
 ```php
 $name = 'hi_there';
 $bool = \TypeRocket\Utility\Str::trimStart($name, 'hi_');
-```
-
-
-## Camelize
-
-Use the method `camelize()` to test if a string contains a value.  
-
-```php
-$name = 'hi_there';
-$capitalize_first_char = true;
-$bool = \TypeRocket\Utility\Str::camelize($name, '_', $capitalize_first_char);
 ```
