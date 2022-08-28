@@ -74,7 +74,6 @@
 - mail: Mail
 - queues: Queues & Jobs
 - storage: Storage
-- strings: Strings
 - utilities: Utilities
 - plugins-making: WordPress Plugins
 # Hooks

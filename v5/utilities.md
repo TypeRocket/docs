@@ -1,7 +1,98 @@
 Title: Utilities
 Description: Utility functions and tools.
+Quick Links Columns: 3
 
 ---
+
+## String
+
+The functions of the `\TypeRocket\Utility\Str` class are all UTF8 enabled and can work with Unicode characters.
+
+### Str::camelize
+
+Use the method `camelize()` to camel case a string.
+
+```php
+$name = 'hi_there';
+$capitalize_first_char = true;
+$bool = \TypeRocket\Utility\Str::camelize($name, '_', $capitalize_first_char);
+// HiThere
+```
+
+### Str::contains
+
+Use the method `contains()` to test if a string contains a value.
+
+```php
+$needle = 'are';
+$haystack = 'Names are cool.';
+$bool = \TypeRocket\Utility\Str::contains($needle, $haystack);
+// true
+```
+
+### Str::ends
+
+Use the method `ends()` to test if a string ends with a value.
+
+```php
+$needle = 'ol.';
+$haystack = 'Names are cool.';
+$bool = \TypeRocket\Utility\Str::ends($needle, $haystack);
+// true
+```
+
+### Str::notBlank
+
+Use the method `notBlank()` to check if a value is `null` or an empty string.
+
+```php
+\TypeRocket\Utility\Str::notBlank(''); // false
+\TypeRocket\Utility\Str::notBlank(null); // false
+\TypeRocket\Utility\Str::notBlank(0); // true
+\TypeRocket\Utility\Str::notBlank(' '); // true
+```
+
+### Str::snake
+
+Use the method `snake()` to convert a string to snake case.
+
+```php
+\TypeRocket\Utility\Str::snake('fooBar');
+// foo_bar
+
+\TypeRocket\Utility\Str::snake('foo bar');
+// foo_bar
+```
+
+### Str::starts
+
+Use the method `starts()` to test if a string starts with a value.
+
+```php
+$needle = 'Name';
+$haystack = 'Names are cool.';
+$bool = \TypeRocket\Utility\Str::starts($needle, $haystack);
+// true
+```
+
+### Str::trimStart
+
+Use the method `trimStart()` to trim the start of a string.
+
+```php
+$name = 'hi_there';
+\TypeRocket\Utility\Str::trimStart($name, 'hi_');
+// there
+```
+
+### Str::uppercaseWords
+
+Use the method `uppercaseWords()` to apply `MB_CASE_TITLE` to a string.
+
+```php
+\TypeRocket\Utility\Str::uppercaseWords('hi_there');
+// Hi_There
+```
 
 ## tr_nils()
 
@@ -45,7 +136,7 @@ $file->size();
 
 The `TypeRocket\Utility\Helper` class includes a number of functions:
 
-### Get The WordPress Directory
+### Helper::wordPressRootPath
 
 This function tries to find the location of WordPress even when it is used before `ABSPATH` is defined.
 
@@ -57,7 +148,7 @@ TypeRocket\Utility\Helper::wordPressRootPath();
 
 The `TypeRocket\Utility\Data` class provides helper functions.
 
-### Walk
+### Data::walk
 
 ```php
 $array = ['my' => ['key' => 'value']];
@@ -66,7 +157,7 @@ echo TypeRocket\Utility\Data::walk('my.key', $array);
 // outputs: value
 ```
 
-### Cast
+### Data::cast
 
 ```php
 // returns string '100'
