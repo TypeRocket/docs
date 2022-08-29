@@ -230,15 +230,6 @@ TypeRocket\Utility\Helper::wordPressRootPath();
 
 The `TypeRocket\Utility\Data` class provides helper functions.
 
-### Data::walk
-
-```php
-$array = ['my' => ['key' => 'value']];
-
-echo TypeRocket\Utility\Data::walk('my.key', $array);
-// outputs: value
-```
-
 ### Data::cast
 
 The `Data::cast` method will cast a value to the given type if the value is compatible with the cast type.
@@ -269,4 +260,32 @@ Data::cast('{"name":"smith"}', 'array');
 
 Data::cast(1, 'array');
 // 1  - is not compatible with array cast
+```
+
+### Data:isJson
+
+The `Data::cast` method returns `true` if the given value is valid `json`:
+
+```php
+use TypeRocket\Utility\Data;
+
+Data::isJson('{"name":"smith"}');
+// true
+
+Data::isJson('');
+// false
+
+Data::isJson('""');
+// false
+```
+
+### Data::walk
+
+```php
+use TypeRocket\Utility\Data;
+
+$array = ['developer' => ['name' => 'Kevin']];
+
+Data::walk('developer.name', $array);
+// 'Kevin'
 ```
