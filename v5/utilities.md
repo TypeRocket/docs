@@ -1,8 +1,88 @@
 Title: Utilities
 Description: Utility functions and tools.
+Quick Links Depth: 3
 Quick Links Columns: 3
 
 ---
+
+## Array
+
+### Arr::filterNull
+
+The `Arr::filterNull` method removes all `null` values from the given array:
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = [0, null];
+ 
+$filtered = Arr::filterNull($array);
+ 
+// [0 => 0]
+```
+
+### Arr::isEmptyArray
+
+The `Arr::isEmptyArray` method checks if array has no values:
+
+```php
+use \TypeRocket\Utility\Arr;
+ 
+Arr::isEmptyArray([]);
+ 
+// true
+
+Arr::isEmptyArray(['']);
+ 
+// false
+```
+
+### Arr::only
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = ['name' => 'Desk', 'price' => 100, 'orders' => 10];
+ 
+$slice = Arr::only($array, ['name', 'price']);
+ 
+// ['name' => 'Desk', 'price' => 100]
+```
+
+### Arr:pluck
+
+The `Arr::pluck` method plucks specific values of a given key from an array:
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = [
+    ['id' => 123, 'title' => 'Dev', 'name' => 'John'],
+    ['id' => 789, 'title' => 'Dev', 'name' => 'Sally'],
+];
+ 
+$names = Arr::pluck($array, ['name']);
+ 
+// ['John', 'Sally']
+
+$names = Arr::pluck($array, ['name', 'title']);
+ 
+// [ ['name' => 'John', 'title' => 'Dev'], ['name' => 'Sally', 'title' => 'Dev'] ]
+```
+
+Further, you can index the result by a given key: 
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = [
+    ['id' => 123, 'title' => 'Dev', 'name' => 'John'],
+    ['id' => 789, 'title' => 'Dev', 'name' => 'Sally'],
+]; 
+$names = Arr::pluck($array, ['name'], 'id');
+ 
+// [123 => 'John', 789 => 'Sally']
+```
 
 ## String
 
@@ -116,7 +196,9 @@ tr_nils($value)->one->two->three->get();
 The `\TypeRocket\Utility\File` utility class offers a number of advanced file management features.
 
 ```php
-$file = \TypeRocket\Utility\File::new($file_path);
+use \TypeRocket\Utility\File;
+
+$file = File::new($file_path);
 $file->create('content');
 $file->append('more content');
 $file->replace('new content');
@@ -159,13 +241,32 @@ echo TypeRocket\Utility\Data::walk('my.key', $array);
 
 ### Data::cast
 
+The `Data::cast` method will cast a value to the given type if the value is compatible with the cast type.
+
 ```php
-// returns string '100'
-TypeRocket\Utility\Data::cast(100, 'str');
+use TypeRocket\Utility\Data;
 
-// returns false
-TypeRocket\Utility\Data::cast(0, 'bool');
+Data::cast(100, 'str');
+// '100'
 
-// returns serialized array
-TypeRocket\Utility\Data::cast(['name' => 'smith'], 'serial');
+Data::cast(0, 'bool');
+// false
+
+Data::cast(1, 'float');
+// 1.0
+
+Data::cast(1.0, 'int');
+// 1
+
+Data::cast(['name' => 'smith'], 'serial');
+// a:1:{s:4:"name";s:5:"smith";}
+
+Data::cast(['name' => 'smith'], 'json');
+// {"name":"smith"}
+
+Data::cast('{"name":"smith"}', 'array');
+// ['name' => 'smith']
+
+Data::cast(1, 'array');
+// 1  - is not compatible with array cast
 ```
