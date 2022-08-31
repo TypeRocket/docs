@@ -16,8 +16,7 @@ use \TypeRocket\Utility\Arr;
 
 $array = [0, null];
  
-$filtered = Arr::filterNull($array);
- 
+Arr::filterNull($array);
 // [0 => 0]
 ```
 
@@ -29,11 +28,9 @@ The `Arr::isEmptyArray` method checks if array has no values:
 use \TypeRocket\Utility\Arr;
  
 Arr::isEmptyArray([]);
- 
 // true
 
 Arr::isEmptyArray(['']);
- 
 // false
 ```
 
@@ -44,8 +41,7 @@ use \TypeRocket\Utility\Arr;
 
 $array = ['name' => 'Desk', 'price' => 100, 'orders' => 10];
  
-$slice = Arr::only($array, ['name', 'price']);
- 
+Arr::only($array, ['name', 'price']);
 // ['name' => 'Desk', 'price' => 100]
 ```
 
@@ -61,12 +57,10 @@ $array = [
     ['id' => 789, 'title' => 'Dev', 'name' => 'Sally'],
 ];
  
-$names = Arr::pluck($array, ['name']);
- 
+Arr::pluck($array, ['name']);
 // ['John', 'Sally']
 
-$names = Arr::pluck($array, ['name', 'title']);
- 
+Arr::pluck($array, ['name', 'title']);
 // [ ['name' => 'John', 'title' => 'Dev'], ['name' => 'Sally', 'title' => 'Dev'] ]
 ```
 
@@ -79,8 +73,8 @@ $array = [
     ['id' => 123, 'title' => 'Dev', 'name' => 'John'],
     ['id' => 789, 'title' => 'Dev', 'name' => 'Sally'],
 ]; 
-$names = Arr::pluck($array, ['name'], 'id');
- 
+
+Arr::pluck($array, ['name'], 'id');
 // [123 => 'John', 789 => 'Sally']
 ```
 
@@ -90,88 +84,116 @@ The functions of the `\TypeRocket\Utility\Str` class are all UTF8 enabled and ca
 
 ### Str::camelize
 
-Use the method `camelize()` to camel case a string.
+Use the method `Str::camelize()` to camel case a string.
 
 ```php
+use \TypeRocket\Utility\Str;
+
 $name = 'hi_there';
 $capitalize_first_char = true;
-$bool = \TypeRocket\Utility\Str::camelize($name, '_', $capitalize_first_char);
-// HiThere
+
+Str::camelize($name, '_', $capitalize_first_char);
+// 'HiThere'
 ```
 
 ### Str::contains
 
-Use the method `contains()` to test if a string contains a value.
+Use the method `Str::contains()` to test if a string contains a value.
 
 ```php
-$needle = 'are';
-$haystack = 'Names are cool.';
-$bool = \TypeRocket\Utility\Str::contains($needle, $haystack);
+use \TypeRocket\Utility\Str;
+
+Str::contains('it', 'Name it!');
 // true
 ```
 
 ### Str::ends
 
-Use the method `ends()` to test if a string ends with a value.
+Use the method `Str::ends()` to test if a string ends with a value.
 
 ```php
-$needle = 'ol.';
-$haystack = 'Names are cool.';
-$bool = \TypeRocket\Utility\Str::ends($needle, $haystack);
+use \TypeRocket\Utility\Str;
+
+Str::ends('it!', 'Names it!');
+// true
+```
+
+### Str::explodeFromRight
+
+Use the method `Str::explodeFromRight()` to test if a string contains a value.
+
+```php
+use \TypeRocket\Utility\Str;
+
+Str::contains('it', 'Name it!');
 // true
 ```
 
 ### Str::notBlank
 
-Use the method `notBlank()` to check if a value is `null` or an empty string.
+Use the method `Str::notBlank()` to check if a value is `null` or an empty string.
 
 ```php
-\TypeRocket\Utility\Str::notBlank(''); // false
-\TypeRocket\Utility\Str::notBlank(null); // false
-\TypeRocket\Utility\Str::notBlank(0); // true
-\TypeRocket\Utility\Str::notBlank(' '); // true
+use \TypeRocket\Utility\Str;
+
+Str::notBlank(''); 
+// false
+
+Str::notBlank(null); 
+// false
+
+Str::notBlank(0); 
+// true
+
+Str::notBlank(' ');
+// true
 ```
 
 ### Str::snake
 
-Use the method `snake()` to convert a string to snake case.
+Use the method `Str::snake()` to convert a string to snake case.
 
 ```php
-\TypeRocket\Utility\Str::snake('fooBar');
-// foo_bar
+use \TypeRocket\Utility\Str;
 
-\TypeRocket\Utility\Str::snake('foo bar');
-// foo_bar
+Str::snake('fooBar');
+// 'foo_bar'
+
+Str::snake('foo bar');
+// 'foo_bar'
 ```
 
 ### Str::starts
 
-Use the method `starts()` to test if a string starts with a value.
+Use the method `Str::starts()` to test if a string starts with a value.
 
 ```php
-$needle = 'Name';
-$haystack = 'Names are cool.';
-$bool = \TypeRocket\Utility\Str::starts($needle, $haystack);
+use \TypeRocket\Utility\Str;
+
+Str::starts('Name', 'Name it!');
 // true
 ```
 
 ### Str::trimStart
 
-Use the method `trimStart()` to trim the start of a string.
+Use the method `Str::trimStart()` to trim the start of a string.
 
 ```php
-$name = 'hi_there';
-\TypeRocket\Utility\Str::trimStart($name, 'hi_');
-// there
+use \TypeRocket\Utility\Str;
+
+Str::trimStart('hi_there', 'hi_');
+// 'there'
 ```
 
 ### Str::uppercaseWords
 
-Use the method `uppercaseWords()` to apply `MB_CASE_TITLE` to a string.
+Use the method `Str::uppercaseWords()` to apply `MB_CASE_TITLE` to a string.
 
 ```php
-\TypeRocket\Utility\Str::uppercaseWords('hi_there');
-// Hi_There
+use \TypeRocket\Utility\Str;
+
+Str::uppercaseWords('hi_there');
+// 'Hi_There'
 ```
 
 ## tr_nils()
@@ -181,37 +203,120 @@ The `tr_nils()` function allows for chaining a number of property lookups withou
 ```php
 $value = new \stdClass;
 
-// returns Nil object
 tr_nils($value)['one']->two->three; 
-
 // returns Nil object
-tr_nils($value)->one->two->three; 
 
-// returns null or real value if exists
+tr_nils($value)->one->two->three; 
+// returns Nil object
+
 tr_nils($value)->one->two->three->get();
+// returns null or real value if exists
 ```
 
 ## File
 
-The `\TypeRocket\Utility\File` utility class offers a number of advanced file management features.
+The `\TypeRocket\Utility\File` utility class offers a number of advanced file management features. First, create a new `\TypeRocket\Utility\File` instance to work with. This is an instance only and no file is created, deleted, or updated at this point.
 
 ```php
 use \TypeRocket\Utility\File;
 
 $file = File::new($file_path);
-$file->create('content');
+```
+
+### Append
+
+Append content to an existing file.
+
+```php
 $file->append('more content');
-$file->replace('new content');
-$file->remove();
+```
+
+### Create
+
+Create a file with content.
+
+```php
+$file->create('content');
+```
+
+### Exists
+
+Check if file exists.
+
+```php
 $file->exists();
-$file->wrote();
-$file->exists();
-$file->read();
-$file->readFirstLine();
-$file->readFirstCharactersTo($length, $offset);
-$file->mimeType();
+```
+
+### Last Modified
+
+Get the last modified date as a Unix timestamp of a file or return `false`.
+
+```php
 $file->lastModified();
+```
+
+### Mime Type
+
+Get the mine-type of an existing file.
+
+```php
+$file->mimeType();
+```
+
+### Read
+
+Get the content of an existing file.
+
+```php
+$file->read();
+```
+
+### Read First Line
+
+Read the first line of an existing file.
+
+```php
+$file->readFirstLine();
+```
+
+### Read First Characters To
+
+Read the content for a specific length of characters and of an offset from an existing file.
+
+```php
+$file->readFirstCharactersTo($length, $offset);
+```
+
+### Remove
+
+Remove an existing file.
+
+```php
+$file->remove();
+```
+
+### Replace
+
+Replace an existing file with a new file containing content.
+
+```php
+$file->replace('new content');
+```
+
+### Size
+
+Get the size of an existing file in bytes, or `false`.
+
+```php
 $file->size();
+```
+
+### Wrote
+
+Has file been written to by this instance.
+
+```php
+$file->wrote();
 ```
 
 ## Helper
