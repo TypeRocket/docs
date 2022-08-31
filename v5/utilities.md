@@ -9,7 +9,7 @@ Quick Links Columns: 3
 
 ### Arr::filterNull
 
-The `Arr::filterNull` method removes all `null` values from the given array:
+The `Arr::filterNull()` method removes all `null` values from the given array:
 
 ```php
 use \TypeRocket\Utility\Arr;
@@ -22,7 +22,7 @@ Arr::filterNull($array);
 
 ### Arr::isEmptyArray
 
-The `Arr::isEmptyArray` method checks if array has no values:
+The `Arr::isEmptyArray()` method checks if array has no values:
 
 ```php
 use \TypeRocket\Utility\Arr;
@@ -36,6 +36,8 @@ Arr::isEmptyArray(['']);
 
 ### Arr::only
 
+The `Arr::only()` method gets a list of specified keys only:
+
 ```php
 use \TypeRocket\Utility\Arr;
 
@@ -47,7 +49,7 @@ Arr::only($array, ['name', 'price']);
 
 ### Arr:pluck
 
-The `Arr::pluck` method plucks specific values of a given key from an array:
+The `Arr::pluck()` method plucks specific values of a given key from an array:
 
 ```php
 use \TypeRocket\Utility\Arr;
@@ -323,12 +325,67 @@ $file->wrote();
 
 The `TypeRocket\Utility\Helper` class includes a number of functions:
 
-### Helper::wordPressRootPath
+### Helper::appNamespace
 
-This function tries to find the location of WordPress even when it is used before `ABSPATH` is defined.
+The `Helper::appNamespace()` method gets the registered app namespace from the `TYPEROCKET_APP_NAMESPACE` constant.
 
 ```php
-TypeRocket\Utility\Helper::wordPressRootPath();
+use TypeRocket\Utility\Helper;
+
+Helper::appNamespace();
+// 'App'
+```
+
+### Helper::controllerClass
+
+The `Helper::controllerClass()` method gets the registered app namespace controller name standard with the `TYPEROCKET_APP_NAMESPACE` constant and appends the string `'Controller'` if needed.
+
+```php
+use TypeRocket\Utility\Helper;
+
+Helper::controllerClass('Page');
+// '\App\Controllers\PageController'
+````
+
+### Helper::form
+
+The `Helper::form()` method creates a [form instance](/docs/v5/forms/) from the config class registered under `app.class.form`.
+
+```php
+use TypeRocket\Utility\Helper;
+
+Helper::form();
+```
+
+### Helper::hash
+
+The `Helper::hash()` method generates a unique runtime hash as an `int`.
+
+```php
+use TypeRocket\Utility\Helper;
+
+Helper::hash();
+```
+
+### Helper::modelClass
+
+The `Helper::modelClass()` method gets the registered app namespace models folder with the `TYPEROCKET_APP_NAMESPACE` constant.
+
+```php
+use TypeRocket\Utility\Helper;
+
+Helper::modelClass('Page');
+// '\App\Models\Page'
+```
+
+### Helper::wordPressRootPath
+
+The `Helper::wordPressRootPath()` method tries to find the location of WordPress even when it is used before `ABSPATH` is defined.
+
+```php
+use TypeRocket\Utility\Helper;
+
+Helper::wordPressRootPath();
 ```
 
 ## Data
@@ -337,7 +394,7 @@ The `TypeRocket\Utility\Data` class provides helper functions.
 
 ### Data::cast
 
-The `Data::cast` method will cast a value to the given type if the value is compatible with the cast type.
+The `Data::cast()` method will cast a value to the given type if the value is compatible with the cast type.
 
 ```php
 use TypeRocket\Utility\Data;
@@ -369,7 +426,7 @@ Data::cast(1, 'array');
 
 ### Data:isJson
 
-The `Data::cast` method returns `true` if the given value is valid `json`:
+The `Data::isJson()` method returns `true` if the given value is valid `json`:
 
 ```php
 use TypeRocket\Utility\Data;
@@ -385,6 +442,8 @@ Data::isJson('""');
 ```
 
 ### Data::walk
+
+The `Data::isJson()` method used dot notation to look up a value by array keys and/or object properties.
 
 ```php
 use TypeRocket\Utility\Data;
