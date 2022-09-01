@@ -20,6 +20,49 @@ Arr::filterNull($array);
 // [0 => 0]
 ```
 
+### Arr::get
+
+The `Arr::get()` method retrieves a value from a deeply nested array using dot notation:
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = ['products' => ['mic' => ['price' => 99]];
+ 
+$price = Arr::get($array, 'products.mic.price');
+// 99
+```
+
+The `Arr::get` method also takes a default value, which will be returned if the specified key is **not present** in the array:
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = ['product' => ['name' => null, 'price' => 99]];
+ 
+$price = Arr::get($array, 'product.tax', 10);
+// 10
+
+$price = Arr::get($array, 'product.name', 10);
+// null
+```
+
+### Arr:has
+
+The `Arr::has` method checks if a given item exists in an array using dot notation:
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = ['product' => ['name' => null, 'price' => 99]];
+ 
+$price = Arr::has($array, 'product.name');
+// true
+
+$price = Arr::has($array, 'product.tax');
+// false
+```
+
 ### Arr::indexBy
 
 The `Arr::indexBy()` method indexes a sequential array by a key when all keyed values are unique:
@@ -162,6 +205,19 @@ Arr::replaceRecursivePreferNew($current, $new, ['section.meta']);
 //     ],
 //   ],
 // ]
+```
+
+### Arr:set
+
+The `Arr::set` method assigns a given value to an item that exists in an array using dot notation:
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = ['product' => ['name' => null, 'price' => 99]];
+ 
+$price = Arr::set('product.name', $array, 'mic');
+// ['product' => ['name' => 'mic', 'price' => 99]]
 ```
 
 ## String
