@@ -47,7 +47,7 @@ $price = Arr::get($array, 'product.name', 10);
 // null
 ```
 
-### Arr:has
+### Arr::has
 
 The `Arr::has` method checks if a given item exists in an array using dot notation:
 
@@ -107,7 +107,7 @@ Arr::isEmptyArray(['id' => [10,20]]);
 // ['id.0' => 10, 'id.1' => 20]
 ```
 
-### Arr:meldExpand
+### Arr::meldExpand
 
 The `Arr::meldExpand()` method expands a dot notation keyed flat array into a deeply nested array:
 
@@ -131,7 +131,7 @@ Arr::only($array, ['name', 'price']);
 // ['name' => 'Desk', 'price' => 100]
 ```
 
-### Arr:pluck
+### Arr::pluck
 
 The `Arr::pluck()` method plucks specific values of a given key from an array:
 
@@ -207,7 +207,7 @@ Arr::replaceRecursivePreferNew($current, $new, ['section.meta']);
 // ]
 ```
 
-### Arr:set
+### Arr::set
 
 The `Arr::set` method assigns a given value to an item that exists in an array using dot notation:
 
