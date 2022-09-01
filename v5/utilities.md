@@ -20,6 +20,25 @@ Arr::filterNull($array);
 // [0 => 0]
 ```
 
+### Arr::indexBy
+
+The `Arr::indexBy()` method indexes a sequential array by a key when all keyed values are unique:
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = [
+    ['id' => 1, 'name' => 'Kevin'],
+    ['id' => 2, 'name' => 'Matt'],
+];
+ 
+Arr::indexBy('id', $array);
+// [
+//   '1' => ['id' => 1, 'name' => 'Kevin'],
+//   '2' => ['id' => 2, 'name' => 'Matt']
+// ]
+```
+
 ### Arr::isEmptyArray
 
 The `Arr::isEmptyArray()` method checks if array has no values:
@@ -32,6 +51,28 @@ Arr::isEmptyArray([]);
 
 Arr::isEmptyArray(['']);
 // false
+```
+
+### Arr::meld
+
+The `Arr::meld()` method reduces a deeply nested array into a dot notation keyed flat array:
+
+```php
+use \TypeRocket\Utility\Arr;
+ 
+Arr::isEmptyArray(['id' => [10,20]]);
+// ['id.0' => 10, 'id.1' => 20]
+```
+
+### Arr:meldExpand
+
+The `Arr::meldExpand()` method expands a dot notation keyed flat array into a deeply nested array:
+
+```php
+use \TypeRocket\Utility\Arr;
+ 
+Arr::isEmptyArray(['id.0' => 10, 'id.1' => 20]);
+// ['id' => [10,20]]
 ```
 
 ### Arr::only
@@ -78,6 +119,49 @@ $array = [
 
 Arr::pluck($array, ['name'], 'id');
 // [123 => 'John', 789 => 'Sally']
+```
+
+### Arr::replaceRecursivePreferNew
+
+The `Arr::replaceRecursivePreferNew()` method works like `array_replace_recursive` but keeps the order of the new array and allows for setting stop break points to the replacement search. The method take three arguments:
+
+1. `$current_array`: `array` - The current array to recursively replace.
+2. `$new_array`: `array` - The new array to recursively replace the current values with.
+3. `$stops`: `array` - List of dot notation merge stop points where `$new_array`, when present, will force override and drop `$current_array` values after that point.
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$current = [
+    'section' => [
+        'name' => 'Development',
+        'meta' => [
+            'id' => 789,
+            'type' => 'array',
+        ]
+    ],
+];
+
+$new = [
+    'section' => [
+        'name' => 'Testing',
+        'meta' => [
+            'type' => 'string',
+        ]
+    ],
+];
+ 
+Arr::replaceRecursivePreferNew($current, $new, ['section.meta']);
+// [
+//   'section' => 
+//   [
+//     'name' => 'Testing',
+//     'meta' => 
+//     [
+//       'type' => 'string',
+//     ],
+//   ],
+// ]
 ```
 
 ## String
