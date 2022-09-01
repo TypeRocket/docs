@@ -20,6 +20,41 @@ Arr::filterNull($array);
 // [0 => 0]
 ```
 
+### Arr::format
+
+The `Arr::format()` method applies a callback to an arrays a values using dot notation. The returned value is the endpoint of the dot notation lookup. The array is mutated by reference.
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = [ 'name' => 'kevin'];
+ 
+$location = Arr::format('name', $array, function($value) {
+    return ucfirst($value)
+});
+// 'Kevin'  - $location
+// [ 'name' => 'Kevin']  - $array
+```
+
+You can also format multiple values using the wild dot notation selector. The returned value will be `null`. The array is mutated by reference.
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = [ 
+    'people' => [
+        [ 'name' => 'kevin'],
+        [ 'name' => 'jim']
+    ]
+];
+ 
+$location = Arr::format('people.*.name', $array, function($value) {
+    return ucfirst($value)
+});
+// null  - $location
+// [ 'people' => [ [ 'name' => 'Kevin'], [ 'name' => 'Jim'] ] ]  - $array
+```
+
 ### Arr::get
 
 The `Arr::get()` method retrieves a value from a deeply nested array using dot notation:
@@ -186,10 +221,10 @@ The `Arr::only()` method gets a list of specified keys only:
 ```php
 use \TypeRocket\Utility\Arr;
 
-$array = ['name' => 'Desk', 'price' => 100, 'orders' => 10];
+$array = ['name' => 'Mic', 'price' => 99, 'orders' => 5];
  
 Arr::only($array, ['name', 'price']);
-// ['name' => 'Desk', 'price' => 100]
+// ['name' => 'Mic', 'price' => 99]
 ```
 
 ### Arr::partition
