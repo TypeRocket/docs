@@ -508,7 +508,7 @@ Data::isJson('""');
 // false
 ```
 
-## Data::nil
+### Data::nil
 
 The `Data::nil()` method allows for chaining a number of property lookups without throwing an error. It does not provide access to object functions.
 
