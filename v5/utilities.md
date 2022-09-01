@@ -7,6 +7,19 @@ Quick Links Columns: 3
 
 ## Array
 
+### Arr::divide
+
+The `Arr::divide()` method splits keys and values from the given array into divided parts:
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = ['one' => 1, 'two' => 2];
+ 
+Arr::divide($array);
+// [ ['one', 'two'],[1,2] ]
+```
+
 ### Arr::filterNull
 
 The `Arr::filterNull()` method removes all `null` values from the given array:
