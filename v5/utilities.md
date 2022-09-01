@@ -96,6 +96,67 @@ Arr::isEmptyArray(['']);
 // false
 ```
 
+### Arr::isSequential
+
+The `Arr::isSequential()` method returns `true` if the given array's keys are sequential integers beginning from zero:
+
+```php
+use \TypeRocket\Utility\Arr;
+ 
+Arr::isSequential([0 => 'zero', 1 => 'one']);
+// true
+
+Arr::isSequential([1,2,3]);
+// true
+```
+
+### Arr::isAccessible
+
+The `Arr::isAccessible` method determines if the given value is array accessible:
+
+```php
+use \TypeRocket\Utility\Arr;
+ 
+Arr::isAccessible(['name' => 'Kevin']);
+// true
+
+Arr::isAccessible(new \ArrayObject());
+// true
+
+Arr::isAccessible(123);
+// false
+```
+
+### Arr::isAssociative
+
+The `Arr::isAssociative()` method returns `true` if the given array is an associative array. An array is considered "associative" if it doesn't have sequential numerical keys beginning with zero:
+
+```php
+use \TypeRocket\Utility\Arr;
+ 
+Arr::isAssociative(['name' => 'Kevin']);
+// true
+
+Arr::isAssociative([1 => 'one']);
+// true
+```
+
+### Arr::keysExist
+
+The `Arr::keysExist()` method check if a given list of keys exist within an array:
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = ['name' => 'mic', 'price' => 99];
+ 
+Arr::isAssociative(['name', 'price'], $array);
+// true
+
+Arr::isAssociative(['tax'], $array);
+// false
+```
+
 ### Arr::meld
 
 The `Arr::meld()` method reduces a deeply nested array into a dot notation keyed flat array:
@@ -129,6 +190,22 @@ $array = ['name' => 'Desk', 'price' => 100, 'orders' => 10];
  
 Arr::only($array, ['name', 'price']);
 // ['name' => 'Desk', 'price' => 100]
+```
+
+### Arr::partition
+
+The `Arr::partition()` method spreads a sequential array's values semi-evenly across a number of groups.
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = [1,2,3,4,5];
+ 
+Arr::partition($array, 2);
+// [[1,2,3],[4,5]]
+
+Arr::partition($array, 3);
+// [[1,2],[3,4],[5]]
 ```
 
 ### Arr::pluck
