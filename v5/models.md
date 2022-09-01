@@ -846,7 +846,7 @@ $new = [
 ];
 
 $model->setArrayReplaceRecursiveKey('column', function($new, $current, $key) {
-    $name['last_name'] = 'Doe';
+    $new['last_name'] = 'Doe';
     return $new;
 });
 $model->save($new);
