@@ -466,9 +466,26 @@ Str::contains('it', 'Name it!');
 // true
 ```
 
+### Str::makeWords
+
+The `Str::makeWords()` method replaces a delimiter with a space, `' '`, in given string with the option to title case the result.
+
+```php
+use \TypeRocket\Utility\Str;
+
+Str::makeWords('foo_bar', false); 
+// foo bar
+
+Str::makeWords('foo_bar', true); 
+// Foo Bar
+
+Str::makeWords('foo-bar', true, '-'); 
+// Foo Bar
+```
+
 ### Str::notBlank
 
-Use the method `Str::notBlank()` to check if a value is `null` or an empty string.
+The `Str::notBlank()` method checks if a value is `null` or an empty string.
 
 ```php
 use \TypeRocket\Utility\Str;
@@ -484,6 +501,28 @@ Str::notBlank(0);
 
 Str::notBlank(' ');
 // true
+```
+
+### Str::pregMatchFindFirst
+
+The `Str::pregMatchFindFirst()` method returns the first regex pattern to match a given string. However, the regex applies `#` vs `/` as the delimiters:
+
+```php
+use \TypeRocket\Utility\Str;
+
+// Do not use delimiters at the
+// start and end of patterns.
+$patters = [
+    '[a-z]+',
+    'brother',
+    'dad',
+    'mom'
+];
+
+$subject = 'dad';
+
+Str::pregMatchFindFirst($patters, $subject);
+// '[a-z]+'
 ```
 
 ### Str::replaceFirst
@@ -542,6 +581,23 @@ $string = 'monster mom';
 
 Str::replaceLast($replace, $with, $string);
 // 'momster po'
+```
+
+### Str::splitAt
+
+The `Str::splitAt()` method splits at a delimiter string into two parts:
+
+```php
+use \TypeRocket\Utility\Str;
+
+Str::splitAt('foo.bar.baz');
+// ['foo', 'bar.baz']
+
+Str::splitAt('.', 'fooBar');
+// ['fooBar', null]
+
+Str::splitAt('.', 'fooBar', true);
+// ['foo.bar', 'baz']
 ```
 
 ### Str::snake
