@@ -289,6 +289,23 @@ Arr::pluck($array, ['name'], 'id');
 // [123 => 'John', 789 => 'Sally']
 ```
 
+### Arr::reduceAllowedStr
+
+The `Arr::reduceAllowedStr()` method builds a string of unique words from an array's keys based on their boolean values:
+
+```php
+use \TypeRocket\Utility\Arr;
+
+$array = [
+    'button button-primary' => true,
+    'button' => true,
+    'link link-external' => false,
+];
+ 
+Arr::reduceAllowedStr($array);
+// 'button button-primary'
+```
+
 ### Arr::replaceRecursivePreferNew
 
 The `Arr::replaceRecursivePreferNew()` method works like `array_replace_recursive` but keeps the order of the new array and allows for setting stop break points to the replacement search. The method take three arguments:
@@ -363,6 +380,59 @@ Str::camelize($name, '_', $capitalize_first_char);
 // 'HiThere'
 ```
 
+### Str::classNames
+
+The `Str::classNames()` method constructs a list of classes for an HTML element. The method builds a string of unique words from an array's keys based on their boolean values:
+
+```php
+use \TypeRocket\Utility\Str;
+
+$array = [
+    'button' => true,
+    'button-primary' => true,
+    'button-large' => true,
+    'button-disabled' => false,
+];
+ 
+Str::classNames($array);
+// 'button button-primary button-large'
+```
+
+If the first argument is a string it will be appended to the result:  
+
+```php
+use \TypeRocket\Utility\Str;
+
+$base = 'button';
+
+$array = [
+    'button-primary' => true,
+    'button-large' => true,
+    'button-disabled' => false,
+];
+ 
+Str::classNames($base, $array);
+// 'button button-primary button-large'
+```
+
+Finally, if a third argument is provided, and all array values are false, it will be prepended to the base string as a fallback:
+
+```php
+use \TypeRocket\Utility\Str;
+
+$base = 'button';
+
+$array = [
+    'button-primary' => false,
+    'button-large' => false,
+];
+
+$fallback = 'button-disabled';
+ 
+Str::classNames($base, $array, $fallback);
+// 'button button-primary button-large'
+```
+
 ### Str::contains
 
 Use the method `Str::contains()` to test if a string contains a value.
@@ -416,9 +486,67 @@ Str::notBlank(' ');
 // true
 ```
 
+### Str::replaceFirst
+
+The `Str::replaceFirst()` method replaces the first occurrence of a given value in the string:
+
+```php
+use \TypeRocket\Utility\Str;
+
+$replace = 'mom';
+$with = 'po';
+$string = 'momster mom';
+
+Str::replaceFirst($replace, $with, $string);
+// 'poster mom'
+```
+
+### Str::replaceFirstRegex
+
+The `Str::replaceFirstRegex()` method replaces only the first match in a given string that is escaped by default with `preg_quote()`:
+
+```php
+use \TypeRocket\Utility\Str;
+
+$replace = 'mom';
+$with = 'po';
+$string = 'momster mom';
+
+Str::replaceFirstRegex($replace, $with, $string);
+// 'poster mom'
+```
+
+Further, you can disable regex escaping of the replacement argument to enable regex:
+
+```php
+use \TypeRocket\Utility\Str;
+
+$replace = '/mo./';
+$with = 'po';
+$string = 'monster mo.';
+
+Str::replaceFirstRegex($replace, $with, $string, false);
+// 'poster mo.'
+```
+
+### Str::replaceLast
+
+The `Str::replaceLast()` method replaces the last occurrence of a given value in the string:
+
+```php
+use \TypeRocket\Utility\Str;
+
+$replace = 'mom';
+$with = 'po';
+$string = 'monster mom';
+
+Str::replaceLast($replace, $with, $string);
+// 'momster po'
+```
+
 ### Str::snake
 
-Use the method `Str::snake()` to convert a string to snake case.
+The `Str::snake()` method converts a string to snake case.
 
 ```php
 use \TypeRocket\Utility\Str;
