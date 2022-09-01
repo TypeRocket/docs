@@ -430,7 +430,7 @@ $array = [
 $fallback = 'button-disabled';
  
 Str::classNames($base, $array, $fallback);
-// 'button button-primary button-large'
+// 'button button-disabled'
 ```
 
 ### Str::contains
