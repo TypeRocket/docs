@@ -82,7 +82,7 @@ The SEO extension comes with several hooks.
 4. Filter - `typerocket_seo_post_types` - Used to control which post types have the SEO meta box.
 6. Filter - `typerocket_seo_url` - Used to control the URL used for OG. 
  
-### tr_seo_post_types
+### typerocket_seo_post_types
 
 If you want to control what post types the meta box is added too, you can use the `typerocket_seo_post_types` filter hook. Only post types added will have the meta box added.
 
@@ -92,7 +92,7 @@ add_filter('typerocket_seo_post_types', function($types) {
 });
 ```
 
-### tr_seo_fields
+### typerocket_seo_fields
 
 If you want to add fields to the SEO metabox, use the `typerocket_seo_fields` action hook.
 
@@ -102,7 +102,7 @@ add_action('typerocket_seo_fields', function($form) {
 });
 ```
 
-### tr_seo_meta
+### typerocket_seo_meta
 
 If you want to add fields to the SEO metabox, you will also want to display them on each page. You can use the `typerocket_seo_meta` action hook to output new meta.
 
