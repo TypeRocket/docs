@@ -282,23 +282,6 @@ Str::uppercaseWords('hi_there');
 // 'Hi_There'
 ```
 
-## tr_nils()
-
-The `tr_nils()` function allows for chaining a number of property lookups without throwing an error. It does not provide access to object functions.
-
-```php
-$value = new \stdClass;
-
-tr_nils($value)['one']->two->three; 
-// returns Nil object
-
-tr_nils($value)->one->two->three; 
-// returns Nil object
-
-tr_nils($value)->one->two->three->get();
-// returns null or real value if exists
-```
-
 ## File
 
 The `\TypeRocket\Utility\File` utility class offers a number of advanced file management features. First, create a new `\TypeRocket\Utility\File` instance to work with. This is an instance only and no file is created, deleted, or updated at this point.
@@ -523,6 +506,32 @@ Data::isJson('');
 
 Data::isJson('""');
 // false
+```
+
+## Data::nil
+
+The `Data::nil()` method allows for chaining a number of property lookups without throwing an error. It does not provide access to object functions.
+
+```php
+use TypeRocket\Utility\Data;
+
+$value = new \stdClass;
+$value->name = 'Kevin'
+
+Data::nil($value)['name']->get();
+// null
+
+Data::nil($value)->name->get();
+// 'Kevin'
+
+Data::nil($value)['one']->two->three; 
+// Nil  - object
+
+Data::nil($value)->one->['two']->three; 
+// Nil  - object
+
+Data::nil($value)->one->['two']->three->get();
+// null
 ```
 
 ### Data::walk
