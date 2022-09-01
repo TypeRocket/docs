@@ -33,7 +33,7 @@ $price = Arr::get($array, 'products.mic.price');
 // 99
 ```
 
-The `Arr::get` method also takes a default value, which will be returned if the specified key is **not present** in the array:
+The `Arr::get()` method also takes a default value, which will be returned if the specified key is **not present** in the array:
 
 ```php
 use \TypeRocket\Utility\Arr;
@@ -49,7 +49,7 @@ $price = Arr::get($array, 'product.name', 10);
 
 ### Arr::has
 
-The `Arr::has` method checks if a given item exists in an array using dot notation:
+The `Arr::has()` method checks if a given item exists in an array using dot notation:
 
 ```php
 use \TypeRocket\Utility\Arr;
@@ -209,7 +209,7 @@ Arr::replaceRecursivePreferNew($current, $new, ['section.meta']);
 
 ### Arr::set
 
-The `Arr::set` method assigns a given value to an item that exists in an array using dot notation:
+The `Arr::set()` method assigns a given value to an item that exists in an array using dot notation:
 
 ```php
 use \TypeRocket\Utility\Arr;
