@@ -80,7 +80,8 @@ The SEO extension comes with several hooks.
 2. Filter - `typerocket_seo_meta` - Used to filter the meta data used for meta tags.
 3. Action - `typerocket_seo_fields` - Used to add custom fields to the general tab of the SEO meta box.
 4. Filter - `typerocket_seo_post_types` - Used to control which post types have the SEO meta box.
-6. Filter - `typerocket_seo_url` - Used to control the URL used for OG. 
+6. Filter - `typerocket_seo_url` - Used to control the URL used for OG.
+7. Filter - `typerocket_view_document_title` - Used to control the document title text.
  
 ### typerocket_seo_post_types
 
@@ -111,4 +112,14 @@ add_action('typerocket_seo_meta', function($seo) {
     $keywords = esc_attr($seo->meta['basic']['keywords'] ?? '')
     echo "<meta name=\"keywords\" content"{$keywords}">";
 });
+```
+
+### typerocket_view_document_title
+
+You can use the `typerocket_view_document_title` to set a view's document title text. This can be helpful when an SEO plugin overrides the document title text, and you want to set the view's title.
+
+```php
+add_filter('typerocket_view_document_title', function($title, $view) {
+    return $title
+}, 10, 2);
 ```
