@@ -569,6 +569,17 @@ Str::contains('it', 'Name it!');
 // true
 ```
 
+### Str::encoding
+
+The `Str::encoding()` method gets the current internal PHP multibyte encoding:
+
+```php
+use \TypeRocket\Utility\Str;
+
+Str::encoding();
+// 'UTF-8'
+```
+
 ### Str::ends
 
 The `Str::ends()` method tests if a string ends with a value:
@@ -591,6 +602,34 @@ Str::contains('it', 'Name it!');
 // true
 ```
 
+### Str::limit
+
+The `Str::limit()` method limits a string to a specific number of characters starting from the left:
+
+```php
+use \TypeRocket\Utility\Str;
+
+Str::limit('Hello world!', 5);
+// 'Hello'
+
+Str::limit('Hello world!', 5, '...');
+// 'Hello...'
+```
+
+### Str::lower
+
+The `Str::lower()` method converts a string to lowercase:
+
+```php
+use \TypeRocket\Utility\Str;
+
+Str::lower('ABC');
+// 'abc'
+
+Str::lower('Ÿ');
+// 'ÿ'
+```
+
 ### Str::makeWords
 
 The `Str::makeWords()` method replaces a delimiter with a space, `' '`, in given string with the option to title case the result.
@@ -608,9 +647,37 @@ Str::makeWords('foo-bar', true, '-');
 // Foo Bar
 ```
 
+### Str::maxed
+
+The `Str::maxed()` method tests if a string's length past a maximum number of characters:
+
+```php
+use \TypeRocket\Utility\Str;
+
+Str::maxed('foo', 3);
+// false
+
+Str::maxed('bar', 2);
+// true
+```
+
+### Str:min
+
+The `Str::min()` method tests if a string's length is a minimum number of characters:
+
+```php
+use \TypeRocket\Utility\Str;
+
+Str::min('foo', 3);
+// true
+
+Str::min('bar', 4);
+// false
+```
+
 ### Str::notBlank
 
-The `Str::notBlank()` method checks if a value is `null` or an empty string.
+The `Str::notBlank()` method checks if a value is `null` or an empty string:
 
 ```php
 use \TypeRocket\Utility\Str;
@@ -648,6 +715,26 @@ $subject = 'dad';
 
 Str::pregMatchFindFirst($patters, $subject);
 // '[a-z]+'
+```
+
+### Str::quiet
+
+The `Str::quiet()` method checks if a value is `null` or a string that is blank when trimmed:
+
+```php
+use \TypeRocket\Utility\Str;
+
+Str::quiet(''); 
+// false
+
+Str::quiet(' ');
+// true
+
+Str::quiet(null); 
+// true
+
+Str::quiet(0); 
+// false
 ```
 
 ### Str::replaceFirst
@@ -706,6 +793,20 @@ $string = 'monster mom';
 
 Str::replaceLast($replace, $with, $string);
 // 'momster po'
+```
+
+### Str::reverse
+
+The `Str::reverse()` method reverses a given string:
+
+```php
+use \TypeRocket\Utility\Str;
+
+Str::reverse('abc');
+// 'cba'
+
+Str::reverse("xŸz");
+// 'zŸx'
 ```
 
 ### Str::splitAt
