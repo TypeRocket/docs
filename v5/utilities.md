@@ -135,7 +135,7 @@ use \TypeRocket\Utility\Arr;
 
 $array = ['products' => ['mic' => ['price' => 99]];
  
-$price = Arr::get($array, 'products.mic.price');
+Arr::get($array, 'products.mic.price');
 // 99
 ```
 
@@ -146,10 +146,10 @@ use \TypeRocket\Utility\Arr;
 
 $array = ['product' => ['name' => null, 'price' => 99]];
  
-$price = Arr::get($array, 'product.tax', 10);
+Arr::get($array, 'product.tax', 10);
 // 10
 
-$price = Arr::get($array, 'product.name', 10);
+Arr::get($array, 'product.name', 10);
 // null
 ```
 
@@ -162,10 +162,10 @@ use \TypeRocket\Utility\Arr;
 
 $array = ['product' => ['name' => null, 'price' => 99]];
  
-$price = Arr::has($array, 'product.name');
+Arr::has($array, 'product.name');
 // true
 
-$price = Arr::has($array, 'product.tax');
+Arr::has($array, 'product.tax');
 // false
 ```
 
@@ -176,7 +176,7 @@ use \TypeRocket\Utility\Arr;
 
 $array = ['product' => ['name' => null, 'price' => 99]];
  
-$price = Arr::has($array, ['product.name', 'product.price']);
+Arr::has($array, ['product.name', 'product.price']);
 // true
 ```
 
@@ -466,7 +466,7 @@ use \TypeRocket\Utility\Arr;
 
 $array = ['product' => ['name' => null, 'price' => 99]];
  
-$price = Arr::set('product.name', $array, 'mic');
+Arr::set('product.name', $array, 'mic');
 // ['product' => ['name' => 'mic', 'price' => 99]]
 ```
 
@@ -981,6 +981,47 @@ Data::cast(1, 'array');
 // 1  - is not compatible with array cast
 ```
 
+### Data::get
+
+The `Data::get()` method retrieves a value from a deeply nested `array` or `object` using dot notation:
+
+```php
+use \TypeRocket\Utility\Data;
+
+$product = new \stdClass;
+$product->name = 'mic';
+$product->price = 99;
+$product->type = null;
+
+$array = ['products' => [$product];
+ 
+Data::get($array, 'products.0.price');
+// 99
+
+Data::get($array, ['products.0.price', 'products.0.type']);
+// ['products.0.price' => 99, 'products.0.type' => null]
+```
+
+The `Data::get()` method also takes a default value, which will be returned if the specified key is **not present** or its value is `null` in the array:
+
+```php
+use \TypeRocket\Utility\Data;
+
+$product = new \stdClass;
+$product->name = 'mic';
+$product->price = 99;
+$product->type = null;
+ 
+Data::get($array, 'products.0.type', 10);
+// 10
+
+Data::get($array, 'products.0.color', 'blue');
+// 'blue'
+
+Data::get($array, 'products.1.color', 'blue');
+// 'blue'
+```
+
 ### Data:isJson
 
 The `Data::isJson()` method returns `true` if the given value is valid `json`:
@@ -1065,6 +1106,24 @@ Data::nil($value)->one->['two']->three;
 
 Data::nil($value)->one->['two']->three->get();
 // null
+```
+
+### Data::value
+
+The `Data::value()` method returns the given value unless it is a `callable`. If the value is `callable`, the method calls it using the `\TypeRocket\Core\Resolver::resolveCallable()` method:
+
+```php
+use TypeRocket\Utility\Data;
+
+Data::value(1);
+// 1
+
+$args = ['id' => 1];
+
+Data::value(function(\TypeRocket\Http\Request $request, $id = null) {
+    return $id;
+}, $args);
+// 1
 ```
 
 ### Data::walk
