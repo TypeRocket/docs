@@ -725,7 +725,7 @@ The `Str::quiet()` method checks if a value is `null` or a string that is blank 
 use \TypeRocket\Utility\Str;
 
 Str::quiet(''); 
-// false
+// true
 
 Str::quiet(' ');
 // true
@@ -733,7 +733,7 @@ Str::quiet(' ');
 Str::quiet(null); 
 // true
 
-Str::quiet(0); 
+Str::quiet('0'); 
 // false
 ```
 
