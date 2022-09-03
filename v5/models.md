@@ -130,13 +130,13 @@ class Version extends WPTerm
 You can query the database and retrieve the model you want. When a list of multiple items is returned a `Results` collection is returned.
 
 ```php
-$docs = (new Doc())->where('version', 'v1')->find();
+$docs = Doc::new()->where('version', 'v1')->find();
 ```
 
 You can also get a single item where the version is not `v1`.
 
 ```php
-$doc = (new Doc())->where('version', '!=' ,'v1')->first();
+$doc = Doc::new()->where('version', '!=' ,'v1')->first();
 ```
 
 And, where the ID is greater than 10.
@@ -151,7 +151,7 @@ $doc->first();
 Or, a single `Doc` by ID.
 
 ```php
-$doc = (new Doc())->find(1);
+$doc = Doc::new()->find(1);
 ```
 
 ## Fillable
@@ -266,7 +266,7 @@ class Doc extends Model
 
 To create a new model instance of the `Model` you want to work with.
 ```php
-$doc = new Doc;
+$doc = Doc::new();
 ```
 
 ## Finding
@@ -471,7 +471,7 @@ You can save any property explicitly set. Explicitly set properties ignore `$gua
 
 
 ```php
-$doc = new Doc;
+$doc = Doc::new();
 $doc->title = 'My Title';
 $doc->json = ['key'=> 'value'];
 $doc->version = 'v1';
@@ -487,7 +487,7 @@ $doc->create();
 If your query has one result like with `findById()`, you can save any property explicitly set.
 
 ```php
-$doc = (new Doc)->findById(1);
+$doc = Doc::new()->findById(1);
 $doc->json = ['key'=> 'new value'];
 $doc->modified_at = $doc->created_at;
 $doc->update();
@@ -502,22 +502,14 @@ The `save()` method will detect if a model's primary key is set. If the key is s
 If your query has one result like with `findById()`, you can delete it.
 
 ```php
-$doc = (new Doc)->findById(1);
+$doc = Doc::new()->findById(1);
 $doc->delete();
 ```
 
 You can also bulk delete items via models you create that extend the base `Model` class. Models that extend `WPPost`, `WPTerm`, `WPUser`, `WPComment`, `WPOption` do not have the ability to bulk delete.
 
 ```php
-(new Doc)->delete([1,2,3]);
-```
-
-## Count
-
-You can run the `count()` method on a model to get the number of items.
-
-```php
-$number = $doc->findAll()->count();
+Doc::new()->delete([1,2,3]);
 ```
 
 ## Select
@@ -525,7 +517,61 @@ $number = $doc->findAll()->count();
 You can use the `select()` method to return specific columns only.
 
 ```php
-$doc = (new Doc)->select('id', 'title')->first();
+$doc = Doc::new()->select('id', 'title')->first();
+```
+
+## Functions
+
+Every model object has the methods: `avg()`, `count()`, `max()`, `min()`, and `sum()`. Each of these functions accepts a single column name as a `string` or an instance of `\TypeRocket\Database\SqlRaw`.
+
+```php
+use \TypeRocket\Database\SqlRaw;
+
+// Single column
+$doc->sum('id');
+
+// Expression
+$doc->sum(SqlRaw::new('`id` * `id`'));
+```
+
+### Avg
+
+The `avg()` method gets the average calculated value:
+
+```php
+$number = $doc->avg('id');
+```
+
+### Count
+
+The `count()` method gets the count:
+
+```php
+$number = $doc->count();
+```
+
+### Max
+
+The `max()` method gets the max calculated value:
+
+```php
+$number = $doc->max('id');
+```
+
+### Min
+
+The `min()` method gets the min calculated value:
+
+```php
+$number = $doc->min('id');
+```
+
+### Sum
+
+The `sum()` method gets the sum calculated value:
+
+```php
+$number = $doc->min('id');
 ```
 
 ## Get ID and Set Primary Key 
@@ -614,7 +660,7 @@ class Doc extends Model
 You now have access to a `slug` property on the `Doc` model.
 
 ```php
-$doc = new Doc;
+$doc = Doc::new();
 echo $doc->slug;
 ```
 
