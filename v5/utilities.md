@@ -20,7 +20,7 @@ Arr::divide($array);
 // [ ['one', 'two'],[1,2] ]
 ```
 
-### Arr:exists
+### Arr::exists
 
 The `Arr::exists()` method check if a key exists for the given `array` or `ArrayAccess` object:
 
