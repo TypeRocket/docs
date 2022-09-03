@@ -661,7 +661,7 @@ Str::maxed('bar', 2);
 // true
 ```
 
-### Str:min
+### Str::min
 
 The `Str::min()` method tests if a string's length is a minimum number of characters:
 
