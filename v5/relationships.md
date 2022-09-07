@@ -284,6 +284,8 @@ You can scope any inner relationship as well by passing a callback.
 
 ```php
 <?php
+use TypeRocket\Models\Model;
+
 class ExampleModel extends Model
 {
     public function publishedBlog()
@@ -326,4 +328,13 @@ class ExampleModel extends Model
         });
     }
 }
+```
+
+## Querying Relationship Existence
+
+When retrieving model records, you can limit your results based on the existence of a relationship. To do so, you may pass the name of the relationship to the `has()` and `hasNo()` methods:
+
+```php
+ExampleModel::new()->has('tags')->get();
+ExampleModel::new()->hasNo('tags')->get();
 ```
