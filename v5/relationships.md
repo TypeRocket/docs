@@ -338,3 +338,17 @@ When retrieving model records, you can limit your results based on the existence
 ExampleModel::new()->has('tags')->get();
 ExampleModel::new()->hasNo('tags')->get();
 ```
+
+You can also scope and nest existence queries:
+
+```php
+use \App\Models\Blog;
+use \App\Models\Post;
+
+ExampleModel::new()->has('publishedBlog', function(Blog $query) {
+    $query->has('posts', function(Post $query) {
+        $table = $query->getTable();
+        $query->where("{$table}.post_status", 'draft');
+    });
+})->get();
+```
