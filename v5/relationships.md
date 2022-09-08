@@ -352,3 +352,12 @@ ExampleModel::new()->has('publishedBlog', function(Blog $query) {
     });
 })->get();
 ```
+
+Further, you can define the existence where condition as `OR`:
+
+```php
+ExampleModel::new()
+    ->where('name', 'kevin')
+    ->has('tags', null, 'OR')
+    ->get();
+```
