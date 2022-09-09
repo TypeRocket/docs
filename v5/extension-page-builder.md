@@ -33,7 +33,7 @@ For the most basic setup, duplicate your theme's current `page.php` template and
 ```php
 <?php get_header();
 
-if( tr_post_field("use_builder") == '1') {
+if( tr_show_page_builder("use_builder") ) {
     tr_components_field('builder');
 } else {
     get_template_part('standard');
@@ -42,7 +42,7 @@ if( tr_post_field("use_builder") == '1') {
 get_footer();
 ```
 
-This code will use the old page template `standard.php` if the builder is not being used.
+This code will use the old page template `standard.php` if the builder is not being used or the page is password protected.
 
 ## Components
 
