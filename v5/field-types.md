@@ -610,7 +610,7 @@ $repeater->setLimit(10);
 
 ### Controls
 
-You can hide controls for a repeater if needed. For example, a short repeater field group may show linted controls. You can define what controls are shown:
+You can hide controls for a repeater if needed. For example, a short repeater field group may show limited controls. You can define what controls are shown:
 
 ```php
 $repeater->hideClone();
@@ -619,6 +619,17 @@ $repeater->hideFlip();
 $repeater->hideClear();
 $repeater->hideContract();
 $repeater->hideClone();
+```
+
+Or, show them again:
+
+```php
+$repeater->showClone();
+$repeater->showMove();
+$repeater->showFlip();
+$repeater->showClear();
+$repeater->showContract();
+$repeater->showClone();
 ```
 
 ### Tabs
