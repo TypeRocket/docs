@@ -608,6 +608,19 @@ You can also limit the number allowed using the `setLimit()` method.
 $repeater->setLimit(10);
 ```
 
+### Controls
+
+You can hide controls for a repeater if needed. For example, a short repeater field group may show linted controls. You can define what controls are shown:
+
+```php
+$repeater->hideClone();
+$repeater->hideMove();
+$repeater->hideFlip();
+$repeater->hideClear();
+$repeater->hideContract();
+$repeater->hideClone();
+```
+
 ### Tabs
 
 You can add tabs to repeaters as well using the Tabs API. 
