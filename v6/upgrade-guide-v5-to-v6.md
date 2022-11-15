@@ -36,7 +36,7 @@ If you are using other packages ensure they are PHP 8 compatible. Next, update t
 "require": {
     "php": "^8.0.2",
     "typerocket/core": "^6.0",
-    "typerocket/core": "^6.0",
+    "typerocket/professional": "^6.0",
     ....
 }
 ```
