@@ -59,12 +59,12 @@ TypeRocket Pro also comes with these additional extensions:
 ```php
 'extensions' => [
    // ... 
-  '\TypeRocketPro\Extensions\ThemeOptions',
-  '\TypeRocketPro\Extensions\DevTools',
-  '\TypeRocketPro\Extensions\Seo',
-  '\TypeRocketPro\Extensions\RapidPages',
-  '\TypeRocketPro\Extensions\HidePostMenu',
-  '\TypeRocketPro\Extensions\DisableComments',
-  '\TypeRocketPro\Extensions\GutenbergRemover',
+  '\TypeRocket\Pro\Extensions\ThemeOptions',
+  '\TypeRocket\Pro\Extensions\DevTools',
+  '\TypeRocket\Pro\Extensions\Seo',
+  '\TypeRocket\Pro\Extensions\RapidPages',
+  '\TypeRocket\Pro\Extensions\HidePostMenu',
+  '\TypeRocket\Pro\Extensions\DisableComments',
+  '\TypeRocket\Pro\Extensions\GutenbergRemover',
 ],
 ```

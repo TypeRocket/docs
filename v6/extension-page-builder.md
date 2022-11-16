@@ -198,7 +198,7 @@ Advanced components can be cloned and named.
 namespace App\Components;
 
 use TypeRocket\Template\Component;
-use TypeRocketPro\Template\AdvancedComponent;
+use TypeRocket\Pro\Template\AdvancedComponent;
 
 class ContentComponent extends AdvancedComponent
 {

@@ -37,7 +37,7 @@ add_filter('typerocket_mail_driver_mailgun_options', function($driver) {
 });
 
 add_filter('typerocket_mailer_service_driver', function($driver) {
-    return new \TypeRocketPro\Utility\Mailers\MailgunMailDriver();
+    return new \TypeRocket\Pro\Utility\Mailers\MailgunMailDriver();
 });
 ```
 
@@ -72,7 +72,7 @@ Then, you can save the Mailgun data to your `wp_options` table with the key `mai
 add_filter('typerocket_mailer_service_driver', function($driver) {
     $mg = get_option('mailgun');
     if(is_array($mg) && !empty($mg['use_mailgun'])) {
-        $driver = new \TypeRocketPro\Utility\Mailers\MailgunMailDriver();
+        $driver = new \TypeRocket\Pro\Utility\Mailers\MailgunMailDriver();
     }
     return $driver;
 });

@@ -98,7 +98,7 @@ tr_view('books.add')->setTitle('Add Book');
 
 If you are using views within a post type's template file, you do not need to set SEO meta of the view. However, if you view is for anything that is not a post type you will need to set the SEO meta using the `setSeoMeta()` view method.
 
-If the view has access to the TypeRocket SEO meta from the `\TypeRocketPro\Extensions\SEO` extension, you can set the SEO for the page.
+If the view has access to the TypeRocket SEO meta from the `\TypeRocket\Pro\Extensions\SEO` extension, you can set the SEO for the page.
 
 ```php
 tr_view('books.show')->setSeoMeta($meta, $url);
@@ -156,7 +156,7 @@ Next, update your `template_engine` settings in your `config/app.php` file and s
 |
 */
 'templates' => [
-    'views' => '\TypeRocketPro\Template\TwigTemplateEngine',
+    'views' => '\TypeRocket\Pro\Template\TwigTemplateEngine',
 ],
 ```
 
@@ -194,7 +194,7 @@ TypeRocket Pro also has a template engine called Tachyon. This template engine i
 If you want to use an engine that is not the default, you can use the `setEngine()` method.
 
 ```php
-$engine = '\TypeRocketPro\Template\TwigTemplateEngine';
+$engine = '\TypeRocket\Pro\Template\TwigTemplateEngine';
 tr_view('books.show')->setEngine($engine);
 ```
 

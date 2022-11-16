@@ -18,14 +18,14 @@ To configure the log system to a specific log driver see the `app/logging.php` c
 ## Log Levels
 
 ```php
-\TypeRocketPro\Utility\Log::emergency('My log');
-\TypeRocketPro\Utility\Log::alert('My log');
-\TypeRocketPro\Utility\Log::critical('My log');
-\TypeRocketPro\Utility\Log::error('My log');
-\TypeRocketPro\Utility\Log::warning('My log');
-\TypeRocketPro\Utility\Log::notice('My log');
-\TypeRocketPro\Utility\Log::info('My log');
-\TypeRocketPro\Utility\Log::debug('My log');
+\TypeRocket\Pro\Utility\Log::emergency('My log');
+\TypeRocket\Pro\Utility\Log::alert('My log');
+\TypeRocket\Pro\Utility\Log::critical('My log');
+\TypeRocket\Pro\Utility\Log::error('My log');
+\TypeRocket\Pro\Utility\Log::warning('My log');
+\TypeRocket\Pro\Utility\Log::notice('My log');
+\TypeRocket\Pro\Utility\Log::info('My log');
+\TypeRocket\Pro\Utility\Log::debug('My log');
 ```
 
 ## Switch Driver
@@ -33,7 +33,7 @@ To configure the log system to a specific log driver see the `app/logging.php` c
 If you do not want to use the default driver you can specify one.
 
 ```php
-\TypeRocketPro\Utility\Log::driver('file')->emergency('My log');
+\TypeRocket\Pro\Utility\Log::driver('file')->emergency('My log');
 ```
 
 ## Custom Stacks
@@ -41,12 +41,12 @@ If you do not want to use the default driver you can specify one.
 You can log to a custom stack as well.
 
 ```php
-\TypeRocketPro\Utility\Log::stack(['file', 'mail'], 'emergency', 'My log');
+\TypeRocket\Pro\Utility\Log::stack(['file', 'mail'], 'emergency', 'My log');
 ```
 
 ## File Logger
 
-You can customize the location the file logger saves log files by defining the `wp-config.php` constant `TYPEROCKET_LOG_FILE_FOLDER`. Or, you can define the `typerocket_log_file` filter hook; but keep in mind your hook must be added before `\TypeRocketPro\Utility\Log` is called:
+You can customize the location the file logger saves log files by defining the `wp-config.php` constant `TYPEROCKET_LOG_FILE_FOLDER`. Or, you can define the `typerocket_log_file` filter hook; but keep in mind your hook must be added before `\TypeRocket\Pro\Utility\Log` is called:
 
 ```php
 add_filter('typerocket_log_file', function($file, $folder, $message, $options) {

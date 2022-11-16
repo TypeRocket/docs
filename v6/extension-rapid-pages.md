@@ -9,7 +9,7 @@ Description: Create static page caches to point your web server at for improved 
 
 TypeRocket's Rapid Pages extension allows you to take advantage of the `advanced-cache.php` WordPress drop-in. To enable Rapid Pages:
  
-1. Add the extension `\TypeRocketPro\Extensions\RapidPages` to your `app.extensions` config setting.
+1. Add the extension `\TypeRocket\Pro\Extensions\RapidPages` to your `app.extensions` config setting.
 2. Run the galaxy command `php galaxy extension:publish typerocket/professional rapid-pages`.
 3. Add `define( 'WP_CACHE', true );` to your `wp-config.php` file.
 4. Add `define('TYPEROCKET_RAPID_PAGES_FOLDER_PATH', ABSPATH . 'tr_cache/rapid_cache');` to your `wp-config.php` file after `ABSPATH` is defined.
@@ -24,7 +24,7 @@ php galaxy extension:publish typerocket/professional rapid-pages --mode=unpublis
 
 ## Nginx Configuration
 
-Once you have enabled the `TypeRocketPro\Extension\RapidPages` you can also configure your web server to the cached files for even faster performance. With Nginx, you can use the `map` directive with custom variables to show the cache with `try_files` to guest users only.   
+Once you have enabled the `TypeRocket\Pro\Extension\RapidPages` you can also configure your web server to the cached files for even faster performance. With Nginx, you can use the `map` directive with custom variables to show the cache with `try_files` to guest users only.   
 
 ```
 map $http_cookie $cachefiles {

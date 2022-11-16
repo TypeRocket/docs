@@ -16,7 +16,7 @@ The updaters check for a new version every 12 hours.
 The slug must match the name of your plugin.
 
 ```php
-new \TypeRocketPro\Updates\PluginUpdater([
+new \TypeRocket\Pro\Updates\PluginUpdater([
     'slug' => 'my-typerocket-plugin',
     'api_url' => 'https://example.com/plugins/my-typerocket-plugin/'
 ]);
@@ -64,7 +64,7 @@ The required endpoint format is JSON.
 The slug must match the name of your theme.
 
 ```php
-new \TypeRocketPro\Updates\ThemeUpdater([
+new \TypeRocket\Pro\Updates\ThemeUpdater([
     'slug' => 'my-typerocket-theme',
     'api_url' => 'https://example.com/themes/my-typerocket-theme/'
 ]);

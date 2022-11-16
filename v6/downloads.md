@@ -12,7 +12,7 @@ The `TypeRocketPro\Http\Download` class lets you send a downloadable file as the
 ## Basic Usage
 
 ```php
-$download = TypeRocketPro\Http\Download::new(__DIR__ . '/file.txt');
+$download = TypeRocket\Pro\Http\Download::new(__DIR__ . '/file.txt');
 $download->setName('my-download-file-name.txt');
 $download->send();
 ```
@@ -23,7 +23,7 @@ Send files using a custom route you can sue the `download()` method.
 
 ```php
 tr_route()->get()->on('my-path', function() {
-    return TypeRocketPro\Http\Download::new(__DIR__ . '/file.txt');
+    return \TypeRocket\Pro\Http\Download::new(__DIR__ . '/file.txt');
 });
 ```
 
@@ -33,6 +33,6 @@ Send files to a client from [storage](/docs/v6/storage/) using a custom route yo
 
 ```php
 tr_route()->get()->on('my-path', function() {
-    return \TypeRocketPro\Utility\Storage::download('file.txt');
+    return \TypeRocket\Pro\Utility\Storage::download('file.txt');
 });
 ```

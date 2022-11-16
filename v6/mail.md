@@ -17,12 +17,12 @@ To configure your mail service to a specific mail driver see the `app/mail.php` 
 - `mailgun`: [the mailgun driver](/docs/v6/mail-mailgun/) for sending email with [mailgun.com](https://www.mailgun.com/) via their HTTP API.
 - `log`: A driver that logs all email sent by WordPress to your the [TypeRocket logs](/docs/v6/log/).
 
-You can set your default mail driver in the `mail.default` config setting. The default driver will then be used by the `wp_mail()` function and the TypeRocket `\TypeRocketPro\Utility\Mail` class.
+You can set your default mail driver in the `mail.default` config setting. The default driver will then be used by the `wp_mail()` function and the TypeRocket `\TypeRocket\Pro\Utility\Mail` class.
 
 ```php
 wp_mail( $to, $subject, $message);
 
-\TypeRocketPro\Utility\Mail::new()
+\TypeRocket\Pro\Utility\Mail::new()
     ->to($to)->subject($subject)
     ->message($message)
     ->send();
@@ -30,10 +30,10 @@ wp_mail( $to, $subject, $message);
 
 ## Mail Class
 
-The fluent TypeRocket Mail class enables you to send mail in a more intuitive way. To start working with the `\TypeRocketPro\Utility\Mail` class create an instance of it.
+The fluent TypeRocket Mail class enables you to send mail in a more intuitive way. To start working with the `\TypeRocket\Pro\Utility\Mail` class create an instance of it.
 
 ```php
-$mail = \TypeRocketPro\Utility\Mail::new();
+$mail = \TypeRocket\Pro\Utility\Mail::new();
 ```
 
 ## To
@@ -142,7 +142,7 @@ $mail->attachments($attachments);
 If you do not want to use the default mail driver your can specify a different one.
 
 ```php
-$mail->driver(new TypeRocketPro\Utility\Mailers\MailgunMailDriver);
+$mail->driver(new TypeRocket\Pro\Utility\Mailers\MailgunMailDriver);
 ```
 
 ## Send

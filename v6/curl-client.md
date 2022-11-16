@@ -19,24 +19,24 @@ $data = [
 ];  
 $json = true; // Make request as JSON
 
-$http = \TypeRocketPro\Utility\Http::post($url, $data, $json);
+$http = \TypeRocket\Pro\Utility\Http::post($url, $data, $json);
 $returned = $http->exec();
 ```
 
 ### All Shorthand Methods
 
 ```php
-\TypeRocketPro\Utility\Http::get($url);
-\TypeRocketPro\Utility\Http::post($url, $data, $json);
-\TypeRocketPro\Utility\Http::put($url, $data, $json);
-\TypeRocketPro\Utility\Http::delete($url, $data, $json);
+\TypeRocket\Pro\Utility\Http::get($url);
+\TypeRocket\Pro\Utility\Http::post($url, $data, $json);
+\TypeRocket\Pro\Utility\Http::put($url, $data, $json);
+\TypeRocket\Pro\Utility\Http::delete($url, $data, $json);
 ```
 
 ## Custom Instance
 
 ```php
 $method = 'GET'; // Any valid HTTP method can be used
-$http = new \TypeRocketPro\Utility\Http($url, $method);
+$http = new \TypeRocket\Pro\Utility\Http($url, $method);
 ```
 
 ## Headers
@@ -92,7 +92,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_URL, $url);
 
 // Close the existing curl request
-$http = (new \TypeRocketPro\Utility\Http($url))->curl(null);
+$http = (new \TypeRocket\Pro\Utility\Http($url))->curl(null);
 
 // Override
 $http->curl($curl);
@@ -107,5 +107,5 @@ $json = true; // Make request as JSON
 $returned = $http->exec();
 ```
 
-The returned value is a `TypeRocketPro\Utility\CurlResponse` object.
+The returned value is a `TypeRocket\Pro\Utility\CurlResponse` object.
 

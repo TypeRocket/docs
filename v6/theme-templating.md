@@ -47,7 +47,7 @@ Meet [route-templates](/docs/v6/route-templates/).
 
 Route-templates let you completely replace the WordPress theme templates with Laravel style routes. If you prefer, use the more powerful [route-templates](/docs/v6/route-templates/) instead of WordPress theme templates with `tr_template_router()`.
 
-For example, delete your `single-post.php` template file and register a route-template for it in your `routes/public.php` file instead (be sure you have the `\TypeRocketPro\Services\TemplateRouter` service enabled in your `app.services` config).
+For example, delete your `single-post.php` template file and register a route-template for it in your `routes/public.php` file instead (be sure you have the `\TypeRocket\Pro\Services\TemplateRouter` service enabled in your `app.services` config).
 
 ```php
 <?php
@@ -75,7 +75,7 @@ This command will create the following controller for us.
 <?php  
 namespace App\Controllers;  
   
-use \TypeRocketPro\Controllers\TemplateController;  
+use \TypeRocket\Pro\Controllers\TemplateController;  
   
 class BlogController extends TemplateController  
 {  
@@ -104,7 +104,7 @@ Now, let's update the `single-post.php` template. Using the TypeRocket shorthand
 tr_template_router('single@Blog');
 ```
 
-Or, instead of using WordPress templates you can do this with a [route-template](/docs/v6/route-templates/) in your `routes/public.php` file (be sure you have the `\TypeRocketPro\Services\TemplateRouter` enabled).
+Or, instead of using WordPress templates you can do this with a [route-template](/docs/v6/route-templates/) in your `routes/public.php` file (be sure you have the `\TypeRocket\Pro\Services\TemplateRouter` enabled).
 
 ```php
 <?php
@@ -225,9 +225,9 @@ get_header();
 get_footer();
 ``` 
 
-Instead, we can use view layouts by enabling the `\TypeRocketPro\Template\TachyonTemplateEngine`. Layouts allow our views to be nested inside a parent view. That parent view can be the single location where our header and footer will be located.
+Instead, we can use view layouts by enabling the `\TypeRocket\Pro\Template\TachyonTemplateEngine`. Layouts allow our views to be nested inside a parent view. That parent view can be the single location where our header and footer will be located.
 
-To enable Tachyon templates, and access layouts, update your configuration under `app.templates.views` from `\TypeRocket\Template\TemplateEngine` to `\TypeRocketPro\Template\TachyonTemplateEngine`.
+To enable Tachyon templates, and access layouts, update your configuration under `app.templates.views` from `\TypeRocket\Template\TemplateEngine` to `\TypeRocket\Pro\Template\TachyonTemplateEngine`.
 
 Once Tachyon templates are enabled, make a layout in your `views` folder under `layout/blog.php` like so:
 

@@ -74,7 +74,7 @@ If you are upgrading from the free plugin to the TypeRocket Pro plugin you will 
 - `rapid.php`.
 - `storage.php`.
 
-Next, you will need to locate your custom `app/Elements/Fom.php` file and add `use \TypeRocketPro\Elements\Traits\AdvancedFields;`:
+Next, you will need to locate your custom `app/Elements/Fom.php` file and add `use \TypeRocket\Pro\Elements\Traits\AdvancedFields;`:
 
 ```php
 <?php
@@ -84,7 +84,7 @@ use TypeRocket\Elements\BaseForm;
 
 class Form extends BaseForm
 { 
-    use \TypeRocketPro\Elements\Traits\AdvancedFields;
+    use \TypeRocket\Pro\Elements\Traits\AdvancedFields;
 }
 ```
 

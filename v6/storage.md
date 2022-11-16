@@ -7,7 +7,7 @@ Description: Custom storage system.
 
 ## Getting Started
 
-You can use the `\TypeRocketPro\Utility\Storage` class to work with files from specific locations. The class makes it easy to work with files, like the `TypeRocket\Utility\File` class, with the benefit of working with files in external and internal locations.
+You can use the `\TypeRocket\Pro\Utility\Storage` class to work with files from specific locations. The class makes it easy to work with files, like the `TypeRocket\Utility\File` class, with the benefit of working with files in external and internal locations.
 
 ## Configure
 
@@ -21,15 +21,15 @@ To configure the storage system to a specific storage driver see the `app/storag
 ## Basic Usage
 
 ```php
-\TypeRocketPro\Utility\Storage::create('file.txt', 'content');
-\TypeRocketPro\Utility\Storage::append('file.txt', 'content');
-\TypeRocketPro\Utility\Storage::replace('file.txt', 'content');
-\TypeRocketPro\Utility\Storage::get('file.txt');
-\TypeRocketPro\Utility\Storage::delete('file.txt');
-\TypeRocketPro\Utility\Storage::exists('file.txt');
-\TypeRocketPro\Utility\Storage::path('file.txt');
-\TypeRocketPro\Utility\Storage::size('file.txt');
-\TypeRocketPro\Utility\Storage::lastModified('file.txt');
+\TypeRocket\Pro\Utility\Storage::create('file.txt', 'content');
+\TypeRocket\Pro\Utility\Storage::append('file.txt', 'content');
+\TypeRocket\Pro\Utility\Storage::replace('file.txt', 'content');
+\TypeRocket\Pro\Utility\Storage::get('file.txt');
+\TypeRocket\Pro\Utility\Storage::delete('file.txt');
+\TypeRocket\Pro\Utility\Storage::exists('file.txt');
+\TypeRocket\Pro\Utility\Storage::path('file.txt');
+\TypeRocket\Pro\Utility\Storage::size('file.txt');
+\TypeRocket\Pro\Utility\Storage::lastModified('file.txt');
 ```
 
 ## Switch Driver
@@ -37,7 +37,7 @@ To configure the storage system to a specific storage driver see the `app/storag
 If you do not want to use the default driver you can specify one.
 
 ```php
-\TypeRocketPro\Utility\Storage::driver('uploads')->create('file.txt');
+\TypeRocket\Pro\Utility\Storage::driver('uploads')->create('file.txt');
 ```
 
 ## Custom Stacks
@@ -45,7 +45,7 @@ If you do not want to use the default driver you can specify one.
 You can log to a custom stack as well.
 
 ```php
-\TypeRocketPro\Utility\Storage::stack(['uploads', 'storage'], 'create', 'file.txt', 'content');
+\TypeRocket\Pro\Utility\Storage::stack(['uploads', 'storage'], 'create', 'file.txt', 'content');
 ```
 
 ## Downloads
@@ -54,6 +54,6 @@ You can log to a custom stack as well.
 
 ```php
 tr_route()->get()->on('my-path', function() {
-    return \TypeRocketPro\Utility\Storage::download('file.txt');
+    return \TypeRocket\Pro\Utility\Storage::download('file.txt');
 });
 ```

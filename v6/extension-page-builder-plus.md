@@ -19,7 +19,7 @@ You can [download the list of official page builder component thumbnail icons](h
 
 ### Installation
 
-1. Update your App Config file adding to the extensions list: `\TypeRocketPro\Extensions\PageBuilderPlus\PageBuilderPlus`
+1. Update your App Config file adding to the extensions list: `\TypeRocket\Pro\Extensions\PageBuilderPlus\PageBuilderPlus`
 2. Run the Pro package galaxy publish script: `php galaxy extension:publish typerocket/professional page-builder-plus --mode=publish`
 
 And you're almost done installing.
@@ -28,10 +28,10 @@ The above steps implements the required `Page` model trait and runs the needed m
 
 ### Block Component
 
-The Page Builder Plus package comes with an additional builder Block component. Modify your component's config file and add the following to the list of components `'block' => TypeRocketPro\Extensions\PageBuilderPlus\Components\Block::class`. Next, add the `block` option to the builder component settings list just below the registry.
+The Page Builder Plus package comes with an additional builder Block component. Modify your component's config file and add the following to the list of components `'block' => TypeRocket\Pro\Extensions\PageBuilderPlus\Components\Block::class`. Next, add the `block` option to the builder component settings list just below the registry.
 
 ### Builder Revisions Usage
 
 The Page Builder Plus package comes with builder revisions. With it, you can see the history of your component changes. There is additional steps involved to get the revisions included.
 
-1. You need to include the BuilderRevisions trait in your applicable `Page` model class. `use TypeRocketPro\Extensions\PageBuilderPlus\Traits\BuilderRevisions;`
+1. You need to include the BuilderRevisions trait in your applicable `Page` model class. `use TypeRocket\Pro\Extensions\PageBuilderPlus\Traits\BuilderRevisions;`

@@ -7,7 +7,7 @@ Description: Access powerful dev tools for WordPress.
 
 ## Getting Started
 
-The `TypeRocketPro\Extensions\DevTools` extension adds an admin page to WordPress named "Dev". From the "Dev" page you can:
+The `TypeRocket\Pro\Extensions\DevTools` extension adds an admin page to WordPress named "Dev". From the "Dev" page you can:
 
 1. Search and view the available TypeRocket icons that can be used for post types and pages.
 2. See all the registered image sizes added by WordPress of through [add_image_size()](https://developer.wordpress.org/reference/functions/add_image_size/).
