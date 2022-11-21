@@ -96,6 +96,8 @@ All that is left is to create the defined methods in the `MemberController` to h
 
 There are five route types: `get`, `post`, `put`, `delete`, `any`.
 
+! **IMPORTANT**: All none-GET requests are passed through the [CSRF check middleware](/docs/v6/csrf/) and will result in a 403 error when the nonce check fails. You can bypass the nonce check by configuring the `App\Http\Middleware\VerifyNonce` class.
+
 ### Get
 
 The `get()` method will register a route for a GET request at a given URL path.
