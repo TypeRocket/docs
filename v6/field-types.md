@@ -461,7 +461,7 @@ For a multi value field,
 $form->search('Links')->multiple();
 ```
 
-! Note, this field only works for Administrator users because it allows full search access to content using the REST API. You can remove Administrator only access limitation by modifying the 'search' middleware group in the HTTP Kernel.
+! Note, the search field only works for Administrator users because it allows full search access to content using the REST API. You can remove the Administrator-only access limitation by modifying the 'search' middleware group in the HTTP Kernel.
 
 ### Search Post Types
 
