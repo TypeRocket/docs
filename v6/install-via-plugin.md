@@ -64,6 +64,15 @@ define('TYPEROCKET_AUTOLOAD_APP', [
 ]);
 ```
 
+## Child Theme Override Folders
+
+If you are using a child theme, TypeRocket will not automatically detect your override folder. you will need to manually set the override folder path in your `wp-config.php` file using the constant `TYPEROCKET_OVERRIDE_PATH`.
+
+```php
+// Root WordPress customizations
+define('TYPEROCKET_CORE_CONFIG_PATH', __DIR__ . '/path/to/my/child/theme/folder');
+```
+
 ### Pro Upgrade Overrides
 
 If you are upgrading from the free plugin to the TypeRocket Pro plugin you will also need to copy some configuration files from the plugin itself into your `config` overrides folder. The config files can be found under `typerocket-pro-v6/typrocket/config`. The files include:
