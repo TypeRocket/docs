@@ -434,7 +434,7 @@ $person->addColumn('Job Title');
 
 *If the custom field is grouped then you need to use the base group name.*
 
-The `addColum()` method takes up to 4 aurguments.
+The `addColumn()` method takes up to 4 aurguments.
 
 1. `field` - The name of the field to add. You can use any string format but lowercase letters and `_` (underscores) should be used for precision. 
 2. `sort_by` - The column is sortable `true` or `false`.  Doubles as order_by when string value is passed. String options include: `int`, `double`,  `date`, `datetime`,  `time`, and `str`.

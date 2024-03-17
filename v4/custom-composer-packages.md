@@ -3,7 +3,7 @@ Description: Make your own TypeRocket composer packages.
 
 ---
 
-## TypeRocket Compatable Composer Packages
+## TypeRocket Compatible Composer Packages
 
 You can create your own custom composer pages that are compatible with TypeRocket. When you do TypeRocket comes with a Galaxy CLI command to help you publish your plugin (this is like activating a plugin in WordPress).
 

@@ -219,7 +219,7 @@ echo $form->text('First Name');
 
 ### Setting the Model
 
-If you need to set the data resource after the a `Form` obejct is initalized use the `setModel()` method. You can pass and `array` or `Model` into this method. you can also pass the `string` class name or a model. 
+If you need to set the data resource after the a `Form` object is initialized use the `setModel()` method. You can pass and `array` or `Model` into this method. you can also pass the `string` class name or a model. 
 
 ```php
 $form->setModel(['first_name' => 'John']);
@@ -251,7 +251,7 @@ You could also omit the `create` action because TypeRocket automatically reasons
 
 ```php
 // Also, sends a POST request with the
-// action omited. TypeRocket magic.
+// action omitted. TypeRocket magic.
 $form = tr_form('post');
 ```
 

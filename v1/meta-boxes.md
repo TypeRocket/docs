@@ -191,7 +191,7 @@ To disable a metabox in Gutenberg.
 $box->gutenbergOff();
 ```
 
-### Compatability Flags
+### Compatibility Flags
 
 In WordPress 5.3 Gutenberg compatibility flags were added.
 

@@ -47,7 +47,7 @@ The required endpoint format is JSON.
   "sections": {
     "description": "<p>My plugin</p>",
     "installation": "<p>Install things this way...</p>",
-    "changelog": "<h4>1.0.0</h4><ul><li>Sart project.</li></ul>"
+    "changelog": "<h4>1.0.0</h4><ul><li>Start project.</li></ul>"
   },
   "download_url": "https://example.com/downloads/latest-version.zip",
   "last_updated": "2020-01-01 14:59:53"

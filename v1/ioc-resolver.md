@@ -1,5 +1,5 @@
 Title: Services & DI Container
-Description: Inversion of control resolver automatically tries to instance a class with its dependancies.
+Description: Inversion of control resolver automatically tries to instance a class with its dependencies.
 
 ---
 
@@ -63,7 +63,7 @@ You can then access the service instance using `tr_service('MyService')`. If you
 Register a class to the DI Container.
 
 ```php
-// singlton and alias are both optional arguments
+// singleton and alias are both optional arguments
 $singleton = true;
 $alias = 'my.class';
 

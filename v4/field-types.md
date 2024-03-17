@@ -473,7 +473,7 @@ Here is an example of a component named "Banner":
 - `resources/components/page_builder/banner.php` - Backend fields.
 - `wordpress/assets/components/page_builder/banner.png` - Thumbnail.
 
-### Using a compnent
+### Using a component
 
 Once the files are created you can begin adding code to the front end and backend files. For example, the "Content" component.
 

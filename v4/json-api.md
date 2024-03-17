@@ -17,7 +17,7 @@ tr_form('book', 'create')->useJson();
 
 The JSON API passes through the [Kernel](https://typerocket.com/docs/v4/kernel/) [middleware](https://typerocket.com/docs/v4/middleware/) for enhanced security. Modifications made to the Kernel will impact the JSON API.
 
-If you encouter issues keep in mind the TypeRocket JSON API requires strict adherence to the controller action naming scheme: `showRest`, `create`, `update`, and `destroy`.
+If you encounter issues keep in mind the TypeRocket JSON API requires strict adherence to the controller action naming scheme: `showRest`, `create`, `update`, and `destroy`.
 
 ## Register Resources
 

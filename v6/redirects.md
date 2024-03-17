@@ -157,7 +157,7 @@ tr_redirect_errors();
 
 ## With Flash
 
-Redirect with WordPresss admin flash message. Works with the TypeRocket REST API.  Types include: `success`, `error`, and `warning`.
+Redirect with WordPress admin flash message. Works with the TypeRocket REST API.  Types include: `success`, `error`, and `warning`.
 
 ```php
 $type = 'success';

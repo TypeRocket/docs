@@ -31,7 +31,7 @@ You can use a [form](/docs/v5/forms/) on the front-end of your site and have it 
 For example, if you have the following route in your `routes/public.php` file.
 
 ```php
-tr_route()->put()->do('/seats/*', funcion($id) {
+tr_route()->put()->do('/seats/*', function($id) {
     tr_frontend_enable();
     $form = tr_form('seat', $id)->toUrl('/seats/'.$id.'/');
         return tr_view('my.view.file', compact('id', 'form'));

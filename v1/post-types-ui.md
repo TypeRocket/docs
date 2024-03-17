@@ -19,6 +19,6 @@ You can also move the menu location of the Post Types UI to another location by 
 // Add to the tools menu
 define('TR_POST_TYPES_MENU', 'tools');
 
-// Add to the setings menu
+// Add to the settings menu
 define('TR_POST_TYPES_MENU', 'settings');
 ```

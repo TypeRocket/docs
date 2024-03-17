@@ -17,6 +17,6 @@ You can also move the menu location of the Post Types UI to another location by 
 // Add to the tools menu
 define('TYPEROCKET_UI_MENU', 'tools');
 
-// Add to the setings menu
+// Add to the settings menu
 define('TYPEROCKET_UI_MENU', 'settings');
 ```
