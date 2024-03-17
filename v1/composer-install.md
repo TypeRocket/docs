@@ -45,7 +45,7 @@ For beginners, the MU install is the fittest place to start.
 
 ### 2.1 MU Install
 
-From the command line, go to your `wordpress/wp-content/mu-plugins` folder. Then, replace `YOUR_URL_HERE` in the following command with the "Composer URL" from your acount page and run it:
+From the command line, go to your `wordpress/wp-content/mu-plugins` folder. Then, replace `YOUR_URL_HERE` in the following command with the "Composer URL" from your account page and run it:
 
 ```
 composer create-project --prefer-dist typerocket/pro typerocket --add-repository --repository=YOUR_URL_HERE

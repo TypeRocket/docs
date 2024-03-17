@@ -156,7 +156,7 @@ tr_route()
 
 In many cases, the regex capture group `(.+)` will be aggressively greedy. It is better to use a stricter capture group pattern like `([^\/]+)`.
 
-The capture group `([^\/]+)` is the recommened regex pattern.
+The capture group `([^\/]+)` is the recommended regex pattern.
 
 *Note: The capture group `(.+)` is used in our examples for help readability of the documentation.*
 
@@ -292,7 +292,7 @@ tr_route()->get()->match('login')->do('login@Member');
 
 The action component, `login`, of this quick route declaration calls the `login()` method of the controller; and the resource component, `Member`, selects `\App\Controllers\MemberController` as the controller and set the middleware group to `member` in the `Kernel`.
 
-### Contoller Override
+### Controller Override
 
 By default, TypeRocket uses the resource declaration of in the route `do()` method to automatically load the correct controller for that route. For example, `tr_route()->do('index@Post')` load the `\App\Controllers\PostController` controller. However, you can override what controller is used by including the controller component of the quick route declaration.  
 

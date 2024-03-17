@@ -565,7 +565,7 @@ Take a look at a quick example of instancing a `Form` with a resource, action an
 if( current_user_can( 'read' ) ) {
     $form = tr_form('users', 'update', get_current_user_id());
     $form->open();
-    $form->text('Github Handle');
+    $form->text('GitHub Handle');
     $form->close('Save Changes');
 }
 ```

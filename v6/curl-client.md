@@ -12,10 +12,10 @@ Description: A simple cURL client.
 TypeRocket provides a simple [cURL](https://www.php.net/manual/en/book.curl.php) Http client. Take a look at sending a POST request.
 
 ```php
-$url = 'https://exmaple.com';  
+$url = 'https://example.com';  
 $data = [  
   'app' => 'TypeRocket',  
-  'downlaods' => '10000',  
+  'downloads' => '10000',  
 ];  
 $json = true; // Make request as JSON
 

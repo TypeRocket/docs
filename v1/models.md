@@ -199,7 +199,7 @@ class Doc extends Model
 
 ## Format
 
-To format a model's values before it is saved, use the `$format` property. Formating can be used to sanitize data being saved to the database.
+To format a model's values before it is saved, use the `$format` property. Formatting can be used to sanitize data being saved to the database.
 
 ```php
 class Doc extends Model

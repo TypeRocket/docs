@@ -285,7 +285,7 @@ $form->range('Years')->setMax(100)->setMin(0)->setStep(1);
 $form->date('Release Date');
 ```
 
-You can set the date pickets format using `setFromat()` and passing any valid [jQuery date format](https://jqueryui.com/datepicker/#date-formats) setting.
+You can set the date pickets format using `setFormat()` and passing any valid [jQuery date format](https://jqueryui.com/datepicker/#date-formats) setting.
 
 ```php
 $form->date('Release Date')->setFormat('mm/dd/yy');

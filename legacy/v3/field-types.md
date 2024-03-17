@@ -32,7 +32,7 @@ $form->password('Your Password');
 
 ## Hidden
 
-This field should always go at the top or bottom of a form to prevent formating issues.
+This field should always go at the top or bottom of a form to prevent formatting issues.
 
 ```php
 $form->hidden('Hidden Field');
@@ -360,7 +360,7 @@ Here is an example for a component named "Banner":
 - `resources/components/page_builder/banner.php` - Backend fields.
 - `wordpress/assets/components/page_builder/banner.png` - Thumbnail.
 
-### Using a compnent
+### Using a component
 
 Once the files are created you can begin adding code to the front end and backend files. For example, the "Content" component.
 

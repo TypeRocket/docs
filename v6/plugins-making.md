@@ -56,7 +56,7 @@ The `app/MyPluginTypeRocketPlugin.php` class is where all of your custom code an
 
 1. `init()` - Place all of your custom plugin code like WordPress hooks here. By default, TypeRocket includes the hooks needed to load your plugin's front-end assets and settings page.
 2. `routes()` - Place your custom routes here instead of the main TypeRocket `public.php` routes file.
-3. `policies()` - If you are using policies in your plugin add them here not the `AuthSerivce` class (`AuthSerivce` can override your policies).
+3. `policies()` - If you are using policies in your plugin add them here not the `AuthService` class (`AuthService` can override your policies).
 4. `activate()` - Place any activation code you need here. By default, any migrations will be run when the plugin is activated because of `migrateUp()` and permalink flushed because of `tr_update_site_state()`.
 5. `deactivate()` - Place any deactivation code here. By default, permalinks will be flushed because of `tr_update_site_state()`.
 6. `uninstall()` - Place nay uninstallation code here. By default, any migrations will be unwound because of `migrateDown()`. You may want to add your own `tr_update_site_state()` here as well.

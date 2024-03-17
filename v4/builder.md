@@ -20,7 +20,7 @@ If you installed TypeRocket manually follow these steps:
 
 ## About Page Builder
 
-The page builder plugin was designed to help developers and designers work together with clients to deliver the best experience when building [modular/component based designes](http://alistapart.com/article/language-of-modular-design).
+The page builder plugin was designed to help developers and designers work together with clients to deliver the best experience when building [modular/component based designs](http://alistapart.com/article/language-of-modular-design).
 
 ![typerocket-builder-plugin](https://typerocket.com/wp-content/uploads/2016/09/typerocket-builder-plugin.gif)
 

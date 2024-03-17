@@ -13,7 +13,7 @@ After and before upgrading, you will have access to both `v5` and `v6`. However,
 
 ## TypeRocket Pro Namespace Change
 
-Update all instances of `TypeRocketPro` to `TypeRocket\Pro`. For example, if you are accessing the class `TypeRocketPro\Elements\Fields\Gallery` you must now call the class `TypeRocket\Pro\Elements\Fields\Gallery`. It is NOT recommended that you run a find and replace. Find and replace will not account for escapping needed withing strings. For example, a find and replace of `TypeRocketPro` to `TypeRocket\Pro` on these strings will cause errors:
+Update all instances of `TypeRocketPro` to `TypeRocket\Pro`. For example, if you are accessing the class `TypeRocketPro\Elements\Fields\Gallery` you must now call the class `TypeRocket\Pro\Elements\Fields\Gallery`. It is NOT recommended that you run a find and replace. Find and replace will not account for escapping needed within strings. For example, a find and replace of `TypeRocketPro` to `TypeRocket\Pro` on these strings will cause errors:
 
 ```
 # Targets

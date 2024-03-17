@@ -1,5 +1,5 @@
 Title: DI Container
-Description: Inversion of control resolver automatically tries to instance a class with its dependancies.
+Description: Inversion of control resolver automatically tries to instance a class with its dependencies.
 
 ---
 
@@ -8,7 +8,7 @@ Description: Inversion of control resolver automatically tries to instance a cla
 Register a class to the DI Container.
 
 ```php
-// singlton and alias are both optional arguments
+// singleton and alias are both optional arguments
 $singleton = true;
 $alias = 'my.class';
 
