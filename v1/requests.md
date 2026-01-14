@@ -128,7 +128,7 @@ $request->getHeader('ACCEPT');
 ## Get Accepts
 
 ```php
-$rquest->getAccepts();
+$request->getAccepts();
 // Returns and array
 ```
 
@@ -137,7 +137,7 @@ $rquest->getAccepts();
 If you need to search the content type, a request accepts in return.
 
 ```php
-$rquest->acceptContains('application/json');
+$request->acceptContains('application/json');
 ```
 
 Or, you can use the shorthand `wants()`. This method accepts the following options:
@@ -150,17 +150,17 @@ Or, you can use the shorthand `wants()`. This method accepts the following optio
 - image
 
 ```php
-$rquest->wants('json');
+$request->wants('json');
 ```
 
 ## GET & POST Data
 
 ```php
-$all = $rquest->getDataPost();
-$single = $rquest->getDataPost('page');
+$all = $request->getDataPost();
+$single = $request->getDataPost('page');
 
-$all = $rquest->getDataGet();
-$single = $rquest->getDataGet('page');
+$all = $request->getDataGet();
+$single = $request->getDataGet('page');
 ```
 
 ## Get Input
@@ -198,14 +198,14 @@ $body = $request->getDataJson();
 ## Get Files
 
 ```php
-$rquest->getDataFiles();
+$request->getDataFiles();
 ```
 
 ## Get Cookies
 
 ```php
 $all = $request->getDataCookies();
-$single = $rquest->getDataCookies('my_cookie');
+$single = $request->getDataCookies('my_cookie');
 ```
 
 ## Check Nonce

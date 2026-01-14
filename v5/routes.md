@@ -175,7 +175,7 @@ tr_route()->get()->match('login')->do('login@Member');
 
 The action component, `login`, of this shorthand calls the `login()` method of the controller; and the `Member` string selects `\App\Controllers\MemberController` as the controller.
 
-#### Contoller Override
+#### Controller Override
 
 You can override what controller is used by using the full class name of the controller.  
 

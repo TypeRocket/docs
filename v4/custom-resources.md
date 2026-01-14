@@ -283,7 +283,7 @@ public function add() {
 }
 ```
 
-If you encouter issues keep in mind the TypeRocket JSON API requires strict adherence to the controller action naming scheme: `showRest`, `create`, `update`, and `destroy`.
+If you encounter issues keep in mind the TypeRocket JSON API requires strict adherence to the controller action naming scheme: `showRest`, `create`, `update`, and `destroy`.
 
 
 

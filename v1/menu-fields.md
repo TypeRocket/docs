@@ -3,7 +3,7 @@ Description: Add custom fields to menu items in WordPress 5.4+.
 
 ---
 
-## Requirments
+## Requirements
 
 Adding menu item fields is possible in **WordPress 5.4+** with the addition of the `wp_nav_menu_item_custom_fields` action hook. Prior to WordPress 5.4, adding custom fields to menu items was not possible without creating major conflicts between plugins.
 

@@ -40,7 +40,7 @@ npm run prod
 
 ## Versioning
 
-TypeRocket Pro supports with versioning for Webpack files that use the `verson()` method. You can use the `tr_manifest_cache()` method to locate your `mix-manifest.json` file.
+TypeRocket Pro supports with versioning for Webpack files that use the `version()` method. You can use the `tr_manifest_cache()` method to locate your `mix-manifest.json` file.
 
 ```php
 // Define Theme Directory  

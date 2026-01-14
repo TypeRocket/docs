@@ -21,7 +21,7 @@ In WordPress, the theme templates do three things:
 
 For example, if your theme has a `single-post.php` template file, all requests for a "single blog post" will be routed to that template file. The file will also control the logic flow and display the view for the page. This bundling of responsibilities is not ideal as it can lead to numerous bugs and scalability issues.
 
-On the other hand, TypeRocket's template router seamlessly integrates into the WordPress template hierarchy pattern allowing you to use the MVC pattern while maintaining backward compatibility withing WordPress. Using the TypeRocket template router has several advantages:
+On the other hand, TypeRocket's template router seamlessly integrates into the WordPress template hierarchy pattern allowing you to use the MVC pattern while maintaining backward compatibility within WordPress. Using the TypeRocket template router has several advantages:
 
 - WordPress core templates only allow for 400 error handling. The template router allows for 500, 401, 403, or any other error templates to be used.
 - Takes your view out of the global scope, greatly reducing your chances of variable naming collisions, thus reducing the odds for bugs.
@@ -168,7 +168,7 @@ The main benefit of using models over the WordPress loops, in our view, will be 
 
 ## Replacing The WP Loop
 
-Now, we can begin replacing the WordPress loop and use the modern pattern of MVC. Back in the `BlogContoller` add the following constructor.
+Now, we can begin replacing the WordPress loop and use the modern pattern of MVC. Back in the `BlogController` add the following constructor.
 
 ```php
 class BlogController extends TemplateController  
@@ -306,7 +306,7 @@ The Tachyon template system also provides an includes system for partial templat
 
 The `include()` method takes up to 3 arguments:
 
-1. **View** - View's dot syntax path or a full file path wth file extension.
+1. **View** - View's dot syntax path or a full file path with file extension.
 2. **Data** (optional) - An associative array with the data to pass into the included view.
 3. **Extension** (optional) - A replacement file extension for the dot syntax path. This is only useful in very custom situations.
 

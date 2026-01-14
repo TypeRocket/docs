@@ -1,11 +1,11 @@
 Title: IoC Resolver
-Description: Inversion of control resolver automatically tries to instance a class with its dependancies.
+Description: Inversion of control resolver automatically tries to instance a class with its dependencies.
 
 ---
 
 ## IoC Resolver
 
-The inversion of control resolver automatically tries to instance a class with its dependancies. The `Resolver` object will look at a classes constructor and automatically inject its dependencies.
+The inversion of control resolver automatically tries to instance a class with its dependencies. The `Resolver` object will look at a classes constructor and automatically inject its dependencies.
 
 ## Resolving
 

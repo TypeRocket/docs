@@ -17,7 +17,7 @@ tr_roles()->all();
 
 ## List Capabilities
 
-Get a list of all capabilities and their asigned roles.
+Get a list of all capabilities and their assigned roles.
 
 ```php
 tr_roles()->capabilities();
